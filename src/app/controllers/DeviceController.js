@@ -42,7 +42,7 @@
                 var clickedItem = $scope.items[$index];
                 $mdBottomSheet.hide(clickedItem);
 
-                if ($index == 4) {
+                if ($index == 0) {
                     $mdDialog.show(
                         {
                             templateUrl: 'app/views/template.html',
@@ -50,29 +50,47 @@
                             targetEvent: ev,
                             clickOutsideToClose:true
                         })
-                        .then(function(answer) {
-                            $scope.status = 'You said the information was "' + answer + '".';
-                        }, function() {
-                            $scope.status = 'You cancelled the dialog.';
-                        });
                 }
                 if ($index == 1) {
                     $mdDialog.show(
                         {
                             templateUrl: 'app/views/template1.html',
+                            controller: TemplateController,
                             parent: angular.element(document.body),
                             targetEvent: ev,
                             clickOutsideToClose:true
                         })
-                        .then(function(answer) {
-                            $scope.status = 'You said the information was "' + answer + '".';
-                        }, function() {
-                            $scope.status = 'You cancelled the dialog.';
-                        });
+
                 }
 
 
             };
+
+
+
+        })
+        .controller('TemplateController', function($scope, $mdDialog, $mdBottomSheet){
+            $scope.cards = [
+                {name: 'Card 1', id: 1},
+                {name: 'Card 2', id: 2},
+                {name: 'Card 3', id: 3}
+            ];
+
+            $scope.addCard = function($event, ev) {
+                console.log($event);
+                var click = $scope.cards[$event];
+                $mdBottomSheet.hide(click);
+            };
+
+            $scope.removeCard = function(id) {
+               // cards.splice
+            };
+
+            $scope.shut = function () {
+                console.log("Removed")
+                $mdDialog.hide();
+            }
+
 
         })
         .run(function($templateRequest) {
