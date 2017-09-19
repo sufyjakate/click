@@ -4,11 +4,11 @@
             $mdIconProvider
                 .icon('devmgmt', 'assets/images/devices.svg', 24)
                 .icon('devctrl', 'assets/images/machine.svg', 24)
-                .icon('suggest', 'assets/images/phone.svg', 24)
-                .icon('upgrade', 'assets/images/phone.svg', 24)
-                .icon('notif', 'assets/images/phone.svg', 24);
+                .icon('suggest', 'assets/images/suggest.svg', 24)
+                .icon('upgrade', 'assets/images/sysupdate.svg', 24)
+                .icon('notif', 'assets/images/notif.svg', 24);
         })
-        .controller('DeviceController', function($scope, $timeout, $mdBottomSheet, $mdToast) {
+        .controller('DeviceController', function($scope, $timeout, $mdBottomSheet, $mdToast, $rootScope) {
             $scope.alert = '';
 
             $scope.showGridBottomSheet = function() {
@@ -28,6 +28,17 @@
                     // User clicked outside or hit escape
                 });
             };
+            $scope.cardisadded = false;
+            $scope.device = function ($mdDialog, $routeProvider) {
+                console.log('Called on click from modal');
+                //$mdDialog.hide();
+                $scope.cardisadded = true;
+
+            };
+            $scope.$on('Hello', function () {
+                $scope.device();
+                //$scope.Myctrl();
+            });
         })
         .controller('GridBottomSheetCtrl', function($scope, $mdBottomSheet, $mdDialog) {
             $scope.items = [
@@ -69,7 +80,7 @@
 
 
         })
-        .controller('TemplateController', function($scope, $mdDialog, $mdBottomSheet){
+        .controller('TemplateController', function($scope, $mdDialog, $mdBottomSheet, $rootScope){
             $scope.cards = [
                 {name: 'Card 1', id: 1},
                 {name: 'Card 2', id: 2},
@@ -77,9 +88,12 @@
             ];
 
             $scope.addCard = function($event, ev) {
-                console.log($event);
-                var click = $scope.cards[$event];
-                $mdBottomSheet.hide(click);
+                //console.log($event);
+                //var click = $scope.cards[$event];
+                //console.log(click);
+                //$mdBottomSheet.hide(click);
+
+                $rootScope.$broadcast('Hello');
             };
 
             $scope.removeCard = function(id) {
@@ -93,14 +107,25 @@
 
 
         })
+        .controller('CardController', function () {
+
+
+        })
+        .directive('cardview', function () {
+            return {
+                restrict: 'EA',
+                templateUrl: 'app/views/card.html'
+
+            }
+        })
         .run(function($templateRequest) {
 
             var urls = [
                 'assets/images/devices.svg',
                 'assets/images/machine.svg',
-                'assets/images/phone.svg',
-                'assets/images/phone.svg',
-                'assets/images/phone.svg'
+                'assets/images/suggest.svg',
+                'assets/images/sysupdate.svg',
+                'assets/images/notif.svg'
             ];
 
             angular.forEach(urls, function(url) {
