@@ -29,12 +29,14 @@
                 });
             };
             $scope.cardisadded = false;
-            $scope.device = function ($mdDialog, $routeProvider) {
+            $scope.devctrlcard = false;
+            $scope.device = function ($mdDialog, $routeProvider, $route) {
                 console.log('Called on click from modal');
                 //$mdDialog.hide();
                 $scope.cardisadded = true;
-
+                $scope.devctrlcard = true;
             };
+
             $scope.$on('Hello', function () {
                 $scope.device();
                 //$scope.Myctrl();
@@ -49,7 +51,7 @@
                 { name: 'Notification Center', icon: 'notif' }
             ];
 
-            $scope.listItemClick = function($index, ev) {
+            $scope.listItemClick = function($index, ev, $rootScope) {
                 var clickedItem = $scope.items[$index];
                 $mdBottomSheet.hide(clickedItem);
 
@@ -65,58 +67,35 @@
                 if ($index == 1) {
                     $mdDialog.show(
                         {
-                            templateUrl: 'app/views/template1.html',
-                            controller: TemplateController,
+                            templateUrl: 'app/views/devctrl.html',
                             parent: angular.element(document.body),
                             targetEvent: ev,
                             clickOutsideToClose:true
                         })
 
                 }
+                if ($index == 2) {
+                    $mdDialog.show(
+                        {
+                            templateUrl: 'app/views/suggest.html',
+                            parent: angular.element(document.body),
+                            targetEvent: ev,
+                            clickOutsideToClose: true
+                        }
+                    )
+                }
+                if ($index == 3) {
+                    $mdDialog.show({
+                        templateUrl: 'app/views/upgrade.html',
+                        parent: angular.element(document.body),
+                        targetEvent: ev,
+                        clickOutsideToClose: true
+                    })
+                }
 
 
             };
 
-
-
-        })
-        .controller('TemplateController', function($scope, $mdDialog, $mdBottomSheet, $rootScope){
-            $scope.cards = [
-                {name: 'Card 1', id: 1},
-                {name: 'Card 2', id: 2},
-                {name: 'Card 3', id: 3}
-            ];
-
-            $scope.addCard = function($event, ev) {
-                //console.log($event);
-                //var click = $scope.cards[$event];
-                //console.log(click);
-                //$mdBottomSheet.hide(click);
-
-                $rootScope.$broadcast('Hello');
-            };
-
-            $scope.removeCard = function(id) {
-               // cards.splice
-            };
-
-            $scope.shut = function () {
-                console.log("Removed")
-                $mdDialog.hide();
-            }
-
-
-        })
-        .controller('CardController', function () {
-
-
-        })
-        .directive('cardview', function () {
-            return {
-                restrict: 'EA',
-                templateUrl: 'app/views/card.html'
-
-            }
         })
         .run(function($templateRequest) {
 
