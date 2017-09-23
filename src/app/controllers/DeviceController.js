@@ -8,7 +8,7 @@
                 .icon('upgrade', 'assets/images/sysupdate.svg', 24)
                 .icon('notif', 'assets/images/notif.svg', 24);
         })
-        .controller('DeviceController', function($scope, $timeout, $mdBottomSheet, $mdToast) {
+        .controller('DeviceController', ['InterControllerCommunication', '$scope', '$mdBottomSheet', function(icc, $scope, $mdBottomSheet, $mdToast) {
             $scope.alert = '';
 
             $scope.showGridBottomSheet = function() {
@@ -29,11 +29,11 @@
                 });
             };
 
-            // var handler = function (ea, data) {
-            //     $scope.cards = data;
-            // };
-            // var list = icc.subscribe('list.update', handler);
-            // console.log(list);
+            var handler = function (ea, data) {
+                $scope.cards = data;
+            };
+            var list = icc.subscribe('list.update', handler);
+            console.log(list);
 
             // $scope.cardisadded = false;
             // $scope.devctrlcard = false;
@@ -48,6 +48,13 @@
             //     $scope.device();
             //     //$scope.Myctrl();
             // });
+        }])
+        .directive('cardview', function () {
+            return {
+                restrict: 'EA',
+                templateUrl: 'app/views/card.html'
+
+            }
         })
         .controller('GridBottomSheetCtrl', function($scope, $mdBottomSheet, $mdDialog) {
             $scope.items = [
