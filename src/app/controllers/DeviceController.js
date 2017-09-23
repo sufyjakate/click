@@ -8,7 +8,7 @@
                 .icon('upgrade', 'assets/images/sysupdate.svg', 24)
                 .icon('notif', 'assets/images/notif.svg', 24);
         })
-        .controller('DeviceController', function($scope, $timeout, $mdBottomSheet, $mdToast, $rootScope) {
+        .controller('DeviceController', function($scope, $timeout, $mdBottomSheet, $mdToast) {
             $scope.alert = '';
 
             $scope.showGridBottomSheet = function() {
@@ -28,19 +28,26 @@
                     // User clicked outside or hit escape
                 });
             };
-            $scope.cardisadded = false;
-            $scope.devctrlcard = false;
-            $scope.device = function ($mdDialog, $routeProvider, $route) {
-                console.log('Called on click from modal');
-                //$mdDialog.hide();
-                $scope.cardisadded = true;
-                $scope.devctrlcard = true;
-            };
 
-            $scope.$on('Hello', function () {
-                $scope.device();
-                //$scope.Myctrl();
-            });
+            // var handler = function (ea, data) {
+            //     $scope.cards = data;
+            // };
+            // var list = icc.subscribe('list.update', handler);
+            // console.log(list);
+
+            // $scope.cardisadded = false;
+            // $scope.devctrlcard = false;
+            // $scope.device = function ($mdDialog, $routeProvider, $route) {
+            //     console.log('Called on click from modal');
+            //     //$mdDialog.hide();
+            //     $scope.cardisadded = true;
+            //     $scope.devctrlcard = true;
+            // };
+            //
+            // $scope.$on('Hello', function () {
+            //     $scope.device();
+            //     //$scope.Myctrl();
+            // });
         })
         .controller('GridBottomSheetCtrl', function($scope, $mdBottomSheet, $mdDialog) {
             $scope.items = [
