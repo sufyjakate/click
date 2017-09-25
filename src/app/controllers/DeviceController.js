@@ -35,6 +35,13 @@
             var list = icc.subscribe('list.update', handler);
             console.log(list);
 
+            var update_handler = function (ea, data) {
+                $scope.cards = data;
+            };
+
+            var newlist = icc.subscribe('list.delete', update_handler);
+            console.log(newlist);
+
             // $scope.cardisadded = false;
             // $scope.devctrlcard = false;
             // $scope.device = function ($mdDialog, $routeProvider, $route) {

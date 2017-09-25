@@ -1,0 +1,33 @@
+<div ng-controller="TemplateController" ng-cloak>
+    <md-dialog aria-label="Software Upgrade Center">
+        <form>
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>Upgrade Center</h2>
+                    <span flex></span>
+                    <md-button class="md-icon-button" ng-click="cancel()">
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-dialog-content style="max-width:800px;max-height:810px; ">
+                <md-tabs md-dynamic-height md-border-bottom>
+                    <md-tab label="Widget 1">
+                        <md-content class="md-padding">
+                            <md-icon md-svg-src="assets/images/light-bulb.svg" aria-label="Close dialog"></md-icon>
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+            </md-dialog-content>
+
+            <md-dialog-actions layout="row">
+                <span flex></span>
+                <md-button ng-click="shut()" >
+                    CANCEL
+                </md-button>
+                <md-button ng-click="addCard('UpgradeCenter')" style="margin-right:20px;" >
+                ADD
+                </md-button>
+            </md-dialog-actions>
+        </form>
+    </md-dialog>
+</div>
