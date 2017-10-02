@@ -4,7 +4,7 @@
 'use strict';
 
 angular
-    .module('interControllerCommunication', [])
+    .module('interControllerCommunication', ['gridstack-angular'])
     .factory('InterControllerCommunication', ['$rootScope', '$window', function($rootScope, $window) {
         return {
             publish: function(topic, data) {

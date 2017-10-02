@@ -1,3 +1,4 @@
+
 <div ng-controller="TemplateController" ng-cloak>
 <md-dialog aria-label="Device Management">
     <form>
@@ -12,9 +13,7 @@
         <md-dialog-content style="max-width:800px;max-height:810px; ">
             <md-tabs md-dynamic-height md-border-bottom>
                 <md-tab label="Widget 1">
-                    <md-content class="md-padding">
-                        <md-icon md-svg-src="assets/images/light-bulb.svg" aria-label="Close dialog"></md-icon>
-                    </md-content>
+
                 </md-tab>
             </md-tabs>
         </md-dialog-content>
@@ -24,7 +23,7 @@
             <md-button ng-click="shut('DeviceManagment')" >
                 CANCEL
             </md-button>
-            <md-button ng-click="addCard('DeviceManagment')" style="margin-right:20px;" >
+            <md-button ng-click="addWidget('DeviceManagment')" style="margin-right:20px;" >
                 ADD
             </md-button>
         </md-dialog-actions>

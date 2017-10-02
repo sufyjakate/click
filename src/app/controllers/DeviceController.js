@@ -8,8 +8,10 @@
                 .icon('upgrade', 'assets/images/sysupdate.svg', 24)
                 .icon('notif', 'assets/images/notif.svg', 24);
         })
-        .controller('DeviceController', ['InterControllerCommunication', '$scope', '$mdBottomSheet', function(icc, $scope, $mdBottomSheet, $mdToast) {
+        .controller('DeviceController', ['InterControllerCommunication', '$scope', '$mdBottomSheet',function(icc, $scope, $mdBottomSheet, $mdToast) {
             $scope.alert = '';
+
+
 
             $scope.showGridBottomSheet = function() {
                 $scope.alert = '';
@@ -30,32 +32,13 @@
             };
 
             var handler = function (ea, data) {
-                $scope.cards = data;
+                $scope.widgets = data;
             };
             var list = icc.subscribe('list.update', handler);
             console.log(list);
 
-            var update_handler = function (ea, data) {
-                $scope.cards = data;
-            };
-
-            var newlist = icc.subscribe('list.delete', update_handler);
-            console.log(newlist);
-
-            // $scope.cardisadded = false;
-            // $scope.devctrlcard = false;
-            // $scope.device = function ($mdDialog, $routeProvider, $route) {
-            //     console.log('Called on click from modal');
-            //     //$mdDialog.hide();
-            //     $scope.cardisadded = true;
-            //     $scope.devctrlcard = true;
-            // };
-            //
-            // $scope.$on('Hello', function () {
-            //     $scope.device();
-            //     //$scope.Myctrl();
-            // });
         }])
+
         .directive('cardview', function () {
             return {
                 restrict: 'EA',
@@ -63,6 +46,7 @@
 
             }
         })
+    
         .controller('GridBottomSheetCtrl', function($scope, $mdBottomSheet, $mdDialog) {
             $scope.items = [
                 { name: 'Device Management', icon: 'devmgmt'},

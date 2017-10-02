@@ -2,8 +2,219 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="714c5d66-6718-4283-89b9-0e53fa71a9d0" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jquery/MIT-LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax/parseJSON.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/defaultDisplay.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/swap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/var/isHidden.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/data/accepts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/data/var/data_priv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/data/var/data_user.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/intro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/outro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/sizzle/dist/sizzle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/sizzle/dist/sizzle.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/sizzle/dist/sizzle.min.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/rnotwhite.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/strundefined.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/ChangeLog" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/LICENSE.BSD" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/bin/phantomjs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/arguments.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/arguments.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/child_process-examples.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/child_process-examples.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/colorwheel.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/colorwheel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/countdown.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/countdown.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/detectsniff.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/detectsniff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/direction.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/direction.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/echoToFile.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/echoToFile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/features.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/features.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/fibo.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/fibo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/follow.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/follow.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/hello.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/hello.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/imagebin.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/imagebin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/injectme.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/injectme.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/ipgeocode.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/ipgeocode.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/loadspeed.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/loadspeed.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/loadurlwithoutcss.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/loadurlwithoutcss.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/modernizr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/module.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/movies.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/movies.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/netlog.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/netlog.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/netsniff.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/netsniff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/outputEncoding.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/outputEncoding.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/page_events.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/page_events.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/pagecallback.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/pagecallback.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/phantomwebintro.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/phantomwebintro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/pizza.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/pizza.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/post.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/post.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/postserver.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/postserver.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/printenv.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/printenv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/printheaderfooter.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/printheaderfooter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/printmargins.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/printmargins.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/rasterize.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/rasterize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/render_multi_url.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/render_multi_url.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/run-jasmine.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/run-jasmine.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/run-qunit.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/run-qunit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/scandir.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/scandir.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/seasonfood.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/seasonfood.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/server.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/server.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/serverkeepalive.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/serverkeepalive.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/simpleserver.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/simpleserver.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/sleepsort.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/sleepsort.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/stdin-stdout-stderr.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/stdin-stdout-stderr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/technews.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/technews.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/tweets.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/tweets.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/universe.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/unrandomize.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/unrandomize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/useragent.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/useragent.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/version.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/version.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/waitfor.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/waitfor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/walk_through_frames.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/walk_through_frames.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/weather.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/examples/weather.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/phantomjs/lib/phantom/third-party.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/angular-material-dashboard.iml" afterPath="$PROJECT_DIR$/.idea/angular-material-dashboard.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/index.html" afterPath="$PROJECT_DIR$/.tmp/serve/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/.bower.json" afterPath="$PROJECT_DIR$/bower_components/jquery/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/bower.json" afterPath="$PROJECT_DIR$/bower_components/jquery/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/bower_components/jquery/dist/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/dist/jquery.min.js" afterPath="$PROJECT_DIR$/bower_components/jquery/dist/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/dist/jquery.min.map" afterPath="$PROJECT_DIR$/bower_components/jquery/dist/jquery.min.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax/jsonp.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/ajax/jsonp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax/load.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/ajax/load.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax/parseXML.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/ajax/parseXML.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax/script.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/ajax/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax/var/nonce.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/ajax/var/nonce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax/var/rquery.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/ajax/var/rquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/ajax/xhr.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/ajax/xhr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/attributes.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/attributes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/attributes/attr.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/attributes/attr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/attributes/classes.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/attributes/classes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/attributes/prop.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/attributes/prop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/attributes/support.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/attributes/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/attributes/val.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/attributes/val.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/callbacks.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/callbacks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core/access.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/core/access.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core/init.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/core/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core/parseHTML.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/core/parseHTML.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core/ready.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/core/ready.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/core/var/rsingleTag.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/core/var/rsingleTag.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/css.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/addGetHookIf.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/css/addGetHookIf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/curCSS.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/css/curCSS.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/hiddenVisibleSelectors.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/css/hiddenVisibleSelectors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/support.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/css/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/var/cssExpand.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/css/var/cssExpand.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/var/getStyles.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/css/var/getStyles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/var/rmargin.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/css/var/rmargin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/css/var/rnumnonpx.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/css/var/rnumnonpx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/data.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/data/Data.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/data/Data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/deferred.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/deferred.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/deprecated.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/deprecated.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/dimensions.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/dimensions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/effects.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/effects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/effects/Tween.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/effects/Tween.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/effects/animatedSelector.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/effects/animatedSelector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/event.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/event.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/event/ajax.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/event/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/event/alias.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/event/alias.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/event/support.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/event/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/exports/amd.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/exports/amd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/exports/global.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/exports/global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/jquery.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/manipulation.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/manipulation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/manipulation/_evalUrl.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/manipulation/_evalUrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/manipulation/support.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/manipulation/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/manipulation/var/rcheckableType.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/manipulation/var/rcheckableType.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/offset.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/offset.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/queue.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/queue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/queue/delay.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/queue/delay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/selector-native.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/selector-native.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/selector-sizzle.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/selector-sizzle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/selector.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/selector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/serialize.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/serialize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/traversing.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/traversing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/traversing/findFilter.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/traversing/findFilter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/traversing/var/rneedsContext.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/traversing/var/rneedsContext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/arr.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/var/arr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/class2type.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/var/class2type.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/concat.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/var/concat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/hasOwn.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/var/hasOwn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/indexOf.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/var/indexOf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/pnum.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/var/pnum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/push.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/var/push.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/slice.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/var/slice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/support.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/var/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/var/toString.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/var/toString.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/src/wrap.js" afterPath="$PROJECT_DIR$/bower_components/jquery/src/wrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.js" afterPath="$PROJECT_DIR$/src/app/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/controllers/CardController.js" afterPath="$PROJECT_DIR$/src/app/controllers/CardController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/controllers/DeviceController.js" afterPath="$PROJECT_DIR$/src/app/controllers/DeviceController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/controllers/InterControllerCommunication.js" afterPath="$PROJECT_DIR$/src/app/controllers/InterControllerCommunication.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/controllers/TemplateController.js" afterPath="$PROJECT_DIR$/src/app/controllers/TemplateController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/views/card.html" afterPath="$PROJECT_DIR$/src/app/views/card.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/views/devctrl.html" afterPath="$PROJECT_DIR$/src/app/views/devctrl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/views/device.html" afterPath="$PROJECT_DIR$/src/app/views/device.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/views/suggest.html" afterPath="$PROJECT_DIR$/src/app/views/suggest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/views/template.html" afterPath="$PROJECT_DIR$/src/app/views/template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/views/upgrade.html" afterPath="$PROJECT_DIR$/src/app/views/upgrade.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
     </list>
     <ignored path="angular-material-dashboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,53 +238,9 @@
       <file leaf-file-name="template.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/views/template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+            <state relative-caret-position="375">
+              <caret line="25" column="59" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="59" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TemplateController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/controllers/TemplateController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#45#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeviceController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/controllers/DeviceController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="35" column="30" selection-start-line="31" selection-start-column="12" selection-end-line="35" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="device.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/views/device.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="37" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InterControllerCommunication.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/controllers/InterControllerCommunication.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#45#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -81,21 +248,51 @@
       <file leaf-file-name="card.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/views/card.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state relative-caret-position="315">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CardController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/controllers/CardController.js">
+      <file leaf-file-name="TemplateController.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/controllers/TemplateController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+            <state relative-caret-position="600">
+              <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
               <folding>
                 <element signature="e#0#45#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InterControllerCommunication.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/controllers/InterControllerCommunication.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeviceController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/controllers/DeviceController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/controllers/CardController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="35" column="63" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,6 +303,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="SCSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -127,25 +326,33 @@
         <option value="$PROJECT_DIR$/src/app/views/partials/template1.html" />
         <option value="$PROJECT_DIR$/src/app/controllers/Template1Controller.js" />
         <option value="$PROJECT_DIR$/src/app/controllers/devctrlController.js" />
-        <option value="$PROJECT_DIR$/src/app/views/devctrl.html" />
-        <option value="$PROJECT_DIR$/src/app/views/suggest.html" />
-        <option value="$PROJECT_DIR$/src/app/views/upgrade.html" />
         <option value="$PROJECT_DIR$/src/app/components/services/InterControllerCommunication" />
-        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/src/app/components/services/InterController.js" />
         <option value="$PROJECT_DIR$/src/app/components/services/NavService.js" />
         <option value="$PROJECT_DIR$/src/app/controllers/MainController.js" />
         <option value="$PROJECT_DIR$/src/app/index.js" />
         <option value="$PROJECT_DIR$/src/app/components/services/InterControllerCommunication.js" />
+        <option value="$PROJECT_DIR$/src/app/components/services/uniqueidService.js" />
+        <option value="$PROJECT_DIR$/src/app/stylesheets/angular-resizable.css" />
+        <option value="$PROJECT_DIR$/src/app/controllers/angular-resizable.js" />
+        <option value="$PROJECT_DIR$/src/app/controllers/angular-resizable.min.js" />
+        <option value="$PROJECT_DIR$/src/app/stylesheets/angular-resizable.min.css" />
+        <option value="$PROJECT_DIR$/src/app/stylesheets/card.scss" />
+        <option value="$PROJECT_DIR$/src/app/views/upgrade.html" />
+        <option value="$PROJECT_DIR$/src/app/views/suggest.html" />
+        <option value="$PROJECT_DIR$/src/app/views/devctrl.html" />
+        <option value="$PROJECT_DIR$/src/app/views/template.html" />
+        <option value="$PROJECT_DIR$/src/app/components/services/gridstack-angular.js" />
+        <option value="$PROJECT_DIR$/src/app/components/services/gridstack-angular.min.js" />
+        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/app/controllers/InterControllerCommunication.js" />
         <option value="$PROJECT_DIR$/src/app/app.js" />
-        <option value="$PROJECT_DIR$/src/app/views/template.html" />
         <option value="$PROJECT_DIR$/src/app/views/device.html" />
-        <option value="$PROJECT_DIR$/src/app/controllers/TemplateController.js" />
         <option value="$PROJECT_DIR$/src/app/controllers/DeviceController.js" />
-        <option value="$PROJECT_DIR$/src/app/views/card.html" />
         <option value="$PROJECT_DIR$/src/app/controllers/CardController.js" />
+        <option value="$PROJECT_DIR$/src/app/views/card.html" />
+        <option value="$PROJECT_DIR$/src/app/controllers/TemplateController.js" />
       </list>
     </option>
   </component>
@@ -162,9 +369,8 @@
     </gulpfiles>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="800" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -191,6 +397,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -328,49 +535,24 @@
               <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-material-dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-material-dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blur-admin" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -459,7 +641,13 @@
       <updated>1505205833486</updated>
       <workItem from="1505205835162" duration="38081000" />
       <workItem from="1505593197168" duration="1532000" />
-      <workItem from="1505728850119" duration="41796000" />
+      <workItem from="1505728850119" duration="52110000" />
+      <workItem from="1506429313151" duration="9250000" />
+      <workItem from="1506515312112" duration="4266000" />
+      <workItem from="1506690512425" duration="1110000" />
+      <workItem from="1506850997854" duration="4522000" />
+      <workItem from="1506931657503" duration="81000" />
+      <workItem from="1506935155711" duration="13012000" />
     </task>
     <task id="LOCAL-00001" summary="Device flow">
       <created>1505500447253</created>
@@ -521,17 +709,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81409000" />
+    <option name="totallyTimeSpent" value="123964000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="800" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18611111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45515394" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -544,6 +731,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45515394" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -589,196 +777,180 @@
     <option name="LAST_COMMIT_MESSAGE" value="Inter Controller Communication service for better handling of the data" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/Template1Controller.js">
+    <entry file="file://$PROJECT_DIR$/src/app/views/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/services/MessagesService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/services/TableService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/services/TodoListService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/ControlPanelController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/TableController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/UsageController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/VisitorsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/WarningsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/ProfileController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/MessagesController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/MainController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/MemoryController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/PerformanceController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/DataTableController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/stylesheets/_table.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2411">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulp/inject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/services/uniqueidService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/services/CountriesService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/angular-resizable.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/angular-resizable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1653">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/stylesheets/card.scss" />
+    <entry file="file://$PROJECT_DIR$/src/app/views/devctrl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/views/suggest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/views/upgrade.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#md-button#1;n#md-dialog-actions#0;n#form#0;n#md-dialog#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/suggest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#md-button#1;n#md-dialog-actions#0;n#form#0;n#md-dialog#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/bottomsheetdev.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/directives/messagesSection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/directives/panelWidget.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulp/deploy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulp/e2e-tests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/services/PerformanceService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="5" selection-start-line="62" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulp/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulp/inject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulp/build.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-375">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/services/InterControllerCommunication">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="39" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/services/InterController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="77" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
-          <folding>
-            <marker date="1505207716000" expanded="true" signature="937:1102" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/services/NavService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="30" />
+        <state relative-caret-position="480">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -791,222 +963,204 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/devctrl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/services/MessagesService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/services/CountriesService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/services/TableService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/services/TodoListService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/ControlPanelController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/TableController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/UsageController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/VisitorsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/WarningsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/ProfileController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/MessagesController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/MainController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/MemoryController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/PerformanceController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/DataTableController.js">
+    <entry file="file://$PROJECT_DIR$/src/app/components/services/gridstack-angular.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/stylesheets/_table.scss">
+    <entry file="file://$PROJECT_DIR$/src/app/components/services/gridstack-angular.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2411">
+        <state relative-caret-position="975">
+          <caret line="189" column="5" selection-start-line="189" selection-start-column="5" selection-end-line="189" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/gridstack/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/gridstack-angular/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="92" selection-start-line="16" selection-start-column="92" selection-end-line="16" selection-end-column="92" />
+          <folding>
+            <marker date="1506954279912" expanded="true" signature="1107:1272" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/stylesheets/angular-resizable.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/stylesheets/angular-resizable.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/stylesheets/_custom.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        <state relative-caret-position="150">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="70" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/gridstack/src/gridstack.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/gridstack/dist/gridstack.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/gridstack/dist/gridstack.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/views/device.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="37" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="37" />
+        <state relative-caret-position="225">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/views/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="59" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/controllers/InterControllerCommunication.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        <state relative-caret-position="450">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/views/card.html">
+    <entry file="file://$PROJECT_DIR$/bower_components/gridstack/src/gridstack.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state relative-caret-position="326">
+          <caret line="1213" column="36" selection-start-line="1213" selection-start-column="26" selection-end-line="1213" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/TemplateController.js">
+    <entry file="file://$PROJECT_DIR$/bower_components/gridstack-angular/src/gridstack.directive.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/gridstack-angular/src/gridstackitem.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/gridstack-angular/src/gridstack.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/controllers/DeviceController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="35" column="30" selection-start-line="31" selection-start-column="12" selection-end-line="35" selection-end-column="30" />
+        <state relative-caret-position="450">
+          <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/controllers/CardController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        <state relative-caret-position="525">
+          <caret line="35" column="63" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/views/card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/TemplateController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
           <folding>
             <element signature="e#0#45#0" expanded="false" />
           </folding>

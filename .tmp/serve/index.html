@@ -14,9 +14,12 @@
     <link rel="stylesheet" href="../bower_components/nvd3/build/nv.d3.css" />
     <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css" />
     <link rel="stylesheet" href="../bower_components/angular-material-data-table/dist/md-data-table.css" />
+    <link rel="stylesheet" href="../bower_components/gridstack/dist/gridstack.css" />
+    <link rel="stylesheet" href="../bower_components/material-design-lite/material.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
     <!-- build:css({.tmp/serve,src}) styles/app.css -->
     <!-- inject:css -->
     <link rel="stylesheet" href="app/index.css">
@@ -48,12 +51,18 @@
     <script src="../bower_components/angular-material/angular-material.js"></script>
     <script src="../bower_components/angular-mocks/angular-mocks.js"></script>
     <script src="../bower_components/angular-material-data-table/dist/md-data-table.js"></script>
+    <script src="../bower_components/lodash/lodash.js"></script>
+    <script src="../bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="../bower_components/gridstack/dist/gridstack.js"></script>
+    <script src="../bower_components/gridstack-angular/dist/gridstack-angular.min.js"></script>
+    <script src="../bower_components/material-design-lite/material.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
     <!-- inject:js -->
     <script src="app/app.js"></script>
+    <script src="app/components/services/uniqueidService.js"></script>
     <script src="app/components/services/TodoListService.js"></script>
     <script src="app/components/services/TableService.js"></script>
     <script src="app/components/services/PerformanceService.js"></script>
@@ -62,6 +71,8 @@
     <script src="app/components/services/CountriesService.js"></script>
     <script src="app/components/directives/panelWidget.js"></script>
     <script src="app/components/directives/messagesSection.js"></script>
+    <script src="app/controllers/angular-resizable.min.js"></script>
+    <script src="app/controllers/angular-resizable.js"></script>
     <script src="app/controllers/WarningsController.js"></script>
     <script src="app/controllers/VisitorsController.js"></script>
     <script src="app/controllers/UsageController.js"></script>
