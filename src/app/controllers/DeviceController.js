@@ -1,5 +1,6 @@
 (function(){
     angular.module('app')
+
         .config(function($mdIconProvider) {
             $mdIconProvider
                 .icon('devmgmt', 'assets/images/devices.svg', 24)
@@ -49,8 +50,8 @@
     
         .controller('GridBottomSheetCtrl', function($scope, $mdBottomSheet, $mdDialog) {
             $scope.items = [
-                { name: 'Device Management', icon: 'devmgmt'},
-                { name: 'Device Controls', icon: 'devctrl' },
+                { name: 'Device Data Manager', icon: 'devmgmt'},
+                { name: 'Add/Remove Devices', icon: 'devctrl' },
                 { name: 'Suggest Me', icon: 'suggest' },
                 { name: 'Upgrade Center', icon: 'upgrade' },
                 { name: 'Notification Center', icon: 'notif' }

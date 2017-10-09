@@ -18,7 +18,8 @@ gulp.task('inject', ['styles'], function () {
   var injectScripts = gulp.src([
     paths.src + '/{app,components}/**/*.js',
     '!' + paths.src + '/{app,components}/**/*.spec.js',
-    '!' + paths.src + '/{app,components}/**/*.mock.js'
+    '!' + paths.src + '/{app,components}/**/*.mock.js',
+      paths.src + '/{app,models}/**/*.js'
   ]).pipe($.angularFilesort());
 
   var injectOptions = {
