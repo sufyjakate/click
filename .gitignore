@@ -44,3 +44,4 @@ Thumbs.db
 /bower_components/
 /.idea/
 /.tmp/
+/node_modules/.bin/
