@@ -20,6 +20,9 @@ routes(app); //register the route
 
 app.listen(port);
 
+app.on('listening', function () {
+   console.log('Server already running');
+});
 
 console.log('todo list RESTful API server started on: ' + port);
 
