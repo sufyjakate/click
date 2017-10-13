@@ -4,10 +4,10 @@
 (function () {
 
     angular.module('app')
-        .controller('TemplateController', ['InterControllerCommunication', '$scope', '$mdDialog'
-        , TemplateController]);
+        .controller('DeviceMgmtController', ['InterControllerCommunication', '$scope', '$mdDialog'
+        , DeviceMgmtController]);
 
-        function TemplateController(icc, $scope, $mdDialog){
+        function DeviceMgmtController(icc, $scope, $mdDialog){
 
 
 
@@ -17,7 +17,6 @@
             $scope.addWidget = function(id) {
                 var newWidget = {x:0, y:0, width:4, height:1};
 
-                //newWidget.id = 1;
                 cardid++;
                 newWidget.cardid = cardid;
                 newWidget.title = id;
@@ -26,14 +25,6 @@
                 icc.publish('list.update', $scope.widgets);
                 console.log($scope.widgets);
             };
-
-
-            // $scope.removeCard = function(index) {
-            //     // cards.splice
-            //     $scope.cards.splice(index, 1);
-            //     console.log(cards);
-            //    
-            // };
             
 
             $scope.shut = function(id) {

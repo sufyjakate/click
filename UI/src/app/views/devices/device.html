@@ -2,7 +2,10 @@
 
 
 <div ng-controller="DeviceController" ng-cloak>
-    <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
+
+
+
+        <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
         <md-button flex="50" class="md-primary md-raised" ng-click="showGridBottomSheet()" style="position:absolute; bottom:0;">Select Widgets</md-button>
 
     </div>
@@ -17,6 +20,10 @@
 
     </md-content>
 
-    <div cardview="card"></div>
+
+    <div ng-if="newWidget.title= 'DeviceManagment'">
+        <div cardview="card"></div>
+    </div>
+
 
     </div>
