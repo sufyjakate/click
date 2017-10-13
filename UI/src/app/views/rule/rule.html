@@ -13,11 +13,11 @@
             <div gridstack
                  class="grid-stack grid1"
                  options="vm.ruleOptions"
-                 on-change="onChange(event,items)"
-                 on-drag-start="onDragStart(event,ui)"
-                 on-drag-stop="onDragStop(event,ui)"
-                 on-resize-start="onResizeStart(event,ui)"
-                 on-resize-stop="onResizeStop(event,ui)">
+                 on-change="vm.onChange(event,items)"
+                 on-drag-start="vm.onDragStart(event,ui)"
+                 on-drag-stop="vm.onDragStop(event,ui)"
+                 on-resize-start="vm.onResizeStart(event,ui)"
+                 on-resize-stop="vm.onResizeStop(event,ui)">
 
 
                 <div gridstack-item
@@ -28,8 +28,8 @@
                      gs-item-width="w.width"
                      gs-item-height="w.height"
                      gs-item-autopos="1"
-                     on-item-added="onItemAdded(item)"
-                     on-item-removed="onItemRemoved(item)">
+                     on-item-added="vm.onItemAdded(item)"
+                     on-item-removed="vm.onItemRemoved(item)">
 
                     <div class="grid-stack-item-content">
 
