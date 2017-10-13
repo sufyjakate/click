@@ -59,11 +59,83 @@
       }
     ];
 
+    var ruleOptions = {
+          cellHeight: 200,
+              verticalMargin: 10
+      };
+
+      var ruleWidgetData =
+          [
+              {
+                  widgetType: 0,
+                  x: 0,
+                  y: 0,
+                  width: 4,
+                  height: 4
+              },
+              {
+                  widgetType: 1,
+                  x: 0,
+                  y: 0,
+                  width: 4,
+                  height: 4
+              },
+              {
+                  widgetType: 2,
+                  x: 0,
+                  y: 0,
+                  width: 4,
+                  height: 4
+              },
+              {
+                  widgetType: 3,
+                  x: 0,
+                  y: 0,
+                  width: 4,
+                  height: 4
+              },
+              {
+                  widgetType: 4,
+                  x: 0,
+                  y: 0,
+                  width: 4,
+                  height: 4
+              },
+              {
+                  widgetType: 5,
+                  x: 0,
+                  y: 0,
+                  width: 4,
+                  height: 4
+              },
+              {
+                  widgetType: 6,
+                  x: 0,
+                  y: 0,
+                  width: 4,
+                  height: 4
+              },
+              {
+                  widgetType: 7,
+                  x: 0,
+                  y: 0,
+                  width: 4,
+                  height: 4
+              },
+
+          ];
+
     function PickRandom() {
       return Object.assign({}, tableData[Math.floor(Math.random()*tableData.length)]);
     }
 
     return {
+      loadAllRuleWidgets : function() {
+          return $q.when(ruleWidgetData);
+      },
+      loadWidgetsOptions : function() {
+          return $q.when(ruleOptions);
+      },
       loadAllItems : function() {
         return $q.when(tableData);
       },
@@ -72,7 +144,7 @@
        */
       loadByPagination: function (query) {
         query = query || {limit:10,page:1};
-         
+
         var list = [];
         var start = (query.page-1)*query.limit;
         var end = start + query.limit;

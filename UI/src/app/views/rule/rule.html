@@ -34,17 +34,26 @@
   </div>
 
   <div class="container-fluid">
-  <div gridstack class="grid-stack grid1" options="options" on-change="onChange(event,items)" on-drag-start="onDragStart(event,ui)" on-drag-stop="onDragStop(event,ui)" on-resize-start="onResizeStart(event,ui)" on-resize-stop="onResizeStop(event,ui)">
+  <div gridstack class="grid-stack grid1" options="vm.ruleOptions" on-change="onChange(event,items)" on-drag-start="onDragStart(event,ui)" on-drag-stop="onDragStop(event,ui)" on-resize-start="onResizeStart(event,ui)" on-resize-stop="onResizeStop(event,ui)">
 
 
     <!--<div gridstack-item ng-repeat="w in widgets track by $index" index="{{::$index}}" class="grid-stack-item" gs-item-x="w.x" gs-item-y="w.y"-->
          <!--gs-item-width="w.width" gs-item-height="w.height" gs-item-autopos="1" on-item-added="onItemAdded(item)" on-item-removed="onItemRemoved(item)">-->
 
-  <!--<div gridstack-item-->
-       <!--Index="{{::1}}" class="grid-stack-item" gs-item-x="0" gs-item-y="0"-->
-       <!--gs-item-width="4" gs-item-height="4" gs-item-autopos="1" on-item-added="onItemAdded(item)" on-item-removed="onItemRemoved(item)">-->
-    <!--<panel-widget flex title="Site visitors" template="app/views/partials/visitors.html" class="fixed-height-widget"></panel-widget>-->
-  <!--</div>-->
+  <div gridstack-item
+       ng-repeat="w in vm.ruleWidgetData track by $index" Index="{{::$index}}" class="grid-stack-item" gs-item-x="w.x" gs-item-y="w.y"
+       gs-item-width="w.width" gs-item-height="w.height" gs-item-autopos="1" on-item-added="onItemAdded(item)" on-item-removed="onItemRemoved(item)">
+
+    <panel-widget ng-if ="w.widgetType==0" flex title="Site visitors" template="app/views/partials/visitors.html" class="fixed-height-widget"></panel-widget>
+    <panel-widget ng-if ="w.widgetType==1" flex title="Warnings" template="app/views/partials/warnings.html" class="fixed-height-widget"></panel-widget>
+    <panel-widget ng-if ="w.widgetType==2" flex title="Memory load" template="app/views/partials/memory.html" class="fixed-height-widget"></panel-widget>
+    <panel-widget ng-if ="w.widgetType==3" flex title="Server Control Panel" template="app/views/partials/controlPanel.html" class="fixed-height-widget"></panel-widget>
+    <panel-widget ng-if ="w.widgetType==4" flex title="Usage Stats" template="app/views/partials/usage.html" class="fixed-height-widget"></panel-widget>
+    <panel-widget ng-if ="w.widgetType==5" flex title="Autocomplete Input" template="app/views/partials/autocomplete.html" options="true" class="fixed-height-widget"></panel-widget>
+    <panel-widget ng-if ="w.widgetType==6" flex title="Performance" template="app/views/partials/performance.html" options="true"></panel-widget>
+    <panel-widget ng-if ="w.widgetType==7" flex title="TODO list" template="app/views/partials/checkboxes.html"></panel-widget>
+
+  </div>
 
     <!--<div gridstack-item-->
          <!--Index="{{::2}}" class="grid-stack-item" gs-item-x="0" gs-item-y="0"-->
