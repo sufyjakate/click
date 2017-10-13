@@ -1,28 +1,28 @@
-<div class="table-responsive-vertical md-whiteframe-z1">
-  <table id="table" class="table table-hover table-bordered">
-    <thead>
-    <tr>
-      <th>#</th>
-      <th>Issue</th>
-      <th>Status</th>
-      <th>Progress</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr ng-repeat="data in vm.ruleData track by $index">
-      <td data-title="ID">{{$index + 1}}</td>
-      <td data-title="Issue">{{data.issue}}</td>
-      <td data-title="Status">{{data.status}}</td>
-      <td data-title="Progress">
-        <md-progress-linear class="table-progress {{data.class}}"
-                            md-mode="determinate"
-                            value={{data.progress}}>
-        </md-progress-linear>
-      </td>
-    </tr>
-    </tbody>
-  </table>
-</div>
+<!--<div class="table-responsive-vertical md-whiteframe-z1">-->
+  <!--<table id="table" class="table table-hover table-bordered">-->
+    <!--<thead>-->
+    <!--<tr>-->
+      <!--<th>#</th>-->
+      <!--<th>Issue</th>-->
+      <!--<th>Status</th>-->
+      <!--<th>Progress</th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+    <!--<tbody>-->
+    <!--<tr ng-repeat="data in vm.ruleData track by $index">-->
+      <!--<td data-title="ID">{{$index + 1}}</td>-->
+      <!--<td data-title="Issue">{{data.issue}}</td>-->
+      <!--<td data-title="Status">{{data.status}}</td>-->
+      <!--<td data-title="Progress">-->
+        <!--<md-progress-linear class="table-progress {{data.class}}"-->
+                            <!--md-mode="determinate"-->
+                            <!--value={{data.progress}}>-->
+        <!--</md-progress-linear>-->
+      <!--</td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+  <!--</table>-->
+<!--</div>-->
 
 
 
@@ -37,84 +37,14 @@
   <div gridstack class="grid-stack grid1" options="vm.ruleOptions" on-change="onChange(event,items)" on-drag-start="onDragStart(event,ui)" on-drag-stop="onDragStop(event,ui)" on-resize-start="onResizeStart(event,ui)" on-resize-stop="onResizeStop(event,ui)">
 
 
-    <!--<div gridstack-item ng-repeat="w in widgets track by $index" index="{{::$index}}" class="grid-stack-item" gs-item-x="w.x" gs-item-y="w.y"-->
-         <!--gs-item-width="w.width" gs-item-height="w.height" gs-item-autopos="1" on-item-added="onItemAdded(item)" on-item-removed="onItemRemoved(item)">-->
-
   <div gridstack-item
        ng-repeat="w in vm.ruleWidgetData track by $index" Index="{{::$index}}" class="grid-stack-item" gs-item-x="w.x" gs-item-y="w.y"
        gs-item-width="w.width" gs-item-height="w.height" gs-item-autopos="1" on-item-added="onItemAdded(item)" on-item-removed="onItemRemoved(item)">
 
-    <panel-widget ng-if ="w.widgetType==0" flex title="Site visitors" template="app/views/partials/visitors.html" class="fixed-height-widget"></panel-widget>
-    <panel-widget ng-if ="w.widgetType==1" flex title="Warnings" template="app/views/partials/warnings.html" class="fixed-height-widget"></panel-widget>
-    <panel-widget ng-if ="w.widgetType==2" flex title="Memory load" template="app/views/partials/memory.html" class="fixed-height-widget"></panel-widget>
-    <panel-widget ng-if ="w.widgetType==3" flex title="Server Control Panel" template="app/views/partials/controlPanel.html" class="fixed-height-widget"></panel-widget>
-    <panel-widget ng-if ="w.widgetType==4" flex title="Usage Stats" template="app/views/partials/usage.html" class="fixed-height-widget"></panel-widget>
-    <panel-widget ng-if ="w.widgetType==5" flex title="Autocomplete Input" template="app/views/partials/autocomplete.html" options="true" class="fixed-height-widget"></panel-widget>
-    <panel-widget ng-if ="w.widgetType==6" flex title="Performance" template="app/views/partials/performance.html" options="true"></panel-widget>
-    <panel-widget ng-if ="w.widgetType==7" flex title="TODO list" template="app/views/partials/checkboxes.html"></panel-widget>
+    <panel-widget flex title="{{w.widgetTitle}}" template="{{w.widgetView}}" class="fixed-height-widget"></panel-widget>
 
   </div>
-
-    <!--<div gridstack-item-->
-         <!--Index="{{::2}}" class="grid-stack-item" gs-item-x="0" gs-item-y="0"-->
-         <!--gs-item-width="4" gs-item-height="4" gs-item-autopos="1" on-item-added="onItemAdded(item)" on-item-removed="onItemRemoved(item)">-->
-  <!--<panel-widget flex title="Warnings" template="app/views/partials/warnings.html" class="fixed-height-widget"></panel-widget>-->
-    <!--</div>-->
-
-    <!--<div gridstack-item-->
-         <!--Index="{{::3}}" class="grid-stack-item" gs-item-x="0" gs-item-y="0"-->
-         <!--gs-item-width="4" gs-item-height="4" gs-item-autopos="1" on-item-added="onItemAdded(item)" on-item-removed="onItemRemoved(item)">-->
-      <!--<panel-widget flex title="Memory load" template="app/views/partials/memory.html" class="fixed-height-widget"></panel-widget>-->
-    <!--</div>-->
-
-
-    <!--<div gridstack-item-->
-         <!--Index="{{::4}}" class="grid-stack-item" gs-item-x="0" gs-item-y="0"-->
-         <!--gs-item-width="4" gs-item-height="4" gs-item-autopos="1" on-item-added="onItemAdded(item)" on-item-removed="onItemRemoved(item)">-->
-      <!--<panel-widget flex title="Server Control Panel" template="app/views/partials/controlPanel.html" class="fixed-height-widget"></panel-widget>-->
-    <!--</div>-->
-
-
-    <!--<div gridstack-item-->
-         <!--Index="{{::5}}" class="grid-stack-item" gs-item-x="0" gs-item-y="0"-->
-         <!--gs-item-width="4" gs-item-height="4" gs-item-autopos="1" on-item-added="onItemAdded(item)" on-item-removed="onItemRemoved(item)">-->
-      <!--<panel-widget flex title="Usage Stats" template="app/views/partials/usage.html" class="fixed-height-widget"></panel-widget>-->
-    <!--</div>-->
-
-
-    <!--<div gridstack-item-->
-         <!--Index="{{::6}}" class="grid-stack-item" gs-item-x="0" gs-item-y="0"-->
-         <!--gs-item-width="4" gs-item-height="4" gs-item-autopos="1" on-item-added="onItemAdded(item)" on-item-removed="onItemRemoved(item)">-->
-      <!--<panel-widget flex title="Autocomplete Input" template="app/views/partials/autocomplete.html" options="true" class="fixed-height-widget"></panel-widget>-->
-    <!--</div>-->
-
-
-    <!--<div gridstack-item-->
-         <!--Index="{{::7}}" class="grid-stack-item" gs-item-x="0" gs-item-y="0"-->
-         <!--gs-item-width="4" gs-item-height="4" gs-item-autopos="1" on-item-added="onItemAdded(item)" on-item-removed="onItemRemoved(item)">-->
-      <!--<panel-widget flex title="Performance" template="app/views/partials/performance.html" options="true"></panel-widget>-->
-    <!--</div>-->
-
-
-    <!--<div gridstack-item-->
-         <!--Index="{{::8}}" class="grid-stack-item" gs-item-x="0" gs-item-y="0"-->
-         <!--gs-item-width="4" gs-item-height="4" gs-item-autopos="1" on-item-added="onItemAdded(item)" on-item-removed="onItemRemoved(item)">-->
-      <!--<panel-widget flex title="TODO list" template="app/views/partials/checkboxes.html"></panel-widget>-->
-    <!--</div>-->
-
 
   </div>
   </div>
 </div>
-
-
-<!--<div layout-gt-md="row">-->
-  <!--<panel-widget flex title="Server Control Panel" template="app/views/partials/controlPanel.html" class="fixed-height-widget"></panel-widget>-->
-  <!--<panel-widget flex title="Usage Stats" template="app/views/partials/usage.html" class="fixed-height-widget"></panel-widget>-->
-  <!--<panel-widget flex title="Autocomplete Input" template="app/views/partials/autocomplete.html" options="true" class="fixed-height-widget"></panel-widget>-->
-<!--</div>-->
-
-<!--<div layout-gt-md="row">-->
-  <!--<panel-widget flex title="Performance" template="app/views/partials/performance.html" options="true"></panel-widget>-->
-  <!--<panel-widget flex title="TODO list" template="app/views/partials/checkboxes.html"></panel-widget>-->
-<!--</div>-->
