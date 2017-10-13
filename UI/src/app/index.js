@@ -35,7 +35,7 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
         controllerAs: 'vm',
         templateUrl: 'app/views/table.html',
         data: {
-          title: 'Table'
+          title: 'Rule'
         }
       })
       .state('home.data-table', {
