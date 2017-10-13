@@ -31,6 +31,7 @@
             .loadWidgetsOptions()
             .then(function (ruleOptions) {
                 vm.ruleOptions = [].concat(ruleOptions);
+                console.log(ruleOptions);
             });
 
 
@@ -72,6 +73,18 @@
         vm.onResizeStop = function(event, ui) {
             console.log("onResizeStop event: "+event+" ui:"+ui);
             console.log(event);console.log(ui);
+            var newHeight = $(event.target).height();
+            console.log(newHeight);
+            console.log(event.target);
+            var element = $(event.target).find('section')[0];
+            console.log("ELEMENT");
+            console.log(element);
+            $(element).height(newHeight*.95);
+            // $(element).find('.ng-scope').height("50%");
+            // $(element).find('.ng-scope').height(newHeight-150);
+
+
+
         };
         vm.onItemAdded = function(item) {
             console.log("onItemAdded item: "+item);
