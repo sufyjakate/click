@@ -12,24 +12,7 @@
 
 
             $scope.widgets = [];
-            // $scope.options = {
-            //     cellHeight: 400,
-            //     verticalMargin: 10
-            // };
-            // $scope.addCard = function(id) {
-            //     var card = {};
-            //     //var cardid = triggerID;
-            //
-            //
-            //     card.ID = 1;
-            //     card.title = id;
-            //     cards.push(card);
-            //
-            //
-            //     //$rootScope.$broadcast('Hello');
-            //     icc.publish('list.update', cards);
-            //     console.log(cards);
-            // };
+
             var cardid = 0;
             $scope.addWidget = function(id) {
                 var newWidget = {x:0, y:0, width:4, height:1};

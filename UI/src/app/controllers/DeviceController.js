@@ -42,8 +42,8 @@
 
         .directive('cardview', function () {
             return {
-                restrict: 'EA',
-                templateUrl: 'app/views/card.html'
+                restrict: 'A',
+                templateUrl: 'app/views/partials/card_devmgmt.html'
 
             }
         })
