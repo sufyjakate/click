@@ -50,11 +50,11 @@
     
         .controller('GridBottomSheetCtrl', function($scope, $mdBottomSheet, $mdDialog) {
             $scope.items = [
-                { name: 'Device Data Manager', icon: 'devmgmt'},
-                { name: 'Add/Remove Devices', icon: 'devctrl' },
+                { name: 'Device Management', icon: 'devmgmt'},
+                { name: 'Device Controls', icon: 'devctrl' },
                 { name: 'Suggest Me', icon: 'suggest' },
                 { name: 'Upgrade Center', icon: 'upgrade' },
-                { name: 'Notification Center', icon: 'notif' }
+                { name: 'Notification Control', icon: 'notif' }
             ];
 
             $scope.listItemClick = function($index, ev, $rootScope) {
