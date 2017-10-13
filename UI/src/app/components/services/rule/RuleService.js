@@ -68,60 +68,127 @@
           [
               {
                   widgetType: 0,
+                  widgetView:"app/views/partials/visitors.html",
+                  widgetTitle:"Site visitors",
                   x: 0,
                   y: 0,
                   width: 4,
                   height: 4
               },
               {
-                  widgetType: 1,
+                  widgetType: 0,
+                  widgetView:"app/views/partials/warnings.html",
+                  widgetTitle:"Warnings",
                   x: 0,
                   y: 0,
                   width: 4,
                   height: 4
               },
               {
-                  widgetType: 2,
+                  widgetType: 0,
+                  widgetView:"app/views/partials/memory.html",
+                  widgetTitle:"Memory load",
                   x: 0,
                   y: 0,
                   width: 4,
                   height: 4
               },
               {
-                  widgetType: 3,
+                  widgetType: 0,
+                  widgetView:"app/views/partials/controlPanel.html",
+                  widgetTitle:"Server Control Panel",
                   x: 0,
                   y: 0,
                   width: 4,
                   height: 4
               },
               {
-                  widgetType: 4,
+                  widgetType: 0,
+                  widgetView:"app/views/partials/usage.html",
+                  widgetTitle:"Usage Stats",
                   x: 0,
                   y: 0,
                   width: 4,
                   height: 4
               },
               {
-                  widgetType: 5,
+                  widgetType: 0,
+                  widgetView:"app/views/partials/autocomplete.html",
+                  widgetTitle:"Autocomplete Input",
                   x: 0,
                   y: 0,
                   width: 4,
                   height: 4
               },
               {
-                  widgetType: 6,
+                  widgetType: 0,
+                  widgetView:"app/views/partials/performance.html",
+                  widgetTitle:"Performance",
                   x: 0,
                   y: 0,
                   width: 4,
                   height: 4
               },
               {
-                  widgetType: 7,
+                  widgetType: 0,
+                  widgetView:"app/views/partials/checkboxes.html",
+                  widgetTitle:"TODO list",
                   x: 0,
                   y: 0,
                   width: 4,
                   height: 4
               },
+
+
+              // {
+              //     widgetType: 1,
+              //     x: 0,
+              //     y: 0,
+              //     width: 4,
+              //     height: 4
+              // },
+              // {
+              //     widgetType: 2,
+              //     x: 0,
+              //     y: 0,
+              //     width: 4,
+              //     height: 4
+              // },
+              // {
+              //     widgetType: 3,
+              //     x: 0,
+              //     y: 0,
+              //     width: 4,
+              //     height: 4
+              // },
+              // {
+              //     widgetType: 4,
+              //     x: 0,
+              //     y: 0,
+              //     width: 4,
+              //     height: 4
+              // },
+              // {
+              //     widgetType: 5,
+              //     x: 0,
+              //     y: 0,
+              //     width: 4,
+              //     height: 4
+              // },
+              // {
+              //     widgetType: 6,
+              //     x: 0,
+              //     y: 0,
+              //     width: 4,
+              //     height: 4
+              // },
+              // {
+              //     widgetType: 7,
+              //     x: 0,
+              //     y: 0,
+              //     width: 4,
+              //     height: 4
+              // },
 
           ];
 
