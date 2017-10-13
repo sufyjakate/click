@@ -20,9 +20,14 @@
         sref: '.device'
       },
       {
-        name: 'Rule',
-        icon: 'view_module',
-        sref: '.table'
+          name: 'Rule',
+          icon: 'view_module',
+          sref: '.rule'
+      },
+      {
+          name: 'Profile',
+          icon: 'view_module',
+          sref: '.table'
       },
       {
         name: 'Data Table',
