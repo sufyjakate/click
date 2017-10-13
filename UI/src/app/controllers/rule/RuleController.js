@@ -37,9 +37,21 @@
 
 
         vm.addWidget = function() {
-            var newWidget = { x:0, y:0, width:1, height:1 };
-            vm.widgets.push(newWidget);
+
+            // var newWidget = { x:0, y:0, width:1, height:1 };
+            var newWidget = {
+                widgetType: 0,
+                widgetView: "app/views/partials/visitors.html",
+                widgetTitle: "Site visitors",
+                x: 0,
+                y: 0,
+                width: 4,
+                height: 4
+            };
+
+            vm.ruleWidgetData.push(newWidget);
             console.log("new widget added");
+            console.log(newWidget);
         };
         vm.moveWidget = function() {
             vm.widgets[0].x = 1;
