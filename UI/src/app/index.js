@@ -29,14 +29,23 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
           title: 'Device'
         }
       })
+      .state('home.rule', {
+          url: '/table',
+          controller: 'RuleController',
+          controllerAs: 'vm',
+          templateUrl: 'app/views/rule/rule.html',
+          data: {
+              title: 'Rule'
+          }
+      })
       .state('home.table', {
-        url: '/table',
-        controller: 'TableController',
-        controllerAs: 'vm',
-        templateUrl: 'app/views/table.html',
-        data: {
-          title: 'Rule'
-        }
+          url: '/table',
+          controller: 'TableController',
+          controllerAs: 'vm',
+          templateUrl: 'app/views/table.html',
+          data: {
+              title: 'Profile'
+          }
       })
       .state('home.data-table', {
         url: '/data-table',
