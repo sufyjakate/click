@@ -1,8 +1,9 @@
 var express = require('express'),
     app = express(),
-    port = process.env.PORT || 3000,
+    port = process.env.PORT || 3333,
     mongoose = require('mongoose'),
     Device = require('./api/models/deviceModel'), //created model loading here
+    Rule = require('./api/models/ruleModel'), //created model loading here
     bodyParser = require('body-parser');
 
 // mongoose instance connection url connection
@@ -18,13 +19,17 @@ var routes = require('./api/routes/deviceRoutes'); //importing route
 routes(app); //register the route
 
 
+var routesRule = require('./api/routes/ruleRoutes'); //importing routes for rule
+routesRule(app); //register the route
+
+
 app.listen(port);
 
 app.on('listening', function () {
    console.log('Server already running');
 });
 
-console.log('todo list RESTful API server started on: ' + port);
+console.log('RESTful API server started on: ' + port);
 
 app.use(function(req, res) {
     res.status(404).send({url: req.originalUrl + ' not found'})
