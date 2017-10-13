@@ -20,7 +20,7 @@
         sref: '.device'
       },
       {
-        name: 'Table',
+        name: 'Rule',
         icon: 'view_module',
         sref: '.table'
       },
