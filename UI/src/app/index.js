@@ -22,7 +22,7 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
       })
       .state('home.device', {
         url: '/device',
-        templateUrl: 'app/views/device.html',
+        templateUrl: 'app/views/devices/device.html',
         controller: 'DeviceController',
         controllerAs: 'vm',
         data: {

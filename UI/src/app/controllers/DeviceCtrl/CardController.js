@@ -30,7 +30,7 @@ angular.module('app')
             if (index == 0){
                 $mdDialog.show(
                     {
-                        templateUrl: 'app/views/guage.html',
+                        templateUrl: 'app/views/devices/guage.html',
                         controller: 'GuageController',
                         parent: angular.element(document.body),
                         targetEvent: ev,
