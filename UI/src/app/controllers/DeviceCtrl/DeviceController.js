@@ -17,7 +17,7 @@
             $scope.showGridBottomSheet = function() {
                 $scope.alert = '';
                 $mdBottomSheet.show({
-                    templateUrl: 'app/views/bottomsheetdev.html',
+                    templateUrl: 'app/views/devices/bottomsheetdev.html',
                     controller: 'GridBottomSheetCtrl',
                     clickOutsideToClose: true
                 }).then(function(clickedItem) {
@@ -43,10 +43,11 @@
         .directive('cardview', function () {
             return {
                 restrict: 'EA',
-                templateUrl: 'app/views/card.html'
+                templateUrl: 'app/views/devices/card_devmgmt.html'
 
             }
         })
+
     
         .controller('GridBottomSheetCtrl', function($scope, $mdBottomSheet, $mdDialog) {
             $scope.items = [
@@ -64,7 +65,7 @@
                 if ($index == 0) {
                     $mdDialog.show(
                         {
-                            templateUrl: 'app/views/template.html',
+                            templateUrl: 'app/views/devices/template.html',
                             parent: angular.element(document.body),
                             targetEvent: ev,
                             clickOutsideToClose:true
@@ -73,7 +74,7 @@
                 if ($index == 1) {
                     $mdDialog.show(
                         {
-                            templateUrl: 'app/views/devctrl.html',
+                            templateUrl: 'app/views/devices/devctrl.html',
                             parent: angular.element(document.body),
                             targetEvent: ev,
                             clickOutsideToClose:true
@@ -83,7 +84,7 @@
                 if ($index == 2) {
                     $mdDialog.show(
                         {
-                            templateUrl: 'app/views/suggest.html',
+                            templateUrl: 'app/views/devices/suggest.html',
                             parent: angular.element(document.body),
                             targetEvent: ev,
                             clickOutsideToClose: true
@@ -92,7 +93,7 @@
                 }
                 if ($index == 3) {
                     $mdDialog.show({
-                        templateUrl: 'app/views/upgrade.html',
+                        templateUrl: 'app/views/devices/upgrade.html',
                         parent: angular.element(document.body),
                         targetEvent: ev,
                         clickOutsideToClose: true
