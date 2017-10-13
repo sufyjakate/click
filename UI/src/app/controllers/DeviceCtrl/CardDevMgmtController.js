@@ -1,5 +1,5 @@
 /**
- * Created by sufyjakate on 21.09.17.
+ * Created by sufyjakate on 13.10.17.
  */
 angular.module('app')
     .config(function($mdThemingProvider) {
@@ -10,7 +10,7 @@ angular.module('app')
 
     })
 
-    .controller('CardController', [ 'InterControllerCommunication', '$scope', '$log' ,function (icc, $scope, $log) {
+    .controller('CardDevMgmtController', [ 'InterControllerCommunication', '$scope', '$log', '$mdDialog' ,function (icc, $scope, $log, $mdDialog) {
 
         var handler = function (ea, data) {
             $scope.widgets = data;
@@ -22,6 +22,10 @@ angular.module('app')
         $scope.options = {
             cellHeight: 300,
             verticalMargin: 1
+        };
+        $scope.addGuage = function (w, ev) {
+            var index = $scope.widgets.indexOf(w);
+            console.log('Open card'+ index);
         };
         $scope.moveWidget = function() {
             $scope.widgets[0].x = 1;
@@ -54,9 +58,14 @@ angular.module('app')
             $log.log("onItemRemoved item: "+item);
         };
 
+    }])
+
+    .directive('cardmgmtview', function () {
+            return {
+                restrict: 'A',
+                templateUrl: 'app/views/devices/guage.html'
+
+            }
+        });
 
 
-
-    }]);
-
-    
