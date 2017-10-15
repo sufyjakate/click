@@ -65,82 +65,86 @@
             verticalMargin: 10
         };
 
-        var ruleWidgetData =
-            [
-                {
-                    widgetType: 0,
-                    widgetView: "app/views/partials/visitors.html",
-                    widgetTitle: "Site visitors",
-                    x: 0,
-                    y: 0,
-                    width: 4,
-                    height: 4
-                },
-                {
-                    widgetType: 0,
-                    widgetView: "app/views/partials/warnings.html",
-                    widgetTitle: "Warnings",
-                    x: 0,
-                    y: 0,
-                    width: 4,
-                    height: 4
-                },
-                {
-                    widgetType: 0,
-                    widgetView: "app/views/partials/memory.html",
-                    widgetTitle: "Memory load",
-                    x: 0,
-                    y: 0,
-                    width: 4,
-                    height: 4
-                },
-                {
-                    widgetType: 0,
-                    widgetView: "app/views/partials/controlPanel.html",
-                    widgetTitle: "Server Control Panel",
-                    x: 0,
-                    y: 0,
-                    width: 4,
-                    height: 4
-                },
-                {
-                    widgetType: 0,
-                    widgetView: "app/views/partials/usage.html",
-                    widgetTitle: "Usage Stats",
-                    x: 0,
-                    y: 0,
-                    width: 4,
-                    height: 4
-                },
-                {
-                    widgetType: 0,
-                    widgetView: "app/views/partials/autocomplete.html",
-                    widgetTitle: "Autocomplete Input",
-                    x: 0,
-                    y: 0,
-                    width: 4,
-                    height: 4
-                },
-                {
-                    widgetType: 0,
-                    widgetView: "app/views/partials/performance.html",
-                    widgetTitle: "Performance",
-                    x: 0,
-                    y: 0,
-                    width: 4,
-                    height: 4
-                },
-                {
-                    widgetType: 0,
-                    widgetView: "app/views/partials/checkboxes.html",
-                    widgetTitle: "TODO list",
-                    x: 0,
-                    y: 0,
-                    width: 4,
-                    height: 4
-                },
+        var ruleWidgetData = [];
 
-            ];
+        // var ruleWidgetData =
+        //     [
+        //         {
+        //             widgetType: 0,
+        //             widgetView: "app/views/partials/visitors.html",
+        //             widgetTitle: "Site visitors",
+        //             x: 0,
+        //             y: 0,
+        //             width: 4,
+        //             height: 4
+        //         },
+        //         {
+        //             widgetType: 0,
+        //             widgetView: "app/views/partials/warnings.html",
+        //             widgetTitle: "Warnings",
+        //             x: 0,
+        //             y: 0,
+        //             width: 4,
+        //             height: 4
+        //         },
+        //         {
+        //             widgetType: 0,
+        //             widgetView: "app/views/partials/memory.html",
+        //             widgetTitle: "Memory load",
+        //             x: 0,
+        //             y: 0,
+        //             width: 4,
+        //             height: 4
+        //         },
+        //         {
+        //             widgetType: 0,
+        //             widgetView: "app/views/partials/controlPanel.html",
+        //             widgetTitle: "Server Control Panel",
+        //             x: 0,
+        //             y: 0,
+        //             width: 4,
+        //             height: 4
+        //         },
+        //         {
+        //             widgetType: 0,
+        //             widgetView: "app/views/partials/usage.html",
+        //             widgetTitle: "Usage Stats",
+        //             x: 0,
+        //             y: 0,
+        //             width: 4,
+        //             height: 4
+        //         },
+        //         {
+        //             widgetType: 0,
+        //             widgetView: "app/views/partials/autocomplete.html",
+        //             widgetTitle: "Autocomplete Input",
+        //             x: 0,
+        //             y: 0,
+        //             width: 4,
+        //             height: 4
+        //         },
+        //         {
+        //             widgetType: 0,
+        //             widgetView: "app/views/partials/performance.html",
+        //             widgetTitle: "Performance",
+        //             x: 0,
+        //             y: 0,
+        //             width: 4,
+        //             height: 4
+        //         },
+        //         {
+        //             widgetType: 0,
+        //             widgetView: "app/views/partials/checkboxes.html",
+        //             widgetTitle: "TODO list",
+        //             x: 0,
+        //             y: 0,
+        //             width: 4,
+        //             height: 4
+        //         },
+        //
+        //     ];
+
+
 
         var test = {};
 
@@ -150,32 +154,56 @@
         });
 
 
-        var ruleWidgetsDataFromServer = [];
+
+        //GET
+        // var ruleWidgetsData = [];
 
         $http.get('http://localhost:3333/ruleWidgets').then(function (response) {
-            ruleWidgetsDataFromServer = response.data;
-            console.log(ruleWidgetsDataFromServer);
+            ruleWidgetData = response.data;
+            console.log(ruleWidgetData);
         });
 
+
+        //POST
         var config = {
             headers: {
                 'Content-Type': 'application/json; charset=utf-8'
             }
         };
 
-
-        var values = ruleWidgetData;
         var log = [];
+        var values = [];
+        // values = ruleWidgetData;
         angular.forEach(values, function(value, key) {
 
             $http.post('http://localhost:3333/ruleWidgets', value, config).then(function (response) {
-                ruleWidgetsDataFromServer = response.data;
-                console.log(ruleWidgetsDataFromServer);
-            }, function (errorEesponse) {
-                ruleWidgetsDataFromServer = response.data;
-                console.log(ruleWidgetsDataFromServer);
+                var afterSaving = response.data;
+                console.log(afterSaving );
+            }, function (errorResponse) {
+                console.log(errorResponse);
             });
         }, log);
+
+
+        //PUT
+        var config = {
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+            }
+        };
+
+        values = ruleWidgetData;
+
+        angular.forEach(values, function(value, key) {
+
+            $http.put('http://localhost:3333/ruleWidgets', value, config).then(function (response) {
+                var afterSaving = response.data;
+                console.log(afterSaving );
+            }, function (errorResponse) {
+                console.log(errorResponse);
+            });
+        }, log);
+
 
 
         function PickRandom() {
