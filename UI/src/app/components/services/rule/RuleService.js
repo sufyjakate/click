@@ -4,10 +4,11 @@
   angular.module('app')
         .service('ruleService', [
         '$q',
+        '$http',
       ruleService
   ]);
 
-  function ruleService($q){
+  function ruleService($q, $http){
     var tableData = [
       {
         issue: 'Nested views',
@@ -59,7 +60,17 @@
       }
     ];
 
-    var ruleOptions = {
+
+    var test={} ;
+
+      $http.get('http://localhost:3333/rules').
+      then(function(response) {
+          test.rules = response.data;
+          console.log(test);
+      });
+
+
+      var ruleOptions = {
           cellHeight: 200,
               verticalMargin: 10
       };
