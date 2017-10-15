@@ -139,57 +139,6 @@
                   height: 4
               },
 
-
-              // {
-              //     widgetType: 1,
-              //     x: 0,
-              //     y: 0,
-              //     width: 4,
-              //     height: 4
-              // },
-              // {
-              //     widgetType: 2,
-              //     x: 0,
-              //     y: 0,
-              //     width: 4,
-              //     height: 4
-              // },
-              // {
-              //     widgetType: 3,
-              //     x: 0,
-              //     y: 0,
-              //     width: 4,
-              //     height: 4
-              // },
-              // {
-              //     widgetType: 4,
-              //     x: 0,
-              //     y: 0,
-              //     width: 4,
-              //     height: 4
-              // },
-              // {
-              //     widgetType: 5,
-              //     x: 0,
-              //     y: 0,
-              //     width: 4,
-              //     height: 4
-              // },
-              // {
-              //     widgetType: 6,
-              //     x: 0,
-              //     y: 0,
-              //     width: 4,
-              //     height: 4
-              // },
-              // {
-              //     widgetType: 7,
-              //     x: 0,
-              //     y: 0,
-              //     width: 4,
-              //     height: 4
-              // },
-
           ];
 
     function PickRandom() {
