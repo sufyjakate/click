@@ -1,4 +1,5 @@
 var express = require('express'),
+    cors = require('cors'),
     app = express(),
     port = process.env.PORT || 3333,
     mongoose = require('mongoose'),
@@ -10,10 +11,9 @@ var express = require('express'),
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://admin:admin123@ds113915.mlab.com:13915/clickdb');
 
-
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
 
 var routes = require('./api/routes/deviceRoutes'); //importing route
 routes(app); //register the route
