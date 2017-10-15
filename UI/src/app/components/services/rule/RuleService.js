@@ -60,15 +60,6 @@
             }
         ];
 
-
-        var test = {};
-
-        $http.get('http://localhost:3333/rules').then(function (response) {
-            test.rules = response.data;
-            console.log(test);
-        });
-
-
         var ruleOptions = {
             cellHeight: 200,
             verticalMargin: 10
@@ -150,6 +141,42 @@
                 },
 
             ];
+
+        var test = {};
+
+        $http.get('http://localhost:3333/rules').then(function (response) {
+            test.rules = response.data;
+            console.log(test);
+        });
+
+
+        var ruleWidgetsDataFromServer = [];
+
+        $http.get('http://localhost:3333/ruleWidgets').then(function (response) {
+            ruleWidgetsDataFromServer = response.data;
+            console.log(ruleWidgetsDataFromServer);
+        });
+
+        var config = {
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+            }
+        };
+
+
+        var values = ruleWidgetData;
+        var log = [];
+        angular.forEach(values, function(value, key) {
+
+            $http.post('http://localhost:3333/ruleWidgets', value, config).then(function (response) {
+                ruleWidgetsDataFromServer = response.data;
+                console.log(ruleWidgetsDataFromServer);
+            }, function (errorEesponse) {
+                ruleWidgetsDataFromServer = response.data;
+                console.log(ruleWidgetsDataFromServer);
+            });
+        }, log);
+
 
         function PickRandom() {
             return Object.assign({}, tableData[Math.floor(Math.random() * tableData.length)]);
