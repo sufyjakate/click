@@ -5,11 +5,13 @@ var express = require('express'),
     mongoose = require('mongoose'),
     Device = require('./api/models/deviceModel'), //created model loading here
     Rule = require('./api/models/rule/ruleModel'), //created model loading here
+    RuleWidget = require('./api/models/rule/ruleWidgetModel'), //created model loading here
     bodyParser = require('body-parser');
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://admin:admin123@ds113915.mlab.com:13915/clickdb');
+// mongoose.connect('mongodb://admin:admin123@ds113915.mlab.com:13915/clickdb');
+mongoose.connect('mongodb://admin:admin@ds111754.mlab.com:11754/click');
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -18,9 +20,11 @@ app.use(bodyParser.json());
 var routes = require('./api/routes/deviceRoutes'); //importing route
 routes(app); //register the route
 
-
 var routesRule = require('./api/routes/rule/ruleRoutes'); //importing routes for rule
 routesRule(app); //register the route
+
+var routesRuleWidget = require('./api/routes/rule/ruleWidgetsRoutes'); //importing routes for rule
+routesRuleWidget(app); //register the route
 
 
 app.listen(port);
