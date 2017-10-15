@@ -1,187 +1,186 @@
-(function(){
-  'use strict';
+(function () {
+    'use strict';
 
-  angular.module('app')
+    angular.module('app')
         .service('ruleService', [
-        '$q',
-        '$http',
-      ruleService
-  ]);
+            '$q',
+            '$http',
+            ruleService
+        ]);
 
-  function ruleService($q, $http){
-    var tableData = [
-      {
-        issue: 'Nested views',
-        progress: 100,
-        status: 'Done',
-        class: 'md-accent'
-      },
-      {
-        issue: 'Table component',
-        progress: 40,
-        status: 'Feedback',
-        class: ''
-      },
-      {
-        issue: 'Dashboard tiles',
-        progress: 100,
-        status: 'Done',
-        class: 'md-accent'
-      },
-      {
-        issue: 'Panel widget',
-        progress: 84,
-        status: 'In progress',
-        class: 'orange'
-      },
-      {
-        issue: 'Form',
-        progress: 100,
-        status: 'Done',
-        class: 'md-accent'
-      },
-      {
-        issue: 'Custom CSS',
-        progress: 20,
-        status: 'Feedback',
-        class: ''
-      },
-      {
-        issue: 'Add backend',
-        progress: 1,
-        status: 'To do',
-        class: 'md-warn'
-      },
-      {
-        issue: 'Layout with sidebar',
-        progress: 100,
-        status: 'Done',
-        class: 'md-accent'
-      }
-    ];
-
-
-    var test={} ;
-
-      $http.get('http://localhost:3333/rules').
-      then(function(response) {
-          test.rules = response.data;
-          console.log(test);
-      });
+    function ruleService($q, $http) {
+        var tableData = [
+            {
+                issue: 'Nested views',
+                progress: 100,
+                status: 'Done',
+                class: 'md-accent'
+            },
+            {
+                issue: 'Table component',
+                progress: 40,
+                status: 'Feedback',
+                class: ''
+            },
+            {
+                issue: 'Dashboard tiles',
+                progress: 100,
+                status: 'Done',
+                class: 'md-accent'
+            },
+            {
+                issue: 'Panel widget',
+                progress: 84,
+                status: 'In progress',
+                class: 'orange'
+            },
+            {
+                issue: 'Form',
+                progress: 100,
+                status: 'Done',
+                class: 'md-accent'
+            },
+            {
+                issue: 'Custom CSS',
+                progress: 20,
+                status: 'Feedback',
+                class: ''
+            },
+            {
+                issue: 'Add backend',
+                progress: 1,
+                status: 'To do',
+                class: 'md-warn'
+            },
+            {
+                issue: 'Layout with sidebar',
+                progress: 100,
+                status: 'Done',
+                class: 'md-accent'
+            }
+        ];
 
 
-      var ruleOptions = {
-          cellHeight: 200,
-              verticalMargin: 10
-      };
+        var test = {};
 
-      var ruleWidgetData =
-          [
-              {
-                  widgetType: 0,
-                  widgetView:"app/views/partials/visitors.html",
-                  widgetTitle:"Site visitors",
-                  x: 0,
-                  y: 0,
-                  width: 4,
-                  height: 4
-              },
-              {
-                  widgetType: 0,
-                  widgetView:"app/views/partials/warnings.html",
-                  widgetTitle:"Warnings",
-                  x: 0,
-                  y: 0,
-                  width: 4,
-                  height: 4
-              },
-              {
-                  widgetType: 0,
-                  widgetView:"app/views/partials/memory.html",
-                  widgetTitle:"Memory load",
-                  x: 0,
-                  y: 0,
-                  width: 4,
-                  height: 4
-              },
-              {
-                  widgetType: 0,
-                  widgetView:"app/views/partials/controlPanel.html",
-                  widgetTitle:"Server Control Panel",
-                  x: 0,
-                  y: 0,
-                  width: 4,
-                  height: 4
-              },
-              {
-                  widgetType: 0,
-                  widgetView:"app/views/partials/usage.html",
-                  widgetTitle:"Usage Stats",
-                  x: 0,
-                  y: 0,
-                  width: 4,
-                  height: 4
-              },
-              {
-                  widgetType: 0,
-                  widgetView:"app/views/partials/autocomplete.html",
-                  widgetTitle:"Autocomplete Input",
-                  x: 0,
-                  y: 0,
-                  width: 4,
-                  height: 4
-              },
-              {
-                  widgetType: 0,
-                  widgetView:"app/views/partials/performance.html",
-                  widgetTitle:"Performance",
-                  x: 0,
-                  y: 0,
-                  width: 4,
-                  height: 4
-              },
-              {
-                  widgetType: 0,
-                  widgetView:"app/views/partials/checkboxes.html",
-                  widgetTitle:"TODO list",
-                  x: 0,
-                  y: 0,
-                  width: 4,
-                  height: 4
-              },
+        $http.get('http://localhost:3333/rules').then(function (response) {
+            test.rules = response.data;
+            console.log(test);
+        });
 
-          ];
 
-    function PickRandom() {
-      return Object.assign({}, tableData[Math.floor(Math.random()*tableData.length)]);
-    }
+        var ruleOptions = {
+            cellHeight: 200,
+            verticalMargin: 10
+        };
 
-    return {
-      loadAllRuleWidgets : function() {
-          return $q.when(ruleWidgetData);
-      },
-      loadWidgetsOptions : function() {
-          return $q.when(ruleOptions);
-      },
-      loadAllItems : function() {
-        return $q.when(tableData);
-      },
-      /**
-       * Query expects that `limit`,`page`, and `order` fields be present
-       */
-      loadByPagination: function (query) {
-        query = query || {limit:10,page:1};
+        var ruleWidgetData =
+            [
+                {
+                    widgetType: 0,
+                    widgetView: "app/views/partials/visitors.html",
+                    widgetTitle: "Site visitors",
+                    x: 0,
+                    y: 0,
+                    width: 4,
+                    height: 4
+                },
+                {
+                    widgetType: 0,
+                    widgetView: "app/views/partials/warnings.html",
+                    widgetTitle: "Warnings",
+                    x: 0,
+                    y: 0,
+                    width: 4,
+                    height: 4
+                },
+                {
+                    widgetType: 0,
+                    widgetView: "app/views/partials/memory.html",
+                    widgetTitle: "Memory load",
+                    x: 0,
+                    y: 0,
+                    width: 4,
+                    height: 4
+                },
+                {
+                    widgetType: 0,
+                    widgetView: "app/views/partials/controlPanel.html",
+                    widgetTitle: "Server Control Panel",
+                    x: 0,
+                    y: 0,
+                    width: 4,
+                    height: 4
+                },
+                {
+                    widgetType: 0,
+                    widgetView: "app/views/partials/usage.html",
+                    widgetTitle: "Usage Stats",
+                    x: 0,
+                    y: 0,
+                    width: 4,
+                    height: 4
+                },
+                {
+                    widgetType: 0,
+                    widgetView: "app/views/partials/autocomplete.html",
+                    widgetTitle: "Autocomplete Input",
+                    x: 0,
+                    y: 0,
+                    width: 4,
+                    height: 4
+                },
+                {
+                    widgetType: 0,
+                    widgetView: "app/views/partials/performance.html",
+                    widgetTitle: "Performance",
+                    x: 0,
+                    y: 0,
+                    width: 4,
+                    height: 4
+                },
+                {
+                    widgetType: 0,
+                    widgetView: "app/views/partials/checkboxes.html",
+                    widgetTitle: "TODO list",
+                    x: 0,
+                    y: 0,
+                    width: 4,
+                    height: 4
+                },
 
-        var list = [];
-        var start = (query.page-1)*query.limit;
-        var end = start + query.limit;
-        for (var i = start; i < end; i++) {
-          var f = PickRandom();
-          f.id = i+1;
-          list.push(f);
+            ];
+
+        function PickRandom() {
+            return Object.assign({}, tableData[Math.floor(Math.random() * tableData.length)]);
         }
-        return $q.when({items:list,count:800});
-      }
-    };
-  }
+
+        return {
+            loadAllRuleWidgets: function () {
+                return $q.when(ruleWidgetData);
+            },
+            loadWidgetsOptions: function () {
+                return $q.when(ruleOptions);
+            },
+            loadAllItems: function () {
+                return $q.when(tableData);
+            },
+            /**
+             * Query expects that `limit`,`page`, and `order` fields be present
+             */
+            loadByPagination: function (query) {
+                query = query || {limit: 10, page: 1};
+
+                var list = [];
+                var start = (query.page - 1) * query.limit;
+                var end = start + query.limit;
+                for (var i = start; i < end; i++) {
+                    var f = PickRandom();
+                    f.id = i + 1;
+                    list.push(f);
+                }
+                return $q.when({items: list, count: 800});
+            }
+        };
+    }
 })();
