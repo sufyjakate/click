@@ -1,5 +1,5 @@
 'use strict';
-module.exports = function(app) {
+module.exports = function (app) {
     var ruleWidgets = require('../../controllers/rule/ruleWidgetsController');
 
     // rule RoutesWidgets
