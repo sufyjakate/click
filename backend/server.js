@@ -14,7 +14,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://admin:admin@ds111754.mlab.com:11754/click');
 
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 var routes = require('./api/routes/deviceRoutes'); //importing route
@@ -30,11 +30,11 @@ routesRuleWidget(app); //register the route
 app.listen(port);
 
 app.on('listening', function () {
-   console.log('Server already running');
+    console.log('Server already running');
 });
 
 console.log('RESTful API server started on: ' + port);
 
-app.use(function(req, res) {
+app.use(function (req, res) {
     res.status(404).send({url: req.originalUrl + ' not found'})
 });

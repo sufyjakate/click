@@ -14,30 +14,32 @@
         vm.ruleWidgetData = [];
         vm.ruleOptions = {};
 
+        vm.loadAllItems = function () {
+            ruleService
+                .loadAllItems()
+                .then(function (ruleData) {
+                    vm.ruleData = [].concat(ruleData);
+                });
+        };
 
-        ruleService
-            .loadAllItems()
-            .then(function (ruleData) {
-                vm.ruleData = [].concat(ruleData);
-            });
-
-        ruleService
-            .loadAllRuleWidgets()
-            .then(function (ruleWidgetData) {
-                console.log("in controller function main");
-                console.log(ruleWidgetData);
-                vm.ruleWidgetData = [].concat(ruleWidgetData);
-            });
-
-        ruleService
-            .loadWidgetsOptions()
-            .then(function (ruleOptions) {
-                vm.ruleOptions = [].concat(ruleOptions);
-                console.log(ruleOptions);
-            });
-
+        vm.loadWidgetsOptions = function () {
+            ruleService
+                .loadWidgetsOptions()
+                .then(function (ruleOptions) {
+                    vm.ruleOptions = [].concat(ruleOptions);
+                    console.log(ruleOptions);
+                });
+        };
 
         vm.updateWidgetState = function () {
+
+            // var sequence = 0;
+            //
+            // angular.forEach(vm.ruleWidgetData, function (value, key) {
+            //     value.sequence = sequence;
+            //     sequence++;
+            // });
+
 
             ruleService
                 .updateRuleWidgetsData(vm.ruleWidgetData)
@@ -76,20 +78,20 @@
             vm.$log("new widget added");
             vm.$log(newWidget);
 
-            vm.updateWidgetState();
         };
         vm.moveWidget = function () {
-            // vm.widgets[0].x = 1;
-            // vm.widgets[0].width = 2;
-            // vm.widgets[0].height = 2;
-            // vm.$log(event);vm.$log(ui);
-            vm.$log("new widget added");
+            // console.log(vm.ruleWidgetData);
+            vm.ruleWidgetData[0].x = 1;
+            vm.ruleWidgetData[0].width = 2;
+            vm.ruleWidgetData[0].height = 2;
+            vm.$log(event);vm.$log(ui);
+            vm.$log("widget moved");
 
-            vm.loadAllRuleWidgets();
+            vm.updateWidgetState();
         };
         vm.removeWidget = function (w) {
-            var index = vm.widgets.indexOf(w);
-            vm.widgets.splice(index, 1);
+            var index = vm.ruleWidgetData.indexOf(w);
+            vm.ruleWidgetData.splice(index, 1);
             vm.$log(w);
         };
         vm.onChange = function (event, items) {
@@ -118,25 +120,26 @@
             vm.$log("onResizeStop event: " + event + " ui:" + ui);
             vm.$log(event);
             vm.$log(ui);
-            var newHeight = $(event.target).height();
-            vm.$log(newHeight);
-            vm.$log(event.target);
-            var element = $(event.target).find('section')[0];
-            vm.$log("ELEMENT");
-            vm.$log(element);
-            $(element).height(newHeight * .95);
+            // var newHeight = $(event.target).height();
+            // vm.$log(newHeight);
+            // vm.$log(event.target);
+            // var element = $(event.target).find('section')[0];
+            // vm.$log("ELEMENT");
+            // vm.$log(element);
+            // $(element).height(newHeight * .95);
             // $(element).find('.ng-scope').height("50%");
             // $(element).find('.ng-scope').height(newHeight-150);
-
-
+            vm.updateWidgetState();
         };
         vm.onItemAdded = function (item) {
             vm.$log("onItemAdded item: " + item);
             vm.$log(item);
+            // vm.updateWidgetState();
         };
         vm.onItemRemoved = function (item) {
             vm.$log("onItemRemoved item: " + item);
             vm.$log(item);
+            vm.updateWidgetState();
         };
 
         vm.$log = function (text) {

@@ -3,11 +3,11 @@
   angular
        .module('app')
        .controller('MainController', [
-          'navService', '$mdSidenav', '$mdBottomSheet', '$log', '$q', '$state', '$mdToast',
+          'navService','ruleService', '$mdSidenav', '$mdBottomSheet', '$log', '$q', '$state', '$mdToast',
           MainController
        ]);
 
-  function MainController(navService, $mdSidenav, $mdBottomSheet, $log, $q, $state, $mdToast) {
+  function MainController(navService,ruleService, $mdSidenav, $mdBottomSheet, $log, $q, $state, $mdToast) {
     var vm = this;
 
     vm.menuItems = [ ];
@@ -24,7 +24,16 @@
         vm.menuItems = [].concat(menuItems);
       });
 
-    function toggleRightSidebar() {
+    ruleService
+        .loadAllRuleWidgets()
+        .then(function (ruleWidgetData) {
+            console.log("in Main controller function in load rule widgets controller function");
+            console.log(ruleWidgetData);
+            vm.ruleWidgetData = [].concat(ruleWidgetData);
+        });
+
+
+      function toggleRightSidebar() {
         $mdSidenav('right').toggle();
     }
 

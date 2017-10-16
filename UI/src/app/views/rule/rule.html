@@ -5,6 +5,7 @@
     <div>
         <a class="btn btn-primary" ng-click="vm.addWidget()" href="">Add Widget</a>
         <a class="btn btn-primary" ng-click="vm.moveWidget()" href="">Move Widget</a>
+        <a class="btn btn-primary" ng-click="vm.loadAllRuleWidgets()" href="">Load All Widget</a>
     </div>
     <br>
 
@@ -37,8 +38,8 @@
                                 flex
                                 title="{{w.widgetTitle}}"
                                 template="{{w.widgetView}}"
-                                >
-                                <!--class="fixed-height-widget"-->
+                        >
+                            <!--class="fixed-height-widget"-->
 
 
                         </panel-widget>

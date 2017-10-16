@@ -24,7 +24,9 @@ var RuleWidgetSchema = new Schema({
     height: {
         type: String
     },
-
+    sequence: {
+        type: String
+    },
 });
 
 module.exports = mongoose.model('RuleWidget', RuleWidgetSchema);
