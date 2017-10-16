@@ -14,7 +14,7 @@ var RuleSchema = new Schema({
     status: {
         type: [{
             type: String,
-            enum: ['activated', 'deactivated', 'created', 'deleted', 'triggered' ]
+            enum: ['activated', 'deactivated', 'created', 'deleted', 'triggered']
         }],
         default: ['ON']
     },
