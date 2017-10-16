@@ -16,7 +16,6 @@
 
 
 
-
         ruleService
             .loadAllItems()
             .then(function (ruleData) {
@@ -26,6 +25,8 @@
         ruleService
             .loadAllRuleWidgets()
             .then(function (ruleWidgetData) {
+                console.log("in controller function main");
+                console.log(ruleWidgetData);
                 vm.ruleWidgetData = [].concat(ruleWidgetData);
             });
 
@@ -37,6 +38,27 @@
             });
 
 
+        vm.updateWidgetState = function() {
+
+            ruleService
+                .updateRuleWidgetsData(vm.ruleWidgetData)
+                .then(function (ruleWidgetDataAfterUpdate) {
+                    vm.ruleWidgetDataAfterUpdate = [].concat(ruleWidgetDataAfterUpdate);
+                    console.log(ruleWidgetDataAfterUpdate);
+                });
+
+        };
+
+        vm.loadAllRuleWidgets = function() {
+
+            ruleService
+                .loadAllRuleWidgets()
+                .then(function (ruleWidgetData) {
+                    console.log("in controller function in load rule widgets controller function");
+                    console.log(ruleWidgetData);
+                    vm.ruleWidgetData = [].concat(ruleWidgetData);
+                });
+        }
 
         vm.addWidget = function() {
 
@@ -54,14 +76,17 @@
             vm.ruleWidgetData.push(newWidget);
             vm.$log("new widget added");
             vm.$log(newWidget);
+
+            vm.updateWidgetState();
         };
         vm.moveWidget = function() {
-            vm.widgets[0].x = 1;
-            vm.widgets[0].width = 2;
-            vm.widgets[0].height = 2;
+            // vm.widgets[0].x = 1;
+            // vm.widgets[0].width = 2;
+            // vm.widgets[0].height = 2;
             // vm.$log(event);vm.$log(ui);
             vm.$log("new widget added");
 
+            vm.loadAllRuleWidgets();
         };
         vm.removeWidget = function(w) {
             var index = vm.widgets.indexOf(w);
@@ -79,6 +104,8 @@
         vm.onDragStop = function(event, ui) {
             vm.$log("onDragStop event: "+event+" ui:"+ui);
             vm.$log(event);vm.$log(ui);
+
+            vm.updateWidgetState();
         };
         vm.onResizeStart = function(event, ui) {
             vm.$log("onResizeStart event: "+event+" ui:"+ui);
@@ -112,6 +139,9 @@
         vm.$log = function (text) {
 //            console.log(text);
         }
+
+
+        vm.loadAllRuleWidgets();
 
     }
 
