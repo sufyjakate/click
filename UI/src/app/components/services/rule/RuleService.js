@@ -145,15 +145,11 @@
         //     ];
 
 
-
-
-
-
         function PickRandom() {
             return Object.assign({}, tableData[Math.floor(Math.random() * tableData.length)]);
         }
 
-        function getAllRuleData(){
+        function getAllRuleData() {
             var test = {};
             $http.get('http://localhost:3333/rules').then(function (response) {
                 test.rules = response.data;
@@ -161,16 +157,16 @@
             });
         }
 
-        function getAllRuleWidgetsData(){
+        function getAllRuleWidgetsData() {
             $http.get('http://localhost:3333/ruleWidgets').then(function (response) {
-                ruleWidgetData= response.data;
+                ruleWidgetData = response.data;
                 console.log("In Get All RuleWidget Function in exports");
                 console.log(ruleWidgetData);
             });
         }
 
 
-        function createRuleWidgetData(createRuleWidgetData){
+        function createRuleWidgetData(createRuleWidgetData) {
             //POST
             var config = {
                 headers: {
@@ -181,18 +177,18 @@
             var log = [];
             var values = [];
             // values = ruleWidgetData;
-            angular.forEach(values, function(value, key) {
+            angular.forEach(values, function (value, key) {
 
                 $http.post('http://localhost:3333/ruleWidgets', value, config).then(function (response) {
                     var afterSaving = response.data;
-                    console.log(afterSaving );
+                    console.log(afterSaving);
                 }, function (errorResponse) {
                     console.log(errorResponse);
                 });
             }, log);
         }
 
-        function updateRuleWidgetData(updatedRuleWidgetData){
+        function updateRuleWidgetData(updatedRuleWidgetData) {
 
             //PUT
             var config = {
@@ -207,17 +203,17 @@
             console.log("update widget data");
             console.log(updatedRuleWidgetData)
 
-            angular.forEach(values, function(value, key) {
+            angular.forEach(values, function (value, key) {
 
                 console.log(value._id);
-                var url = 'http://localhost:3333/ruleWidgets/'+value._id;
+                var url = 'http://localhost:3333/ruleWidgets/' + value._id;
                 console.log(url);
 
 
                 $http.put(url, value, config).then(function (response) {
                     var afterSaving = response.data;
-                    console.log("Widget Updated" );
-                    console.log(afterSaving );
+                    console.log("Widget Updated");
+                    console.log(afterSaving);
                 }, function (errorResponse) {
                     console.log(errorResponse);
                 });
