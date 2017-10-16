@@ -70,20 +70,20 @@
             vm.$log("new widget added");
             vm.$log(newWidget);
 
-            vm.updateWidgetState();
         };
         vm.moveWidget = function () {
-            // vm.widgets[0].x = 1;
-            // vm.widgets[0].width = 2;
-            // vm.widgets[0].height = 2;
-            // vm.$log(event);vm.$log(ui);
-            vm.$log("new widget added");
+            // console.log(vm.ruleWidgetData);
+            vm.ruleWidgetData[0].x = 1;
+            vm.ruleWidgetData[0].width = 2;
+            vm.ruleWidgetData[0].height = 2;
+            vm.$log(event);vm.$log(ui);
+            vm.$log("widget moved");
 
-            vm.loadAllRuleWidgets();
+            vm.updateWidgetState();
         };
         vm.removeWidget = function (w) {
-            var index = vm.widgets.indexOf(w);
-            vm.widgets.splice(index, 1);
+            var index = vm.ruleWidgetData.indexOf(w);
+            vm.ruleWidgetData.splice(index, 1);
             vm.$log(w);
         };
         vm.onChange = function (event, items) {
@@ -121,16 +121,17 @@
             $(element).height(newHeight * .95);
             // $(element).find('.ng-scope').height("50%");
             // $(element).find('.ng-scope').height(newHeight-150);
-
-
+            vm.updateWidgetState();
         };
         vm.onItemAdded = function (item) {
             vm.$log("onItemAdded item: " + item);
             vm.$log(item);
+            vm.updateWidgetState();
         };
         vm.onItemRemoved = function (item) {
             vm.$log("onItemRemoved item: " + item);
             vm.$log(item);
+            vm.updateWidgetState();
         };
 
         vm.$log = function (text) {
