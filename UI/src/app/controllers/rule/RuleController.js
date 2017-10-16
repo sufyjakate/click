@@ -14,28 +14,22 @@
         vm.ruleWidgetData = [];
         vm.ruleOptions = {};
 
+        vm.loadAllItems = function () {
+            ruleService
+                .loadAllItems()
+                .then(function (ruleData) {
+                    vm.ruleData = [].concat(ruleData);
+                });
+        };
 
-        ruleService
-            .loadAllItems()
-            .then(function (ruleData) {
-                vm.ruleData = [].concat(ruleData);
-            });
-
-        ruleService
-            .loadAllRuleWidgets()
-            .then(function (ruleWidgetData) {
-                console.log("in controller function main");
-                console.log(ruleWidgetData);
-                vm.ruleWidgetData = [].concat(ruleWidgetData);
-            });
-
-        ruleService
-            .loadWidgetsOptions()
-            .then(function (ruleOptions) {
-                vm.ruleOptions = [].concat(ruleOptions);
-                console.log(ruleOptions);
-            });
-
+        vm.loadWidgetsOptions = function () {
+            ruleService
+                .loadWidgetsOptions()
+                .then(function (ruleOptions) {
+                    vm.ruleOptions = [].concat(ruleOptions);
+                    console.log(ruleOptions);
+                });
+        };
 
         vm.updateWidgetState = function () {
 
