@@ -3,7 +3,8 @@ var express = require('express'),
     port = process.env.PORT || 3333,
     mongoose = require('mongoose'),
     Device = require('./api/models/deviceModel'), //created model loading here
-    Rule = require('./api/models/ruleModel'), //created model loading here
+    Rule = require('./api/models/ruleModel'),
+    Card = require('./api/models/cardModel'), //created model loading here
     bodyParser = require('body-parser');
 
 // mongoose instance connection url connection
@@ -18,6 +19,8 @@ app.use(bodyParser.json());
 var routes = require('./api/routes/deviceRoutes'); //importing route
 routes(app); //register the route
 
+var cardRoutes = require('./api/routes/cardRoutes');
+cardRoutes(app);
 
 var routesRule = require('./api/routes/ruleRoutes'); //importing routes for rule
 routesRule(app); //register the route
