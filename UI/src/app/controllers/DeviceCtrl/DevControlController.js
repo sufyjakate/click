@@ -14,13 +14,13 @@
         $scope.widgets = [];
 
         var cardid = 0;
-        $scope.addWidget = function(id) {
+        $scope.addWidget = function() {
             var newWidget = {x:0, y:0, width:4, height:1};
 
             //newWidget.id = 1;
             cardid++;
             newWidget.cardid = cardid;
-            newWidget.title = id;
+            newWidget.title = 'Device Control';
             $scope.widgets.push(newWidget);
 
             icc.publish('list.update', $scope.widgets);
@@ -36,7 +36,7 @@
         // };
 
 
-        $scope.shut = function(id) {
+        $scope.shut = function() {
             console.log("Removed");
             $mdDialog.hide();
         }

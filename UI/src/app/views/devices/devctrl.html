@@ -3,21 +3,17 @@
         <form>
             <md-toolbar>
                 <div class="md-toolbar-tools">
-                    <h2>Add/Remove Devices</h2>
+                    <h2>Device Control</h2>
                     <span flex></span>
-                    <md-button class="md-icon-button" ng-click="cancel()">
-                    </md-button>
                 </div>
             </md-toolbar>
             <md-dialog-content style="max-width:800px;max-height:810px; ">
                 <md-tabs md-dynamic-height md-border-bottom>
-                    <md-tab label="Widget 1">
                         <md-content class="md-padding">
                             <section layout="row" layout-sm="column" layout-align="center bottom" layout-wrap>
                                 <md-button class="md-raised" ng-click="addDevice()">Add Device</md-button>
                             </section>
                         </md-content>
-                    </md-tab>
                 </md-tabs>
             </md-dialog-content>
 
@@ -26,7 +22,7 @@
                 <md-button ng-click="shut()" >
                     CANCEL
                 </md-button>
-                <md-button ng-click="addWidget('DeviceControl')" style="margin-right:20px;" >
+                <md-button ng-click="addWidget()" style="margin-right:20px;" >
                 ADD
                 </md-button>
             </md-dialog-actions>

@@ -1,6 +1,7 @@
 (function(){
     angular.module('app')
 
+
         .config(function($mdIconProvider) {
             $mdIconProvider
                 .icon('devmgmt', 'assets/images/devices.svg', 24)
@@ -37,6 +38,7 @@
             };
             var list = icc.subscribe('list.update', handler);
             console.log(list);
+
 
         }])
 
