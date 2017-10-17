@@ -3,14 +3,13 @@ var express = require('express'),
     app = express(),
     port = process.env.PORT || 3333,
     mongoose = require('mongoose'),
+
     Device = require('./api/models/deviceModel'), //created model loading here
-<<<<<<< HEAD
-    Rule = require('./api/models/ruleModel'),
+
     Card = require('./api/models/cardModel'), //created model loading here
-=======
+
     Rule = require('./api/models/rule/ruleModel'), //created model loading here
     RuleWidget = require('./api/models/rule/ruleWidgetModel'), //created model loading here
->>>>>>> b753468f71119fb5c8129a00e7106ab86181303c
     bodyParser = require('body-parser');
 
 // mongoose instance connection url connection
@@ -25,14 +24,10 @@ app.use(bodyParser.json());
 var routes = require('./api/routes/deviceRoutes'); //importing route
 routes(app); //register the route
 
-<<<<<<< HEAD
 var cardRoutes = require('./api/routes/cardRoutes');
 cardRoutes(app);
 
-var routesRule = require('./api/routes/ruleRoutes'); //importing routes for rule
-=======
 var routesRule = require('./api/routes/rule/ruleRoutes'); //importing routes for rule
->>>>>>> b753468f71119fb5c8129a00e7106ab86181303c
 routesRule(app); //register the route
 
 var routesRuleWidget = require('./api/routes/rule/ruleWidgetsRoutes'); //importing routes for rule
