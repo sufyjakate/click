@@ -165,8 +165,8 @@
             });
         }
 
+        function createRuleWidgetData(newWidgetData) {
 
-        function createRuleWidgetData(createRuleWidgetData) {
             //POST
             var config = {
                 headers: {
@@ -174,10 +174,11 @@
                 }
             };
 
-            var log = [];
-            var values = [];
-            // values = ruleWidgetData;
-            angular.forEach(values, function (value, key) {
+
+            var value = newWidgetData;
+
+
+            // angular.forEach(values, function (value, key) {
 
                 $http.post('http://localhost:3333/ruleWidgets', value, config).then(function (response) {
                     var afterSaving = response.data;
@@ -185,7 +186,9 @@
                 }, function (errorResponse) {
                     console.log(errorResponse);
                 });
-            }, log);
+
+            // });
+
         }
 
         function updateRuleWidgetData(updatedRuleWidgetData) {
@@ -221,6 +224,10 @@
         }
 
         return {
+            createRuleWidgetData: function (newWidgetData) {
+                createRuleWidgetData(newWidgetData);
+                return $q.when(ruleWidgetData);
+            },
             updateRuleWidgetsData: function (updatedRuleWidgetData) {
                 updateRuleWidgetData(updatedRuleWidgetData);
                 return $q.when(ruleWidgetData);
@@ -233,6 +240,9 @@
                 return $q.when(ruleOptions);
             },
             loadAllItems: function () {
+                return $q.when(tableData);
+            },
+            loadWidgetConfig: function (widgetType) {
                 return $q.when(tableData);
             },
             /**

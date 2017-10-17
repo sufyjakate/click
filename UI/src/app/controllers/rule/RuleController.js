@@ -61,24 +61,89 @@
                 });
         }
 
-        vm.addWidget = function () {
+        vm.createRuleWidgets = function (newWidgetData) {
 
-            // var newWidget = { x:0, y:0, width:1, height:1 };
-            var newWidget = {
-                widgetType: 0,
-                widgetView: "app/views/partials/visitors.html",
-                widgetTitle: "Site visitors",
-                x: 0,
-                y: 0,
-                width: 4,
-                height: 4
-            };
+            ruleService
+                .createRuleWidgetData(newWidgetData)
+                .then(function (ruleWidgetData) {
+                    console.log("in Rule controller function in create rule widgets ");
+                    console.log(ruleWidgetData);
+                    // vm.ruleWidgetData = [].concat(ruleWidgetData);
+                });
+            vm.loadAllRuleWidgets();
+        }
+
+        vm.widgetTypeDetailEnum = {
+
+            "0": {
+                "widgetType": "0",
+                "widgetView": "app/views/partials/visitors.html",
+                "widgetTitle": "Site visitors"
+            },
+
+            "1": {
+                "widgetType": "1",
+                "widgetView": "app/views/partials/warnings.html",
+                "widgetTitle": "Warnings"
+            },
+
+            "2": {
+                "widgetType": "2",
+                "widgetView": "app/views/partials/memory.html",
+                "widgetTitle": "Memory load"
+            },
+            "3": {
+                "widgetType": "3",
+                "widgetView": "app/views/partials/controlPanel.html",
+                "widgetTitle": "Server Control Panel"
+            },
+
+            "4": {
+                "widgetType": "4",
+                "widgetView": "app/views/partials/usage.html",
+                "widgetTitle": "Usage Stats"
+            },
+
+            "5": {
+                "widgetType": "5",
+                "widgetView": "app/views/partials/autocomplete.html",
+                "widgetTitle": "Autocomplete Input"
+            },
+
+            "6": {
+                "widgetType": "6",
+                "widgetView": "app/views/partials/performance.html",
+                "widgetTitle": "Performance"
+            },
+
+            "7": {
+                "widgetType": "7",
+                "widgetView": "app/views/partials/checkboxes.html",
+                "widgetTitle": "TODO list"
+            }
+        };
+
+        vm.addWidget = function (widgetType,data) {
+
+            var newWidget  =
+                {
+                    widgetType:widgetType,
+                    widgetView: vm.widgetTypeDetailEnum[widgetType].widgetView,
+                    widgetTitle: vm.widgetTypeDetailEnum[widgetType].widgetTitle,
+                    x: 0,
+                    y: 0,
+                    width: 4,
+                    height: 4
+                };
 
             vm.ruleWidgetData.push(newWidget);
             vm.$log("new widget added");
             vm.$log(newWidget);
 
+            vm.createRuleWidgets(newWidget);
+
         };
+
         vm.moveWidget = function () {
             // console.log(vm.ruleWidgetData);
             vm.ruleWidgetData[0].x = 1;
