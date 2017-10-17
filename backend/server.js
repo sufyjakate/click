@@ -10,6 +10,7 @@ var express = require('express'),
 
     Rule = require('./api/models/rule/ruleModel'), //created model loading here
     RuleWidget = require('./api/models/rule/ruleWidgetModel'), //created model loading here
+    RuleWidgetDashboard = require('./api/models/rule/ruleWidgetDashboardModel'), //created model loading here
     bodyParser = require('body-parser');
 
 // mongoose instance connection url connection
@@ -31,7 +32,9 @@ var routesRule = require('./api/routes/rule/ruleRoutes'); //importing routes for
 routesRule(app); //register the route
 
 var routesRuleWidget = require('./api/routes/rule/ruleWidgetsRoutes'); //importing routes for rule
-routesRuleWidget(app); //register the route
+routesRuleWidget(app);
+var routesRuleWidgetDashboard = require('./api/routes/rule/ruleWidgetsDashboardRoutes'); //importing routes for rule
+routesRuleWidgetDashboard(app); //register the route
 
 
 app.listen(port);
