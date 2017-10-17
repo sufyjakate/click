@@ -14,6 +14,12 @@
         vm.ruleWidgetData = [];
         vm.ruleOptions = {};
 
+        vm.$log = function (text) {
+//            console.log(text);
+        }
+
+        vm.$log(vm.ruleWidgetData);
+
         vm.loadAllItems = function () {
             ruleService
                 .loadAllItems()
@@ -50,14 +56,36 @@
 
         };
 
-        vm.loadAllRuleWidgets = function () {
+        vm.loadAllRuleWidgetData = function () {
+
+            console.log("in load rule widget function");
+            console.log(vm.ruleWidgetData);
 
             ruleService
                 .loadAllRuleWidgets()
                 .then(function (ruleWidgetData) {
-                    console.log("in controller function in load rule widgets controller function");
+
+                    console.log("_________________________");
+                    console.log("vm.ruleWidgetData in load rule widget function - in THEN Before Assigning");
+                    console.log(vm.ruleWidgetData);
+                    console.log("_________________________");
+
+                    console.log("Service Result.ruleWidgetData in controller function in load rule widgets");
                     console.log(ruleWidgetData);
-                    vm.ruleWidgetData = [].concat(ruleWidgetData);
+                    console.log("_________________________");
+
+                    // vm.ruleWidgetData = [].concat(ruleWidgetData);
+                    vm.ruleWidgetData = [];
+
+                    vm.ruleWidgetData = ruleWidgetData;
+                    console.log("_________________________");
+
+                    console.log("vm.ruleWidgetData in load rule widget function - in THEN After Assigning");
+                    console.log(vm.ruleWidgetData);
+
+                    // vm.updateWidgetState();
+
+
                 });
         }
 
@@ -70,7 +98,7 @@
                     console.log(ruleWidgetData);
                     // vm.ruleWidgetData = [].concat(ruleWidgetData);
                 });
-            vm.loadAllRuleWidgets();
+            // vm.loadAllRuleWidgetData();
         }
 
         vm.widgetTypeDetailEnum = {
@@ -146,13 +174,13 @@
 
         vm.moveWidget = function () {
             // console.log(vm.ruleWidgetData);
-            vm.ruleWidgetData[0].x = 1;
-            vm.ruleWidgetData[0].width = 2;
-            vm.ruleWidgetData[0].height = 2;
+            // vm.ruleWidgetData[0].x = 1;
+            // vm.ruleWidgetData[0].width = 2;
+            // vm.ruleWidgetData[0].height = 2;
             vm.$log(event);vm.$log(ui);
             vm.$log("widget moved");
 
-            vm.updateWidgetState();
+            // vm.updateWidgetState();
         };
         vm.removeWidget = function (w) {
             var index = vm.ruleWidgetData.indexOf(w);
@@ -174,7 +202,7 @@
             vm.$log(event);
             vm.$log(ui);
 
-            vm.updateWidgetState();
+            // vm.updateWidgetState();
         };
         vm.onResizeStart = function (event, ui) {
             vm.$log("onResizeStart event: " + event + " ui:" + ui);
@@ -194,7 +222,7 @@
             // $(element).height(newHeight * .95);
             // $(element).find('.ng-scope').height("50%");
             // $(element).find('.ng-scope').height(newHeight-150);
-            vm.updateWidgetState();
+            // vm.updateWidgetState();
         };
         vm.onItemAdded = function (item) {
             vm.$log("onItemAdded item: " + item);
@@ -204,15 +232,12 @@
         vm.onItemRemoved = function (item) {
             vm.$log("onItemRemoved item: " + item);
             vm.$log(item);
-            vm.updateWidgetState();
+            // vm.updateWidgetState();
         };
 
-        vm.$log = function (text) {
-//            console.log(text);
-        }
+        vm.loadAllRuleWidgetData();
 
 
-        vm.loadAllRuleWidgets();
 
     }
 

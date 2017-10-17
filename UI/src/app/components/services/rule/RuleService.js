@@ -158,10 +158,11 @@
         }
 
         function getAllRuleWidgetsData() {
-            $http.get('http://localhost:3333/ruleWidgets').then(function (response) {
-                ruleWidgetData = response.data;
+            return $http.get('http://localhost:3333/ruleWidgets').then(function (response) {
+                var ruleWidgetDataResult = response.data;
                 console.log("In Get All RuleWidget Function in exports");
-                console.log(ruleWidgetData);
+                console.log(ruleWidgetDataResult);
+                return ruleWidgetDataResult;
             });
         }
 
@@ -234,7 +235,7 @@
             },
             loadAllRuleWidgets: function () {
                 getAllRuleWidgetsData();
-                return $q.when(ruleWidgetData);
+                return $q.when(getAllRuleWidgetsData());
             },
             loadWidgetsOptions: function () {
                 return $q.when(ruleOptions);
