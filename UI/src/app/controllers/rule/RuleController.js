@@ -5,11 +5,25 @@
         .controller('RuleController', [
             'ruleService',
             RuleController,
-        ]);
+        ])
+    ;
 
     function RuleController(ruleService) {
         var vm = this;
 
+
+        vm.topDirections = ['left', 'up'];
+        vm.bottomDirections = ['down', 'right'];
+
+        vm.isOpen = true;
+
+        vm.availableModes = ['md-fling', 'md-scale'];
+        vm.selectedMode = 'md-fling';
+
+        vm.availableDirections = ['up', 'down', 'left', 'right'];
+        vm.selectedDirection = 'right';
+
+        
         vm.ruleData = [];
         vm.ruleWidgetData = [];
 
