@@ -15,7 +15,7 @@
         vm.ruleOptions = {};
 
         vm.$log = function (text) {
-//            console.log(text);
+           console.log(text);
         }
 
         vm.$log(vm.ruleWidgetData);
@@ -54,12 +54,12 @@
 
 
 
-            ruleService
-                .updateRuleWidgetsData(vm.ruleWidgetData)
-                .then(function (ruleWidgetDataAfterUpdate) {
-                    vm.ruleWidgetDataAfterUpdate = ruleWidgetDataAfterUpdate;
-                    console.log(ruleWidgetDataAfterUpdate);
-                });
+            // ruleService
+            //     .updateRuleWidgetsData(vm.ruleWidgetData)
+            //     .then(function (ruleWidgetDataAfterUpdate) {
+            //         vm.ruleWidgetDataAfterUpdate = ruleWidgetDataAfterUpdate;
+            //         console.log(ruleWidgetDataAfterUpdate);
+            //     });
 
             ruleService
                 .updateDashboardState(vm.ruleWidgetData)
@@ -193,8 +193,6 @@
             // vm.ruleWidgetData[0].height = 2;
             vm.$log(event);vm.$log(ui);
             vm.$log("widget moved");
-
-            // vm.updateWidgetState();
         };
         vm.removeWidget = function (w) {
             var index = vm.ruleWidgetData.indexOf(w);
@@ -205,6 +203,7 @@
             vm.$log("onChange event: " + event + " items:" + items);
             vm.$log(event);
             vm.$log(items);
+            vm.updateWidgetState();
         };
         vm.onDragStart = function (event, ui) {
             vm.$log("onDragStart event: " + event + " ui:" + ui);

@@ -255,11 +255,12 @@
                 widgetType : "def"
             }
 
-            $http.put(url, data, config).then(function (response) {
+            return $http.put(url, data, config).then(function (response) {
                 var afterSaving = response.data;
                 console.log("Widget Dashboard Updated");
                 console.log(afterSaving);
                 console.log(response);
+                return afterSaving;
             }, function (errorResponse) {
                 console.log(errorResponse);
             });
@@ -279,7 +280,7 @@
                 return $q.when(ruleWidgetData);
             },
             loadAllRuleWidgets: function () {
-                getAllRuleWidgetsData();
+                // getAllRuleWidgetsData();
                 return $q.when(getAllRuleWidgetsData());
             },
             loadWidgetsOptions: function () {
