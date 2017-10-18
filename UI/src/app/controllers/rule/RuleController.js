@@ -15,7 +15,7 @@
         vm.ruleOptions = {};
 
         vm.$log = function (text) {
-           console.log(text);
+            console.log(text);
         }
 
         vm.$log(vm.ruleWidgetData);
@@ -49,9 +49,6 @@
 
             console.log("currentstate ");
             console.log(vm.ruleWidgetData);
-
-
-
 
 
             // ruleService
@@ -165,11 +162,11 @@
             }
         };
 
-        vm.addWidget = function (widgetType,data) {
+        vm.addWidget = function (widgetType, data) {
 
-            var newWidget  =
+            var newWidget =
                 {
-                    widgetType:widgetType,
+                    widgetType: widgetType,
                     widgetView: vm.widgetTypeDetailEnum[widgetType].widgetView,
                     widgetTitle: vm.widgetTypeDetailEnum[widgetType].widgetTitle,
                     x: 0,
@@ -191,7 +188,8 @@
             // vm.ruleWidgetData[0].x = 1;
             // vm.ruleWidgetData[0].width = 2;
             // vm.ruleWidgetData[0].height = 2;
-            vm.$log(event);vm.$log(ui);
+            vm.$log(event);
+            vm.$log(ui);
             vm.$log("widget moved");
         };
         vm.removeWidget = function (w) {
@@ -249,7 +247,6 @@
         };
 
         vm.loadAllRuleWidgetData();
-
 
 
     }

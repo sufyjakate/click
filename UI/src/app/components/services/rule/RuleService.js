@@ -169,7 +169,7 @@
             //     return ruleWidgetDataResult;
             // });
 
-            return $http.get('http://localhost:3333/ruleWidgetsDashboard/'+documentID).then(function (response) {
+            return $http.get('http://localhost:3333/ruleWidgetsDashboard/' + documentID).then(function (response) {
                 var ruleWidgetDataResult = response.data.state;
                 console.log("In Get All RuleWidgetDashboard State Function in exports");
                 console.log(ruleWidgetDataResult);
@@ -192,12 +192,12 @@
 
             // angular.forEach(values, function (value, key) {
 
-                $http.post('http://localhost:3333/ruleWidgets', value, config).then(function (response) {
-                    var afterSaving = response.data;
-                    console.log(afterSaving);
-                }, function (errorResponse) {
-                    console.log(errorResponse);
-                });
+            $http.post('http://localhost:3333/ruleWidgets', value, config).then(function (response) {
+                var afterSaving = response.data;
+                console.log(afterSaving);
+            }, function (errorResponse) {
+                console.log(errorResponse);
+            });
 
             // });
 
@@ -220,8 +220,7 @@
 
             angular.forEach(values, function (value, key) {
 
-                if(value._id!==null && value._id !== undefined)
-                {
+                if (value._id !== null && value._id !== undefined) {
                     console.log(value._id);
                     var url = 'http://localhost:3333/ruleWidgets/' + value._id;
                     console.log(url);
@@ -246,13 +245,13 @@
                 }
             };
 
-            var url = 'http://localhost:3333/ruleWidgetsDashboard/'+ documentID ;
+            var url = 'http://localhost:3333/ruleWidgetsDashboard/' + documentID;
             console.log(url);
 
 
             var data = {
-                state : newState,
-                widgetType : "def"
+                state: newState,
+                widgetType: "def"
             }
 
             return $http.put(url, data, config).then(function (response) {
@@ -265,7 +264,6 @@
                 console.log(errorResponse);
             });
         }
-
 
         return {
             updateDashboardState: function (newState) {
