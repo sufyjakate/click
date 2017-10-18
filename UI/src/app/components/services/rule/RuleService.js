@@ -9,6 +9,10 @@
         ]);
 
     function ruleService($q, $http) {
+
+
+        var documentID = "59e694b00185326f1d387691";
+
         var tableData = [
             {
                 issue: 'Nested views',
@@ -158,9 +162,16 @@
         }
 
         function getAllRuleWidgetsData() {
-            return $http.get('http://localhost:3333/ruleWidgets').then(function (response) {
-                var ruleWidgetDataResult = response.data;
-                console.log("In Get All RuleWidget Function in exports");
+            // return $http.get('http://localhost:3333/ruleWidgets').then(function (response) {
+            //     var ruleWidgetDataResult = response.data;
+            //     console.log("In Get All RuleWidget Function in exports");
+            //     console.log(ruleWidgetDataResult);
+            //     return ruleWidgetDataResult;
+            // });
+
+            return $http.get('http://localhost:3333/ruleWidgetsDashboard/'+documentID).then(function (response) {
+                var ruleWidgetDataResult = response.data.state;
+                console.log("In Get All RuleWidgetDashboard State Function in exports");
                 console.log(ruleWidgetDataResult);
                 return ruleWidgetDataResult;
             });
@@ -209,22 +220,56 @@
 
             angular.forEach(values, function (value, key) {
 
-                console.log(value._id);
-                var url = 'http://localhost:3333/ruleWidgets/' + value._id;
-                console.log(url);
+                if(value._id!==null && value._id !== undefined)
+                {
+                    console.log(value._id);
+                    var url = 'http://localhost:3333/ruleWidgets/' + value._id;
+                    console.log(url);
 
 
-                $http.put(url, value, config).then(function (response) {
-                    var afterSaving = response.data;
-                    console.log("Widget Updated");
-                    console.log(afterSaving);
-                }, function (errorResponse) {
-                    console.log(errorResponse);
-                });
+                    $http.put(url, value, config).then(function (response) {
+                        var afterSaving = response.data;
+                        console.log("Widget Updated");
+                        console.log(afterSaving);
+                    }, function (errorResponse) {
+                        console.log(errorResponse);
+                    });
+                }
             }, log);
         }
 
+        function updateDashboardState(newState) {
+            //PUT
+            var config = {
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8'
+                }
+            };
+
+            var url = 'http://localhost:3333/ruleWidgetsDashboard/'+ documentID ;
+            console.log(url);
+
+
+            var data = {
+                state : newState,
+                widgetType : "def"
+            }
+
+            $http.put(url, data, config).then(function (response) {
+                var afterSaving = response.data;
+                console.log("Widget Dashboard Updated");
+                console.log(afterSaving);
+                console.log(response);
+            }, function (errorResponse) {
+                console.log(errorResponse);
+            });
+        }
+
+
         return {
+            updateDashboardState: function (newState) {
+                return $q.when(updateDashboardState(newState));
+            },
             createRuleWidgetData: function (newWidgetData) {
                 createRuleWidgetData(newWidgetData);
                 return $q.when(ruleWidgetData);

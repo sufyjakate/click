@@ -47,10 +47,24 @@
             // });
 
 
+            console.log("currentstate ");
+            console.log(vm.ruleWidgetData);
+
+
+
+
+
             ruleService
                 .updateRuleWidgetsData(vm.ruleWidgetData)
                 .then(function (ruleWidgetDataAfterUpdate) {
-                    vm.ruleWidgetDataAfterUpdate = [].concat(ruleWidgetDataAfterUpdate);
+                    vm.ruleWidgetDataAfterUpdate = ruleWidgetDataAfterUpdate;
+                    console.log(ruleWidgetDataAfterUpdate);
+                });
+
+            ruleService
+                .updateDashboardState(vm.ruleWidgetData)
+                .then(function (ruleWidgetDataAfterUpdate) {
+                    // vm.ruleWidgetData = ruleWidgetDataAfterUpdate;
                     console.log(ruleWidgetDataAfterUpdate);
                 });
 
@@ -75,7 +89,7 @@
                     console.log("_________________________");
 
                     // vm.ruleWidgetData = [].concat(ruleWidgetData);
-                    vm.ruleWidgetData = [];
+                    // vm.ruleWidgetData = [];
 
                     vm.ruleWidgetData = ruleWidgetData;
                     console.log("_________________________");
@@ -91,14 +105,14 @@
 
         vm.createRuleWidgets = function (newWidgetData) {
 
-            ruleService
-                .createRuleWidgetData(newWidgetData)
-                .then(function (ruleWidgetData) {
-                    console.log("in Rule controller function in create rule widgets ");
-                    console.log(ruleWidgetData);
-                    // vm.ruleWidgetData = [].concat(ruleWidgetData);
-                });
-            // vm.loadAllRuleWidgetData();
+            // ruleService
+            //     .createRuleWidgetData(newWidgetData)
+            //     .then(function (ruleWidgetDataResult) {
+            //         console.log("in Rule controller function in create rule widgets ");
+            //         console.log(ruleWidgetDataResult);
+            //         // vm.ruleWidgetData = [].concat(ruleWidgetData);
+            //     });
+            vm.updateWidgetState(vm.ruleWidgetData);
         }
 
         vm.widgetTypeDetailEnum = {
