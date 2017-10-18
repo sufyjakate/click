@@ -18,6 +18,7 @@ mongoose.Promise = global.Promise;
 // mongoose.connect('mongodb://admin:admin123@ds113915.mlab.com:13915/clickdb');
 mongoose.connect('mongodb://admin:admin@ds111754.mlab.com:11754/click');
 
+app.disable('view cache');
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
