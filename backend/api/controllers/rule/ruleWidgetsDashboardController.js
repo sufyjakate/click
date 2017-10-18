@@ -2,7 +2,7 @@
 
 
 var mongoose = require('mongoose'),
-    RuleWidget = mongoose.model('RuleWidgetDashboard');
+    RuleWidgetDashboard = mongoose.model('RuleWidgetDashboard');
 
 exports.list_all_ruleWidgetsDashboard = function (req, res) {
     RuleWidgetDashboard.find({}, function (err, ruleWidgetDashboard) {
@@ -14,7 +14,7 @@ exports.list_all_ruleWidgetsDashboard = function (req, res) {
 
 
 exports.create_a_ruleWidgetDashboard = function (req, res) {
-    var new_ruleWidgetDashboard = new RuleWidget(req.body);
+    var new_ruleWidgetDashboard = new RuleWidgetDashboard(req.body);
     new_ruleWidgetDashboard.save(function (err, ruleWidgetDashboard) {
         if (err)
             res.send(err);
@@ -36,9 +36,19 @@ exports.update_a_ruleWidgetDashboard = function (req, res) {
     RuleWidgetDashboard.findOneAndUpdate({_id: req.params.ruleWidgetDashboardId}, req.body, {new: true}, function (err, ruleWidgetDashboard) {
         if (err)
             res.send(err);
+        console.log(ruleWidgetDashboard);
         res.json(ruleWidgetDashboard);
     });
 };
+
+
+// exports.updateState_ruleWidgetDashboard = function (req, res) {
+//     RuleWidgetDashboard.findOneAndUpdate({}, req.body, {new: true}, function (err, ruleWidgetDashboard) {
+//         if (err)
+//             res.send(err);
+//         res.json(ruleWidgetDashboard);
+//     });
+// };
 
 
 exports.delete_a_ruleWidgetDashboard = function (req, res) {
