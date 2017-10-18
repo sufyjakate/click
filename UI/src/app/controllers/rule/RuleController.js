@@ -12,7 +12,19 @@
 
         vm.ruleData = [];
         vm.ruleWidgetData = [];
-        vm.ruleOptions = {};
+
+        vm.ruleOptions = {
+            cellHeight: 70,
+            verticalMargin: 10,
+            animate : true,
+            auto : false,
+            // disableDrag : true,
+            // disableResize: true,
+            // alwaysShowResizeHandle: true,
+            height:0,
+            width: 12,
+            float:true
+        };
 
         vm.$log = function (text) {
             console.log(text);
@@ -32,7 +44,7 @@
             ruleService
                 .loadWidgetsOptions()
                 .then(function (ruleOptions) {
-                    vm.ruleOptions = [].concat(ruleOptions);
+                    vm.ruleOptions = ruleOptions;
                     console.log(ruleOptions);
                 });
         };

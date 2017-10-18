@@ -65,8 +65,11 @@
         ];
 
         var ruleOptions = {
-            cellHeight: 200,
-            verticalMargin: 10
+            cellHeight: 180,
+            verticalMargin: 10,
+            animate : true,
+            auto : true,
+            disableDrag : true
         };
 
         var ruleWidgetData = [];
