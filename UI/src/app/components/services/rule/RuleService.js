@@ -9,6 +9,10 @@
         ]);
 
     function ruleService($q, $http) {
+
+
+        var documentID = "59e694b00185326f1d387691";
+
         var tableData = [
             {
                 issue: 'Nested views',
@@ -61,8 +65,11 @@
         ];
 
         var ruleOptions = {
-            cellHeight: 200,
-            verticalMargin: 10
+            cellHeight: 180,
+            verticalMargin: 10,
+            animate : true,
+            auto : true,
+            disableDrag : true
         };
 
         var ruleWidgetData = [];
@@ -158,15 +165,23 @@
         }
 
         function getAllRuleWidgetsData() {
-            $http.get('http://localhost:3333/ruleWidgets').then(function (response) {
-                ruleWidgetData = response.data;
-                console.log("In Get All RuleWidget Function in exports");
-                console.log(ruleWidgetData);
+            // return $http.get('http://localhost:3333/ruleWidgets').then(function (response) {
+            //     var ruleWidgetDataResult = response.data;
+            //     console.log("In Get All RuleWidget Function in exports");
+            //     console.log(ruleWidgetDataResult);
+            //     return ruleWidgetDataResult;
+            // });
+
+            return $http.get('http://localhost:3333/ruleWidgetsDashboard/' + documentID).then(function (response) {
+                var ruleWidgetDataResult = response.data.state;
+                console.log("In Get All RuleWidgetDashboard State Function in exports");
+                console.log(ruleWidgetDataResult);
+                return ruleWidgetDataResult;
             });
         }
 
+        function createRuleWidgetData(newWidgetData) {
 
-        function createRuleWidgetData(createRuleWidgetData) {
             //POST
             var config = {
                 headers: {
@@ -174,18 +189,21 @@
                 }
             };
 
-            var log = [];
-            var values = [];
-            // values = ruleWidgetData;
-            angular.forEach(values, function (value, key) {
 
-                $http.post('http://localhost:3333/ruleWidgets', value, config).then(function (response) {
-                    var afterSaving = response.data;
-                    console.log(afterSaving);
-                }, function (errorResponse) {
-                    console.log(errorResponse);
-                });
-            }, log);
+            var value = newWidgetData;
+
+
+            // angular.forEach(values, function (value, key) {
+
+            $http.post('http://localhost:3333/ruleWidgets', value, config).then(function (response) {
+                var afterSaving = response.data;
+                console.log(afterSaving);
+            }, function (errorResponse) {
+                console.log(errorResponse);
+            });
+
+            // });
+
         }
 
         function updateRuleWidgetData(updatedRuleWidgetData) {
@@ -205,34 +223,74 @@
 
             angular.forEach(values, function (value, key) {
 
-                console.log(value._id);
-                var url = 'http://localhost:3333/ruleWidgets/' + value._id;
-                console.log(url);
+                if (value._id !== null && value._id !== undefined) {
+                    console.log(value._id);
+                    var url = 'http://localhost:3333/ruleWidgets/' + value._id;
+                    console.log(url);
 
 
-                $http.put(url, value, config).then(function (response) {
-                    var afterSaving = response.data;
-                    console.log("Widget Updated");
-                    console.log(afterSaving);
-                }, function (errorResponse) {
-                    console.log(errorResponse);
-                });
+                    $http.put(url, value, config).then(function (response) {
+                        var afterSaving = response.data;
+                        console.log("Widget Updated");
+                        console.log(afterSaving);
+                    }, function (errorResponse) {
+                        console.log(errorResponse);
+                    });
+                }
             }, log);
         }
 
+        function updateDashboardState(newState) {
+            //PUT
+            var config = {
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8'
+                }
+            };
+
+            var url = 'http://localhost:3333/ruleWidgetsDashboard/' + documentID;
+            console.log(url);
+
+
+            var data = {
+                state: newState,
+                widgetType: "def"
+            }
+
+            return $http.put(url, data, config).then(function (response) {
+                var afterSaving = response.data;
+                console.log("Widget Dashboard Updated");
+                console.log(afterSaving);
+                console.log(response);
+                return afterSaving;
+            }, function (errorResponse) {
+                console.log(errorResponse);
+            });
+        }
+
         return {
+            updateDashboardState: function (newState) {
+                return $q.when(updateDashboardState(newState));
+            },
+            createRuleWidgetData: function (newWidgetData) {
+                createRuleWidgetData(newWidgetData);
+                return $q.when(ruleWidgetData);
+            },
             updateRuleWidgetsData: function (updatedRuleWidgetData) {
                 updateRuleWidgetData(updatedRuleWidgetData);
                 return $q.when(ruleWidgetData);
             },
             loadAllRuleWidgets: function () {
-                getAllRuleWidgetsData();
-                return $q.when(ruleWidgetData);
+                // getAllRuleWidgetsData();
+                return $q.when(getAllRuleWidgetsData());
             },
             loadWidgetsOptions: function () {
                 return $q.when(ruleOptions);
             },
             loadAllItems: function () {
+                return $q.when(tableData);
+            },
+            loadWidgetConfig: function (widgetType) {
                 return $q.when(tableData);
             },
             /**
