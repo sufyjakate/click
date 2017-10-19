@@ -5,10 +5,11 @@ var mongoose = require('mongoose'),
     Card = mongoose.model('Card');
 
 exports.list_all_cards = function(req, res) {
-    Card.find({}, function(err, card) {
+
+    Card.find({}, function(err, new_card) {
         if (err)
             res.send(err);
-        res.json(card);
+        res.json(new_card);
     });
 };
 
@@ -16,10 +17,29 @@ exports.list_all_cards = function(req, res) {
 
 
 exports.create_a_card = function(req, res) {
-    var new_card = new Card(req.body);
-    new_card.save(function(err, card) {
-        if (err)
-            res.send(err);
-        res.json(card);
-    });
+    //console.log(req.query.cardid);
+    //console.log(req.query.title);
+
+    var new_card = new Card();
+    new_card.cardid = req.body.cardid;
+    new_card.title = req.body.title;
+    new_card.height = req.body.height;
+    new_card.width = req.body.width;
+    new_card.x = req.body.x;
+    new_card.y = req.body.y;
+
+    console.log('id' + req.body.cardid);
+    console.log(req.body.title);
+    console.log('height' + req.body.height);
+    console.log('width' + req.body.width);
+    console.log('x' + req.body.x);
+    console.log('y' +  req.body.y);
+    new_card.save();
+    // new_card.save(function(err, Card) {
+    //     if (err)
+    //         res.send(err);
+    //         console.log('Error Occured while Saving');
+    //     res.json(Card);
+    //     console.log(Card);
+    // });
 };

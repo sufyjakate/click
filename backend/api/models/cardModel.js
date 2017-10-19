@@ -4,12 +4,24 @@ var Schema = mongoose.Schema;
 
 
 var CardSchema = new Schema({
-    id: {
-        type: String,
-        required: 'Kindly enter the name of the device'
+    cardid: {
+        type: Number,
+        unique: true
+    },
+    height: {
+        type: Number
     },
     title: {
         type: String
+    },
+    width: {
+        type: Number
+    },
+    x: {
+        type: Number
+    },
+    y: {
+        type: Number
     }
 });
 

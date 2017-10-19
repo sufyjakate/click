@@ -20,23 +20,6 @@
                 newWidget.cardid = cardid;
                 newWidget.title = 'Device Management';
 
-                // $http({
-                //             url: 'http://localhost:3333/cards',
-                //             method: 'GET',
-                //             headers: {'Content-Type': 'application/json'}
-                //         }).then(function successcallback(response, status, headers, config) {
-                //
-                //             $scope.widgets = response.data;
-                //             console.log('Getting the data');
-                //             console.log($scope.widgets);
-                //
-                //         }, function errorcallback(response, status, headers, config) {
-                //             $scope.status = status;
-                //             alert('Data Retrieving Failed');
-                //         });
-
-
-
                 //JSON.stringify(newWidget);
 
                 $http({
@@ -64,7 +47,22 @@
             $scope.shut = function(id) {
                 console.log("Removed");
                 $mdDialog.hide();
-            }
+            };
+
+
+
+                $http({
+                    url: 'http://localhost:3333/devices',
+                    method: 'GET',
+                    headers: {'Content-Type': 'application/json'}
+                }).then(function success(response, status, headers, config) {
+                    console.log('Device GET successful');
+                    console.log(response);
+                    $scope.devices = response.data;
+                    console.log($scope.devices);
+
+                })
+
 
 
     }

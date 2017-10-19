@@ -8,11 +8,23 @@
             </div>
         </md-toolbar>
         <md-dialog-content style="max-width:800px;max-height:810px; ">
-            <md-tabs md-dynamic-height md-border-bottom>
-                <md-tab label="Widget 1">
 
-                </md-tab>
-            </md-tabs>
+            <table class="table">
+                <md-button class="md-warn md-raised md-hue-2">Add Device</md-button>
+                <tr>
+                    <th>Name</th>
+                    <th>Device Type</th>
+                    <th>Device Status</th>
+                    <th>Select Device</th>
+                </tr>
+                <tr ng-repeat="device in devices">
+                    <th>{{device.name}}</th>
+                    <th>{{device.Device_type}}</th>
+                    <th>{{device.status}}</th>
+
+                </tr>
+            </table>
+
         </md-dialog-content>
 
         <md-dialog-actions layout="row">
@@ -27,3 +39,5 @@
     </form>
 </md-dialog>
 </div>
+
+

@@ -10,10 +10,24 @@
                 .icon('upgrade', 'assets/images/sysupdate.svg', 24)
                 .icon('notif', 'assets/images/notif.svg', 24);
         })
-        .controller('DeviceController', ['InterControllerCommunication', '$scope', '$mdBottomSheet',function(icc, $scope, $mdBottomSheet, $mdToast) {
+        .controller('DeviceController', ['InterControllerCommunication', '$scope', '$http', '$mdBottomSheet' ,function(icc, $scope, $http, $mdBottomSheet, $mdToast) {
             $scope.alert = '';
 
+            $scope.widgets = [];
+            $http({
+                url: 'http://localhost:3333/cards',
+                method: 'GET',
+                headers: {'Content-Type': 'application/json'}
+            }).then(function successcallback(response, status, headers, config) {
 
+                $scope.widgets = response.data;
+                console.log('Getting the data');
+                console.log($scope.widgets);
+
+            }, function errorcallback(response, status, headers, config) {
+                $scope.status = status;
+                alert('Data Retrieving Failed');
+            });
 
             $scope.showGridBottomSheet = function() {
                 $scope.alert = '';
@@ -33,13 +47,26 @@
                 });
             };
 
+
+
             var handler = function (ea, data) {
                 $scope.widgets = data;
             };
             var list = icc.subscribe('list.update', handler);
             console.log(list);
 
-
+            // $http({
+            //         url: 'http://localhost:3333/cards',
+            //         method: 'GET',
+            //         headers: {'Content-Type': 'application/json'}
+            //     }).then(function successcallback(data, status, headers, config) {
+            //
+            //         $scope.widgets = data;
+            //
+            //     }, function errorcallback(data, status, headers, config) {
+            //         $scope.status = status;
+            //         alert('Data Retrieving Failed');
+            //     });
         }])
 
         .directive('cardview', function () {
