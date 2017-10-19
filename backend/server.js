@@ -15,16 +15,16 @@ var express = require('express'),
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-<<<<<<< HEAD
+
 mongoose.connect('mongodb://admin:admin123@ds113915.mlab.com:13915/clickdb');
 //mongoose.connect('mongodb://admin:admin@ds111754.mlab.com:11754/click');
-=======
+
 // mongoose.connect('mongodb://admin:admin123@ds113915.mlab.com:13915/clickdb');
-mongoose.connect('mongodb://admin:admin@ds111754.mlab.com:11754/click');
+//mongoose.connect('mongodb://admin:admin@ds111754.mlab.com:11754/click');
 
 app.disable('view cache');
 app.use(cors());
->>>>>>> 5877a21086915ecb06d77711005aece39d5fdadb
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cors());
