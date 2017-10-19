@@ -14,12 +14,12 @@ var express = require('express'),
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-// mongoose.connect('mongodb://admin:admin123@ds113915.mlab.com:13915/clickdb');
-mongoose.connect('mongodb://admin:admin@ds111754.mlab.com:11754/click');
-
-app.use(cors());
+mongoose.connect('mongodb://admin:admin123@ds113915.mlab.com:13915/clickdb');
+//mongoose.connect('mongodb://admin:admin@ds111754.mlab.com:11754/click');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(cors());
+
 
 var routes = require('./api/routes/deviceRoutes'); //importing route
 routes(app); //register the route
