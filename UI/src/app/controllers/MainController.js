@@ -24,13 +24,13 @@
         vm.menuItems = [].concat(menuItems);
       });
 
-    ruleService
-        .loadAllRuleWidgets()
-        .then(function (ruleWidgetData) {
-            console.log("in Main controller function in load rule widgets controller function");
-            console.log(ruleWidgetData);
-            vm.ruleWidgetData = [].concat(ruleWidgetData);
-        });
+    // ruleService
+    //     .loadAllRuleWidgets()
+    //     .then(function (ruleWidgetData) {
+    //         console.log("in Main controller function in load rule widgets controller function");
+    //         console.log(ruleWidgetData);
+    //         vm.ruleWidgetData = [].concat(ruleWidgetData);
+    //     });
 
 
       function toggleRightSidebar() {

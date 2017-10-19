@@ -30,7 +30,7 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
         }
       })
       .state('home.rule', {
-          url: '/table',
+          url: '/rule',
           controller: 'RuleController',
           controllerAs: 'vm',
           templateUrl: 'app/views/rule/rule.html',
