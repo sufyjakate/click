@@ -3,9 +3,11 @@
                        ng-class="vm.selectedMode"
                        ng-mouseenter="vm.isOpen=true" ng-mouseleave="vm.isOpen=false" >
         <md-fab-trigger>
-            <md-button aria-label="menu" class="md-fab md-warn">
-                <md-icon ng-if="!vm.isOpen" md-svg-src={{vm.fab.trigger.openIcon}}></md-icon>
-                <md-icon ng-if="vm.isOpen" md-svg-src={{vm.fab.trigger.closeIcon}}></md-icon>
+            <md-button aria-label="menu" class="md-fab md-warn" class="fab-main-circle">
+                <i ng-if="!vm.isOpen" class="material-icons large fab-icon ">{{vm.fab.trigger.openIconMaterialIcon}}</i>
+                <i ng-if="vm.isOpen" class="material-icons large fab-icon ">{{vm.fab.trigger.closeIconMaterialIcon}}</i>
+                <!--<md-icon ng-if="!vm.isOpen" md-svg-src={{vm.fab.trigger.openIcon}} class="large fab-icon"></md-icon>-->
+                <!--<md-icon ng-if="vm.isOpen" md-svg-src={{vm.fab.trigger.closeIcon}} class=" fab-icon"></md-icon>-->
                 <md-tooltip md-direction= "top" md-visible="tooltipVisible" >Rule</md-tooltip>
             </md-button>
         </md-fab-trigger>
@@ -13,7 +15,9 @@
         <md-fab-actions>
             <md-button ng-repeat="action in vm.fab.actionList" aria-label={{action.arialabel}} class="md-fab md-raised md-mini">
                 <md-tooltip md-direction="top" md-visible="tooltipVisible" md-autohide="false">{{action.title}}</md-tooltip>
-                <md-icon md-svg-src={{action.icon}} aria-label={{action.arialabel}} ></md-icon>
+                <!--<md-icon md-svg-src={{action.icon}} aria-label={{action.arialabel}} ></md-icon>-->
+                <i class="material-icons large fab-icon">{{action.materialIcon}}</i>
+
             </md-button>
         </md-fab-actions>
     </md-fab-speed-dial>

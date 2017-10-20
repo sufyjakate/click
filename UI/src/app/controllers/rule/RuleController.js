@@ -27,7 +27,9 @@
         vm.fab = {
             trigger:{
                 openIcon : "assets/images/ic_add_black_48px.svg",
-                closeIcon : "assets/images/ic_close_black_48px.svg"
+                openIconMaterialIcon:"add",
+                closeIcon : "assets/images/ic_close_black_48px.svg",                  
+                closeIconMaterialIcon:"close"
             },
             tooltip:{
                 visibility : "tooltipVisible",
@@ -35,27 +37,31 @@
             },
             actionList:[
                 {
-                    arialabel: "Creation",
+                    ariaLabel: "Creation",
                     title:"Rule Creation",
                     icon:"assets/images/ic_create_black_48px.svg",
+                    materialIcon:"create",
                     ruleType:0
                 },
                 {
-                    arialabel: "Notification",
+                    ariaLabel: "Notification",
                     title:"Rule Notification",
                     icon:"assets/images/ic_notifications_black_48px.svg",
+                    materialIcon:"notifications",
                     ruleType:1
                 },
                 {
-                    arialabel: "Management",
+                    ariaLabel: "Management",
                     title:"Rule Management",
                     icon:"assets/images/ic_settings_black_48px.svg",
+                    materialIcon:"settings",
                     ruleType:2
                 },
                 {
-                    arialabel: "Sharing",
+                    ariaLabel: "Sharing",
                     title:"Rule Sharing",
                     icon:"assets/images/ic_share_black_48px.svg",
+                    materialIcon:"share",
                     ruleType:3
                 },
 
