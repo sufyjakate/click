@@ -26,9 +26,7 @@
 
         vm.fab = {
             trigger:{
-                openIcon : "assets/images/ic_add_black_48px.svg",
                 openIconMaterialIcon:"add",
-                closeIcon : "assets/images/ic_close_black_48px.svg",
                 closeIconMaterialIcon:"close"
             },
             tooltip:{
@@ -36,7 +34,6 @@
                 direction: "top"
             }
         };
-
 
         vm.ruleData = [];
         vm.ruleWidgetData = [];
