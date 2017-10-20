@@ -29,7 +29,7 @@
 
     <div>
         <input type="text"
-               ng-model="vm.newRuleTYpe"
+               ng-model="vm.newRuleType"
                [name="WidgetType"]
                [required="string"]
                [ng-required="string"]
@@ -40,9 +40,10 @@
                [ng-change="string"]
                [ng-trim="boolean"]>
 
-        <a class="btn btn-primary" ng-click="vm.addWidget(vm.newRuleTYpe)" href="">Add Widget</a>
-        <a class="btn btn-primary" ng-click="vm.moveWidget()" href="">Move Widget</a>
-        <a class="btn btn-primary" ng-click="vm.loadAllRuleWidgetData()" href="">Load All Widget</a>
+        <md-button class="md-raised md-primary" ng-click="vm.addWidget(vm.newRuleType)" >Add Widget</md-button>
+        <md-button class="md-raised md-primary" ng-click="vm.moveWidget()" >Move Widget</md-button>
+        <md-button class="md-raised md-primary" ng-click="vm.loadAllRuleWidgetData()" >Load Dashboard</md-button>
+
     </div>
     <br>
 
