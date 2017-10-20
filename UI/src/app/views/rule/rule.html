@@ -23,28 +23,22 @@
     </md-fab-speed-dial>
 </div>
 
+<div >
+
+    <md-select ng-model="vm.newRuleType" placeholder="Select Widget Type" class=" md-raised md-primary">
+        <md-option ng-repeat="item in vm.widgetTypeDetailEnum" value={{item.widgetType}}>{{item.widgetTitle}}</md-option>
+    </md-select>
+
+    <md-button class="md-raised md-primary" ng-click="vm.addWidget(vm.newRuleType)" >Add Widget</md-button>
+    <md-button class="md-raised md-primary" ng-click="vm.moveWidget()" >Move Widget</md-button>
+    <md-button class="md-raised md-primary" ng-click="vm.loadAllRuleWidgetData()" >Load Dashboard</md-button>
+
+</div>
 <div class="container-fluid">
 
     <!--<p>{{vm.ruleWidgetData}}</p>-->
 
-    <div>
-        <input type="text"
-               ng-model="vm.newRuleType"
-               [name="WidgetType"]
-               [required="string"]
-               [ng-required="string"]
-               [ng-minlength="number"]
-               [ng-maxlength="number"]
-               [pattern="string"]
-               [ng-pattern="string"]
-               [ng-change="string"]
-               [ng-trim="boolean"]>
 
-        <md-button class="md-raised md-primary" ng-click="vm.addWidget(vm.newRuleType)" >Add Widget</md-button>
-        <md-button class="md-raised md-primary" ng-click="vm.moveWidget()" >Move Widget</md-button>
-        <md-button class="md-raised md-primary" ng-click="vm.loadAllRuleWidgetData()" >Load Dashboard</md-button>
-
-    </div>
     <br>
 
     <div class="row">
