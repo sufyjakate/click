@@ -12,18 +12,59 @@
         var vm = this;
 
 
+
         vm.topDirections = ['left', 'up'];
         vm.bottomDirections = ['down', 'right'];
 
         vm.isOpen = false;
 
         vm.availableModes = ['md-fling', 'md-scale'];
-        vm.selectedMode = 'md-fling';
+        vm.selectedMode = 'md-scale';
 
         vm.availableDirections = ['up', 'down', 'left', 'right'];
         vm.selectedDirection = 'right';
 
-        
+        vm.fab = {
+            trigger:{
+                openIcon : "assets/images/ic_add_black_48px.svg",
+                closeIcon : "assets/images/ic_close_black_48px.svg"
+            },
+            tooltip:{
+                visibility : "tooltipVisible",
+                direction: "top"
+            },
+            actionList:[
+                {
+                    arialabel: "Creation",
+                    title:"Rule Creation",
+                    icon:"assets/images/ic_create_black_48px.svg",
+                    ruleType:0
+                },
+                {
+                    arialabel: "Notification",
+                    title:"Rule Notification",
+                    icon:"assets/images/ic_notifications_black_48px.svg",
+                    ruleType:1
+                },
+                {
+                    arialabel: "Management",
+                    title:"Rule Management",
+                    icon:"assets/images/ic_settings_black_48px.svg",
+                    ruleType:2
+                },
+                {
+                    arialabel: "Sharing",
+                    title:"Rule Sharing",
+                    icon:"assets/images/ic_share_black_48px.svg",
+                    ruleType:3
+                },
+
+
+
+            ]
+        };
+
+
         vm.ruleData = [];
         vm.ruleWidgetData = [];
 
