@@ -15,7 +15,7 @@
         vm.topDirections = ['left', 'up'];
         vm.bottomDirections = ['down', 'right'];
 
-        vm.isOpen = true;
+        vm.isOpen = false;
 
         vm.availableModes = ['md-fling', 'md-scale'];
         vm.selectedMode = 'md-fling';
@@ -139,52 +139,58 @@
         }
 
         vm.widgetTypeDetailEnum = {
+
+
             "0": {
                 "widgetType": "0",
-                "widgetView": "app/views/table.html",
-                "widgetTitle": "Rule Notifications"
+                "widgetView": "app/views/rule/widgets/ShareRule.html",
+                "widgetTitle": "Share Rule"
             },
 
             "1": {
                 "widgetType": "1",
+                "widgetView": "app/views/partials/checkboxes.html",
+                "widgetTitle": "Rule Management"
+            },
+
+
+            "2": {
+                "widgetType": "2",
+                "widgetView": "app/views/table.html",
+                "widgetTitle": "Rule Notifications"
+            },
+
+            "3": {
+                "widgetType": "3",
                 "widgetView": "app/views/partials/warnings.html",
                 "widgetTitle": "Warnings"
             },
 
-            "2": {
-                "widgetType": "2",
+            "4": {
+                "widgetType": "4",
                 "widgetView": "app/views/partials/memory.html",
                 "widgetTitle": "Memory load"
             },
-            "3": {
-                "widgetType": "3",
+            "5": {
+                "widgetType": "5",
                 "widgetView": "app/views/partials/controlPanel.html",
                 "widgetTitle": "Server Control Panel"
             },
 
-            "4": {
-                "widgetType": "4",
+            "6": {
+                "widgetType": "6",
                 "widgetView": "app/views/partials/usage.html",
                 "widgetTitle": "Usage Stats"
             },
 
-            "5": {
-                "widgetType": "5",
-                "widgetView": "app/views/partials/autocomplete.html",
-                "widgetTitle": "Share Rule"
-            },
 
-            "6": {
-                "widgetType": "6",
+
+            "7": {
+                "widgetType": "7",
                 "widgetView": "app/views/partials/performance.html",
                 "widgetTitle": "Performance"
             },
 
-            "7": {
-                "widgetType": "7",
-                "widgetView": "app/views/partials/checkboxes.html",
-                "widgetTitle": "Rule Management"
-            }
         };
 
         vm.addWidget = function (widgetType, data) {
