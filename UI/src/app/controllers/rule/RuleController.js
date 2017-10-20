@@ -139,8 +139,6 @@
         }
 
         vm.widgetTypeDetailEnum = {
-<<<<<<< HEAD
-
             "0": {
                 "widgetType": "0",
                 "widgetView": "app/views/table.html",
@@ -153,21 +151,6 @@
                 "widgetTitle": "Warnings"
             },
 
-=======
-
-            "0": {
-                "widgetType": "0",
-                "widgetView": "app/views/partials/visitors.html",
-                "widgetTitle": "Site visitors"
-            },
-
-            "1": {
-                "widgetType": "1",
-                "widgetView": "app/views/partials/warnings.html",
-                "widgetTitle": "Warnings"
-            },
-
->>>>>>> 3727df8fe880366c88f62032f15a11144191b0bc
             "2": {
                 "widgetType": "2",
                 "widgetView": "app/views/partials/memory.html",
