@@ -11,7 +11,8 @@
     function ruleService($q, $http) {
 
 
-        var documentID = "59e694b00185326f1d387691";
+        var documentID = "59e694b00185326f1d387691";    //remote database
+        var documentID = "59ea0ff6f182e10f81bfaa94";    //loacl database
 
         var tableData = [
             {
