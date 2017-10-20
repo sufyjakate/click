@@ -149,14 +149,14 @@
 
             "1": {
                 "widgetType": "1",
-                "widgetView": "app/views/partials/checkboxes.html",
+                "widgetView": "app/views/rule/widgets/RuleManagement.html",
                 "widgetTitle": "Rule Management"
             },
 
 
             "2": {
                 "widgetType": "2",
-                "widgetView": "app/views/table.html",
+                "widgetView": "app/views/rule/widgets/RuleNotification.html",
                 "widgetTitle": "Rule Notifications"
             },
 
@@ -182,8 +182,6 @@
                 "widgetView": "app/views/partials/usage.html",
                 "widgetTitle": "Usage Stats"
             },
-
-
 
             "7": {
                 "widgetType": "7",
