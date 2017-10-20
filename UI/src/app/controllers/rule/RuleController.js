@@ -52,7 +52,7 @@
         };
 
         vm.$log = function (text) {
-            // console.log(text);
+            console.log(text);
         }
 
         vm.$log(vm.ruleWidgetData);

@@ -91,11 +91,17 @@
                         </panel-widget>
 
                     <md-card-actions layout="row" layout-align="end center">
-                        <md-button>
-                            <i class="material-icons small fab-icon">delete</i>
+                        <md-button ng-click="vm.editWidget(w)">
+                            <i class="material-icons fab-icon">edit</i>
+                            <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Edit</md-tooltip>
                         </md-button>
-                        <md-button>
-                            <i class="material-icons small fab-icon">edit</i>
+                        <md-button ng-click="vm.configureWidget(w)">
+                            <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Settings</md-tooltip>
+                            <i class="material-icons fab-icon">settings</i>
+                        </md-button>
+                        <md-button ng-click="vm.removeWidget(w)">
+                            <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Delete</md-tooltip>
+                            <i class="material-icons fab-icon">delete</i>
                         </md-button>
                     </md-card-actions>
                         <!--<a class="btn btn-primary" ng-click="removeWidget(w)" href="#">remove</a>-->
