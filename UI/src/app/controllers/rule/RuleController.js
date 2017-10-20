@@ -6,6 +6,7 @@
             'ruleService',
             RuleController,
         ])
+
     ;
 
     function RuleController(ruleService) {
@@ -51,7 +52,7 @@
         };
 
         vm.$log = function (text) {
-            console.log(text);
+            // console.log(text);
         }
 
         vm.$log(vm.ruleWidgetData);
@@ -152,7 +153,7 @@
 
             "0": {
                 widgetType: "0",
-                widgetView: "app/views/rule/widgets/ShareRule.html",
+                widgetView: "app/views/rule/widgets/RuleSharing.html",
                 widgetTitle: "Rule Sharing",
                 icon:"share",
                 ariaLabel: "Sharing",

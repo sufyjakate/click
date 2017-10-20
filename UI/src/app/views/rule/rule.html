@@ -84,13 +84,20 @@
                                 flex
                                 title="{{w.widgetTitle}}"
                                 template="{{w.widgetView}}"
-                                options="true"
+                                options="false"
                         >
                             <!--class="fixed-height-widget"-->
 
-
                         </panel-widget>
 
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button>
+                            <i class="material-icons small fab-icon">delete</i>
+                        </md-button>
+                        <md-button>
+                            <i class="material-icons small fab-icon">edit</i>
+                        </md-button>
+                    </md-card-actions>
                         <!--<a class="btn btn-primary" ng-click="removeWidget(w)" href="#">remove</a>-->
 
                 </div>
