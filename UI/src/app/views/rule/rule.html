@@ -1,21 +1,31 @@
-<div class="lock-size" layout="row" layout-align="left center">
+<div class="lock-size " layout="row" layout-align="left center">
     <md-fab-speed-dial md-open="demo.isOpen" md-direction="{{vm.selectedDirection}}"
-                       ng-class="vm.selectedMode">
+                       ng-class="vm.selectedMode"
+                       ng-mouseenter="demo.isOpen=true" ng-mouseleave="demo.isOpen=false" >
         <md-fab-trigger>
             <md-button aria-label="menu" class="md-fab md-warn">
-                <!--<md-icon md-svg-src="img/icons/menu.svg"></md-icon>-->
+                <md-icon ng-if="!demo.isOpen" md-svg-src="assets/images/ic_add_black_48px.svg"></md-icon>
+                <md-icon ng-if="demo.isOpen" md-svg-src="assets/images/ic_close_black_48px.svg"></md-icon>
+                <md-tooltip md-direction="top" md-visible="tooltipVisible">Rule</md-tooltip>
             </md-button>
         </md-fab-trigger>
 
         <md-fab-actions>
             <md-button aria-label="Twitter" class="md-fab md-raised md-mini">
-                <md-icon md-svg-src="assets/images/devices.svg" aria-label="Twitter"></md-icon>
+                <md-tooltip md-direction="top" md-visible="tooltipVisible" md-autohide="false">Rule Creation</md-tooltip>
+                <md-icon md-svg-src="assets/images/ic_create_black_48px.svg" aria-label="Creation"></md-icon>
             </md-button>
             <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
-                <md-icon md-svg-src="assets/images/devices.svg" aria-label="Facebook"></md-icon>
+                <md-icon md-svg-src="assets/images/ic_notifications_black_48px.svg" aria-label="Notification"></md-icon>
+                <md-tooltip md-direction="top" md-visible="tooltipVisible" md-autohide="false">Rule Notification</md-tooltip>
             </md-button>
             <md-button aria-label="Google Hangout" class="md-fab md-raised md-mini">
-                <md-icon md-svg-src="assets/images/devices.svg" aria-label="Google Hangout"></md-icon>
+                <md-icon md-svg-src="assets/images/ic_settings_black_48px.svg" aria-label="Management"></md-icon>
+                <md-tooltip md-direction="top" md-visible="tooltipVisible" md-autohide="false">Rule Management</md-tooltip>
+            </md-button>
+            <md-button aria-label="Google Hangout" class="md-fab md-raised md-mini">
+                <md-icon md-svg-src="assets/images/ic_share_black_48px.svg" aria-label="Sharing"></md-icon>
+                <md-tooltip md-direction="top" md-visible="tooltipVisible" md-autohide="false">Rule Sharing</md-tooltip>
             </md-button>
         </md-fab-actions>
     </md-fab-speed-dial>
@@ -92,3 +102,11 @@
         </div>
     </div>
 </div>
+
+
+<button class="md-fab md-fab-bottom-left docs-scroll-fab md-button md-ink-ripple scrolling" type="button" ng-transclude="" docs-scroll-class="scrolling" ng-click="scrollTop()" aria-label="Back to Top" aria-hidden="false">
+
+    <md-icon md-svg-src="assets/images/menu.svg" class="ng-scope" role="img" aria-hidden="true"><svg height="100%" viewBox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
+
+    </svg></md-icon>
+    <div class="md-ripple-container" style=""></div></button>
