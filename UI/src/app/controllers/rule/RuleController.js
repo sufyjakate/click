@@ -142,8 +142,8 @@
 
             "0": {
                 "widgetType": "0",
-                "widgetView": "app/views/partials/visitors.html",
-                "widgetTitle": "Site visitors"
+                "widgetView": "app/views/table.html",
+                "widgetTitle": "Rule Notifications"
             },
 
             "1": {
@@ -172,7 +172,7 @@
             "5": {
                 "widgetType": "5",
                 "widgetView": "app/views/partials/autocomplete.html",
-                "widgetTitle": "Autocomplete Input"
+                "widgetTitle": "Share Rule"
             },
 
             "6": {
@@ -184,7 +184,7 @@
             "7": {
                 "widgetType": "7",
                 "widgetView": "app/views/partials/checkboxes.html",
-                "widgetTitle": "TODO list"
+                "widgetTitle": "Rule Management"
             }
         };
 

@@ -1,7 +1,7 @@
 <md-content class="md-padding" ng-controller="TodoController as vm">
     <div layout="row">
-        <h4 flex="82">{{vm.remaining()}} of {{vm.todos.length}} remaining</h4>
-        <md-button class="md-primary" ng-click="vm.toggleAll()">Toggle All
+        <h4 flex="82">{{5-vm.remaining()}} of {{vm.todos.length}} Activated </h4>
+        <md-button class="md-primary" ng-click="vm.toggleAll()">activate all
         </md-button>
     </div>
 
@@ -12,7 +12,7 @@
     <form ng-submit="vm.addTodo($event)" novalidate name="tasksForm">
         <div layout="row" flex>
             <md-input-container flex ng-class="{'md-input-invalid':tasksForm.taskText.$error.required && tasksForm.$submitted}">
-                <label>Write some todo task here...</label>
+                <label>Add a new rule to the list...</label>
                 <input ng-model="vm.todoText" name="taskText" required>
             </md-input-container>
             <md-button class="md-fab md-wayrn md-mini" ng-click="vm.addTodo($event)">
