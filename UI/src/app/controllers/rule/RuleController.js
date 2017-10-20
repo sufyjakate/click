@@ -34,40 +34,7 @@
             tooltip:{
                 visibility : "tooltipVisible",
                 direction: "top"
-            },
-            actionList:[
-                {
-                    ariaLabel: "Creation",
-                    title:"Rule Creation",
-                    icon:"assets/images/ic_create_black_48px.svg",
-                    materialIcon:"create",
-                    ruleType:0
-                },
-                {
-                    ariaLabel: "Notification",
-                    title:"Rule Notification",
-                    icon:"assets/images/ic_notifications_black_48px.svg",
-                    materialIcon:"notifications",
-                    ruleType:1
-                },
-                {
-                    ariaLabel: "Management",
-                    title:"Rule Management",
-                    icon:"assets/images/ic_settings_black_48px.svg",
-                    materialIcon:"settings",
-                    ruleType:2
-                },
-                {
-                    ariaLabel: "Sharing",
-                    title:"Rule Sharing",
-                    icon:"assets/images/ic_share_black_48px.svg",
-                    materialIcon:"share",
-                    ruleType:3
-                },
-
-
-
-            ]
+            }
         };
 
 
@@ -187,54 +154,67 @@
 
         vm.widgetTypeDetailEnum = {
 
-
             "0": {
-                "widgetType": "0",
-                "widgetView": "app/views/rule/widgets/ShareRule.html",
-                "widgetTitle": "Share Rule"
+                widgetType: "0",
+                widgetView: "app/views/rule/widgets/ShareRule.html",
+                widgetTitle: "Rule Sharing",
+                icon:"share",
+                ariaLabel: "Sharing",
             },
 
             "1": {
-                "widgetType": "1",
-                "widgetView": "app/views/rule/widgets/RuleManagement.html",
-                "widgetTitle": "Rule Management"
+                widgetType: "1",
+                widgetView: "app/views/rule/widgets/RuleManagement.html",
+                widgetTitle: "Rule Management",
+                icon:"settings",
+                ariaLabel: "Management",
             },
 
 
             "2": {
-                "widgetType": "2",
-                "widgetView": "app/views/rule/widgets/RuleNotification.html",
-                "widgetTitle": "Rule Notifications"
+                widgetType: "2",
+                widgetView: "app/views/rule/widgets/RuleNotification.html",
+                widgetTitle: "Rule Notifications",
+                icon:"notifications",
+                ariaLabel: "Notifications",
             },
 
             "3": {
-                "widgetType": "3",
-                "widgetView": "app/views/partials/warnings.html",
-                "widgetTitle": "Warnings"
+                widgetType: "3",
+                widgetView: "app/views/rule/widgets/RuleCreation.html",
+                widgetTitle: "Rule Creation",
+                icon:"create",
+                ariaLabel: "Creation",
             },
 
-            "4": {
-                "widgetType": "4",
-                "widgetView": "app/views/partials/memory.html",
-                "widgetTitle": "Memory load"
-            },
-            "5": {
-                "widgetType": "5",
-                "widgetView": "app/views/partials/controlPanel.html",
-                "widgetTitle": "Server Control Panel"
-            },
-
-            "6": {
-                "widgetType": "6",
-                "widgetView": "app/views/partials/usage.html",
-                "widgetTitle": "Usage Stats"
-            },
-
-            "7": {
-                "widgetType": "7",
-                "widgetView": "app/views/partials/performance.html",
-                "widgetTitle": "Performance"
-            },
+            // "4": {
+            //     widgetType: "4",
+            //     widgetView: "app/views/partials/warnings.html",
+            //     widgetTitle: "Warnings"
+            // },
+            //
+            // "5": {
+            //     widgetType: "5",
+            //     widgetView: "app/views/partials/memory.html",
+            //     widgetTitle: "Memory load"
+            // },
+            // "6": {
+            //     widgetType: "6",
+            //     widgetView: "app/views/partials/controlPanel.html",
+            //     widgetTitle: "Server Control Panel"
+            // },
+            //
+            // "7": {
+            //     widgetType: "7",
+            //     widgetView: "app/views/partials/usage.html",
+            //     widgetTitle: "Usage Stats"
+            // },
+            //
+            // "8": {
+            //     widgetType: "8",
+            //     widgetView: "app/views/partials/performance.html",
+            //     widgetTitle: "Performance"
+            // },
 
         };
 
