@@ -12,7 +12,6 @@
         var vm = this;
 
 
-
         vm.topDirections = ['left', 'up'];
         vm.bottomDirections = ['down', 'right'];
 

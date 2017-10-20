@@ -51,7 +51,7 @@
     <!--<p>{{vm.ruleWidgetData}}</p>-->
 
 
-    <br>
+    <!--<br>-->
 
     <div class="row">
         <div class="col-md-8">
@@ -80,12 +80,11 @@
                      on-item-added="vm.onItemAdded(item)"
                      on-item-removed="vm.onItemRemoved(item)">
 
-                    <div class="grid-stack-item-content">
-
-                        <panel-widget
+                        <panel-widget class="grid-stack-item-content"
                                 flex
                                 title="{{w.widgetTitle}}"
                                 template="{{w.widgetView}}"
+                                options="true"
                         >
                             <!--class="fixed-height-widget"-->
 
@@ -93,8 +92,6 @@
                         </panel-widget>
 
                         <!--<a class="btn btn-primary" ng-click="removeWidget(w)" href="#">remove</a>-->
-
-                    </div>
 
                 </div>
             </div>
