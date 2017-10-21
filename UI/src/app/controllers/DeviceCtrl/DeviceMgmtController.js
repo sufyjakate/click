@@ -14,12 +14,11 @@
             var cardid = 0;
             $scope.addWidget = function() {
                 var newWidget = {x:0, y:0, width:4, height:1};
-
-
+                $scope.data = $scope.tempdevices[0].name;
                 cardid++;
                 newWidget.cardid = cardid;
                 newWidget.title = 'Device Management';
-
+                newWidget.deviceName = $scope.data;
                 //JSON.stringify(newWidget);
 
                 $http({
@@ -37,6 +36,7 @@
                 });
 
 
+
                 $scope.widgets.push(newWidget);
                 icc.publish('list.update', $scope.widgets);
                 console.log($scope.widgets);
@@ -44,7 +44,7 @@
             };
             
 
-            $scope.shut = function(id) {
+            $scope.shut = function() {
                 console.log("Removed");
                 $mdDialog.hide();
             };
