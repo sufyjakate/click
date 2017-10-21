@@ -65,7 +65,18 @@
                 });
 
             $scope.data = $scope.tempdevices[0];
+            
+            $scope.addDevice = function () {
+
+                $mdDialog.show({
+                    templateUrl: 'app/views/devices/add_device.html',
+                    parent: angular.element(document.body),
+                    clickOutsideToClose:true
+                });
+
+            }
 
 
     }
+
 })();

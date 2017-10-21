@@ -1,0 +1,58 @@
+<div ng-controller="AddDeviceController" layout="column" ng-cloak="" class="md-inline-form inputdemoBasicUsage">
+
+    <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding="">
+        <div>
+            <md-input-container>
+                <label>Device Name</label>
+                <input ng-model="device.name">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Device ID</label>
+                <input ng-model="device.DeviceID">
+            </md-input-container>
+        </div>
+    </md-content>
+
+    <md-content layout-padding="">
+        <div>
+            <form name="userForm">
+
+                <div layout-gt-xs="row">
+
+                    <md-input-container>
+                        <label>Enter date</label>
+                        <md-datepicker ng-model="user.submissionDate"></md-datepicker>
+                    </md-input-container>
+                </div>
+
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm="">
+                        <label>Device Type</label>
+                        <input ng-model="device.DeviceType">
+                    </md-input-container>
+                </div>
+
+                <div layout-gt-sm="row">
+
+                    <md-input-container class="md-block" flex-gt-sm="">
+                        <label>State</label>
+                        <md-select ng-model="user.state">
+                            <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                                {{state.abbrev}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+
+                </div>
+
+
+            </form>
+        </div>
+    </md-content>
+    <md-button class="md-raised md-primary">ADD</md-button>
+    <md-button class="md-raised md-warn">CANCEL</md-button>
+    <md-progress-circular md-mode="determinate" value="{{vm.determinateValue}}"></md-progress-circular>
+
+
+</div>
