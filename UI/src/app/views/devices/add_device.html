@@ -38,9 +38,7 @@
                     <md-input-container class="md-block" flex-gt-sm="">
                         <label>State</label>
                         <md-select ng-model="device.DeviceStatus">
-                            <md-option ng-repeat="state in states" value="{{state.abbrev}}">
-                                {{state.abbrev}}
-                            </md-option>
+                            <md-option ng-repeat="state in states" value="{{state.abbrev}}"></md-option>
                         </md-select>
                     </md-input-container>
 
@@ -51,6 +49,6 @@
         </div>
     </md-content>
     <md-button class="md-raised md-primary" ng-click="addDevice(deviceData)">ADD</md-button>
-    <md-button class="md-raised md-warn">CANCEL</md-button>
+    <md-button class="md-raised md-warn" ng-click="closeDevice()">CANCEL</md-button>
 
 </div>

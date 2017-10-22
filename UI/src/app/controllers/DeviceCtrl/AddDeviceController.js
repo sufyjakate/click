@@ -53,6 +53,12 @@ angular
                     $scope.status = status;
                     alert('Data Sending Failed');
                 });
+
+                $mdDialog.hide();
+            };
+
+            $scope.closeDevice = function () {
+              $mdDialog.hide();
             }
         }
 
