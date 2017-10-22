@@ -22,7 +22,7 @@
 
                     <md-input-container>
                         <label>Enter date</label>
-                        <md-datepicker ng-model="user.submissionDate"></md-datepicker>
+                        <md-datepicker ng-model="device.submissionDate"></md-datepicker>
                     </md-input-container>
                 </div>
 
@@ -37,7 +37,7 @@
 
                     <md-input-container class="md-block" flex-gt-sm="">
                         <label>State</label>
-                        <md-select ng-model="user.state">
+                        <md-select ng-model="device.DeviceStatus">
                             <md-option ng-repeat="state in states" value="{{state.abbrev}}">
                                 {{state.abbrev}}
                             </md-option>
@@ -50,7 +50,7 @@
             </form>
         </div>
     </md-content>
-    <md-button class="md-raised md-primary">ADD</md-button>
+    <md-button class="md-raised md-primary" ng-click="addDevice(deviceData)">ADD</md-button>
     <md-button class="md-raised md-warn">CANCEL</md-button>
 
 </div>
