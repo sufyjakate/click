@@ -12,6 +12,8 @@ var express = require('express'),
     RuleWidget = require('./api/models/rule/ruleWidgetModel'), //created model loading here
     RuleWidgetDashboard = require('./api/models/rule/ruleWidgetDashboardModel'), //created model loading here
     bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
@@ -25,8 +27,7 @@ mongoose.connect('mongodb://admin:admin123@ds113915.mlab.com:13915/clickdb');
 app.disable('view cache');
 app.use(cors());
 
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
+
 app.use(cors());
 
 

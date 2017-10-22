@@ -5,23 +5,22 @@ var Schema = mongoose.Schema;
 
 var DeviceSchema = new Schema({
     name: {
-        type: String,
-        required: 'Kindly enter the name of the device'
+        type: String
     },
     Device_type: {
-        type: String,
-        required: 'Enter Device Type'
+        type: String
     },
-    Added_date: {
-        type: Date,
-        default: Date.now
+    Date: {
+        type: Date
     },
     status: {
         type: [{
             type: String,
             enum: ['ON', 'OFF']
-        }],
-        default: ['ON']
+        }]
+    },
+    DeviceID: {
+        type: Number
     }
 });
 
