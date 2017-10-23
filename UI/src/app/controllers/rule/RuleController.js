@@ -6,6 +6,7 @@
             'ruleService',
             RuleController,
         ])
+
     ;
 
     function RuleController(ruleService) {
@@ -15,15 +16,25 @@
         vm.topDirections = ['left', 'up'];
         vm.bottomDirections = ['down', 'right'];
 
-        vm.isOpen = true;
+        vm.isOpen = false;
 
         vm.availableModes = ['md-fling', 'md-scale'];
-        vm.selectedMode = 'md-fling';
+        vm.selectedMode = 'md-scale';
 
         vm.availableDirections = ['up', 'down', 'left', 'right'];
         vm.selectedDirection = 'right';
 
-        
+        vm.fab = {
+            trigger:{
+                openIconMaterialIcon:"add",
+                closeIconMaterialIcon:"close"
+            },
+            tooltip:{
+                visibility : "tooltipVisible",
+                direction: "top"
+            }
+        };
+
         vm.ruleData = [];
         vm.ruleWidgetData = [];
 
@@ -139,69 +150,69 @@
         }
 
         vm.widgetTypeDetailEnum = {
-<<<<<<< HEAD
 
             "0": {
-                "widgetType": "0",
-                "widgetView": "app/views/partials/visitors.html",
-                "widgetTitle": "Site visitors"
+                widgetType: "0",
+                widgetView: "app/views/rule/widgets/RuleSharing.html",
+                widgetTitle: "Rule Sharing",
+                icon:"share",
+                ariaLabel: "Sharing",
             },
 
             "1": {
-                "widgetType": "1",
-                "widgetView": "app/views/partials/warnings.html",
-                "widgetTitle": "Warnings"
+                widgetType: "1",
+                widgetView: "app/views/rule/widgets/RuleManagement.html",
+                widgetTitle: "Rule Management",
+                icon:"settings",
+                ariaLabel: "Management",
             },
 
-=======
 
-            "0": {
-                "widgetType": "0",
-                "widgetView": "app/views/partials/visitors.html",
-                "widgetTitle": "Site visitors"
-            },
-
-            "1": {
-                "widgetType": "1",
-                "widgetView": "app/views/partials/warnings.html",
-                "widgetTitle": "Warnings"
-            },
-
->>>>>>> 3727df8fe880366c88f62032f15a11144191b0bc
             "2": {
-                "widgetType": "2",
-                "widgetView": "app/views/partials/memory.html",
-                "widgetTitle": "Memory load"
+                widgetType: "2",
+                widgetView: "app/views/rule/widgets/RuleNotification.html",
+                widgetTitle: "Rule Notifications",
+                icon:"notifications",
+                ariaLabel: "Notifications",
             },
+
             "3": {
-                "widgetType": "3",
-                "widgetView": "app/views/partials/controlPanel.html",
-                "widgetTitle": "Server Control Panel"
+                widgetType: "3",
+                widgetView: "app/views/rule/widgets/RuleCreation.html",
+                widgetTitle: "Rule Creation",
+                icon:"create",
+                ariaLabel: "Creation",
             },
 
-            "4": {
-                "widgetType": "4",
-                "widgetView": "app/views/partials/usage.html",
-                "widgetTitle": "Usage Stats"
-            },
+            // "4": {
+            //     widgetType: "4",
+            //     widgetView: "app/views/partials/warnings.html",
+            //     widgetTitle: "Warnings"
+            // },
+            //
+            // "5": {
+            //     widgetType: "5",
+            //     widgetView: "app/views/partials/memory.html",
+            //     widgetTitle: "Memory load"
+            // },
+            // "6": {
+            //     widgetType: "6",
+            //     widgetView: "app/views/partials/controlPanel.html",
+            //     widgetTitle: "Server Control Panel"
+            // },
+            //
+            // "7": {
+            //     widgetType: "7",
+            //     widgetView: "app/views/partials/usage.html",
+            //     widgetTitle: "Usage Stats"
+            // },
+            //
+            // "8": {
+            //     widgetType: "8",
+            //     widgetView: "app/views/partials/performance.html",
+            //     widgetTitle: "Performance"
+            // },
 
-            "5": {
-                "widgetType": "5",
-                "widgetView": "app/views/partials/autocomplete.html",
-                "widgetTitle": "Autocomplete Input"
-            },
-
-            "6": {
-                "widgetType": "6",
-                "widgetView": "app/views/partials/performance.html",
-                "widgetTitle": "Performance"
-            },
-
-            "7": {
-                "widgetType": "7",
-                "widgetView": "app/views/partials/checkboxes.html",
-                "widgetTitle": "TODO list"
-            }
         };
 
         vm.addWidget = function (widgetType, data) {

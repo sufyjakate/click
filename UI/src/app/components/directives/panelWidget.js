@@ -14,8 +14,13 @@ angular.module('app')
                 '      <h3 class="panel-widget-tittle" >{{title}}</h3>' +
                 '      <span flex></span>' +
                 '      <md-button ng-show="options" ng-click="$showOptions = !$showOptions" class="md-icon-button" aria-label="Show options">' +
-                '        <i class="material-icons">more_vert</i>' +
+                '        <i class="material-icons">expand_more</i>' +
                 '      </md-button>' +
+
+                '<md-content ng-show="$showOptions" class="options"> '+
+
+                '</md-content>'+
+
                 '    </div>' +
                 '  </md-toolbar>' +
                 '  <div ng-include="template"/>' +

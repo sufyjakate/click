@@ -21,7 +21,7 @@
       },
       {
           name: 'Rule',
-          icon: 'view_module',
+          icon: 'widgets',
           sref: '.rule'
       },
       {

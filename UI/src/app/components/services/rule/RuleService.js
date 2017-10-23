@@ -11,7 +11,8 @@
     function ruleService($q, $http) {
 
 
-        var documentID = "59e694b00185326f1d387691";
+        var documentID = "59e694b00185326f1d387691";    //remote database
+        var documentID = "59ea17f5f182e10f81bfaa97";    //loacl database
 
         var tableData = [
             {
@@ -164,6 +165,52 @@
             });
         }
 
+        function loadWidgetsData(documentID) {
+            return $http.get('http://localhost:3333/ruleWidgetsDashboard/' + documentID).then(function (response) {
+
+                if(response.data !==null){
+
+                    var ruleWidgetDataResult = response.data.state;
+                    console.log("In Get All RuleWidgetDashboard State Function in exports");
+                    console.log(ruleWidgetDataResult);
+                    return ruleWidgetDataResult;
+
+                }
+            });
+        }
+
+        function createNewDashboard() {
+            //POST
+            var config = {
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8'
+                }
+            };
+
+            var url = 'http://localhost:3333/ruleWidgetsDashboard/';
+            console.log(url);
+
+
+            var data = {
+                state: [],
+                widgetType: "def"
+            }
+
+            return $http.post(url, data, config).then(function (response) {
+                var afterSaving = response.data;
+                console.log("Widget Dashboard Created");
+                console.log(afterSaving);
+                console.log(response);
+
+
+                return afterSaving._id;
+            }, function (errorResponse) {
+                console.log(errorResponse);
+            });
+
+
+        }
+
         function getAllRuleWidgetsData() {
             // return $http.get('http://localhost:3333/ruleWidgets').then(function (response) {
             //     var ruleWidgetDataResult = response.data;
@@ -172,12 +219,25 @@
             //     return ruleWidgetDataResult;
             // });
 
-            return $http.get('http://localhost:3333/ruleWidgetsDashboard/' + documentID).then(function (response) {
-                var ruleWidgetDataResult = response.data.state;
-                console.log("In Get All RuleWidgetDashboard State Function in exports");
-                console.log(ruleWidgetDataResult);
-                return ruleWidgetDataResult;
+
+            return $http.get('http://localhost:3333/ruleWidgetsDashboard/').then(function (response) {
+
+                if(response.data !==null && response.data.length !==0){
+                    documentID = response.data[0]._id;
+                    console.log("In Get All RuleWidgetDashboard State Function Dashboard Existing : Document ID");
+                    console.log(documentID);
+
+                    return loadWidgetsData(documentID);
+
+                }
+                else{   //Dashboard not found
+
+                    return createNewDashboard();
+
+                }
             });
+
+
         }
 
         function createRuleWidgetData(newWidgetData) {
