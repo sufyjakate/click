@@ -1,13 +1,13 @@
 /**
- * Created by sufyjakate on 13.10.17.
+ * Created by sufyjakate on 23.10.17.
  */
 (function () {
 
     angular.module('app')
-        .controller('SuggestController', ['InterControllerCommunication', '$scope', '$mdDialog', '$http'
-            , SuggestController]);
+        .controller('NotificationController', ['InterControllerCommunication', '$scope', '$mdDialog', '$http'
+            , NotificationController]);
 
-    function SuggestController(icc, $scope, $mdDialog, $http){
+    function NotificationController(icc, $scope, $mdDialog, $http){
 
 
 
@@ -17,10 +17,11 @@
         $scope.addWidget = function() {
             var newWidget = {x:0, y:0, width:4, height:1};
             $scope.data = $scope.tempdevices[0].name;
+
             //newWidget.id = 1;
             cardid++;
             newWidget.cardid = cardid;
-            newWidget.title = 'Suggest Me';
+            newWidget.title = 'Notification Center';
             newWidget.deviceName = $scope.data;
 
             $http({
@@ -37,19 +38,13 @@
                 $scope.status = status;
             });
 
+
             $scope.widgets.push(newWidget);
 
             icc.publish('list.update', $scope.widgets);
             console.log($scope.widgets);
         };
 
-
-        // $scope.removeCard = function(index) {
-        //     // cards.splice
-        //     $scope.cards.splice(index, 1);
-        //     console.log(cards);
-        //
-        // };
 
 
         $scope.shut = function() {
