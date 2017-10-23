@@ -27,13 +27,11 @@ exports.create_a_card = function(req, res) {
     new_card.width = req.body.width;
     new_card.x = req.body.x;
     new_card.y = req.body.y;
+    new_card.deviceName = req.body.deviceName;
 
     console.log('id' + req.body.cardid);
     console.log(req.body.title);
-    console.log('height' + req.body.height);
-    console.log('width' + req.body.width);
-    console.log('x' + req.body.x);
-    console.log('y' +  req.body.y);
+    console.log(req.body.deviceName);
     new_card.save();
     // new_card.save(function(err, Card) {
     //     if (err)

@@ -128,6 +128,14 @@
                         clickOutsideToClose: true
                     })
                 }
+                if ($index == 4) {
+                    $mdDialog.show({
+                        templateUrl: 'app/views/devices/notification.html',
+                        parent: angular.element(document.body),
+                        targetEvent: ev,
+                        clickOutsideToClose: true
+                    })
+                }
 
 
             };

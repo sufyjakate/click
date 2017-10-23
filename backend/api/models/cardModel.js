@@ -22,6 +22,9 @@ var CardSchema = new Schema({
     },
     y: {
         type: Number
+    },
+    deviceName: {
+        type: String
     }
 });
 
