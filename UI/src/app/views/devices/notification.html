@@ -1,9 +1,9 @@
-<div ng-controller="DeviceUpgradeController" ng-cloak>
-    <md-dialog aria-label="Software Upgrade Center">
+<div ng-controller="NotificationController" ng-cloak>
+    <md-dialog aria-label="Notification Center">
         <form>
             <md-toolbar>
                 <div class="md-toolbar-tools">
-                    <h2>Upgrade Center</h2>
+                    <h2>Notification Center</h2>
                 </div>
             </md-toolbar>
             <md-dialog-content style="max-width:800px;max-height:810px; ">
@@ -35,7 +35,7 @@
                     CANCEL
                 </md-button>
                 <md-button ng-disabled="!data" ng-click="addWidget()" style="margin-right:20px;" >
-                ADD
+                    ADD
                 </md-button>
             </md-dialog-actions>
         </form>

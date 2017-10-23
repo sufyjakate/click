@@ -10,7 +10,7 @@ angular.module('app')
 
     })
 
-    .controller('CardDevMgmtController', [ 'InterControllerCommunication', '$scope', '$log', '$mdDialog' ,function (icc, $scope, $log, $mdDialog) {
+    .controller('CardDevMgmtController', [ 'InterControllerCommunication', '$scope', '$log', '$mdDialog', '$http' ,function (icc, $scope, $log, $mdDialog, $http) {
 
         var handler = function (ea, data) {
             $scope.widgets = data;
@@ -35,6 +35,17 @@ angular.module('app')
         $scope.removeWidget = function(w) {
             var index = $scope.widgets.indexOf(w);
             $scope.widgets.splice(index, 1);
+
+            // $http({
+            //     url: 'http://localhost:3333/cards',
+            //     method: 'DELETE',
+            //     data: $scope.widgets[index],
+            //     headers: {'Content-Type': 'application/json'}
+            // }).then(function success(response, status, headers, config) {
+            //     console.log('Device GET successful');
+            //     console.log(response);
+            //
+            // });
         };
         $scope.onChange = function(event, items) {
             $log.log("onChange event: "+event+" items:"+items);
