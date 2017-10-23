@@ -7,8 +7,8 @@
                            ng-mouseenter="vm.isOpen=true" ng-mouseleave="vm.isOpen=false" >
             <md-fab-trigger>
                 <md-button aria-label="menu" class="md-fab md-warn" class="fab-main-circle">
-                    <i ng-if="!vm.isOpen" class="material-icons large fab-icon ">{{vm.fab.trigger.openIconMaterialIcon}}</i>
-                    <i ng-if="vm.isOpen" class="material-icons large fab-icon ">{{vm.fab.trigger.closeIconMaterialIcon}}</i>
+                    <i ng-if="!vm.isOpen" class="material-icons md-36 fab-icon ">{{vm.fab.trigger.openIconMaterialIcon}}</i>
+                    <i ng-if="vm.isOpen" class="material-icons md-36 fab-icon ">{{vm.fab.trigger.closeIconMaterialIcon}}</i>
                     <md-tooltip md-direction= "top" md-visible="tooltipVisible" >Rule</md-tooltip>
                 </md-button>
             </md-fab-trigger>
@@ -24,7 +24,7 @@
                                 md-autohide="false">
                         {{action.widgetTitle}}
                     </md-tooltip>
-                    <i class="material-icons large fab-icon">
+                    <i class="material-icons md-24 fab-icon">
                         {{action.icon}}
                     </i>
 
