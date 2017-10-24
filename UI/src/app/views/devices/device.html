@@ -21,7 +21,15 @@
 
     </md-content>
 
-    <div cardview="card"></div>
+
+    <div gridstack class="grid-stack grid1" options="options" on-change="onChange(event,items)" on-drag-start="onDragStart(event,ui)" on-drag-stop="onDragStop(event,ui)" on-resize-start="onResizeStart(event,ui)" on-resize-stop="onResizeStop(event,ui)">
+
+        <div gridstack-item ng-repeat="w in widgets track by $index" index="{{::$index}}" class="grid-stack-item" gs-item-x="w.x" gs-item-y="w.y"
+             gs-item-width="w.width" gs-item-height="w.height" gs-item-autopos="1" on-item-added="onItemAdded(item)" on-item-removed="onItemRemoved(item)">
+
+    <div class="grid-stack-item-content" cardview="card"></div>
 
 
+        </div>
     </div>
+</div>
