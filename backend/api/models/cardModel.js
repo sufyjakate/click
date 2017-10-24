@@ -4,11 +4,8 @@ var Schema = mongoose.Schema;
 
 
 var CardSchema = new Schema({
-
-    CardState:[{
         cardid: {
-            type: Number,
-            unique: true
+            type: Number
         },
         height: {
             type: Number
@@ -28,7 +25,7 @@ var CardSchema = new Schema({
         deviceName: {
             type: String
         }
-    }]
+
 });
 
 module.exports = mongoose.model('Card', CardSchema);

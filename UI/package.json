@@ -10,7 +10,8 @@
     "gulp": "^3.9.1",
     "karma": "^1.5.0",
     "material-design-icons": "^3.0.1",
-    "mongodb": "^2.2.31"
+    "mongodb": "^2.2.31",
+    "npm-check-updates": "^2.13.0"
   },
   "devDependencies": {
     "browser-sync": "~1.7.1",
@@ -47,7 +48,7 @@
     "karma-phantomjs-launcher": "~0.1.4",
     "main-bower-files": "~2.4.0",
     "protractor": "~1.4.0",
-    "require-dir": "~0.1.0",
+    "require-dir": "^0.1.0",
     "uglify-save-license": "~0.4.1",
     "wiredep": "~2.2.0"
   },

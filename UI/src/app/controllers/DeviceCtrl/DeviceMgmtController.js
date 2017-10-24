@@ -14,7 +14,7 @@
             var cardid = 0;
 
 
-            $http({
+           /* $http({
                 url: 'http://localhost:3333/cards',
                 method: 'GET',
                 headers: {'Content-Type': 'application/json'}
@@ -24,7 +24,7 @@
                 $scope.widgets = response.data;
                 console.log($scope.widgets);
 
-            });
+            });*/
 
 
 
@@ -38,24 +38,21 @@
                 newWidget.title = 'Device Management';
                 newWidget.deviceName = $scope.data;
                 //JSON.stringify(newWidget);
-                $scope.widgets.push(newWidget);
 
-                var object = {
-                    value: $scope.widgets
-                };
                 $http({
                     url: 'http://localhost:3333/cards',
                     method: 'POST',
-                    data: object,
+                    data: newWidget,
                     headers: {'Content-Type': 'application/json'}
                 }).then(function successcallback(data, status, headers, config) {
 
-                        object = data;
+                        newWidget = data;
 
 
                 }, function errorcallback(data, status, headers, config) {
                         $scope.status = status;
                 });
+                $scope.widgets.push(newWidget);
 
 
 
