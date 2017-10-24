@@ -87,19 +87,18 @@
                                 options="false"
                         >
                             <!--class="fixed-height-widget"-->
-
                         </panel-widget>
 
                     <md-card-actions layout="row" layout-align="end center">
-                        <md-button ng-click="vm.editWidget(w)">
-                            <i class="material-icons fab-icon">edit</i>
+                        <md-button ng-click="vm.editWidget(w)" class="md-icon-button" >
+                            <i class="material-icons fab-icon" >edit</i>
                             <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Edit</md-tooltip>
                         </md-button>
-                        <md-button ng-click="vm.configureWidget(w)">
+                        <md-button ng-click="vm.configureWidget(w)" class="md-icon-button" >
                             <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Settings</md-tooltip>
                             <i class="material-icons fab-icon">settings</i>
                         </md-button>
-                        <md-button ng-click="vm.removeWidget(w)">
+                        <md-button ng-click="vm.removeWidget(w)" class="md-icon-button" >
                             <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Delete</md-tooltip>
                             <i class="material-icons fab-icon">delete</i>
                         </md-button>
