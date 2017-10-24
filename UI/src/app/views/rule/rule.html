@@ -1,25 +1,57 @@
+
+<div layout="row">
+
+    <div class="lock-size " layout="column" layout-align="left center">
+        <md-fab-speed-dial md-open="vm.isOpen" md-direction="{{vm.selectedDirection}}"
+                           ng-class="vm.selectedMode"
+                           ng-mouseenter="vm.isOpen=true" ng-mouseleave="vm.isOpen=false" >
+            <md-fab-trigger>
+                <md-button aria-label="menu" class="md-fab md-warn" class="fab-main-circle">
+                    <i ng-if="!vm.isOpen" class="material-icons md-36 fab-icon ">{{vm.fab.trigger.openIconMaterialIcon}}</i>
+                    <i ng-if="vm.isOpen" class="material-icons md-36 fab-icon ">{{vm.fab.trigger.closeIconMaterialIcon}}</i>
+                    <md-tooltip md-direction= "top" md-visible="tooltipVisible" >Rule</md-tooltip>
+                </md-button>
+            </md-fab-trigger>
+
+            <md-fab-actions>
+                <md-button ng-repeat="action in vm.widgetTypeDetailEnum"
+                           ng-click="vm.addWidget(action.widgetType)"
+                           aria-label={{action.arialabel}}
+                           class="md-fab md-raised md-mini" >
+
+                    <md-tooltip md-direction="top"
+                                md-visible="tooltipVisible"
+                                md-autohide="false">
+                        {{action.widgetTitle}}
+                    </md-tooltip>
+                    <i class="material-icons md-24 fab-icon">
+                        {{action.icon}}
+                    </i>
+
+                </md-button>
+            </md-fab-actions>
+        </md-fab-speed-dial>
+    </div>
+
+    <md-select ng-model="vm.newRuleType" placeholder="Select Widget Type" class=" md-raised md-primary col-md-2" >
+        <md-option ng-repeat="item in vm.widgetTypeDetailEnum " value={{item.widgetType}}>
+            <i class="material-icons large fab-icon">{{item.icon}}</i>
+            {{item.widgetTitle}}
+
+        </md-option>
+    </md-select>
+
+    <md-button class="md-raised md-primary" ng-click="vm.addWidget(vm.newRuleType)" >Add Widget</md-button>
+    <md-button class="md-raised md-primary" ng-click="vm.moveWidget()" >Move Widget</md-button>
+    <md-button class="md-raised md-primary" ng-click="vm.loadAllRuleWidgetData()" >Load Dashboard</md-button>
+
+</div>
 <div class="container-fluid">
 
     <!--<p>{{vm.ruleWidgetData}}</p>-->
 
-    <div>
-        <input type="text"
-               ng-model="vm.newRuleTYpe"
-               [name="WidgetType"]
-               [required="string"]
-               [ng-required="string"]
-               [ng-minlength="number"]
-               [ng-maxlength="number"]
-               [pattern="string"]
-               [ng-pattern="string"]
-               [ng-change="string"]
-               [ng-trim="boolean"]>
 
-        <a class="btn btn-primary" ng-click="vm.addWidget(vm.newRuleTYpe)" href="">Add Widget</a>
-        <a class="btn btn-primary" ng-click="vm.moveWidget()" href="">Move Widget</a>
-        <a class="btn btn-primary" ng-click="vm.loadAllRuleWidgetData()" href="">Load All Widget</a>
-    </div>
-    <br>
+    <!--<br>-->
 
     <div class="row">
         <div class="col-md-8">
@@ -48,24 +80,35 @@
                      on-item-added="vm.onItemAdded(item)"
                      on-item-removed="vm.onItemRemoved(item)">
 
-                    <div class="grid-stack-item-content">
-
-                        <panel-widget
+                        <panel-widget class="grid-stack-item-content"
                                 flex
                                 title="{{w.widgetTitle}}"
                                 template="{{w.widgetView}}"
+                                options="false"
                         >
                             <!--class="fixed-height-widget"-->
 
-
                         </panel-widget>
 
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button ng-click="vm.editWidget(w)">
+                            <i class="material-icons fab-icon">edit</i>
+                            <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Edit</md-tooltip>
+                        </md-button>
+                        <md-button ng-click="vm.configureWidget(w)">
+                            <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Settings</md-tooltip>
+                            <i class="material-icons fab-icon">settings</i>
+                        </md-button>
+                        <md-button ng-click="vm.removeWidget(w)">
+                            <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Delete</md-tooltip>
+                            <i class="material-icons fab-icon">delete</i>
+                        </md-button>
+                    </md-card-actions>
                         <!--<a class="btn btn-primary" ng-click="removeWidget(w)" href="#">remove</a>-->
-
-                    </div>
 
                 </div>
             </div>
         </div>
     </div>
 </div>
+
