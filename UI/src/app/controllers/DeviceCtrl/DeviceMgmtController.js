@@ -12,6 +12,18 @@
 
             $scope.widgets = [];
             var cardid = 0;
+            $http({
+                url: 'http://localhost:3333/cards',
+                method: 'GET',
+                headers: {'Content-Type': 'application/json'}
+            }).then(function success(response, status, headers, config) {
+                console.log('Card GET successful');
+                console.log(response);
+                $scope.widgets = response.data;
+                console.log($scope.widgets);
+
+            });
+
             $scope.addWidget = function() {
                 var newWidget = {x:0, y:0, width:4, height:1};
                 $scope.data = $scope.tempdevices[0].name;
@@ -20,15 +32,16 @@
                 newWidget.title = 'Device Management';
                 newWidget.deviceName = $scope.data;
                 //JSON.stringify(newWidget);
+                $scope.widgets.push(newWidget);
 
                 $http({
                     url: 'http://localhost:3333/cards',
                     method: 'POST',
-                    data: newWidget,
+                    data: $scope.widgets,
                     headers: {'Content-Type': 'application/json'}
                 }).then(function successcallback(data, status, headers, config) {
 
-                        newWidget = data;
+                        $scope.widgets = data;
 
 
                 }, function errorcallback(data, status, headers, config) {
@@ -37,7 +50,7 @@
 
 
 
-                $scope.widgets.push(newWidget);
+
                 icc.publish('list.update', $scope.widgets);
                 console.log($scope.widgets);
 
