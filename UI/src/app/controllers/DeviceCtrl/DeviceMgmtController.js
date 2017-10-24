@@ -14,17 +14,28 @@
             var cardid = 0;
 
 
-           /* $http({
+           $http({
                 url: 'http://localhost:3333/cards',
                 method: 'GET',
                 headers: {'Content-Type': 'application/json'}
             }).then(function success(response, status, headers, config) {
                 console.log('Card GET successful');
                 console.log(response);
-                $scope.widgets = response.data;
-                console.log($scope.widgets);
+                var cardsFromRest = response.data;
+                console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+                console.log(cardsFromRest);
+                var maxCardId = 0 ;
+                var cardRest;
+                for (cardRest in cardsFromRest) {
+                    if(cardsFromRest[cardRest].cardid > maxCardId ) {
+                        maxCardId = cardsFromRest[cardRest].cardid;
+                    }
+                }
+                cardid = maxCardId;
+               console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 
-            });*/
+
+           });
 
 
 
