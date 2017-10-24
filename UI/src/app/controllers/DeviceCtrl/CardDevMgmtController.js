@@ -73,7 +73,7 @@ angular.module('app')
 
     .directive('cardmgmtview', function () {
             return {
-                restrict: 'A',
+                restrict: 'EA',
                 templateUrl: 'app/views/devices/guage.html'
 
             }

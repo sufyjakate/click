@@ -12,6 +12,8 @@
 
             $scope.widgets = [];
             var cardid = 0;
+
+
             $http({
                 url: 'http://localhost:3333/cards',
                 method: 'GET',
@@ -24,7 +26,11 @@
 
             });
 
+
+
+
             $scope.addWidget = function() {
+
                 var newWidget = {x:0, y:0, width:4, height:1};
                 $scope.data = $scope.tempdevices[0].name;
                 cardid++;
@@ -34,14 +40,17 @@
                 //JSON.stringify(newWidget);
                 $scope.widgets.push(newWidget);
 
+                var object = {
+                    value: $scope.widgets
+                };
                 $http({
                     url: 'http://localhost:3333/cards',
                     method: 'POST',
-                    data: $scope.widgets,
+                    data: object,
                     headers: {'Content-Type': 'application/json'}
                 }).then(function successcallback(data, status, headers, config) {
 
-                        $scope.widgets = data;
+                        object = data;
 
 
                 }, function errorcallback(data, status, headers, config) {
