@@ -10,7 +10,7 @@
         <md-dialog-content style="max-width:800px;max-height:810px; ">
 
             <table class="table">
-                <md-button class="md-warn md-raised md-hue-2">Add Device</md-button>
+                <md-button class="md-warn md-raised md-hue-2" ng-click="addDevice()">Add Device</md-button>
                 <tr>
                     <th>Name</th>
                     <th>Device Type</th>
@@ -21,6 +21,12 @@
                     <th>{{device.name}}</th>
                     <th>{{device.Device_type}}</th>
                     <th>{{device.status}}</th>
+                    <th>
+                        <md-radio-group ng-model="$parent.data">
+                            <md-radio-button  value="{{device.name}}" class="md-primary">{{device.name}}</md-radio-button>
+                        </md-radio-group>
+                    </th>
+
 
                 </tr>
             </table>
@@ -32,7 +38,7 @@
             <md-button ng-click="shut()" >
                 CANCEL
             </md-button>
-            <md-button ng-click="addWidget()" style="margin-right:20px;" >
+            <md-button ng-disabled="!data" ng-click="addWidget()" style="margin-right:20px;" >
                 ADD
             </md-button>
         </md-dialog-actions>

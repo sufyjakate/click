@@ -4,19 +4,31 @@
             <md-toolbar>
                 <div class="md-toolbar-tools">
                     <h2>Suggest Me</h2>
-                    <span flex></span>
                     <md-button class="md-icon-button" ng-click="cancel()">
                     </md-button>
                 </div>
             </md-toolbar>
             <md-dialog-content style="max-width:800px;max-height:810px; ">
-                <md-tabs md-dynamic-height md-border-bottom>
-                    <md-tab label="Widget 1">
-                        <md-content class="md-padding">
-                            <md-icon md-svg-src="assets/images/light-bulb.svg" aria-label="Close dialog"></md-icon>
-                        </md-content>
-                    </md-tab>
-                </md-tabs>
+                <table class="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Device Type</th>
+                        <th>Device Status</th>
+                        <th>Select Device</th>
+                    </tr>
+                    <tr ng-repeat="device in devices">
+                        <th>{{device.name}}</th>
+                        <th>{{device.Device_type}}</th>
+                        <th>{{device.status}}</th>
+                        <th>
+                            <md-radio-group ng-model="$parent.data">
+                                <md-radio-button  value="{{device.name}}" class="md-primary">{{device.name}}</md-radio-button>
+                            </md-radio-group>
+                        </th>
+
+
+                    </tr>
+                </table>
             </md-dialog-content>
 
             <md-dialog-actions layout="row">
@@ -24,7 +36,7 @@
                 <md-button ng-click="shut()" >
                     CANCEL
                 </md-button>
-                <md-button ng-click="addWidget()" style="margin-right:20px;" >
+                <md-button ng-disabled="!data" ng-click="addWidget()" style="margin-right:20px;" >
                 ADD
                 </md-button>
             </md-dialog-actions>
