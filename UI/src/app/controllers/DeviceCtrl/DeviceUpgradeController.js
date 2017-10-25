@@ -14,11 +14,32 @@
         $scope.widgets = [];
 
         var cardid = 0;
+
+        $http({
+            url: 'http://localhost:3333/cards',
+            method: 'GET',
+            headers: {'Content-Type': 'application/json'}
+        }).then(function success(response, status, headers, config) {
+            console.log('Card GET successful');
+            console.log(response);
+            var cardsFromRest = response.data;
+            console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+            console.log(cardsFromRest);
+            var maxCardId = 0 ;
+            var cardRest;
+            for (cardRest in cardsFromRest) {
+                if(cardsFromRest[cardRest].cardid > maxCardId ) {
+                    maxCardId = cardsFromRest[cardRest].cardid;
+                }
+            }
+            cardid = maxCardId;
+            console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+
+        });
+
         $scope.addWidget = function() {
             var newWidget = {x:0, y:0, width:4, height:1};
-            $scope.data = $scope.tempdevices[0].name;
-
-            //newWidget.id = 1;
             cardid++;
             newWidget.cardid = cardid;
             newWidget.title = 'Device Upgrade Center';
@@ -41,7 +62,7 @@
 
             $scope.widgets.push(newWidget);
 
-            icc.publish('list.update', $scope.widgets);
+            icc.publish('list_upgrade.update', $scope.widgets);
             console.log($scope.widgets);
         };
 

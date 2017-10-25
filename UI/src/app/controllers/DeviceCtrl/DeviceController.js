@@ -61,6 +61,24 @@
             var list_control = icc.subscribe('list_control.update', handler_control);
             console.log(list_control);
 
+            var handler_upgrade = function (ea, data) {
+                $scope.widgets = data;
+            };
+            var list_upgrade = icc.subscribe('list_upgrade.update', handler_upgrade);
+            console.log(list_upgrade);
+
+            var handler_suggest = function (ea, data) {
+                $scope.widgets = data;
+            };
+            var list_suggest = icc.subscribe('list_suggest.update', handler_suggest);
+            console.log(list_suggest);
+
+            var handler_notif = function (ea, data) {
+                $scope.widgets = data;
+            };
+            var list_notif = icc.subscribe('list_notif.update', handler_notif);
+            console.log(list_notif);
+
             // $http({
             //         url: 'http://localhost:3333/cards',
             //         method: 'GET',

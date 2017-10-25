@@ -89,7 +89,7 @@
 
         });
 
-        $scope.data = $scope.tempdevices[0];
+        $scope.data = $scope.tempdevices;
 
         $scope.addDevice = function () {
 
