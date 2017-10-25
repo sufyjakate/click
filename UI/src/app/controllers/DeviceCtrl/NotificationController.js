@@ -31,6 +31,7 @@
                 if(cardsFromRest[cardRest].cardid > maxCardId ) {
                     maxCardId = cardsFromRest[cardRest].cardid;
                 }
+                $scope.widgets.push(cardsFromRest[cardRest]);
             }
             cardid = maxCardId;
             console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
