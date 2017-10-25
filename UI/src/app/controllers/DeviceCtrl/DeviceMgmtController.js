@@ -43,7 +43,6 @@
             $scope.addWidget = function() {
 
                 var newWidget = {x:0, y:0, width:4, height:1};
-                $scope.data = $scope.tempdevices[0].name;
                 cardid++;
                 newWidget.cardid = cardid;
                 newWidget.title = 'Device Management';
@@ -94,7 +93,7 @@
 
                 });
 
-            $scope.data = $scope.tempdevices[0];
+            $scope.data = $scope.tempdevices;
             
             $scope.addDevice = function () {
 

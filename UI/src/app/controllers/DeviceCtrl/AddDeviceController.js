@@ -18,9 +18,8 @@ angular
 
         function AddDeviceController(icc, $scope, $mdDialog, $http) {
 
-            $scope.states = ('ON OFF').split(' ').map(function(state) {
-                return {abbrev: state};
-            });
+            $scope.status = ["ON","OFF"];
+
 
             $scope.device = {
                 name: '',
@@ -29,6 +28,7 @@ angular
                 DeviceStatus: ''
             };
 
+            console.log($scope.device.DeviceStatus);
 
 
             //console.log(state);

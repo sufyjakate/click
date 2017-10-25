@@ -29,7 +29,6 @@ angular.module('app')
             $mdDialog.show( {
 
                     templateUrl: 'app/views/devices/guage.html',
-                    parent: angular.element(document.body),
                     clickOutsideToClose:true
                 });
         };
