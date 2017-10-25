@@ -23,9 +23,15 @@ angular.module('app')
             cellHeight: 300,
             verticalMargin: 1
         };
-        $scope.addGuage = function (w, ev) {
-            var index = $scope.widgets.indexOf(w);
-            console.log('Open card'+ index);
+        $scope.addGuage = function () {
+            // var index = $scope.widgets.indexOf(w);
+            // console.log('Open card'+ index);
+            $mdDialog.show( {
+
+                    templateUrl: 'app/views/devices/guage.html',
+                    parent: angular.element(document.body),
+                    clickOutsideToClose:true
+                });
         };
         $scope.moveWidget = function() {
             $scope.widgets[0].x = 1;

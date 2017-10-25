@@ -49,11 +49,17 @@
 
 
 
-            var handler = function (ea, data) {
+            var handler_mgmt = function (ea, data) {
                 $scope.widgets = data;
             };
-            var list = icc.subscribe('list.update', handler);
-            console.log(list);
+            var list_mgmt = icc.subscribe('list_mgmt.update', handler_mgmt);
+            console.log(list_mgmt);
+
+            var handler_control = function (ea, data) {
+                $scope.widgets = data;
+            };
+            var list_control = icc.subscribe('list_control.update', handler_control);
+            console.log(list_control);
 
             // $http({
             //         url: 'http://localhost:3333/cards',
