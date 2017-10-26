@@ -98,7 +98,7 @@
                             <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Settings</md-tooltip>
                             <i class="material-icons fab-icon">settings</i>
                         </md-button>
-                        <md-button ng-click="vm.removeWidget(w)" class="md-icon-button" >
+                        <md-button ng-click="vm.showConfirm ($event,w)"  class="md-icon-button" >
                             <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Delete</md-tooltip>
                             <i class="material-icons fab-icon">delete</i>
                         </md-button>
