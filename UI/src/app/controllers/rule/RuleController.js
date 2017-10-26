@@ -4,14 +4,69 @@
         .module('app')
         .controller('RuleController', [
             'ruleService',
+            '$scope',
+            '$mdDialog',
             RuleController,
         ])
 
     ;
 
-    function RuleController(ruleService) {
+    function RuleController(ruleService, $scope, $mdDialog) {
         var vm = this;
 
+
+        vm.hide = function() {
+            $mdDialog.hide();
+        };
+
+        vm.cancel = function() {
+            $mdDialog.cancel();
+        };
+
+        vm.answer = function(answer) {
+            $mdDialog.hide(answer);
+        };
+
+
+        vm.showConfirm = function(ev,widget) {
+            // Appending dialog to document.body to cover sidenav in docs app
+            var confirm = $mdDialog.confirm()
+                .title('Delete Widget ?')
+                .textContent('Are you sure you want to delete this widget')
+                .ariaLabel('Lucky day')
+                .targetEvent(ev)
+                .ok('Confirm')
+                .cancel('Cancel');
+
+            $mdDialog.show(confirm).then(function() {
+                console.log("Deleted Widget");
+                vm.removeWidget(widget);
+            }, function() {
+                console.log("cancelled");
+                // $scope.status = 'You decided to keep your debt.';
+            });
+        };
+
+
+        vm.showPrompt = function(ev) {
+            // Appending dialog to document.body to cover sidenav in docs app
+            var confirm = $mdDialog.prompt()
+                .title('Delete Widget ?')
+                .textContent('Are you sure you want to delete this widget')
+                // .placeholder('Dog name')
+                // .ariaLabel('Dog name')
+                // .initialValue('Buddy')
+                .targetEvent(ev)
+                .required(true)
+                .ok('Okay!')
+                .cancel('I\'m a cat person');
+
+            $mdDialog.show(confirm).then(function(result) {
+                $scope.status = 'You decided to name your dog ' + result + '.';
+            }, function() {
+                $scope.status = 'You didn\'t name your dog.';
+            });
+        };
 
         vm.topDirections = ['left', 'up'];
         vm.bottomDirections = ['down', 'right'];
