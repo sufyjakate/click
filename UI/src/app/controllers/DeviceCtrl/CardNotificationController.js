@@ -10,7 +10,7 @@ angular.module('app')
 
     })
 
-    .controller('CardDevMgmtController', [ 'InterControllerCommunication', '$scope', '$log', '$mdDialog', '$http' ,function (icc, $scope, $log, $mdDialog, $http) {
+    .controller('CardNotificationController', [ 'InterControllerCommunication', '$scope', '$log', '$mdDialog', '$http' ,function (icc, $scope, $log, $mdDialog, $http) {
 
         // var handler = function (ea, data) {
         //     $scope.widgets = data;
@@ -28,9 +28,9 @@ angular.module('app')
             // console.log('Open card'+ index);
             $mdDialog.show( {
 
-                    templateUrl: 'app/views/devices/guage.html',
-                    clickOutsideToClose:true
-                });
+                templateUrl: 'app/views/devices/guage.html',
+                clickOutsideToClose:true
+            });
         };
         $scope.moveWidget = function() {
             $scope.widgets[0].x = 1;
@@ -77,11 +77,11 @@ angular.module('app')
     }])
 
     .directive('cardmgmtview', function () {
-            return {
-                restrict: 'EA',
-                templateUrl: 'app/views/devices/guage.html'
+        return {
+            restrict: 'EA',
+            templateUrl: 'app/views/devices/guage.html'
 
-            }
-        });
+        }
+    });
 
 

@@ -1,5 +1,5 @@
 /**
- * Created by sufyjakate on 13.10.17.
+ * Created by sufyjakate on 28.10.17.
  */
 angular.module('app')
     .config(function($mdThemingProvider) {
@@ -10,7 +10,7 @@ angular.module('app')
 
     })
 
-    .controller('CardDevMgmtController', [ 'InterControllerCommunication', '$scope', '$log', '$mdDialog', '$http' ,function (icc, $scope, $log, $mdDialog, $http) {
+    .controller('CardDevControlController', [ 'InterControllerCommunication', '$scope', '$log', '$mdDialog', '$http' ,function (icc, $scope, $log, $mdDialog, $http) {
 
         // var handler = function (ea, data) {
         //     $scope.widgets = data;
@@ -23,15 +23,13 @@ angular.module('app')
             cellHeight: 300,
             verticalMargin: 1
         };
-        $scope.addGuage = function () {
-            // var index = $scope.widgets.indexOf(w);
-            // console.log('Open card'+ index);
-            $mdDialog.show( {
 
-                    templateUrl: 'app/views/devices/guage.html',
-                    clickOutsideToClose:true
-                });
-        };
+        $scope.toggle = true;
+
+        $scope.$watch('toggle', function(){
+            $scope.toggleText = $scope.toggle ? 'ON' : 'OFF';
+        });
+
         $scope.moveWidget = function() {
             $scope.widgets[0].x = 1;
             $scope.widgets[0].width = 2;
@@ -76,12 +74,6 @@ angular.module('app')
 
     }])
 
-    .directive('cardmgmtview', function () {
-            return {
-                restrict: 'EA',
-                templateUrl: 'app/views/devices/guage.html'
 
-            }
-        });
 
 

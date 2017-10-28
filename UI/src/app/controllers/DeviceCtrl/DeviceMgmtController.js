@@ -71,6 +71,8 @@
                 icc.publish('list_mgmt.update', $scope.widgets);
                 console.log($scope.widgets);
 
+
+
             };
             
 

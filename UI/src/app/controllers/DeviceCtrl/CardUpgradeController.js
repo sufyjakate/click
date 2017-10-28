@@ -1,5 +1,5 @@
 /**
- * Created by sufyjakate on 21.09.17.
+ * Created by sufyjakate on 29.10.17.
  */
 angular.module('app')
     .config(function($mdThemingProvider) {
@@ -10,34 +10,27 @@ angular.module('app')
 
     })
 
-    .controller('CardController', [ 'InterControllerCommunication', '$scope', '$log', '$mdDialog' ,function (icc, $scope, $log, $mdDialog) {
+    .controller('CardUpgradeController', [ 'InterControllerCommunication', '$scope', '$log', '$mdDialog', '$http' ,function (icc, $scope, $log, $mdDialog, $http) {
 
-        var handler = function (ea, data) {
-            $scope.widgets = data;
-            console.log($scope.widgets);
-        };
-        var list = icc.subscribe('list.update', handler);
-        console.log(list);
+        // var handler = function (ea, data) {
+        //     $scope.widgets = data;
+        //     console.log($scope.widgets);
+        // };
+        // var list = icc.subscribe('list.update', handler);
+        // console.log(list);
 
         $scope.options = {
             cellHeight: 300,
             verticalMargin: 1
         };
-        $scope.addGuage = function (w, ev) {
-            var index = $scope.widgets.indexOf(w);
-            console.log('Open card'+ index);
+        $scope.addGuage = function () {
+            // var index = $scope.widgets.indexOf(w);
+            // console.log('Open card'+ index);
+            $mdDialog.show( {
 
-            if (index == 0){
-                $mdDialog.show(
-                    {
-                        templateUrl: 'app/views/devices/guage.html',
-                        controller: 'GuageController',
-                        parent: angular.element(document.body),
-                        targetEvent: ev,
-                        clickOutsideToClose:true
-                    }
-                )
-            }
+                templateUrl: 'app/views/devices/guage.html',
+                clickOutsideToClose:true
+            });
         };
         $scope.moveWidget = function() {
             $scope.widgets[0].x = 1;
@@ -47,6 +40,17 @@ angular.module('app')
         $scope.removeWidget = function(w) {
             var index = $scope.widgets.indexOf(w);
             $scope.widgets.splice(index, 1);
+
+            // $http({
+            //     url: 'http://localhost:3333/cards',
+            //     method: 'DELETE',
+            //     data: $scope.widgets[index],
+            //     headers: {'Content-Type': 'application/json'}
+            // }).then(function success(response, status, headers, config) {
+            //     console.log('Device GET successful');
+            //     console.log(response);
+            //
+            // });
         };
         $scope.onChange = function(event, items) {
             $log.log("onChange event: "+event+" items:"+items);
@@ -70,7 +74,14 @@ angular.module('app')
             $log.log("onItemRemoved item: "+item);
         };
 
+    }])
 
-    }]);
+    .directive('cardmgmtview', function () {
+        return {
+            restrict: 'EA',
+            templateUrl: 'app/views/devices/guage.html'
 
-    
+        }
+    });
+
+

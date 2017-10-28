@@ -28,11 +28,39 @@
              gs-item-width="w.width" gs-item-height="4" gs-item-autopos="1" on-item-added="onItemAdded(item)" on-item-removed="onItemRemoved(item)">
 
     <div class="grid-stack-item-content">
-        <div cardview="card">
+
+        <div ng-if="w.title == 'Device Management'">
+
+            <cardview type="card_devmgmt"></cardview>
 
         </div>
-    </div>
 
+        <div ng-if="w.title == 'Device Control'">
+
+            <cardview type="card_devctrl"></cardview>
+
+        </div>
+
+        <div ng-if="w.title == 'Device Upgrade Center'">
+
+            <cardview type="card_upgrade"></cardview>
+
+        </div>
+
+        <div ng-if="w.title == 'Suggest Me'">
+
+            <cardview type="card_suggest"></cardview>
+
+        </div>
+
+        <div ng-if="w.title == 'Notification Center'">
+
+            <cardview type="card_notification"></cardview>
+
+        </div>
+
+
+    </div>
 
         </div>
     </div>

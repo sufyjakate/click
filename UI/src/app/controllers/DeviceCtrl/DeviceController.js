@@ -79,6 +79,7 @@
             var list_notif = icc.subscribe('list_notif.update', handler_notif);
             console.log(list_notif);
 
+
             // $http({
             //         url: 'http://localhost:3333/cards',
             //         method: 'GET',
@@ -94,12 +95,17 @@
         }])
 
         .directive('cardview', function () {
-            return {
-                restrict: 'EA',
-                templateUrl: 'app/views/devices/card_devmgmt.html'
 
+            return {
+                restrict: 'E',
+                compile: function (element, attrs) {
+                    element.append('<div ng-include="\'app/views/devices/' + attrs.type + '.html\'"></div>');
+                }
             }
+
+
         })
+
 
     
         .controller('GridBottomSheetCtrl', function($scope, $mdBottomSheet, $mdDialog) {
