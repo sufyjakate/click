@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(app) {
-    var device = require('../controllers/deviceController');
+    var device = require('../../controllers/device/deviceController');
 
     // todoList Routes
     app.route('/devices')
