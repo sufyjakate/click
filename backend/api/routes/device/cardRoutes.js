@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function(app) {
 
-    var card = require('../controllers/cardController');
+    var card = require('../../controllers/device/cardController');
     // todoList Routes
     app.route('/cards')
         .get(card.list_all_cards)

@@ -4,9 +4,9 @@ var express = require('express'),
     port = process.env.PORT || 3333,
     mongoose = require('mongoose'),
 
-    Device = require('./api/models/deviceModel'), //created model loading here
+    Device = require('./api/models/device/deviceModel'), //created model loading here
 
-    Card = require('./api/models/cardModel'), //created model loading here
+    Card = require('./api/models/device/cardModel'), //created model loading here
 
     Rule = require('./api/models/rule/ruleModel'), //created model loading here
     RuleWidget = require('./api/models/rule/ruleWidgetModel'), //created model loading here
@@ -32,10 +32,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-var routes = require('./api/routes/deviceRoutes'); //importing route
+var routes = require('./api/routes/device/deviceRoutes'); //importing route
 routes(app); //register the route
 
-var cardRoutes = require('./api/routes/cardRoutes');
+var cardRoutes = require('./api/routes/device/cardRoutes');
 cardRoutes(app);
 
 var routesRule = require('./api/routes/rule/ruleRoutes'); //importing routes for rule
