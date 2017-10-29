@@ -42,7 +42,7 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
           url: '/table',
           controller: 'TableController',
           controllerAs: 'vm',
-          templateUrl: 'app/views/table.html',
+          templateUrl: 'app/views/default/table.html',
           data: {
               title: 'Profile'
           }
@@ -51,7 +51,7 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
         url: '/data-table',
         controller: 'DataTableController',
         controllerAs: 'vm',
-        templateUrl: 'app/views/data-table.html',
+        templateUrl: 'app/views/default/data-table.html',
         data: {
           title: 'Table'
         }
