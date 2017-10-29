@@ -85,27 +85,45 @@
                                 title="{{w.widgetTitle}}"
                                 template="{{w.widgetView}}"
                                 options="false"
+                                      themeColor = "{{vm.selectedColor"}}"
                         >
                             <!--class="fixed-height-widget"-->
                         </panel-widget>
 
-                    <div md-color-picker ng-model="valueObj"></div>
+
 
                     <md-card-actions layout="row" layout-align="end center">
-                        <md-button ng-click="vm.editWidget(w)" class="md-icon-button" >
+                        <div md-color-picker
+                             ng-change="vm.changeColor(w)"
+                             ng-model="vm.selectedColor"
+                        > </div>
+                        <!--<md-checkbox ng-model="vm.selectedColor" layout-align="bottom center">Color</md-checkbox>-->
+
+                        <!--<div md-color-picker ng-model="valueObj" class="md-icon-button">-->
+
+                        <!--</div>-->
+                        <div>
+                        <md-button ng-click="vm.editWidget($event,w)" class="md-icon-button" >
                             <i class="material-icons fab-icon" >edit</i>
                             <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Edit</md-tooltip>
                         </md-button>
-                        <md-button ng-click="vm.configureWidget(w)" class="md-icon-button" >
+                        </div>
+                        <div>
+                        <md-button ng-click="vm.configureWidget($event,w)" class="md-icon-button" >
                             <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Settings</md-tooltip>
                             <i class="material-icons fab-icon">settings</i>
+                            <div md-color-picker ng-model="valueObj"></div>
                         </md-button>
-                        <md-button ng-click="vm.showConfirm ($event,w)"  class="md-icon-button" >
+                        </div>
+                        <div>
+                            <md-button ng-click="vm.showConfirm ($event,w)"  class="md-icon-button" >
                             <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Delete</md-tooltip>
                             <i class="material-icons fab-icon">delete</i>
                         </md-button>
-                    </md-card-actions>
-                        <!--<a class="btn btn-primary" ng-click="removeWidget(w)" href="#">remove</a>-->
+
+                        </div>
+
+                    </md-card-actions>    <!--<a class="btn btn-primary" ng-click="removeWidget(w)" href="#">remove</a>-->
 
                 </div>
             </div>
