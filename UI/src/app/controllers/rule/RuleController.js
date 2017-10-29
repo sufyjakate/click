@@ -2,6 +2,14 @@
 
     angular
         .module('app')
+        .config(function($mdThemingProvider) {
+            $mdThemingProvider.theme('dark-grey').backgroundPalette('grey').dark();
+            $mdThemingProvider.theme('dark-orange').backgroundPalette('orange').dark();
+            $mdThemingProvider.theme('dark-purple').backgroundPalette('deep-purple').dark();
+            $mdThemingProvider.theme('dark-blue').backgroundPalette('blue').dark();
+            $mdThemingProvider.theme('grey').backgroundPalette('grey').dark();
+
+        })
         .controller('RuleController', [
             'ruleService',
             '$scope',
@@ -27,8 +35,82 @@
             $mdDialog.hide(answer);
         };
 
+        // vm.scopeVariable.options = {
+        //     label: "Choose a color",
+        //     icon: "brush",
+        //     default: "#f00",
+        //     genericPalette: false,
+        //     history: false
+        // };
+
+
+        vm.selectedColor="";
+
+
+
+        vm.editWidget = function(ev,widget) {
+
+            $mdDialog.show({
+                controller: RuleController,
+                templateUrl: 'app/views/rule/partial/RuleDialog.html',
+                parent: angular.element(document.body),
+                targetEvent: ev,
+                clickOutsideToClose:true,
+                escapeToClose: true,
+                // skipHide : true,
+                multiple: true,
+                // fullscreen: vm.customFullscreen // Only for -xs, -sm breakpoints.
+            })
+                .then(function(answer) {
+                    $scope.status = 'You said the information was "' + answer + '".';
+                }, function() {
+                    $scope.status = 'You cancelled the dialog.';
+                });
+        };
+
+
+        vm.configureWidget = function(ev,widget) {
+
+            $mdDialog.show({
+                controller: RuleController,
+                templateUrl: 'app/views/rule/partial/ColorDialog.html',
+                parent: angular.element(document.body),
+                targetEvent: ev,
+                clickOutsideToClose:true,
+                escapeToClose: true,
+                // skipHide : true,
+                multiple: true,
+                // fullscreen: vm.customFullscreen // Only for -xs, -sm breakpoints.
+            })
+                .then(function(answer) {
+                    $scope.status = 'You said the information was "' + answer + '".';
+                }, function() {
+                    $scope.status = 'You cancelled the dialog.';
+                });
+        };
+
+        $scope.$watch('selectedColor', function(newValue, oldValue) {
+            console.log(newValue);
+
+            vm.selectedColor=newValue;
+            console.log(vm.selectedColor);
+
+
+
+            // angular copy will preserve the reference of $scope.someVar
+            // so it will not trigger another digest
+            // angular.copy(someVar, $scope.someVar);
+
+        });
+
+        vm.changeColor=function (w) {
+            console.log(vm.selectedColor);
+            // md-theme=
+        }
 
         vm.showConfirm = function(ev,widget) {
+            console.log("confirmed");
+            console.log(vm.selectedColor);
             // Appending dialog to document.body to cover sidenav in docs app
             var confirm = $mdDialog.confirm()
                 .title('Delete Widget ?')
