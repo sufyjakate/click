@@ -23,12 +23,15 @@ angular.module('app')
             cellHeight: 300,
             verticalMargin: 1
         };
-        $scope.addGuage = function () {
+        $scope.addGuage = function (ev) {
             // var index = $scope.widgets.indexOf(w);
             // console.log('Open card'+ index);
             $mdDialog.show( {
 
                     templateUrl: 'app/views/devices/guage.html',
+                    controller: 'GuageController',
+                    parent: angular.element(document.body),
+                    targetEvent: ev,
                     clickOutsideToClose:true
                 });
         };
@@ -76,7 +79,7 @@ angular.module('app')
 
     }])
 
-    .directive('cardmgmtview', function () {
+    .directive('guagecharts', function () {
             return {
                 restrict: 'EA',
                 templateUrl: 'app/views/devices/guage.html'
