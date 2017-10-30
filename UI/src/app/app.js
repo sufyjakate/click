@@ -1,6 +1,8 @@
 (function(){
   'use strict';
 
-  angular.module('app', [ 'ngMaterial', 'interControllerCommunication', 'ngCookies', 'mdColorPicker']);
+  angular.module('app', [ 'ngMaterial', 'interControllerCommunication',
+      // 'ngCookies', 'mdColorPicker'
+  ]);
 
 })();
