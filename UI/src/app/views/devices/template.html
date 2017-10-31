@@ -7,11 +7,13 @@
                 <h2>Device Management</h2>
             </div>
         </md-toolbar>
-        <md-dialog-content style="max-width:800px;max-height:810px; ">
+        <md-dialog-content>
 
             <table class="table">
-                <md-button class="md-warn md-raised md-hue-2" ng-click="addDevice()">Add Device</md-button>
-                <tr>
+                <div  layout="row" layout-align="center end">
+                <md-button class="md-warn md-raised md-hue-2" ng-click="addDevice()">Add Device</md-button>    
+                </div>
+                    <tr>
                     <th>Name</th>
                     <th>Device Type</th>
                     <th>Device Status</th>

@@ -106,7 +106,7 @@
                     clickOutsideToClose:true
                 });
 
-            }
+            };
 
 
     }

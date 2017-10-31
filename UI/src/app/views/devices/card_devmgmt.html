@@ -14,13 +14,30 @@
                                     </md-card-title-text>
 
                                 </md-card-title>
+
                                 <md-card-content layout="row" layout-align="center">
-                                    <div guagecharts></div>
+
+                                    <div ng-if="WidgetType == 'Guage Widget'">
+                                        <div guagecharts></div>
+                                    </div>
+
+                                    <div ng-if="WidgetType == 'Slider Widget'">
+                                        <div slidercharts></div>
+                                    </div>
+
                                 </md-card-content>
+
                                 <md-card-actions layout="row" layout-align="end center">
+                                    <md-input-container class="md-block" flex-gt-sm="">
+                                        <label>Select Widgets</label>
+                                        <md-select ng-model="WidgetType">
+                                            <md-option ng-repeat="widget in Widgets" ng-value="widget">{{widget}}</md-option>
+                                        </md-select>
+                                    </md-input-container>
                                     <md-button class="btn btn-primary" ng-click="removeWidget(w)">Delete</md-button>
                                     <md-button ng-click="addGuage()">Open</md-button>
                                 </md-card-actions>
+
 
                                 <md-checkbox ng-model="showDarkTheme" layout-align="bottom center">Use 'Dark' Themed Cards</md-checkbox>
 

@@ -19,6 +19,13 @@ angular.module('app')
         // var list = icc.subscribe('list.update', handler);
         // console.log(list);
 
+        $scope.Widgets = ["Guage Widget","Slider Widget"];
+
+
+        var WidgetType;
+
+        console.log(WidgetType);
+
         $scope.options = {
             cellHeight: 300,
             verticalMargin: 1
@@ -77,6 +84,9 @@ angular.module('app')
             $log.log("onItemRemoved item: "+item);
         };
 
+
+
+
     }])
 
     .directive('guagecharts', function () {
@@ -85,6 +95,14 @@ angular.module('app')
                 templateUrl: 'app/views/devices/guage.html'
 
             }
-        });
+        })
+
+    .directive('slidercharts', function () {
+        return {
+            restrict: 'EA',
+            templateUrl: 'app/views/devices/slider.html'
+
+        }
+    });
 
 
