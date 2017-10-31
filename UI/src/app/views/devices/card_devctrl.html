@@ -4,7 +4,7 @@
             <div class="col-md-12">
 
 
-                <md-card  md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+                <md-card class="buttonclass" md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
 
                     <md-card-title>
 
@@ -16,7 +16,7 @@
 
                     </md-card-title>
 
-                    <md-card-content layout="row" layout-align="center center">
+                    <md-card-content class="butclass" layout="row" layout-align="center center">
 
                         <div ng-if="WidgetType == 'Switch Widget'">
                             <md-button  class="md-raised" ng-click="$parent.toggle = !toggle">{{toggleText}}</md-button>
