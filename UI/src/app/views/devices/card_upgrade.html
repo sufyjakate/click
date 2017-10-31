@@ -4,7 +4,7 @@
             <div class="col-md-12">
 
 
-                <md-card md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}" md-theme-watch>
+                <md-card class="buttonclass" md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}" md-theme-watch>
 
                                 <md-card-title>
 
@@ -18,7 +18,7 @@
                     <md-card-content layout="row" layout-align="center center">
 
                         <div ng-if="WidgetType == 'Upgrade Widget'">
-                            <md-button  class="md-raised" ng-click="">Upgrade Device</md-button>
+                            <md-button  class="md-raised" ng-click="checkUpgrade()">Upgrade Device</md-button>
                         </div>
 
 

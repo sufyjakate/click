@@ -29,15 +29,7 @@ angular.module('app')
             cellHeight: 300,
             verticalMargin: 1
         };
-        $scope.addGuage = function () {
-            // var index = $scope.widgets.indexOf(w);
-            // console.log('Open card'+ index);
-            $mdDialog.show( {
 
-                templateUrl: 'app/views/devices/guage.html',
-                clickOutsideToClose:true
-            });
-        };
         $scope.moveWidget = function() {
             $scope.widgets[0].x = 1;
             $scope.widgets[0].width = 2;
@@ -79,6 +71,23 @@ angular.module('app')
         $scope.onItemRemoved = function(item) {
             $log.log("onItemRemoved item: "+item);
         };
+        
+        $scope.checkUpgrade = function () {
+
+            $mdDialog.show(
+                $mdDialog.alert()
+                    .clickOutsideToClose(true)
+                    .title('Device Upgrade Status')
+                    .textContent('No Updates Available!!')
+                    .ariaLabel('Left to right demo')
+                    .ok('Cool!')
+                    // You can specify either sting with query selector
+                    .openFrom('#left')
+                    // or an element
+                    .closeTo(angular.element(document.querySelector('#right')))
+            );
+
+        }
 
     }])
 
