@@ -14,12 +14,12 @@
                ng-model="selected"
                class="table table-hover table-bordered" >
 
-            <thead md-head md-order="query.order" md-on-reorder="vm.getItems()">
+            <thead md-head md-order="vm.query.order" md-on-reorder="vm.getItems()">
             <tr md-row>
                 <th md-column md-numeric>Rule ID</th>
                 <th md-column md-numeric>Rule Icon</th>
                 <th md-column md-order-by="nameToLower"><span>Rule Title</span></th>
-                <th md-column md-numeric md-order-by="calories.value"><span>Time</span></th>
+                <th md-column md-order-by="calories.value"><span>Time</span></th>
                 <th md-column md-numeric>Status Icon</th>
                 <th md-column md-numeric>Status </th>
                 <!--<th md-column md-numeric>Carbs (g)</th>-->
@@ -30,16 +30,16 @@
             <tr md-row md-select="item" md-select-id="name" md-auto-select ng-repeat="item in vm.ruleNotifications">
                 <td md-cell>{{item.ruleId}}</td>
                 <td md-cell>
-                    <i class="material-icons md-36" >{{item.ruleIcon}}</i>
+                    <i class="material-icons md-36 rule-icon" >{{item.ruleIcon}}</i>
                 </td>
                 <td md-cell>{{item.ruleTitle}}</td>
                 <td md-cell>{{item.time}}</td>
                 <td md-cell>
-                    <i ng-if="item.status == 'created'" class="material-icons" >add</i>
-                    <i ng-if="item.status == 'activated'" class="material-icons" >alarm</i>
-                    <i ng-if="item.status == 'deactivated'" class="material-icons" >cancel</i>
-                    <i ng-if="item.status == 'triggered'" class="material-icons" >vibration</i>
-                    <i ng-if="item.status == 'deleted'" class="material-icons" >delete</i>
+                    <i ng-if="item.status == 'created'" class="material-icons rule-status-icon" >add_circle_outline</i>
+                    <i ng-if="item.status == 'activated'" class="material-icons rule-status-icon" >play_circle_outline</i>
+                    <i ng-if="item.status == 'deactivated'" class="material-icons rule-status-icon" >pause_circle_outline</i>
+                    <i ng-if="item.status == 'triggered'" class="material-icons rule-status-icon" >notifications_active</i>
+                    <i ng-if="item.status == 'deleted'" class="material-icons rule-status-icon" >delete</i>
                 </td>
                 <td md-cell>{{item.status}}</td>
 
@@ -57,5 +57,5 @@
         </table>
     </md-table-container>
 
-    <md-table-pagination md-limit="query.limit" md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{vm.totalItems}}" md-on-paginate="vm.getItems()" md-page-select></md-table-pagination>
+    <md-table-pagination md-limit="vm.query.limit" md-limit-options="[5, 10, 15]" md-page="vm.query.page" md-total="{{vm.totalItems}}" md-on-paginate="vm.getItems()" md-page-select></md-table-pagination>
 </div>

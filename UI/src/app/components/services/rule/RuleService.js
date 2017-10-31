@@ -70,35 +70,70 @@
                 ruleId: 1,
                 ruleTitle: "This is Rule 1",
                 ruleIcon:"home",
-                time: 'current date time',
+                time: "2017-10-31 21:27:38",
                 status: 'created'
             },
             {
                 ruleId: 2,
                 ruleTitle: "This is Rule 2",
                 ruleIcon:"work",
-                time: 'current date time',
+                time: "2017-10-31 21:28:38",
                 status: 'triggered'
             },
             {
                 ruleId: 3,
                 ruleTitle: "This is Rule 3",
                 ruleIcon:"fingerprint",
-                time: 'current date time',
+                time: "2017-10-31 21:29:38",
                 status: 'activated'
             },
             {
                 ruleId: 4,
                 ruleTitle: "This is Rule 4",
                 ruleIcon:"motorcycle",
-                time: 'current date time',
+                time: "2017-10-31 21:30:38",
                 status: 'deactivated'
             },
             {
                 ruleId: 5,
                 ruleTitle: "This is Rule 5",
                 ruleIcon:"store",
-                time: 'current date time',
+                time: "2017-10-31 21:31:38",
+                status: 'deleted'
+            },
+            {
+                ruleId: 1,
+                ruleTitle: "This is Rule 1",
+                ruleIcon:"home",
+                time: "2017-10-31 21:27:38",
+                status: 'created'
+            },
+            {
+                ruleId: 2,
+                ruleTitle: "This is Rule 2",
+                ruleIcon:"work",
+                time: "2017-10-31 21:28:38",
+                status: 'triggered'
+            },
+            {
+                ruleId: 3,
+                ruleTitle: "This is Rule 3",
+                ruleIcon:"fingerprint",
+                time: "2017-10-31 21:29:38",
+                status: 'activated'
+            },
+            {
+                ruleId: 4,
+                ruleTitle: "This is Rule 4",
+                ruleIcon:"motorcycle",
+                time: "2017-10-31 21:30:38",
+                status: 'deactivated'
+            },
+            {
+                ruleId: 5,
+                ruleTitle: "This is Rule 5",
+                ruleIcon:"store",
+                time: "2017-10-31 21:31:38",
                 status: 'deleted'
             },
         ];
@@ -192,7 +227,7 @@
 
 
         function PickRandom() {
-            return Object.assign({}, tableData[Math.floor(Math.random() * tableData.length)]);
+            return Object.assign({}, ruleNotificationData[Math.floor(Math.random() * ruleNotificationData.length)]);
         }
 
         function getAllRuleData() {
@@ -382,8 +417,24 @@
                 // getAllRuleWidgetsData();
                 return $q.when(getAllRuleWidgetsData());
             },
-            loadAllRuleNotifications: function () {
-                return $q.when(ruleNotificationData);
+            loadAllRuleNotifications: function (query) {
+                /**
+                 * Query expects that `limit`,`page`, and `order` fields be present
+                 */
+                query = query || {limit:10,page:1};
+
+                var list = [];
+                var start = (query.page-1)*query.limit;
+                var end = start + query.limit;
+                for (var i = start; i < end; i++) {
+                    // var f = PickRandom();
+                    var f = ruleNotificationData[i];
+                    f.id = i+1;
+                    list.push(f);
+                }
+                return $q.when({items:list,count:10});
+
+                // return $q.when(ruleNotificationData);
             },
             loadWidgetsOptions: function () {
                 return $q.when(ruleOptions);

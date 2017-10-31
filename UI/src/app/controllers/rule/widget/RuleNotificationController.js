@@ -15,16 +15,16 @@
         vm.tableData = [];
         vm.totalItems = 0;
 
-        $scope.selected = [];
+        vm.selected = [];
 
-        $scope.query = {
+        vm.query = {
             order: 'name',
             limit: 5,
             page: 1
         };
-        $scope.selected = [];
+        vm.selected = [];
 
-        $scope.render = function (T) {
+        vm.render = function (T) {
             return T;
         }
         var lastQuery = null;
@@ -34,10 +34,10 @@
              * it supposed to call once per pagination, so the next 3 lines are only to avoid
              * multiple requests.
              */
-            var query = JSON.stringify($scope.query);
+            var query = JSON.stringify(vm.query);
             if (query == lastQuery) return;
             lastQuery = query;
-            GetItemsData($scope.query);
+            GetItemsData(vm.query);
 
         }
 
@@ -46,10 +46,10 @@
 
 
             ruleService
-                .loadAllRuleNotifications()
+                .loadAllRuleNotifications(query)
                 .then(function (ruleNotifications) {
 
-                    vm.ruleNotifications =  ruleNotifications;
+                    vm.ruleNotifications =  ruleNotifications.items;
                     vm.totalItems = ruleNotifications.count;
 
                     console.log(ruleNotifications);
@@ -67,7 +67,7 @@
 
         }
 
-        GetItemsData($scope.query);
+        GetItemsData(vm.query);
 
 
 
