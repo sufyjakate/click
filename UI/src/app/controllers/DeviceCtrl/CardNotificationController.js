@@ -10,7 +10,7 @@ angular.module('app')
 
     })
 
-    .controller('CardNotificationController', [ 'InterControllerCommunication', '$scope', '$log', '$mdDialog', '$http' ,function (icc, $scope, $log, $mdDialog, $http) {
+    .controller('CardNotificationController', [ 'InterControllerCommunication', '$scope', '$log', '$mdDialog', '$mdToast' , '$http' ,function (icc, $scope, $log, $mdDialog, $mdToast, $http) {
 
         // var handler = function (ea, data) {
         //     $scope.widgets = data;
@@ -18,6 +18,22 @@ angular.module('app')
         // };
         // var list = icc.subscribe('list.update', handler);
         // console.log(list);
+        $scope.Widgets = ["Toast Widget"];
+
+        var WidgetType;
+
+        $scope.Toasts = [
+            {text: 'Device Working Properly'} ,
+            {text: 'Device Stopped Working'},
+            {text: 'Device Restarted'}
+        ];
+
+        $scope.randomQuote = $scope.Toasts[Math.floor(Math.random() * $scope.Toasts.length)];
+        console.log($scope.randomQuote);
+
+
+        console.log(WidgetType);
+
 
         $scope.options = {
             cellHeight: 300,

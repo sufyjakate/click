@@ -1,10 +1,10 @@
-<div ng-controller="CardNotificationController">
+<div ng-controller="CardNotificationController" class="carddemoBasicUsage">
     <md-content>
         <div class="row">
             <div class="col-md-12">
 
 
-                <md-card  md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+                <md-card  md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
 
                     <md-card-title>
 
@@ -16,10 +16,37 @@
 
                     </md-card-title>
 
+                    <md-card-content layout="row" layout-align="center center">
+
+                        <div ng-if="WidgetType == 'Toast Widget'">
+                            <table class="table">
+                                <tr>
+                                    <th>Notification Text</th>
+                                    <th>Clear Toast</th>
+                                </tr>
+                                <tr>
+                                    <th>{{randomQuote.text}}</th>
+                                    <th>
+                                        <md-button class="btn btn-primary" ng-click="removeToast()">Clear Toast</md-button>
+                                    </th>
+
+
+                                </tr>
+                            </table>
+                        </div>
+
+
+                    </md-card-content>
+
 
                     <md-card-actions layout="row" layout-align="end center">
+                        <md-input-container class="md-block" flex-gt-sm="">
+                            <label>Select Widgets</label>
+                            <md-select ng-model="WidgetType">
+                                <md-option ng-repeat="widget in Widgets" ng-value="widget">{{widget}}</md-option>
+                            </md-select>
+                        </md-input-container>
                         <md-button class="btn btn-primary" ng-click="removeWidget(w)">Delete</md-button>
-                        <md-button  class="md-raised" ng-click="toggle = !toggle">{{toggleText}}</md-button>
                     </md-card-actions>
 
                     <md-checkbox ng-model="showDarkTheme" layout-align="bottom center">Use 'Dark' Themed Cards</md-checkbox>

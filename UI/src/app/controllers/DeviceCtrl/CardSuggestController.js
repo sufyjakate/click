@@ -18,6 +18,13 @@ angular.module('app')
         // };
         // var list = icc.subscribe('list.update', handler);
         // console.log(list);
+        $scope.Widgets = ["Suggest Widget"];
+
+
+        var WidgetType;
+
+        console.log(WidgetType);
+
 
         $scope.options = {
             cellHeight: 300,

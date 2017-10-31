@@ -30,18 +30,7 @@ angular.module('app')
             cellHeight: 300,
             verticalMargin: 1
         };
-        $scope.addGuage = function (ev) {
-            // var index = $scope.widgets.indexOf(w);
-            // console.log('Open card'+ index);
-            $mdDialog.show( {
 
-                    templateUrl: 'app/views/devices/guage.html',
-                    controller: 'GuageController',
-                    parent: angular.element(document.body),
-                    targetEvent: ev,
-                    clickOutsideToClose:true
-                });
-        };
         $scope.moveWidget = function() {
             $scope.widgets[0].x = 1;
             $scope.widgets[0].width = 2;
@@ -51,16 +40,17 @@ angular.module('app')
             var index = $scope.widgets.indexOf(w);
             $scope.widgets.splice(index, 1);
 
-            // $http({
-            //     url: 'http://localhost:3333/cards',
-            //     method: 'DELETE',
-            //     data: $scope.widgets[index],
-            //     headers: {'Content-Type': 'application/json'}
-            // }).then(function success(response, status, headers, config) {
-            //     console.log('Device GET successful');
-            //     console.log(response);
-            //
-            // });
+            $http({
+                url: 'http://localhost:3333/cards',
+                method: 'DELETE',
+                data: $scope.widgets,
+                headers: {'Content-Type': 'application/json'}
+            }).then(function success(data, status, headers, config) {
+                console.log('Device GET successful');
+                console.log(data);
+                $scope.widgets = data;
+
+            });
         };
         $scope.onChange = function(event, items) {
             $log.log("onChange event: "+event+" items:"+items);

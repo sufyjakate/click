@@ -18,17 +18,24 @@ angular.module('app')
         // };
         // var list = icc.subscribe('list.update', handler);
         // console.log(list);
-
-        $scope.options = {
-            cellHeight: 300,
-            verticalMargin: 1
-        };
+        $scope.Widgets = ["Switch Widget"];
 
         $scope.toggle = true;
 
         $scope.$watch('toggle', function(){
             $scope.toggleText = $scope.toggle ? 'ON' : 'OFF';
         });
+
+        var WidgetType;
+
+        console.log(WidgetType);
+
+        $scope.options = {
+            cellHeight: 300,
+            verticalMargin: 1
+        };
+
+
 
         $scope.moveWidget = function() {
             $scope.widgets[0].x = 1;
