@@ -9,11 +9,11 @@
 
   function navService($q){
     var menuItems = [
-      {
-        name: 'Dashboard',
-        icon: 'dashboard',
-        sref: '.dashboard'
-      },
+      // {
+      //   name: 'Dashboard',
+      //   icon: 'dashboard',
+      //   sref: '.dashboard'
+      // },
       {
         name: 'Devices',
         icon: 'devices',
@@ -24,16 +24,16 @@
           icon: 'widgets',
           sref: '.rule'
       },
-      {
-          name: 'Profile',
-          icon: 'view_module',
-          sref: '.table'
-      },
-      {
-        name: 'Data Table',
-        icon: 'view_module',
-        sref: '.data-table'
-      }
+      // {
+      //     name: 'Profile',
+      //     icon: 'view_module',
+      //     sref: '.table'
+      // },
+      // {
+      //   name: 'Data Table',
+      //   icon: 'view_module',
+      //   sref: '.data-table'
+      // }
     ];
 
     return {

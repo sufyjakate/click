@@ -13,13 +13,13 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
         controllerAs: 'vm',
         abstract: true
       })
-      .state('home.dashboard', {
-        url: '/dashboard',
-        templateUrl: 'app/views/default/dashboard.html',
-        data: {
-          title: 'Dashboard'
-        }
-      })
+      // .state('home.dashboard', {
+      //   url: '/dashboard',
+      //   templateUrl: 'app/views/default/dashboard.html',
+      //   data: {
+      //     title: 'Dashboard'
+      //   }
+      // })
       .state('home.device', {
         url: '/device',
         templateUrl: 'app/views/devices/device.html',
@@ -38,26 +38,27 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
               title: 'Rule'
           }
       })
-      .state('home.table', {
-          url: '/table',
-          controller: 'TableController',
-          controllerAs: 'vm',
-          templateUrl: 'app/views/default/table.html',
-          data: {
-              title: 'Profile'
-          }
-      })
-      .state('home.data-table', {
-        url: '/data-table',
-        controller: 'DataTableController',
-        controllerAs: 'vm',
-        templateUrl: 'app/views/default/data-table.html',
-        data: {
-          title: 'Table'
-        }
-      });
+      // .state('home.table', {
+      //     url: '/table',
+      //     controller: 'TableController',
+      //     controllerAs: 'vm',
+      //     templateUrl: 'app/views/default/table.html',
+      //     data: {
+      //         title: 'Profile'
+      //     }
+      // })
+      // .state('home.data-table', {
+      //   url: '/data-table',
+      //   controller: 'DataTableController',
+      //   controllerAs: 'vm',
+      //   templateUrl: 'app/views/default/data-table.html',
+      //   data: {
+      //     title: 'Table'
+      //   }
+      // })
+    ;
 
-    $urlRouterProvider.otherwise('/dashboard');
+    $urlRouterProvider.otherwise('/device');
 
     $mdThemingProvider
       .theme('default')
