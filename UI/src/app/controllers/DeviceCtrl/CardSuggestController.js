@@ -81,6 +81,13 @@ angular.module('app')
             $log.log("onItemRemoved item: "+item);
         };
 
+        $scope.productSuggest = function () {
+            $mdDialog.show({
+                templateUrl: 'app/views/devices/device_suggestion.html',
+                clickOutsideToClose:true
+            })
+        }
+
     }])
 
     .directive('cardmgmtview', function () {
