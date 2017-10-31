@@ -31,3 +31,16 @@ exports.create_a_card = function(req, res) {
     console.log(req.body.deviceName);
     new_card.save();
 };
+
+exports.delete_a_card = function(req, res) {
+
+
+    Card.remove({
+        cardid: req.params.cardid
+    }, function(err, task) {
+        if (err)
+            res.send(err);
+        res.json({ message: 'Task successfully deleted' });
+    });
+};
+

@@ -4,7 +4,7 @@
             <div class="col-md-12">
 
 
-                        <md-card  md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+                        <md-card class="buttonclass" md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
 
                                 <md-card-title>
 
@@ -15,19 +15,19 @@
 
                                 </md-card-title>
 
-                                <md-card-content layout="row" layout-align="center">
+                                <md-card-content layout="row" layout-align="space-between">
 
                                     <div ng-if="WidgetType == 'Guage Widget'">
                                         <div guagecharts></div>
                                     </div>
 
-                                    <div ng-if="WidgetType == 'Slider Widget'">
+                                    <div ng-if="WidgetType == 'Slider Widget'" layout="row" layout-align="center">
                                         <div slidercharts></div>
                                     </div>
 
                                 </md-card-content>
 
-                                <md-card-actions layout="row" layout-align="end center">
+                                <md-card-actions  layout="row" layout-align="end center">
                                     <md-input-container class="md-block" flex-gt-sm="">
                                         <label>Select Widgets</label>
                                         <md-select ng-model="WidgetType">
@@ -35,7 +35,6 @@
                                         </md-select>
                                     </md-input-container>
                                     <md-button class="btn btn-primary" ng-click="removeWidget(w)">Delete</md-button>
-                                    <md-button ng-click="addGuage()">Open</md-button>
                                 </md-card-actions>
 
 

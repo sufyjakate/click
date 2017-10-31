@@ -14,9 +14,24 @@
 
                                 </md-card-title>
 
+                    <md-card-content layout="row" layout-align="center center">
+
+                        <div ng-if="WidgetType == 'Suggest Widget'">
+                            <md-button  class="md-raised" ng-click="">Suggest</md-button>
+                            <md-button  class="md-raised" ng-click="">Re-Run</md-button>
+                        </div>
+
+
+                    </md-card-content>
+
                                 <md-card-actions layout="row" layout-align="end center">
+                                    <md-input-container class="md-block" flex-gt-sm="">
+                                        <label>Select Widgets</label>
+                                        <md-select ng-model="WidgetType">
+                                            <md-option ng-repeat="widget in Widgets" ng-value="widget">{{widget}}</md-option>
+                                        </md-select>
+                                    </md-input-container>
                                     <md-button class="btn btn-primary" ng-click="removeWidget(w)">Delete</md-button>
-                                    <md-button ng-click="addGuage(w)">Open</md-button>
                                 </md-card-actions>
 
                                 <md-checkbox ng-model="showDarkTheme" layout-align="bottom center">Use 'Dark' Themed Cards</md-checkbox>
