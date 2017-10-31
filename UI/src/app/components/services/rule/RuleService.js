@@ -65,6 +65,44 @@
             }
         ];
 
+        var ruleNotificationData = [
+            {
+                ruleId: 1,
+                ruleTitle: "This is Rule 1",
+                ruleIcon:"home",
+                time: 'current date time',
+                status: 'created'
+            },
+            {
+                ruleId: 2,
+                ruleTitle: "This is Rule 2",
+                ruleIcon:"work",
+                time: 'current date time',
+                status: 'triggered'
+            },
+            {
+                ruleId: 3,
+                ruleTitle: "This is Rule 3",
+                ruleIcon:"fingerprint",
+                time: 'current date time',
+                status: 'activated'
+            },
+            {
+                ruleId: 4,
+                ruleTitle: "This is Rule 4",
+                ruleIcon:"motorcycle",
+                time: 'current date time',
+                status: 'deactivated'
+            },
+            {
+                ruleId: 5,
+                ruleTitle: "This is Rule 5",
+                ruleIcon:"store",
+                time: 'current date time',
+                status: 'deleted'
+            },
+        ];
+
         var ruleOptions = {
             cellHeight: 180,
             verticalMargin: 10,
@@ -343,6 +381,9 @@
             loadAllRuleWidgets: function () {
                 // getAllRuleWidgetsData();
                 return $q.when(getAllRuleWidgetsData());
+            },
+            loadAllRuleNotifications: function () {
+                return $q.when(ruleNotificationData);
             },
             loadWidgetsOptions: function () {
                 return $q.when(ruleOptions);

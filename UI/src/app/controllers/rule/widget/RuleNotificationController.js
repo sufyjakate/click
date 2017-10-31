@@ -3,13 +3,13 @@
     angular
         .module('app')
         .controller('RuleNotificationController', [
-            'tableService',
+            'ruleService',
             '$scope',
-            TableController
+            RuleNotificationController
 
         ]);
 
-    function TableController(tableService , $scope) {
+    function RuleNotificationController(ruleService , $scope) {
         var vm = this;
 
         vm.tableData = [];
@@ -19,7 +19,7 @@
 
         $scope.query = {
             order: 'name',
-            limit: 10,
+            limit: 5,
             page: 1
         };
         $scope.selected = [];
@@ -42,14 +42,28 @@
         }
 
         function GetItemsData(query) {
-            tableService
-                .loadByPagination(query)
-                .then(function(tableData) {
-                    vm.tableData =  tableData.items;
-                    // Represents the count of database count of records, not items array!
-                    vm.totalItems = tableData.count;
 
+
+
+            ruleService
+                .loadAllRuleNotifications()
+                .then(function (ruleNotifications) {
+
+                    vm.ruleNotifications =  ruleNotifications;
+                    vm.totalItems = ruleNotifications.count;
+
+                    console.log(ruleNotifications);
                 });
+
+
+            // tableService
+            //     .loadByPagination(query)
+            //     .then(function(tableData) {
+            //         vm.tableData =  tableData.items;
+            //         // Represents the count of database count of records, not items array!
+            //         vm.totalItems = tableData.count;
+            //
+            //     });
 
         }
 

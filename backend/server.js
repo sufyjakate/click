@@ -18,12 +18,13 @@ app.use(bodyParser.json());
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://admin:admin123@ds113915.mlab.com:13915/clickdb');
+// mongoose.connect('mongodb://admin:admin123@ds113915.mlab.com:13915/clickdb');
 //mongoose.connect('mongodb://admin:admin@ds111754.mlab.com:11754/click');
 
 // mongoose.connect('mongodb://admin:admin123@ds113915.mlab.com:13915/clickdb');
 // mongoose.connect('mongodb://admin:admin@ds111754.mlab.com:11754/click');
 //mongoose.connect('mongodb://localhost/click');
+mongoose.connect('mongodb://localhost/clickdb');
 
 
 app.disable('view cache');
