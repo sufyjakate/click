@@ -294,6 +294,8 @@
                 widgetTitle: "Rule Sharing",
                 icon:"share",
                 ariaLabel: "Sharing",
+                width:3,
+                height:4
             },
 
             "1": {
@@ -302,6 +304,8 @@
                 widgetTitle: "Rule Management",
                 icon:"settings",
                 ariaLabel: "Management",
+                width:4,
+                height:7
             },
 
 
@@ -311,6 +315,8 @@
                 widgetTitle: "Rule Notifications",
                 icon:"notifications",
                 ariaLabel: "Notifications",
+                width:6,
+                height:6
             },
 
             "3": {
@@ -319,6 +325,8 @@
                 widgetTitle: "Rule Creation",
                 icon:"create",
                 ariaLabel: "Creation",
+                width:3,
+                height:4
             },
 
             // "4": {
@@ -361,8 +369,8 @@
                     widgetTitle: vm.widgetTypeDetailEnum[widgetType].widgetTitle,
                     x: 0,
                     y: 0,
-                    width: 4,
-                    height: 4
+                    width: vm.widgetTypeDetailEnum[widgetType].width,
+                    height: vm.widgetTypeDetailEnum[widgetType].height
                 };
 
             vm.ruleWidgetData.push(newWidget);
