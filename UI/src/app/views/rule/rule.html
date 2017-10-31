@@ -1,7 +1,7 @@
 
 <div layout="row">
 
-    <div class="lock-size " layout="column" layout-align="left center">
+    <div flex class="lock-size "  layout-align="left">
         <md-fab-speed-dial md-open="vm.isOpen" md-direction="{{vm.selectedDirection}}"
                            ng-class="vm.selectedMode"
                            ng-mouseenter="vm.isOpen=true" ng-mouseleave="vm.isOpen=false" >
@@ -33,17 +33,20 @@
         </md-fab-speed-dial>
     </div>
 
-    <md-select ng-model="vm.newRuleType" placeholder="Select Widget Type" class=" md-raised md-primary col-md-2" >
+    <div flex></div>
+    <div flex></div>
+    <div flex></div>
+
+    <md-select flex layout-align="right" ng-model="vm.newRuleType" md-on-close="vm.addWidget(vm.newRuleType)" placeholder="Select Widget Type" class=" md-raised md-primary col-md-2" >
         <md-option ng-repeat="item in vm.widgetTypeDetailEnum " value={{item.widgetType}}>
             <i class="material-icons large fab-icon">{{item.icon}}</i>
             {{item.widgetTitle}}
-
         </md-option>
     </md-select>
 
-    <md-button class="md-raised md-primary" ng-click="vm.addWidget(vm.newRuleType)" >Add Widget</md-button>
-    <md-button class="md-raised md-primary" ng-click="vm.moveWidget()" >Move Widget</md-button>
-    <md-button class="md-raised md-primary" ng-click="vm.loadAllRuleWidgetData()" >Load Dashboard</md-button>
+    <!--<md-button class="md-raised md-primary" ng-click="vm.addWidget(vm.newRuleType)" >Add Widget</md-button>-->
+    <!--<md-button class="md-raised md-primary" ng-click="vm.moveWidget()" >Move Widget</md-button>-->
+    <!--<md-button class="md-raised md-primary" ng-click="vm.loadAllRuleWidgetData()" >Load Dashboard</md-button>-->
 
 </div>
 <div class="container-fluid">
