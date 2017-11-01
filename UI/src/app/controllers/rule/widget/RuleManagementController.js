@@ -10,7 +10,7 @@
         ]);
 
     function RuleManagementController(ruleService, $scope, $mdDialog,$mdToast) {
-        var vm = this;
+        var vm = !!vm ? vm : this;
         console.log("In the Rule Management controller");
 
 
@@ -30,6 +30,21 @@
 
         vm.loadAllItems();
 
+
+        vm.hide = function () {
+            $mdDialog.hide();
+        };
+
+        vm.cancel = function () {
+            $mdDialog.cancel();
+        };
+
+        vm.answer = function (answer) {
+            console.log(" value check");
+            console.log(vm.selectedRule);
+            $mdDialog.hide(answer);
+        };
+
         vm.loadAllRules = function (ev) {
 
             $mdDialog.show({
@@ -43,9 +58,12 @@
                 multiple: true,
                 // fullscreen: vm.customFullscreen // Only for -xs, -sm breakpoints.
             })
-                .then(function (answer) {
+                .then(function (answer,j,i) {
+                    debugger;
+                    $scope.vm.selectedRule = answer;
                     console.log("In the Rule Management controller --- in then ");
                     $scope.status = 'You said the information was "' + answer + '".';
+
                 }, function () {
                     console.log("In the Rule Management controller --- after then ");
                     $scope.status = 'You cancelled the dialog.';
@@ -56,8 +74,10 @@
 
 
         vm.loadRuleData = function (rule) {
+            console.log("before");
+            console.log(vm.selectedRule);
             vm.selectedRule = rule;
-            console.log("SELECTEDDDD");
+            console.log("after");
             console.log(rule);
             console.log(vm.selectedRule);
         }
