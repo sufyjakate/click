@@ -76,27 +76,34 @@
         vm.themeList = [
             // 'dark-grey',
             // 'dark-orange',
-            'dark-purple',
-            'dark-blue',
+
             // 'red',
             // 'pink',
             // 'purple',
-            'deep-purple',
             // 'indigo',
             // 'blue',
-            'light-blue',
-            'cyan',
             // 'teal',
-            'green',
             // 'light-green',
-            'lime',
             // 'yellow',
             // 'amber',
             // 'orange',
-            'deep-orange',
             // 'brown',
+            // 'blue-grey',
+
+            //+++++++++++++++++++++++==
+            'dark-purple',
+            'dark-blue',
+
+            // 'deep-purple',
+
+            // 'light-blue',
+            // 'cyan',
+
+            // 'green',
+
+            // 'lime',
+            'deep-orange',
             'grey',
-            // 'blue-grey'
             'default',
             ];
 
@@ -104,6 +111,10 @@
 
 
             var item = vm.themeList[Math.floor(Math.random() * vm.themeList.length)];
+
+            while(item== widget.themeColor){
+                item = vm.themeList[Math.floor(Math.random() * vm.themeList.length)];
+            }
 
             // vm.showDarkTheme = 'dark-purple';
             widget.themeColor = item;
