@@ -82,12 +82,13 @@
                      data-gs-item-min-height="5"
                      on-item-added="vm.onItemAdded(item)"
                      on-item-removed="vm.onItemRemoved(item)"
+
+                     md-card md-theme={{w.themeColor}} md-theme-watch
                      >
                     <!--md-colors="{background: 'default-background-hue-1'}"-->
                         <panel-widget class="grid-stack-item-content"
-                                      md-card md-theme={{w.themeColor}} md-theme-watch
 
-                                      flex
+
                                 title="{{w.widgetTitle}}"
                                 template="{{w.widgetView}}"
                                 options="false"

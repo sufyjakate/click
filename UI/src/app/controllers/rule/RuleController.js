@@ -12,7 +12,7 @@
             $mdThemingProvider.theme('red');
             $mdThemingProvider.theme('pink');
             $mdThemingProvider.theme('purple');
-            $mdThemingProvider.theme('deep-purple');
+            $mdThemingProvider.theme('deep-purple').dark();
             $mdThemingProvider.theme('indigo');
             $mdThemingProvider.theme('blue');
             $mdThemingProvider.theme('light-blue');
@@ -28,12 +28,11 @@
             $mdThemingProvider.theme('brown');
             $mdThemingProvider.theme('blue-grey');
 
-            $mdThemingProvider.theme('dark-grey').dark();
             $mdThemingProvider.theme('dark-orange');
             // $mdThemingProvider.theme('dark-purple').backgroundPalette('deep-purple').dark();
             $mdThemingProvider.theme('dark-blue').dark();
             $mdThemingProvider.theme('grey').dark();
-
+            $mdThemingProvider.alwaysWatchTheme(true);
         })
         .controller('RuleController', [
             'ruleService',
@@ -75,7 +74,7 @@
 
 
         vm.themeList = [
-            'dark-grey',
+            // 'dark-grey',
             'dark-orange',
             'dark-purple',
             'dark-blue',

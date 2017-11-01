@@ -1,38 +1,37 @@
 (function () {
     angular
         .module('app')
-        .config(function ($mdThemingProvider) {
-
-            //
-            // red, pink, purple, deep-purple, indigo, blue, light-blue,
-            //     cyan, teal, green, light-green, lime, yellow, amber,
-            //     orange, deep-orange, brown, grey, blue-grey
-
-            $mdThemingProvider.theme('red');
-            $mdThemingProvider.theme('pink');
-            $mdThemingProvider.theme('purple');
-            $mdThemingProvider.theme('deep-purple');
-            $mdThemingProvider.theme('indigo');
-            $mdThemingProvider.theme('blue');
-            $mdThemingProvider.theme('light-blue');
-            $mdThemingProvider.theme('cyan');
-            $mdThemingProvider.theme('teal');
-            $mdThemingProvider.theme('green');
-            $mdThemingProvider.theme('light-green');
-            $mdThemingProvider.theme('lime');
-            $mdThemingProvider.theme('yellow');
-            $mdThemingProvider.theme('amber');
-            $mdThemingProvider.theme('orange');
-            $mdThemingProvider.theme('deep-orange');
-            $mdThemingProvider.theme('brown');
-            $mdThemingProvider.theme('blue-grey');
-
-            $mdThemingProvider.theme('dark-grey').dark();
-            $mdThemingProvider.theme('dark-orange');
-            $mdThemingProvider.theme('dark-purple').backgroundPalette('grey').dark();
-            $mdThemingProvider.theme('dark-blue').dark();
-            $mdThemingProvider.theme('grey').dark();
-        })
+        // .config(function ($mdThemingProvider) {
+        //
+        //     //
+        //     // red, pink, purple, deep-purple, indigo, blue, light-blue,
+        //     //     cyan, teal, green, light-green, lime, yellow, amber,
+        //     //     orange, deep-orange, brown, grey, blue-grey
+        //
+        //     $mdThemingProvider.theme('red');
+        //     $mdThemingProvider.theme('pink');
+        //     $mdThemingProvider.theme('purple');
+        //     $mdThemingProvider.theme('deep-purple');
+        //     $mdThemingProvider.theme('indigo');
+        //     $mdThemingProvider.theme('blue');
+        //     $mdThemingProvider.theme('light-blue');
+        //     $mdThemingProvider.theme('cyan');
+        //     $mdThemingProvider.theme('teal');
+        //     $mdThemingProvider.theme('green');
+        //     $mdThemingProvider.theme('light-green');
+        //     $mdThemingProvider.theme('lime');
+        //     $mdThemingProvider.theme('yellow');
+        //     $mdThemingProvider.theme('amber');
+        //     $mdThemingProvider.theme('orange');
+        //     $mdThemingProvider.theme('deep-orange');
+        //     $mdThemingProvider.theme('brown');
+        //     $mdThemingProvider.theme('blue-grey');
+        //
+        //     $mdThemingProvider.theme('dark-orange');
+        //     $mdThemingProvider.theme('dark-purple').backgroundPalette('grey').dark();
+        //     $mdThemingProvider.theme('dark-blue').dark();
+        //     $mdThemingProvider.theme('grey').dark();
+        // })
         .controller('RuleManagementController', [
             'ruleService',
             RuleManagementController
