@@ -4,10 +4,15 @@
   <div flex-xs flex-gt-xs="100" layout="column">
     <md-card >
       <md-card-title>
+        <md-card-title-media>
+          <div class="md-media-sm card-media" layout-align="center">
+            <i class="material-icons md-48">share</i>
+          </div>
+        </md-card-title-media>
         <md-card-title-text>
           <span class="md-headline">Share a rule with a user</span>
           <span class="md-subhead">
-            <md-autocomplete placeholder="Share Rule"
+            <md-autocomplete placeholder="Search Rule"
                              md-selected-item="vm.selectedRules"
                              md-search-text="vm.searchText"
                              md-no-cache="vm.disableCaching"
@@ -15,7 +20,8 @@
                              md-item-text="item.display">
       <span md-highlight-text="vm.searchText">{{item.rule}}</span>
     </md-autocomplete>
-    <md-autocomplete placeholder="User Email"
+            <br>
+    <md-autocomplete placeholder="Enter Email"
                      md-selected-item="vm.user"
                      md-search-text="vm.emailSearchText"
                      md-no-cache="vm.disableCaching"
@@ -24,20 +30,22 @@
                      type="email">
       <span md-highlight-text="vm.searchText">{{item.email}}</span>
     </md-autocomplete>
-    <p>Selected Rule:
+
+            <p>Selected Rule:
       <b>{{vm.rule|| 'No rule selected'}}</b>
     </p>
     <p>Selected User:
       <b>{{vm.user || 'No user selected'}}</b>
     </p>
 
+            <!--<md-input-container>-->
+        <!--<label>Title</label>-->
+        <!--<input ng-model="user.title">-->
+      <!--</md-input-container>-->
+
           </span>
         </md-card-title-text>
-        <md-card-title-media>
-          <div class="md-media-sm card-media">
-            <i class="material-icons md-48">share</i>
-          </div>
-        </md-card-title-media>
+
       </md-card-title>
       <md-card-actions layout="row" layout-align="end center">
         <md-button class="md-raised md-primary">Share</md-button>
