@@ -1,0 +1,47 @@
+<md-dialog aria-label="Mango (Fruit)" ng-controller="RuleManagementController as vm" >
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Select a Rule </h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <i class="material-icons fab-icon">cancel</i>
+                    <!--<md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>-->
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+
+                <md-list flex>
+                    <md-list-item class="md-2-line" ng-repeat="item in vm.ruleData" ng-click="vm.loadRuleData(item)">
+
+                        <!--<img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.ruleIcon}}" />-->
+                        <i class="material-icons md-avatar">{{item.ruleIcon}}</i>
+
+                        <div class="md-list-item-text" layout="column">
+                            <h3>{{ item.ruleTitle }}</h3>
+                            <!--<h4>{{ item.ruleDescription }}</h4>-->
+                            <p>{{ item.ruleDescription }}</p>
+                        </div>
+                    </md-list-item>
+
+            </div>
+
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <!--<md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>-->
+                <!--More on Wikipedia-->
+            <!--</md-button>-->
+            <span flex></span>
+            <md-button ng-click="answer('not useful')">
+                Cancel
+            </md-button>
+            <md-button ng-click="answer('useful')">
+                Save
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

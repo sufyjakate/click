@@ -3,16 +3,16 @@
     <!--md-colors="{background: 'default-background-hue-1'}"-->
 
 
-    <div flex-xs flex-gt-xs="100" layout="column">
+    <div  flex-xs flex-gt-xs="100" layout="column">
         <md-card >
             <md-card-title>
                 <md-card-title-text>
-                    <span class="md-headline">Turn on music when I come home</span>
-                    <span class="md-subhead">Whenever I enter the home in the evening, swith on the music in the room</span>
+                    <span class="md-headline">{{vm.selectedRule.ruleTitle}}</span>
+                    <span class="md-subhead">{{vm.selectedRule.ruleDescription}}</span>
                 </md-card-title-text>
                 <md-card-title-media>
                     <div class="md-media-sm card-media">
-                        <i class="material-icons md-48">music_note</i>
+                        <i class="material-icons md-48">{{vm.selectedRule.ruleIcon}}</i>
                     </div>
                 </md-card-title-media>
             </md-card-title>
@@ -44,6 +44,17 @@
                     <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >share</md-tooltip>
                 </md-button>
             </md-card-actions>
+        </md-card>
+    </div>
+
+
+    <div ng-if="vm.selectedRule == null" flex-xs flex-gt-xs="100" layout="column">
+        <md-card >
+            <md-card-title>
+                <md-card-title-text>
+                    <md-button ng-click="vm.loadAllRules($event)" class="md-raised md-primary">Select a Rule</md-button>
+                </md-card-title-text>
+            </md-card-title>
         </md-card>
     </div>
 

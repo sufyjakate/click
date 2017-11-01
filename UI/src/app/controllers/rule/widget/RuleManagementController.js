@@ -1,44 +1,67 @@
 (function () {
     angular
         .module('app')
-        // .config(function ($mdThemingProvider) {
-        //
-        //     //
-        //     // red, pink, purple, deep-purple, indigo, blue, light-blue,
-        //     //     cyan, teal, green, light-green, lime, yellow, amber,
-        //     //     orange, deep-orange, brown, grey, blue-grey
-        //
-        //     $mdThemingProvider.theme('red');
-        //     $mdThemingProvider.theme('pink');
-        //     $mdThemingProvider.theme('purple');
-        //     $mdThemingProvider.theme('deep-purple');
-        //     $mdThemingProvider.theme('indigo');
-        //     $mdThemingProvider.theme('blue');
-        //     $mdThemingProvider.theme('light-blue');
-        //     $mdThemingProvider.theme('cyan');
-        //     $mdThemingProvider.theme('teal');
-        //     $mdThemingProvider.theme('green');
-        //     $mdThemingProvider.theme('light-green');
-        //     $mdThemingProvider.theme('lime');
-        //     $mdThemingProvider.theme('yellow');
-        //     $mdThemingProvider.theme('amber');
-        //     $mdThemingProvider.theme('orange');
-        //     $mdThemingProvider.theme('deep-orange');
-        //     $mdThemingProvider.theme('brown');
-        //     $mdThemingProvider.theme('blue-grey');
-        //
-        //     $mdThemingProvider.theme('dark-orange');
-        //     $mdThemingProvider.theme('dark-purple').backgroundPalette('grey').dark();
-        //     $mdThemingProvider.theme('dark-blue').dark();
-        //     $mdThemingProvider.theme('grey').dark();
-        // })
         .controller('RuleManagementController', [
             'ruleService',
+            '$scope',
+            '$mdDialog',
             RuleManagementController
         ]);
 
-    function RuleManagementController(ruleService) {
+    function RuleManagementController(ruleService, $scope, $mdDialog) {
         var vm = this;
+        console.log("In the Rule Management controller");
+
+
+        vm.selectedRule ;
+
+        vm.loadAllItems = function () {
+            ruleService
+                .loadAllRuleData()
+                .then(function (ruleData) {
+                    vm.ruleData = [].concat(ruleData);
+                    console.log(ruleData);
+                });
+
+        };
+
+        vm.loadAllItems();
+
+        vm.loadAllRules = function (ev) {
+
+            $mdDialog.show({
+                controller: RuleManagementController,
+                templateUrl: 'app/views/rule/partial/SelectRuleFromAllDialog.html',
+                parent: angular.element(document.body),
+                targetEvent: ev,
+                clickOutsideToClose: true,
+                escapeToClose: true,
+                // skipHide : true,
+                multiple: true,
+                // fullscreen: vm.customFullscreen // Only for -xs, -sm breakpoints.
+            })
+                .then(function (answer) {
+                    console.log("In the Rule Management controller --- in then ");
+                    $scope.status = 'You said the information was "' + answer + '".';
+                }, function () {
+                    console.log("In the Rule Management controller --- after then ");
+                    $scope.status = 'You cancelled the dialog.';
+                });
+        };
+
+
+
+
+        vm.loadRuleData = function (rule) {
+            vm.selectedRule = rule;
+            console.log("SELECTEDDDD");
+            console.log(rule);
+            console.log(vm.selectedRule);
+        }
+
+
+
+
 
         vm.addTodo = addTodo;
         vm.remaining = remaining;

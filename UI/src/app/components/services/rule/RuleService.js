@@ -72,6 +72,109 @@
             }
         ];
 
+        var ruleData = [
+            {
+                ruleId: 1,
+                ruleTitle: "Switch on Wifi when I enter my home",
+                ruleIcon:"wifi",
+                code :{
+                    trigger: "motionDevice.movement == true && time > 20:00",
+                    action: "wifiDevice.switch = on"
+                }
+            },
+            {
+                ruleId: 2,
+                ruleTitle: "Turn on music when I come home",
+                ruleDescription:"Whenever I enter the home in the evening, swith on the music in the room",
+                ruleIcon:"audiotrack",
+                code :{
+                    trigger: "motionDevice.movement == true && time > 20:00",
+                    action: "musicDevice.switch = on"
+                }
+            },
+            {
+                ruleId: 3,
+                ruleTitle: "Turn off lights after 11pm",
+                ruleDescription:"Switch off lights",
+                ruleIcon:"hotel",
+                code :{
+                    trigger: "time > 23:00",
+                    action: "lightDevice.switch = off"
+                }
+            },
+            {
+                ruleId: 4,
+                ruleTitle: "Send me a message when my son leaves school",
+                ruleDescription:"Send me a message when my son leaves school",
+                ruleIcon:"child_care",
+                code :{
+                    trigger: "sonDevice.gps.lat == 1.23453 && sonDevice.gps.log == 2.21334 && sonDevice.gps.radius == 1km && sonDevice.gps.movement == out",
+                    action: "myMobile.sms = sonLeftSchool"
+                }
+            },
+            {
+                ruleId: 5,
+                ruleTitle: "Notify me daily to throw the trash out",
+                ruleDescription:"Notify me daily to throw the trash out",
+                ruleIcon:"shopping_basket",
+                code :{
+                    trigger: "time > 7:00",
+                    action: "myMobile.sms = throwTrash"
+                }
+
+            },
+            {
+                ruleId: 6,
+                ruleTitle: "Switch off lights",
+                ruleDescription:"Switch off lights",
+                ruleIcon:"wifi",
+                code :{
+                    trigger: "motionDevice.movement == true && time > 20:00",
+                    action: "wifiDevice.switch = on"
+                }
+            },
+            {
+                ruleId: 7,
+                ruleTitle: "Turn on music when I come home",
+                ruleDescription:"Whenever I enter the home in the evening, swith on the music in the room",
+                ruleIcon:"audiotrack",
+                code :{
+                    trigger: "motionDevice.movement == true && time > 20:00",
+                    action: "musicDevice.switch = on"
+                }
+            },
+            {
+                ruleId: 8,
+                ruleTitle: "Turn off lights after 11pm",
+                ruleDescription:"Turn off lights after 11pm",
+                ruleIcon:"hotel",
+                code :{
+                    trigger: "time > 23:00",
+                    action: "lightDevice.switch = off"
+                }
+            },
+            {
+                ruleId: 9,
+                ruleTitle: "Send me a message when my son leaves school",
+                ruleDescription:"Send me a message when my son leaves school",
+                ruleIcon:"child_care",
+                code :{
+                    trigger: "sonDevice.gps.lat == 1.23453 && sonDevice.gps.log == 2.21334 && sonDevice.gps.radius == 1km && sonDevice.gps.movement == out",
+                    action: "myMobile.sms = sonLeftSchool"
+                }
+            },
+            {
+                ruleId: 10,
+                ruleTitle: "Notify me daily to throw the trash out",
+                ruleDescription:"Notify me daily to throw the trash out",
+                ruleIcon:"shopping_basket",
+                code :{
+                    trigger: "time > 7:00",
+                    action: "myMobile.sms = throwTrash"
+                }
+            },
+        ];
+
         var ruleNotificationData = [
             {
                 ruleId: 1,
@@ -448,6 +551,9 @@
             },
             loadAllItems: function () {
                 return $q.when(rules);
+            },
+            loadAllRuleData: function () {
+                return $q.when(ruleData);
             },
             loadWidgetConfig: function (widgetType) {
                 return $q.when(tableData);
