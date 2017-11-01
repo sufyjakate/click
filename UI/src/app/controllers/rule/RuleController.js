@@ -2,36 +2,36 @@
 
     angular
         .module('app')
-        .config(function($mdThemingProvider) {
+        .config(function ($mdThemingProvider) {
 
             //
             // red, pink, purple, deep-purple, indigo, blue, light-blue,
             //     cyan, teal, green, light-green, lime, yellow, amber,
             //     orange, deep-orange, brown, grey, blue-grey
 
-            $mdThemingProvider.theme('red');
-            $mdThemingProvider.theme('pink');
-            $mdThemingProvider.theme('purple');
-            $mdThemingProvider.theme('deep-purple');
-            $mdThemingProvider.theme('indigo');
-            $mdThemingProvider.theme('blue');
-            $mdThemingProvider.theme('light-blue');
-            $mdThemingProvider.theme('cyan');
-            $mdThemingProvider.theme('teal');
-            $mdThemingProvider.theme('green');
-            $mdThemingProvider.theme('light-green');
-            $mdThemingProvider.theme('lime');
-            $mdThemingProvider.theme('yellow');
-            $mdThemingProvider.theme('amber');
-            $mdThemingProvider.theme('orange');
-            $mdThemingProvider.theme('deep-orange');
-            $mdThemingProvider.theme('brown');
-            $mdThemingProvider.theme('blue-grey');
+            // $mdThemingProvider.theme('red');
+            // $mdThemingProvider.theme('pink');
+            // $mdThemingProvider.theme('purple');
+            // $mdThemingProvider.theme('deep-purple');
+            // $mdThemingProvider.theme('indigo');
+            // $mdThemingProvider.theme('blue');
+            // $mdThemingProvider.theme('light-blue');
+            // $mdThemingProvider.theme('cyan');
+            // $mdThemingProvider.theme('teal');
+            // $mdThemingProvider.theme('green');
+            // $mdThemingProvider.theme('light-green');
+            // $mdThemingProvider.theme('lime');
+            // $mdThemingProvider.theme('yellow');
+            // $mdThemingProvider.theme('amber');
+            // $mdThemingProvider.theme('orange');
+            // $mdThemingProvider.theme('deep-orange');
+            // $mdThemingProvider.theme('brown');
+            // $mdThemingProvider.theme('blue-grey');
 
-            $mdThemingProvider.theme('dark-grey').dark();
-            $mdThemingProvider.theme('dark-orange').dark();
-            $mdThemingProvider.theme('dark-purple').dark();
-            $mdThemingProvider.theme('dark-blue').dark();
+            // $mdThemingProvider.theme('dark-grey').dark();
+            // $mdThemingProvider.theme('dark-orange');
+            // $mdThemingProvider.theme('dark-purple').dark();
+            // $mdThemingProvider.theme('dark-blue').dark();
             $mdThemingProvider.theme('grey').dark();
 
         })
@@ -48,15 +48,15 @@
         var vm = this;
 
 
-        vm.hide = function() {
+        vm.hide = function () {
             $mdDialog.hide();
         };
 
-        vm.cancel = function() {
+        vm.cancel = function () {
             $mdDialog.cancel();
         };
 
-        vm.answer = function(answer) {
+        vm.answer = function (answer) {
             $mdDialog.hide(answer);
         };
 
@@ -69,71 +69,94 @@
         // };
 
 
-        vm.selectedColor="";
+        vm.selectedColor = "";
 
-        vm.showDarkTheme='grey';
-
-
-        vm.themeList = ['dark-grey','dark-orange','dark-purple','dark-blue','red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue','cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey'];
-
-        vm.switchTheme = function(ev,widget) {
+        vm.showDarkTheme = 'grey';
 
 
+        vm.themeList = [
+            // 'dark-grey',
+            // 'dark-orange',
+            // 'dark-purple',
+            // 'dark-blue',
+            // 'red',
+            // 'pink',
+            // 'purple',
+            // 'deep-purple',
+            // 'indigo',
+            // 'blue',
+            // 'light-blue',
+            // 'cyan',
+            // 'teal',
+            // 'green',
+            // 'light-green',
+            // 'lime',
+            // 'yellow',
+            // 'amber',
+            // 'orange',
+            // 'deep-orange',
+            // 'brown',
+            'grey',
+            // 'blue-grey'
+            'default',
+            ];
 
-            var item = vm.themeList[Math.floor(Math.random()*vm.themeList.length)];
+        vm.switchTheme = function (ev, widget) {
+
+
+            var item = vm.themeList[Math.floor(Math.random() * vm.themeList.length)];
 
             // vm.showDarkTheme = 'dark-purple';
             widget.themeColor = item;
-            console.log("theme switched to "+widget.themeColor);
+            console.log("theme switched to " + widget.themeColor);
         };
 
-        vm.editWidget = function(ev,widget) {
+        vm.editWidget = function (ev, widget) {
 
             $mdDialog.show({
                 controller: RuleController,
                 templateUrl: 'app/views/rule/partial/RuleDialog.html',
                 parent: angular.element(document.body),
                 targetEvent: ev,
-                clickOutsideToClose:true,
+                clickOutsideToClose: true,
                 escapeToClose: true,
                 // skipHide : true,
                 multiple: true,
                 // fullscreen: vm.customFullscreen // Only for -xs, -sm breakpoints.
             })
-                .then(function(answer) {
+                .then(function (answer) {
                     $scope.status = 'You said the information was "' + answer + '".';
-                }, function() {
+                }, function () {
                     $scope.status = 'You cancelled the dialog.';
                 });
         };
 
 
-        vm.configureWidget = function(ev,widget) {
+        vm.configureWidget = function (ev, widget) {
 
             $mdDialog.show({
                 controller: RuleController,
                 templateUrl: 'app/views/rule/partial/ColorDialog.html',
                 parent: angular.element(document.body),
                 targetEvent: ev,
-                clickOutsideToClose:true,
+                clickOutsideToClose: true,
                 escapeToClose: true,
                 // skipHide : true,
                 multiple: true,
                 // fullscreen: vm.customFullscreen // Only for -xs, -sm breakpoints.
             })
-                .then(function(answer) {
+                .then(function (answer) {
                     $scope.status = 'You said the information was "' + answer + '".';
-                }, function() {
+                }, function () {
                     $scope.status = 'You cancelled the dialog.';
                 });
         };
 
-        $scope.$watch('selectedColor', function(newValue, oldValue) {
+        $scope.$watch('selectedColor', function (newValue, oldValue) {
             console.log(newValue);
 
-            vm.selectedColor=newValue;
+            vm.selectedColor = newValue;
             console.log(vm.selectedColor);
-
 
 
             // angular copy will preserve the reference of $scope.someVar
@@ -142,12 +165,12 @@
 
         });
 
-        vm.changeColor=function (w) {
+        vm.changeColor = function (w) {
             console.log(vm.selectedColor);
             // md-theme=
         }
 
-        vm.showConfirm = function(ev,widget) {
+        vm.showConfirm = function (ev, widget) {
             console.log("confirmed");
             console.log(vm.selectedColor);
             // Appending dialog to document.body to cover sidenav in docs app
@@ -159,17 +182,17 @@
                 .ok('Confirm')
                 .cancel('Cancel');
 
-            $mdDialog.show(confirm).then(function() {
+            $mdDialog.show(confirm).then(function () {
                 console.log("Deleted Widget");
                 vm.removeWidget(widget);
-            }, function() {
+            }, function () {
                 console.log("cancelled");
                 // $scope.status = 'You decided to keep your debt.';
             });
         };
 
 
-        vm.showPrompt = function(ev) {
+        vm.showPrompt = function (ev) {
             // Appending dialog to document.body to cover sidenav in docs app
             var confirm = $mdDialog.prompt()
                 .title('Delete Widget ?')
@@ -182,9 +205,9 @@
                 .ok('Okay!')
                 .cancel('I\'m a cat person');
 
-            $mdDialog.show(confirm).then(function(result) {
+            $mdDialog.show(confirm).then(function (result) {
                 $scope.status = 'You decided to name your dog ' + result + '.';
-            }, function() {
+            }, function () {
                 $scope.status = 'You didn\'t name your dog.';
             });
         };
@@ -201,12 +224,12 @@
         vm.selectedDirection = 'right';
 
         vm.fab = {
-            trigger:{
-                openIconMaterialIcon:"add",
-                closeIconMaterialIcon:"close"
+            trigger: {
+                openIconMaterialIcon: "add",
+                closeIconMaterialIcon: "close"
             },
-            tooltip:{
-                visibility : "tooltipVisible",
+            tooltip: {
+                visibility: "tooltipVisible",
                 direction: "top"
             }
         };
@@ -217,14 +240,14 @@
         vm.ruleOptions = {
             cellHeight: 1,
             verticalMargin: 0,
-            animate : true,
-            auto : false,
+            animate: true,
+            auto: false,
             // disableDrag : true,
             // disableResize: true,
             // alwaysShowResizeHandle: true,
-            height:0,
+            height: 0,
             width: 12,
-            float:true
+            float: true
         };
 
         vm.$log = function (text) {
@@ -338,22 +361,22 @@
                 widgetType: "0",
                 widgetView: "app/views/rule/widgets/RuleSharing.html",
                 widgetTitle: "Rule Sharing",
-                icon:"share",
+                icon: "share",
                 ariaLabel: "Sharing",
-                width:3,
-                height:4,
-                themeColor:'grey'
+                width: 2,
+                height: 241,
+                themeColor: 'grey'
             },
 
             "1": {
                 widgetType: "1",
                 widgetView: "app/views/rule/widgets/RuleManagement.html",
                 widgetTitle: "Rule Management",
-                icon:"settings",
+                icon: "settings",
                 ariaLabel: "Management",
-                width:4,
-                height:7,
-                themeColor:'grey'
+                width: 4,
+                height: 473,
+                themeColor: 'grey'
             },
 
 
@@ -361,22 +384,22 @@
                 widgetType: "2",
                 widgetView: "app/views/rule/widgets/RuleNotification.html",
                 widgetTitle: "Rule Notifications",
-                icon:"notifications",
+                icon: "notifications",
                 ariaLabel: "Notifications",
-                width:6,
-                height:6,
-                themeColor:'grey'
+                width: 8,
+                height: 462,
+                themeColor: 'grey'
             },
 
             "3": {
                 widgetType: "3",
                 widgetView: "app/views/rule/widgets/RuleCreation.html",
                 widgetTitle: "Rule Creation",
-                icon:"create",
+                icon: "create",
                 ariaLabel: "Creation",
-                width:3,
-                height:4,
-                themeColor:'grey'
+                width: 3,
+                height: 240,
+                themeColor: 'grey'
             },
 
             // "4": {
