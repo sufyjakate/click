@@ -9,27 +9,27 @@
             //     cyan, teal, green, light-green, lime, yellow, amber,
             //     orange, deep-orange, brown, grey, blue-grey
 
-            $mdThemingProvider.theme('red');
-            $mdThemingProvider.theme('pink');
-            $mdThemingProvider.theme('purple');
+            $mdThemingProvider.theme('red').dark();
+            $mdThemingProvider.theme('pink').dark();
+            $mdThemingProvider.theme('purple').dark();
             $mdThemingProvider.theme('deep-purple').dark();
-            $mdThemingProvider.theme('indigo');
-            $mdThemingProvider.theme('blue');
-            $mdThemingProvider.theme('light-blue');
-            $mdThemingProvider.theme('cyan');
-            $mdThemingProvider.theme('teal');
-            $mdThemingProvider.theme('green');
-            $mdThemingProvider.theme('light-green');
-            $mdThemingProvider.theme('lime');
-            $mdThemingProvider.theme('yellow');
-            $mdThemingProvider.theme('amber');
-            $mdThemingProvider.theme('orange');
-            $mdThemingProvider.theme('deep-orange');
-            $mdThemingProvider.theme('brown');
-            $mdThemingProvider.theme('blue-grey');
+            $mdThemingProvider.theme('indigo').dark();
+            $mdThemingProvider.theme('blue').dark();
+            $mdThemingProvider.theme('light-blue').dark();
+            $mdThemingProvider.theme('cyan').dark();
+            $mdThemingProvider.theme('teal').dark();
+            $mdThemingProvider.theme('green').dark();
+            $mdThemingProvider.theme('light-green').dark();
+            $mdThemingProvider.theme('lime').dark();
+            $mdThemingProvider.theme('yellow').dark();
+            $mdThemingProvider.theme('amber').dark();
+            $mdThemingProvider.theme('orange').dark();
+            $mdThemingProvider.theme('deep-orange').dark();
+            $mdThemingProvider.theme('brown').dark();
+            $mdThemingProvider.theme('blue-grey').dark();
 
-            $mdThemingProvider.theme('dark-orange');
-            // $mdThemingProvider.theme('dark-purple').backgroundPalette('deep-purple').dark();
+            $mdThemingProvider.theme('dark-orange').dark();
+            $mdThemingProvider.theme('dark-purple').backgroundPalette('deep-purple').dark();
             $mdThemingProvider.theme('dark-blue').dark();
             $mdThemingProvider.theme('grey').dark();
             $mdThemingProvider.alwaysWatchTheme(true);
@@ -75,26 +75,26 @@
 
         vm.themeList = [
             // 'dark-grey',
-            'dark-orange',
+            // 'dark-orange',
             'dark-purple',
             'dark-blue',
-            'red',
-            'pink',
-            'purple',
+            // 'red',
+            // 'pink',
+            // 'purple',
             'deep-purple',
-            'indigo',
-            'blue',
+            // 'indigo',
+            // 'blue',
             'light-blue',
             'cyan',
-            'teal',
+            // 'teal',
             'green',
-            'light-green',
+            // 'light-green',
             'lime',
-            'yellow',
-            'amber',
-            'orange',
+            // 'yellow',
+            // 'amber',
+            // 'orange',
             'deep-orange',
-            'brown',
+            // 'brown',
             'grey',
             // 'blue-grey'
             'default',
