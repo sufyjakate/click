@@ -1,4 +1,4 @@
-<div class="table-responsive-vertical md-whiteframe-z1" ng-controller="RuleNotificationController as vm">
+<md-content class="table-responsive-vertical md-whiteframe-z1" ng-controller="RuleNotificationController as vm">
     <!-- TODO: Replace table to table component when https://github.com/angular/material/issues/796 will closed -->
     <!--<md-toolbar class="md-table-toolbar md-default">-->
         <!--&lt;!&ndash;<div class="md-toolbar-tools">&ndash;&gt;-->
@@ -58,4 +58,4 @@
     </md-table-container>
 
     <md-table-pagination md-limit="vm.query.limit" md-limit-options="[5, 10, 15]" md-page="vm.query.page" md-total="{{vm.totalItems}}" md-on-paginate="vm.getItems()" md-page-select></md-table-pagination>
-</div>
+</md-content>
