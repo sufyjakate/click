@@ -70,7 +70,6 @@
 
                 <!--gs-item-autopos="1"-->
                 <div gridstack-item
-
                      ng-repeat="w in vm.ruleWidgetData"
                      class="grid-stack-item"
                      gs-item-x="w.x"
@@ -83,10 +82,12 @@
                      data-gs-item-min-height="5"
                      on-item-added="vm.onItemAdded(item)"
                      on-item-removed="vm.onItemRemoved(item)"
-                     md-theme="{{w.themeColor}}" md-theme-watch>
-
+                     >
+                    <!--md-colors="{background: 'default-background-hue-1'}"-->
                         <panel-widget class="grid-stack-item-content"
-                                flex
+                                      md-card md-theme={{w.themeColor}} md-theme-watch
+
+                                      flex
                                 title="{{w.widgetTitle}}"
                                 template="{{w.widgetView}}"
                                 options="false"

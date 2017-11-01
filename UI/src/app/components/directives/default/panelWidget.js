@@ -3,10 +3,10 @@
 angular.module('app')
   .directive('panelWidget', function() {
     return {
-      restrict: 'E',
+      restrict: 'EA',
       replace: true,
       transclude: true,
-      scope: { title: '@', template: '@', options: '@' ,themeColor: '@'},
+      scope: { title: '@', template: '@', options: '@'},
       template: '' +
                 '<section layout-margin class=" panel-widget ">' +
                 '  <md-toolbar md-theme="" class="md-hue-1 panel-widget-toolbar">' +
@@ -23,7 +23,7 @@ angular.module('app')
 
                 '    </div>' +
                 '  </md-toolbar>' +
-                '  <div ng-include="template"/>' +
+                '  <div md-colors="{background: \'default-background-hue-1\'}" ng-include="template"/>' +
                 '</section>',
       compile: function(element, attrs, linker) {
         return function(scope, element) {

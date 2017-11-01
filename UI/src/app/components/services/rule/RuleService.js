@@ -10,6 +10,13 @@
 
     function ruleService($q, $http) {
 
+        var rules = [
+            {text: 'Switch off lights', done: false},
+            {text: 'Turn on music when I come home', done: true},
+            {text: 'Turn off lights after 11pm', done: false},
+            {text: 'Send me a message when my son leaves school', done: false},
+            {text: 'Notify me daily to throw the trash out.', done: false}
+        ];
 
         var documentID = "59e694b00185326f1d387691";    //remote database
         var documentID = "59ea17f5f182e10f81bfaa97";    //loacl database
@@ -440,7 +447,7 @@
                 return $q.when(ruleOptions);
             },
             loadAllItems: function () {
-                return $q.when(tableData);
+                return $q.when(rules);
             },
             loadWidgetConfig: function (widgetType) {
                 return $q.when(tableData);

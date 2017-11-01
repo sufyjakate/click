@@ -72,7 +72,7 @@ body {
 
 // panel-widget
 .panel-widget {
-  background-color: transparent;
+  background-color: inherit;
 
   &-toolbar {
     box-shadow: none;
@@ -83,11 +83,11 @@ body {
     color: $text-color;
   }
 }
-
-.options {
-  -webkit-transition:all linear 0.5s;
-  transition:all linear 0.5s;
-}
+//
+//.options {
+//  -webkit-transition:all linear 0.5s;
+//  transition:all linear 0.5s;
+//}
 
 .options.ng-hide {
   opacity:0;
@@ -182,3 +182,6 @@ md-backdrop.md-sidenav-backdrop {
   //color: darkgrey;
 }
 
+//.md-content.md-dark-purple-theme{
+//  background-color: purple;
+//}

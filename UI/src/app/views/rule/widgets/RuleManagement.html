@@ -1,11 +1,14 @@
-<md-content class="md-padding" ng-controller="TodoController as vm">
+<md-content
+        class="md-padding" ng-controller="RuleManagementController as vm">
+    <!--md-colors="{background: 'default-background-hue-1'}"-->
+
     <div layout="row">
         <h4 flex="82">{{5-vm.remaining()}} of {{vm.todos.length}} Activated </h4>
         <md-button class="md-primary" ng-click="vm.toggleAll()">activate all
         </md-button>
     </div>
 
-    <md-checkbox ng-repeat="todo in vm.todos" ng-model="todo.done">
+    <md-checkbox class="md-primary" ng-repeat="todo in vm.todos" ng-model="todo.done">
         {{todo.text}}
     </md-checkbox>
 
