@@ -46,7 +46,13 @@
 
         vm.selectedColor="";
 
+        vm.showDarkTheme="";
 
+        vm.switchTheme = function(ev,widget) {
+            vm.showDarkTheme = 'grey';
+            widget.themeColor = "grey";
+            console.log("theme switched to "+widget.themeColor);
+        };
 
         vm.editWidget = function(ev,widget) {
 
@@ -189,7 +195,7 @@
         };
 
         vm.$log = function (text) {
-            console.log(text);
+            // console.log(text);
         }
 
         vm.$log(vm.ruleWidgetData);
@@ -220,9 +226,9 @@
             //     sequence++;
             // });
 
-
-            console.log("currentstate ");
-            console.log(vm.ruleWidgetData);
+            //
+            // console.log("currentstate ");
+            // console.log(vm.ruleWidgetData);
 
 
             // ruleService
@@ -236,7 +242,7 @@
                 .updateDashboardState(vm.ruleWidgetData)
                 .then(function (ruleWidgetDataAfterUpdate) {
                     // vm.ruleWidgetData = ruleWidgetDataAfterUpdate;
-                    console.log(ruleWidgetDataAfterUpdate);
+                    // console.log(ruleWidgetDataAfterUpdate);
                 });
 
         };
@@ -250,23 +256,30 @@
                 .loadAllRuleWidgets()
                 .then(function (ruleWidgetData) {
 
-                    console.log("_________________________");
-                    console.log("vm.ruleWidgetData in load rule widget function - in THEN Before Assigning");
-                    console.log(vm.ruleWidgetData);
-                    console.log("_________________________");
-
-                    console.log("Service Result.ruleWidgetData in controller function in load rule widgets");
-                    console.log(ruleWidgetData);
-                    console.log("_________________________");
+                    // console.log("_________________________");
+                    // console.log("vm.ruleWidgetData in load rule widget function - in THEN Before Assigning");
+                    // console.log(vm.ruleWidgetData);
+                    // console.log("_________________________");
+                    //
+                    // console.log("Service Result.ruleWidgetData in controller function in load rule widgets");
+                    // console.log(ruleWidgetData);
+                    // console.log("_________________________");e.log("_________________________");
+                    // console.log("vm.ruleWidgetData in load rule widget function - in THEN Before Assigning");
+                    // console.log(vm.ruleWidgetData);
+                    // console.log("_________________________");
+                    //
+                    // console.log("Service Result.ruleWidgetData in controller function in load rule widgets");
+                    // console.log(ruleWidgetData);
+                    // console.log("_________________________");
 
                     // vm.ruleWidgetData = [].concat(ruleWidgetData);
                     // vm.ruleWidgetData = [];
 
                     vm.ruleWidgetData = ruleWidgetData;
-                    console.log("_________________________");
-
-                    console.log("vm.ruleWidgetData in load rule widget function - in THEN After Assigning");
-                    console.log(vm.ruleWidgetData);
+                    // console.log("_________________________");
+                    //
+                    // console.log("vm.ruleWidgetData in load rule widget function - in THEN After Assigning");
+                    // console.log(vm.ruleWidgetData);
 
                     // vm.updateWidgetState();
 
@@ -295,7 +308,8 @@
                 icon:"share",
                 ariaLabel: "Sharing",
                 width:3,
-                height:4
+                height:4,
+                themeColor:'grey'
             },
 
             "1": {
@@ -305,7 +319,8 @@
                 icon:"settings",
                 ariaLabel: "Management",
                 width:4,
-                height:7
+                height:7,
+                themeColor:'grey'
             },
 
 
@@ -316,7 +331,8 @@
                 icon:"notifications",
                 ariaLabel: "Notifications",
                 width:6,
-                height:6
+                height:6,
+                themeColor:'grey'
             },
 
             "3": {
@@ -326,7 +342,8 @@
                 icon:"create",
                 ariaLabel: "Creation",
                 width:3,
-                height:4
+                height:4,
+                themeColor:'grey'
             },
 
             // "4": {
@@ -370,7 +387,8 @@
                     x: 0,
                     y: 0,
                     width: vm.widgetTypeDetailEnum[widgetType].width,
-                    height: vm.widgetTypeDetailEnum[widgetType].height
+                    height: vm.widgetTypeDetailEnum[widgetType].height,
+                    themeColor: vm.widgetTypeDetailEnum[widgetType].themeColor
                 };
 
             vm.ruleWidgetData.push(newWidget);

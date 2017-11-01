@@ -261,7 +261,7 @@
             };
 
             var url = 'http://localhost:3333/ruleWidgetsDashboard/';
-            console.log(url);
+            // console.log(url);
 
 
             var data = {
@@ -271,9 +271,9 @@
 
             return $http.post(url, data, config).then(function (response) {
                 var afterSaving = response.data;
-                console.log("Widget Dashboard Created");
-                console.log(afterSaving);
-                console.log(response);
+                //console.log("Widget Dashboard Created");
+                //console.log(afterSaving);
+                //console.log(response);
 
 
                 return afterSaving._id;
@@ -297,8 +297,8 @@
 
                 if(response.data !==null && response.data.length !==0){
                     documentID = response.data[0]._id;
-                    console.log("In Get All RuleWidgetDashboard State Function Dashboard Existing : Document ID");
-                    console.log(documentID);
+                    //console.log("In Get All RuleWidgetDashboard State Function Dashboard Existing : Document ID");
+                    //console.log(documentID);
 
                     return loadWidgetsData(documentID);
 
@@ -330,7 +330,7 @@
 
             $http.post('http://localhost:3333/ruleWidgets', value, config).then(function (response) {
                 var afterSaving = response.data;
-                console.log(afterSaving);
+                //console.log(afterSaving);
             }, function (errorResponse) {
                 console.log(errorResponse);
             });
@@ -351,8 +351,8 @@
             var values = updatedRuleWidgetData;
             var log = [];
 
-            console.log("update widget data");
-            console.log(updatedRuleWidgetData)
+            //console.log("update widget data");
+            //console.log(updatedRuleWidgetData)
 
             angular.forEach(values, function (value, key) {
 
@@ -382,7 +382,7 @@
             };
 
             var url = 'http://localhost:3333/ruleWidgetsDashboard/' + documentID;
-            console.log(url);
+            // console.log(url);
 
 
             var data = {
@@ -392,9 +392,9 @@
 
             return $http.put(url, data, config).then(function (response) {
                 var afterSaving = response.data;
-                console.log("Widget Dashboard Updated");
-                console.log(afterSaving);
-                console.log(response);
+                // console.log("Widget Dashboard Updated");
+                // console.log(afterSaving);
+                // console.log(response);
                 return afterSaving;
             }, function (errorResponse) {
                 console.log(errorResponse);

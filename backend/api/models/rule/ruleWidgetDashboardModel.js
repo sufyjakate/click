@@ -27,6 +27,9 @@ var RuleWidgetDashboardSchema = new Schema({
             height: {
                 type: String
             },
+            themeColor: {
+                type: String
+            },
             sequence: {
                 type: String
             },

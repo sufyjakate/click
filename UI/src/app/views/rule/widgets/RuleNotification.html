@@ -11,14 +11,14 @@
         <table md-table
                md-row-select
                multiple
-               ng-model="selected"
+               ng-model="vm.selected"
                class="table table-hover table-bordered" >
 
             <thead md-head md-order="vm.query.order" md-on-reorder="vm.getItems()">
             <tr md-row>
                 <th md-column md-numeric>Rule ID</th>
                 <th md-column md-numeric>Rule Icon</th>
-                <th md-column md-order-by="nameToLower"><span>Rule Title</span></th>
+                <th md-column md-order-by="Rule Title"><span>Rule Title</span></th>
                 <th md-column md-order-by="time"><span>Time</span></th>
                 <th md-column md-numeric>Status Icon</th>
                 <th md-column md-numeric>Status </th>

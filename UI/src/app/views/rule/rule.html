@@ -51,7 +51,7 @@
 </div>
 <div class="container-fluid">
 
-    <!--<p>{{vm.ruleWidgetData}}</p>-->
+    <p>{{vm.ruleWidgetData}}</p>
 
 
     <!--<br>-->
@@ -83,12 +83,12 @@
                      on-item-added="vm.onItemAdded(item)"
                      on-item-removed="vm.onItemRemoved(item)">
 
-                        <panel-widget class="grid-stack-item-content"
+                        <panel-widget class="grid-stack-item-content" md-theme="{{w.themeColor}}" md-theme-watch
                                 flex
                                 title="{{w.widgetTitle}}"
                                 template="{{w.widgetView}}"
                                 options="false"
-                                      themeColor = "{{vm.selectedColor"}}"
+                                themeColor = "{{w.themeColor}}"
                         >
                             <!--class="fixed-height-widget"-->
                         </panel-widget>
@@ -108,7 +108,17 @@
 
                         <!--</div>-->
                         <div>
-                        <md-button ng-click="vm.editWidget($event,w)" class="md-icon-button" >
+                            <md-button ng-click="vm.switchTheme($event,w)" class="md-icon-button" >
+                                <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Switch Theme</md-tooltip>
+                                <i class="material-icons fab-icon">invert_colors</i>
+                                <!--<div md-color-picker ng-model="valueObj"></div>-->
+                            </md-button>
+                        </div>
+
+                        <div>
+                        <md-button
+                                ng-if="w.widgetType != 2 && w.widgetType != 0 "
+                                   ng-click="vm.editWidget($event,w)" class="md-icon-button" >
                             <i class="material-icons fab-icon" >edit</i>
                             <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Edit</md-tooltip>
                         </md-button>
