@@ -3,11 +3,36 @@
     angular
         .module('app')
         .config(function($mdThemingProvider) {
-            $mdThemingProvider.theme('dark-grey').backgroundPalette('grey').dark();
-            $mdThemingProvider.theme('dark-orange').backgroundPalette('orange').dark();
-            $mdThemingProvider.theme('dark-purple').backgroundPalette('deep-purple').dark();
-            $mdThemingProvider.theme('dark-blue').backgroundPalette('blue').dark();
-            $mdThemingProvider.theme('grey').backgroundPalette('grey').dark();
+
+            //
+            // red, pink, purple, deep-purple, indigo, blue, light-blue,
+            //     cyan, teal, green, light-green, lime, yellow, amber,
+            //     orange, deep-orange, brown, grey, blue-grey
+
+            $mdThemingProvider.theme('red');
+            $mdThemingProvider.theme('pink');
+            $mdThemingProvider.theme('purple');
+            $mdThemingProvider.theme('deep-purple');
+            $mdThemingProvider.theme('indigo');
+            $mdThemingProvider.theme('blue');
+            $mdThemingProvider.theme('light-blue');
+            $mdThemingProvider.theme('cyan');
+            $mdThemingProvider.theme('teal');
+            $mdThemingProvider.theme('green');
+            $mdThemingProvider.theme('light-green');
+            $mdThemingProvider.theme('lime');
+            $mdThemingProvider.theme('yellow');
+            $mdThemingProvider.theme('amber');
+            $mdThemingProvider.theme('orange');
+            $mdThemingProvider.theme('deep-orange');
+            $mdThemingProvider.theme('brown');
+            $mdThemingProvider.theme('blue-grey');
+
+            $mdThemingProvider.theme('dark-grey').dark();
+            $mdThemingProvider.theme('dark-orange').dark();
+            $mdThemingProvider.theme('dark-purple').dark();
+            $mdThemingProvider.theme('dark-blue').dark();
+            $mdThemingProvider.theme('grey').dark();
 
         })
         .controller('RuleController', [
@@ -46,11 +71,19 @@
 
         vm.selectedColor="";
 
-        vm.showDarkTheme="";
+        vm.showDarkTheme='grey';
+
+
+        vm.themeList = ['dark-grey','dark-orange','dark-purple','dark-blue','red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue','cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey'];
 
         vm.switchTheme = function(ev,widget) {
-            vm.showDarkTheme = 'grey';
-            widget.themeColor = "grey";
+
+
+
+            var item = vm.themeList[Math.floor(Math.random()*vm.themeList.length)];
+
+            // vm.showDarkTheme = 'dark-purple';
+            widget.themeColor = item;
             console.log("theme switched to "+widget.themeColor);
         };
 
@@ -182,8 +215,8 @@
         vm.ruleWidgetData = [];
 
         vm.ruleOptions = {
-            cellHeight: 70,
-            verticalMargin: 10,
+            cellHeight: 1,
+            verticalMargin: 0,
             animate : true,
             auto : false,
             // disableDrag : true,
