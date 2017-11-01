@@ -1,29 +1,97 @@
 <md-content
-        class="md-padding" ng-controller="RuleManagementController as vm">
+        class="rule-management" ng-controller="RuleManagementController as vm">
     <!--md-colors="{background: 'default-background-hue-1'}"-->
 
-    <div layout="row">
-        <h4 flex="82">{{5-vm.remaining()}} of {{vm.todos.length}} Activated </h4>
-        <md-button class="md-primary" ng-click="vm.toggleAll()">activate all
-        </md-button>
+
+    <div flex-xs flex-gt-xs="100" layout="column">
+        <md-card >
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Turn on music when I come home</span>
+                    <span class="md-subhead">Whenever I enter the home in the evening, swith on the music in the room</span>
+                </md-card-title-text>
+                <md-card-title-media>
+                    <div class="md-media-sm card-media">
+                        <i class="material-icons md-48">music_note</i>
+                    </div>
+                </md-card-title-media>
+            </md-card-title>
+
+            <!--activate/deactivate , edit, delete, copy, share, -->
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button class="md-icon-button" aria-label="activate">
+                    <i class="material-icons">play_arrow</i>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="deactivate">
+                    <i class="material-icons">pause</i>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="edit">
+                    <i class="material-icons">edit</i>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="delete">
+                    <i class="material-icons">delete</i>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="copy">
+                    <i class="material-icons">content_copy</i>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="share">
+                    <i class="material-icons">share</i>
+                </md-button>
+
+            </md-card-actions>
+        </md-card>
     </div>
 
-    <md-checkbox class="md-primary" ng-repeat="todo in vm.todos" ng-model="todo.done">
-        {{todo.text}}
-    </md-checkbox>
+    <!--<md-card md-theme="purple" md-theme-watch>-->
+        <!--<md-card-title>-->
+            <!--<md-card-title-text>-->
+                <!--<span class="md-headline">Turn on music when I come home</span>-->
+                <!--<span class="md-subhead">Whenever I enter the home in the evening, swith on the music in the room</span>-->
+            <!--</md-card-title-text>-->
+        <!--</md-card-title>-->
+        <!--<md-card-content layout="row" layout-align="space-between">-->
+            <!--<div class="md-media-xl card-media">-->
+                <!--<i class="material-icons md-48">invert_colors</i>-->
+            <!--</div>-->
 
-    <form ng-submit="vm.addTodo($event)" novalidate name="tasksForm">
-        <div layout="row" flex>
-            <md-input-container flex ng-class="{'md-input-invalid':tasksForm.taskText.$error.required && tasksForm.$submitted}">
-                <label>Add a new rule to the list...</label>
-                <input ng-model="vm.todoText" name="taskText" required>
-            </md-input-container>
-            <md-button class="md-fab md-wayrn md-mini" ng-click="vm.addTodo($event)">
-                <i class="material-icons">add</i>
-            </md-button>
-        </div>
-        <md-button class="md-primary" ng-click="vm.archive($event)">
-            Remove completed
-        </md-button>
-    </form>
+            <!--<md-card-actions layout="column">-->
+                <!--<md-button class="md-icon-button" aria-label="Favorite">-->
+                    <!--<md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>-->
+                <!--</md-button>-->
+                <!--<md-button class="md-icon-button" aria-label="Settings">-->
+                    <!--<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>-->
+                <!--</md-button>-->
+                <!--<md-button class="md-icon-button" aria-label="Share">-->
+                    <!--<md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>-->
+                <!--</md-button>-->
+            <!--</md-card-actions>-->
+        <!--</md-card-content>-->
+    <!--</md-card>-->
+
+
+
+    <!--<div layout="row">-->
+        <!--<h4 flex="82">{{5-vm.remaining()}} of {{vm.todos.length}} Activated </h4>-->
+        <!--<md-button class="md-primary" ng-click="vm.toggleAll()">activate all-->
+        <!--</md-button>-->
+    <!--</div>-->
+
+    <!--<md-checkbox class="md-primary" ng-repeat="todo in vm.todos" ng-model="todo.done">-->
+        <!--{{todo.text}}-->
+    <!--</md-checkbox>-->
+
+    <!--<form ng-submit="vm.addTodo($event)" novalidate name="tasksForm">-->
+        <!--<div layout="row" flex>-->
+            <!--<md-input-container flex ng-class="{'md-input-invalid':tasksForm.taskText.$error.required && tasksForm.$submitted}">-->
+                <!--<label>Add a new rule to the list...</label>-->
+                <!--<input ng-model="vm.todoText" name="taskText" required>-->
+            <!--</md-input-container>-->
+            <!--<md-button class="md-fab md-wayrn md-mini" ng-click="vm.addTodo($event)">-->
+                <!--<i class="material-icons">add</i>-->
+            <!--</md-button>-->
+        <!--</div>-->
+        <!--<md-button class="md-primary" ng-click="vm.archive($event)">-->
+            <!--Remove completed-->
+        <!--</md-button>-->
+    <!--</form>-->
 </md-content>
