@@ -386,7 +386,7 @@
                 ariaLabel: "Management",
                 width: 4,
                 height: 473,
-                themeColor: 'grey'
+                themeColor: 'dark-blue'
             },
 
 
@@ -398,7 +398,7 @@
                 ariaLabel: "Notifications",
                 width: 8,
                 height: 462,
-                themeColor: 'grey'
+                themeColor: 'dark-purple'
             },
 
             "3": {

@@ -21,6 +21,8 @@
                 .then(function (ruleData) {
                     vm.ruleData = [].concat(ruleData);
                     console.log(ruleData);
+                    vm.selectedRule = vm.ruleData[1];
+
                 });
 
         };
