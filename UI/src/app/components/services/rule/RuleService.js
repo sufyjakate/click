@@ -75,71 +75,71 @@
         var ruleNotificationData = [
             {
                 ruleId: 1,
-                ruleTitle: "This is Rule 1",
-                ruleIcon:"home",
+                ruleTitle: "Switch on Wifi when I enter my home",
+                ruleIcon:"wifi",
                 time: "2017-10-31 21:27:38",
                 status: 'created'
             },
             {
                 ruleId: 2,
-                ruleTitle: "This is Rule 2",
-                ruleIcon:"work",
+                ruleTitle: "Turn on music when I come home",
+                ruleIcon:"audiotrack",
                 time: "2017-10-31 21:28:38",
                 status: 'triggered'
             },
             {
                 ruleId: 3,
-                ruleTitle: "This is Rule 3",
-                ruleIcon:"fingerprint",
+                ruleTitle: "Turn off lights after 11pm",
+                ruleIcon:"hotel",
                 time: "2017-10-31 21:29:38",
                 status: 'activated'
             },
             {
                 ruleId: 4,
-                ruleTitle: "This is Rule 4",
-                ruleIcon:"motorcycle",
+                ruleTitle: "Send me a message when my son leaves school",
+                ruleIcon:"child_care",
                 time: "2017-10-31 21:30:38",
                 status: 'deactivated'
             },
             {
                 ruleId: 5,
-                ruleTitle: "This is Rule 5",
-                ruleIcon:"store",
+                ruleTitle: "Notify me daily to throw the trash out",
+                ruleIcon:"shopping_basket",
                 time: "2017-10-31 21:31:38",
                 status: 'deleted'
             },
             {
                 ruleId: 1,
-                ruleTitle: "This is Rule 1",
-                ruleIcon:"home",
+                ruleTitle: "Switch off lights",
+                ruleIcon:"wifi",
                 time: "2017-10-31 21:27:38",
                 status: 'created'
             },
             {
                 ruleId: 2,
-                ruleTitle: "This is Rule 2",
-                ruleIcon:"work",
+                ruleTitle: "Turn on music when I come home",
+                ruleIcon:"audiotrack",
                 time: "2017-10-31 21:28:38",
                 status: 'triggered'
             },
             {
                 ruleId: 3,
-                ruleTitle: "This is Rule 3",
-                ruleIcon:"fingerprint",
+                ruleTitle: "Turn off lights after 11pm",
+                ruleIcon:"hotel",
                 time: "2017-10-31 21:29:38",
                 status: 'activated'
             },
             {
                 ruleId: 4,
-                ruleTitle: "This is Rule 4",
-                ruleIcon:"motorcycle",
+                ruleTitle: "Send me a message when my son leaves school",
+                ruleIcon:"child_care",
                 time: "2017-10-31 21:30:38",
                 status: 'deactivated'
             },
             {
                 ruleId: 5,
-                ruleTitle: "This is Rule 5",
-                ruleIcon:"store",
+                ruleTitle: "Notify me daily to throw the trash out",
+                ruleIcon:"shopping_basket",
                 time: "2017-10-31 21:31:38",
                 status: 'deleted'
             },
