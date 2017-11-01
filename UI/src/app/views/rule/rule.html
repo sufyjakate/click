@@ -119,8 +119,9 @@
                         </div>
 
                         <div>
+                            <!--ng-if="w.widgetType != 2 && w.widgetType != 0 "-->
                         <md-button
-                                ng-if="w.widgetType != 2 && w.widgetType != 0 "
+
                                    ng-click="vm.editWidget($event,w)" class="md-icon-button" >
                             <i class="material-icons fab-icon" >edit</i>
                             <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Edit</md-tooltip>
