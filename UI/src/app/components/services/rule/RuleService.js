@@ -249,7 +249,7 @@
         ];
 
         var ruleOptions = {
-            cellHeight: 180,
+            cellHeight: 200,
             verticalMargin: 10,
             animate : true,
             auto : true,
