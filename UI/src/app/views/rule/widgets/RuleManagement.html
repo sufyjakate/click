@@ -49,12 +49,25 @@
                     <i class="material-icons">share</i>
                     <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >share</md-tooltip>
                 </md-button>
+
+
+
+
+
+
+                <md-button class="md-icon-button" aria-label="switch"
+                           ng-click="vm.loadAllRules($event)">
+                    <i class="material-icons">find_replace</i>
+                    <md-tooltip md-direction= "bottom" md-visible="tooltipVisible" >Switch Rules</md-tooltip>
+                </md-button>
+
+
             </md-card-actions>
         </md-card>
     </div>
 
 
-    <div ng-if="vm.selectedRule == null" flex-xs flex-gt-xs="100" layout="column">
+    <div  flex-xs flex-gt-xs="100" layout="column">
         <md-card >
             <md-card-title>
                 <md-card-title-text>
