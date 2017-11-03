@@ -38,31 +38,170 @@
                         {
                             id: 1,
                             name: 'Dates of Month',
-                            icon: 'time',
+                            icon: 'access_time',
                             link: '',
-                            children: []
+                            children: [
+                                {
+                                    id: 1,
+                                    name: 'First Week of every month',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'First Weekend of every month',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Mid of the month',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                            ]
                         },
                         {
                             id: 1,
                             name: 'Days of Week',
-                            icon: 'time',
+                            icon: 'access_time',
                             link: '',
-                            children: []
+                            children: [
+                                {
+                                    id: 1,
+                                    name: 'Every Weekend',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Every Weekday',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Every Monday',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Every Tuesday',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Every Wednesday',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Every Thursday',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Every Friday',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Every Saturday',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Every Sunday',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                            ]
                         },
                         {
                             id: 1,
-                            name: 'Times',
-                            icon: 'time',
+                            name: 'Time',
+                            icon: 'access_time',
                             link: '',
-                            children: []
+                            children: [
+
+                                {
+                                    id: 1,
+                                    name: 'Every Morning',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Every Afternoon',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Every Eventing',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Every Night',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                            ]
                         }
                         ,
                         {
                             id: 1,
                             name: 'Duration',
-                            icon: 'time',
+                            icon: 'access_time',
                             link: '',
-                            children: []
+                            children: [
+
+                                {
+                                    id: 1,
+                                    name: 'After one hour of',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'One day after',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'One week after',
+                                    icon: 'access_time',
+                                    link: '',
+                                    children: []
+                                },
+                            ]
                         }
 
                     ]
@@ -304,13 +443,27 @@
         vm.items = ['Temporal', 'Spatial', 'Situation', 'Communication', 'Service', 'Physical Entity', 'Operator'];
 
 
-        vm.leveloneItem = {};
+        vm.levelItem1 = {};
+        vm.levelitem2= {};
+        vm.levelitem3= {};
 
         vm.selectLevelOneItem = function (item) {
-            vm.leveloneItem = item;
+            vm.levelItem1 = item;
             console.log("1st level item : ");
             console.log(item);
+        }
 
+        vm.selectLevelTwoItem = function (item) {
+            vm.levelItem2 = item;
+            console.log("2nd level item : ");
+            console.log(item);
+        }
+
+
+        vm.selectLevelThreeItem = function (item) {
+            vm.levelItem2 = item;
+            console.log("3rd level item : ");
+            console.log(item);
         }
 
 
