@@ -80,6 +80,8 @@
             console.log("after");
             console.log(rule);
             console.log(vm.selectedRule);
+
+            vm.answer(vm.selectedRule);
         }
 
         vm.showToastMessage = function (message) {
