@@ -38,27 +38,27 @@
                         {
                             id: 1,
                             name: 'Dates of Month',
-                            icon: 'access_time',
+                            icon: 'today',
                             link: '',
                             children: [
                                 {
                                     id: 1,
                                     name: 'First Week of every month',
-                                    icon: 'access_time',
+                                    icon: 'event_available',
                                     link: '',
                                     children: []
                                 },
                                 {
                                     id: 1,
                                     name: 'First Weekend of every month',
-                                    icon: 'access_time',
+                                    icon: 'today',
                                     link: '',
                                     children: []
                                 },
                                 {
                                     id: 1,
                                     name: 'Mid of the month',
-                                    icon: 'access_time',
+                                    icon: 'event_busy',
                                     link: '',
                                     children: []
                                 },
@@ -67,72 +67,72 @@
                         {
                             id: 1,
                             name: 'Days of Week',
-                            icon: 'access_time',
+                            icon: 'date_range',
                             link: '',
                             children: [
                                 {
                                     id: 1,
                                     name: 'Every Weekend',
-                                    icon: 'access_time',
+                                    icon: 'date_range',
                                     link: '',
                                     children: []
                                 },
                                 {
                                     id: 1,
                                     name: 'Every Weekday',
-                                    icon: 'access_time',
+                                    icon: 'date_range',
                                     link: '',
                                     children: []
                                 },
                                 {
                                     id: 1,
                                     name: 'Every Monday',
-                                    icon: 'access_time',
+                                    icon: 'date_range',
                                     link: '',
                                     children: []
                                 },
                                 {
                                     id: 1,
                                     name: 'Every Tuesday',
-                                    icon: 'access_time',
+                                    icon: 'date_range',
                                     link: '',
                                     children: []
                                 },
                                 {
                                     id: 1,
                                     name: 'Every Wednesday',
-                                    icon: 'access_time',
+                                    icon: 'date_range',
                                     link: '',
                                     children: []
                                 },
                                 {
                                     id: 1,
                                     name: 'Every Thursday',
-                                    icon: 'access_time',
+                                    icon: 'date_range',
                                     link: '',
                                     children: []
                                 },
                                 {
                                     id: 1,
                                     name: 'Every Friday',
-                                    icon: 'access_time',
+                                    icon: 'date_range',
                                     link: '',
                                     children: []
                                 },
-                                {
-                                    id: 1,
-                                    name: 'Every Saturday',
-                                    icon: 'access_time',
-                                    link: '',
-                                    children: []
-                                },
-                                {
-                                    id: 1,
-                                    name: 'Every Sunday',
-                                    icon: 'access_time',
-                                    link: '',
-                                    children: []
-                                },
+                                // {
+                                //     id: 1,
+                                //     name: 'Every Saturday',
+                                //     icon: 'date_range',
+                                //     link: '',
+                                //     children: []
+                                // },
+                                // {
+                                //     id: 1,
+                                //     name: 'Every Sunday',
+                                //     icon: 'date_range',
+                                //     link: '',
+                                //     children: []
+                                // },
                             ]
                         },
                         {
@@ -214,33 +214,96 @@
                     children: [
                         {
                             id: 1,
-                            name: 'Dates of Month',
-                            icon: 'time',
+                            name: 'Fixed Location',
+                            icon: 'business',
                             link: '',
-                            children: []
+                            children: [
+                                {
+                                    id: 1,
+                                    name: 'Bedroom',
+                                    icon: 'local_hotel',
+                                    link: '',
+                                    children: []
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Garage',
+                                    icon: 'local_car_wash',
+                                    link: '',
+                                    children: []
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Living Room',
+                                    icon: 'weekend',
+                                    link: '',
+                                    children: []
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Restaurant',
+                                    icon: 'restaurant',
+                                    link: '',
+                                    children: []
+                                }
+                            ]
                         },
                         {
                             id: 1,
-                            name: 'Days of Week',
-                            icon: 'time',
+                            name: 'Moving Location',
+                            icon: 'motorcycle',
                             link: '',
-                            children: []
+                            children: [
+
+                                {
+                                    id: 1,
+                                    name: 'University',
+                                    icon: 'school',
+                                    link: '',
+                                    children: []
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Work',
+                                    icon: 'work',
+                                    link: '',
+                                    children: []
+                                }
+
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Home',
+                                    icon: 'home',
+                                    link: '',
+                                    children: []
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Hiking',
+                                    icon: 'terrain',
+                                    link: '',
+                                    children: []
+                                }
+
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Shopping',
+                                    icon: 'store_mall_directory',
+                                    link: '',
+                                    children: []
+                                }
+
+
+
+                            ]
                         },
-                        {
-                            id: 1,
-                            name: 'Times',
-                            icon: 'time',
-                            link: '',
-                            children: []
-                        }
-                        ,
-                        {
-                            id: 1,
-                            name: 'Duration',
-                            icon: 'time',
-                            link: '',
-                            children: []
-                        }
 
                     ]
                 },
@@ -252,30 +315,39 @@
                     children: [
                         {
                             id: 1,
-                            name: 'Dates of Month',
-                            icon: 'time',
+                            name: 'User Mode',
+                            icon: 'mood_bad',
                             link: '',
                             children: []
                         },
                         {
                             id: 1,
-                            name: 'Days of Week',
-                            icon: 'time',
+                            name: 'Weather',
+                            icon: 'grain',
                             link: '',
                             children: []
                         },
                         {
                             id: 1,
-                            name: 'Times',
-                            icon: 'time',
+                            name: 'Activity',
+                            icon: 'directions_run',
                             link: '',
                             children: []
                         }
                         ,
                         {
                             id: 1,
-                            name: 'Duration',
-                            icon: 'time',
+                            name: 'Agenda',
+                            icon: 'view_agenda',
+                            link: '',
+                            children: []
+                        }
+
+                        ,
+                        {
+                            id: 1,
+                            name: 'Traffic Situation',
+                            icon: 'traffic',
                             link: '',
                             children: []
                         }
@@ -444,26 +516,55 @@
 
 
         vm.levelItem1 = {};
-        vm.levelitem2= {};
-        vm.levelitem3= {};
+        vm.levelItem2= {};
+        vm.levelItem3= {};
 
         vm.selectLevelOneItem = function (item) {
+
+            vm.levelItem2= null;
+            vm.levelItem3= null;
+            vm.levelItem1 = null;
+
             vm.levelItem1 = item;
             console.log("1st level item : ");
             console.log(item);
+
+            logAllLevelItems();
+        }
+
+
+        function logAllLevelItems() {
+            console.log("1st level item : ");
+            console.log(vm.levelItem1);
+            console.log("2nd level item : ");
+            console.log(vm.levelItem2);
+            console.log("3rd level item : ");
+            console.log(vm.levelitem3);
+
+
         }
 
         vm.selectLevelTwoItem = function (item) {
+
+
+            vm.levelItem2= null;
+
             vm.levelItem2 = item;
             console.log("2nd level item : ");
             console.log(item);
+
+            vm.levelitem3= null;
+            logAllLevelItems();
+
         }
 
 
         vm.selectLevelThreeItem = function (item) {
-            vm.levelItem2 = item;
+            vm.levelItem3 = item;
             console.log("3rd level item : ");
             console.log(item);
+            logAllLevelItems();
+
         }
 
 
