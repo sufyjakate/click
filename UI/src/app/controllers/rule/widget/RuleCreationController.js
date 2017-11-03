@@ -12,7 +12,20 @@
 
     console.log("rule Creation controller");
 
+      vm.options = {
+          content: 'Menu',
+          isOpen: true,
+          toggleOnClick: true,
+          items: [
+              {
+                  content: 'About',
+                  onclick: function () {console.log('About');}
+              }
+          ]
+      };
 
+
+      vm.items=['Temporal','Spatial','Situation','Communication','Service','Physical Entity','Operator'];
 
     vm.countries = countriesService.loadAll();
     vm.selectedCountry = null;
