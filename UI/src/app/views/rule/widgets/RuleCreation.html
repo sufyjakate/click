@@ -77,7 +77,7 @@
 
                 <div layout="row" layout-align="center center">
                     <md-divider></md-divider>
-                    <div ng-if="vm.levelItem1 != null || vm.levelItem1 != null" ng-repeat="item in vm.levelItem2.children" trackby $index >
+                    <div ng-if="vm.levelItem1 != null || vm.levelItem2 != null" ng-repeat="item in vm.levelItem2.children" trackby $index >
                         <div class="clearfix" ng-if="$index % 3 == 0"></div>
                         <div class="col-sm-4">
                             <md-divider ></md-divider>
@@ -86,6 +86,67 @@
                                        flex class="capitalize" ng-click="vm.selectLevelThreeItem(item)"
                                        ui-sref-active="md-warn"
                                        ng-class="item == vm.levelItem3? 'md-primary md-raised' :''">
+
+                                <div hide-sm hide-md class="md-tile-content">
+                                    <i class="material-icons md-24">{{item.icon}}</i>
+                                </div>
+                                <div class="md-tile-content">
+                                    {{item.name}}
+                                </div>
+
+                            </md-button>
+                            <md-divider ></md-divider>
+
+
+                        </div>
+                        <md-divider ></md-divider>
+
+                    </div>
+                    <md-divider ></md-divider>
+                </div>
+
+
+                <div layout="row" layout-align="center center">
+                    <md-divider></md-divider>
+                    <div ng-if="vm.levelItem1 != null || vm.levelItem2 != null || vm.levelItem3 != null" ng-repeat="item in vm.levelItem3.children" trackby $index >
+                        <div class="clearfix" ng-if="$index % 3 == 0"></div>
+                        <div class="col-sm-4">
+                            <md-divider ></md-divider>
+
+                            <md-button layout="column" layout-align=""
+                                       flex class="capitalize" ng-click="vm.selectLevelFourItem(item)"
+                                       ui-sref-active="md-warn"
+                                       ng-class="item == vm.levelItem4? 'md-primary md-raised' :''">
+
+                                <div hide-sm hide-md class="md-tile-content">
+                                    <i class="material-icons md-24">{{item.icon}}</i>
+                                </div>
+                                <div class="md-tile-content">
+                                    {{item.name}}
+                                </div>
+
+                            </md-button>
+                            <md-divider ></md-divider>
+
+
+                        </div>
+                        <md-divider ></md-divider>
+
+                    </div>
+                    <md-divider ></md-divider>
+                </div>
+
+                <div layout="row" layout-align="center center">
+                    <md-divider></md-divider>
+                    <div ng-if="vm.levelItem1 != null || vm.levelItem2 != null || vm.levelItem3 != null || vm.levelItem4 != null" ng-repeat="item in vm.levelItem4.children" trackby $index >
+                        <div class="clearfix" ng-if="$index % 3 == 0"></div>
+                        <div class="col-sm-4">
+                            <md-divider ></md-divider>
+
+                            <md-button layout="column" layout-align=""
+                                       flex class="capitalize" ng-click="vm.selectLevelFiveItem(item)"
+                                       ui-sref-active="md-warn"
+                                       ng-class="item == vm.levelItem5? 'md-primary md-raised' :''">
 
                                 <div hide-sm hide-md class="md-tile-content">
                                     <i class="material-icons md-24">{{item.icon}}</i>
