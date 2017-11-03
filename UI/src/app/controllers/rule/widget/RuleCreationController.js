@@ -699,6 +699,57 @@
                             children: [
                                 {
                                     id: 1,
+                                    name: 'Device',
+                                    icon: 'phone_iphone',
+                                    link: '',
+                                    children: [
+                                        {
+                                            id: 1,
+                                            name: 'Car',
+                                            icon: 'local_car_wash',
+                                            link: '',
+                                            children: []
+                                        },
+                                        {
+                                            id: 1,
+                                            name: 'Bike',
+                                            icon: 'directions_bike',
+                                            link: '',
+                                            children: []
+                                        },
+                                        // {
+                                        //     id: 1,
+                                        //     name: 'Fan',
+                                        //     icon: 'phone_iphone',
+                                        //     link: '',
+                                        //     children: []
+                                        // },
+                                        {
+                                            id: 1,
+                                            name: 'Light',
+                                            icon: 'lightbulb_outline',
+                                            link: '',
+                                            children: []
+                                        },
+                                        // {
+                                        //     id: 1,
+                                        //     name: 'Air conditioning',
+                                        //     icon: 'whatshot',
+                                        //     link: '',
+                                        //     children: []
+                                        // },
+                                        {
+                                            id: 1,
+                                            name: 'Washing Machine',
+                                            icon: 'phone_iphone',
+                                            link: '',
+                                            children: []
+                                        },
+
+                                    ]
+                                },
+                                {
+                                    id: 1,
                                     name: 'Place',
                                     icon: 'location_city',
                                     link: '',
@@ -719,58 +770,7 @@
                                         }
                                     ]
                                 }
-                                ,
-                                {
-                                    id: 1,
-                                    name: 'Device',
-                                    icon: 'phone_iphone',
-                                    link: '',
-                                    children: [
-                                        {
-                                            id: 1,
-                                            name: 'Car',
-                                            icon: 'phone_iphone',
-                                            link: '',
-                                            children: []
-                                        },
-                                        {
-                                            id: 1,
-                                            name: 'Bike',
-                                            icon: 'phone_iphone',
-                                            link: '',
-                                            children: []
-                                        },
-                                        {
-                                            id: 1,
-                                            name: 'Fan',
-                                            icon: 'phone_iphone',
-                                            link: '',
-                                            children: []
-                                        },
-                                        {
-                                            id: 1,
-                                            name: 'Light',
-                                            icon: 'phone_iphone',
-                                            link: '',
-                                            children: []
-                                        },
-                                        {
-                                            id: 1,
-                                            name: 'Air conditioning',
-                                            icon: 'phone_iphone',
-                                            link: '',
-                                            children: []
-                                        },
-                                        {
-                                            id: 1,
-                                            name: 'Washing Machine',
-                                            icon: 'phone_iphone',
-                                            link: '',
-                                            children: []
-                                        },
 
-                                    ]
-                                }
                             ]
                         },
 
@@ -900,11 +900,16 @@
         vm.levelItem1 = {};
         vm.levelItem2= {};
         vm.levelItem3= {};
+        vm.levelItem4= {};
+        vm.levelItem5= {};
 
         vm.selectLevelOneItem = function (item) {
 
-            vm.levelItem2= null;
+
+            vm.levelItem5= null;
+            vm.levelItem4= null;
             vm.levelItem3= null;
+            vm.levelItem2= null;
             vm.levelItem1 = null;
 
             vm.levelItem1 = item;
@@ -922,6 +927,10 @@
             console.log(vm.levelItem2);
             console.log("3rd level item : ");
             console.log(vm.levelitem3);
+            console.log("4th level item : ");
+            console.log(vm.levelitem4);
+            console.log("5th level item : ");
+            console.log(vm.levelitem5);
 
 
         }
@@ -930,20 +939,42 @@
 
 
             vm.levelItem2= null;
+            vm.levelItem3= null;
+
 
             vm.levelItem2 = item;
             console.log("2nd level item : ");
             console.log(item);
 
-            vm.levelitem3= null;
             logAllLevelItems();
 
         }
 
 
         vm.selectLevelThreeItem = function (item) {
+            vm.levelItem3= null;
+            vm.levelItem4= null;
+
             vm.levelItem3 = item;
             console.log("3rd level item : ");
+            console.log(item);
+            logAllLevelItems();
+
+        }
+
+        vm.selectLevelFourItem = function (item) {
+            vm.levelItem4= null;
+            vm.levelItem5= null;
+
+            vm.levelItem4 = item;
+            console.log("4th level item : ");
+            console.log(item);
+            logAllLevelItems();
+
+        }
+        vm.selectLevelFiveItem = function (item) {
+            vm.levelItem5 = item;
+            console.log("5th level item : ");
             console.log(item);
             logAllLevelItems();
 
