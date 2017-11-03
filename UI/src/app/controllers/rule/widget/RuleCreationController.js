@@ -670,33 +670,110 @@
                     children: [
                         {
                             id: 1,
-                            name: 'Dates of Month',
-                            icon: 'time',
+                            name: 'Living',
+                            icon: 'accessibility',
                             link: '',
-                            children: []
+                            children: [
+                                {
+                                    id: 1,
+                                    name: 'Human',
+                                    icon: 'accessibility',
+                                    link: '',
+                                    children: []
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Animal',
+                                    icon: 'adb',
+                                    link: '',
+                                    children: []
+                                }
+                            ]
                         },
                         {
                             id: 1,
-                            name: 'Days of Week',
-                            icon: 'time',
+                            name: 'Non Living',
+                            icon: 'event_seat',
                             link: '',
-                            children: []
+                            children: [
+                                {
+                                    id: 1,
+                                    name: 'Place',
+                                    icon: 'location_city',
+                                    link: '',
+                                    children: [
+                                        {
+                                            id: 1,
+                                            name: 'City',
+                                            icon: 'location_city',
+                                            link: '',
+                                            children: []
+                                        }
+                                        ,{
+                                            id: 1,
+                                            name: 'Apartment',
+                                            icon: 'location_city',
+                                            link: '',
+                                            children: []
+                                        }
+                                    ]
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Device',
+                                    icon: 'phone_iphone',
+                                    link: '',
+                                    children: [
+                                        {
+                                            id: 1,
+                                            name: 'Car',
+                                            icon: 'phone_iphone',
+                                            link: '',
+                                            children: []
+                                        },
+                                        {
+                                            id: 1,
+                                            name: 'Bike',
+                                            icon: 'phone_iphone',
+                                            link: '',
+                                            children: []
+                                        },
+                                        {
+                                            id: 1,
+                                            name: 'Fan',
+                                            icon: 'phone_iphone',
+                                            link: '',
+                                            children: []
+                                        },
+                                        {
+                                            id: 1,
+                                            name: 'Light',
+                                            icon: 'phone_iphone',
+                                            link: '',
+                                            children: []
+                                        },
+                                        {
+                                            id: 1,
+                                            name: 'Air conditioning',
+                                            icon: 'phone_iphone',
+                                            link: '',
+                                            children: []
+                                        },
+                                        {
+                                            id: 1,
+                                            name: 'Washing Machine',
+                                            icon: 'phone_iphone',
+                                            link: '',
+                                            children: []
+                                        },
+
+                                    ]
+                                }
+                            ]
                         },
-                        {
-                            id: 1,
-                            name: 'Times',
-                            icon: 'time',
-                            link: '',
-                            children: []
-                        }
-                        ,
-                        {
-                            id: 1,
-                            name: 'Duration',
-                            icon: 'time',
-                            link: '',
-                            children: []
-                        }
+
 
                     ]
                 },
@@ -708,33 +785,106 @@
                     children: [
                         {
                             id: 1,
-                            name: 'Dates of Month',
-                            icon: 'time',
+                            name: 'Aggregation',
+                            icon: 'line_style',
                             link: '',
-                            children: []
+                            children: [
+                                {
+                                    id: 1,
+                                    name: 'Sum',
+                                    icon: 'select_all',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Average',
+                                    icon: 'av_timer',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Maximum',
+                                    icon: 'expand_less',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Minimum',
+                                    icon: 'expand_more',
+                                    link: '',
+                                    children: []
+                                },
+                            ]
                         },
                         {
                             id: 1,
-                            name: 'Days of Week',
-                            icon: 'time',
+                            name: 'Comparison',
+                            icon: 'compare',
                             link: '',
-                            children: []
+                            children: [
+                                {
+                                    id: 1,
+                                    name: 'Less Than',
+                                    icon: 'chevron_left',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Greater Than',
+                                    icon: 'chevron_right',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Equal To',
+                                    icon: 'equalizer',
+                                    link: '',
+                                    children: []
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Not Equal To',
+                                    icon: 'not_interested',
+                                    link: '',
+                                    children: []
+                                },
+                            ]
                         },
-                        {
-                            id: 1,
-                            name: 'Times',
-                            icon: 'time',
-                            link: '',
-                            children: []
-                        }
-                        ,
-                        {
-                            id: 1,
-                            name: 'Duration',
-                            icon: 'time',
-                            link: '',
-                            children: []
-                        }
+                        // {
+                        //     id: 1,
+                        //     name: 'Logical',
+                        //     icon: 'time',
+                        //     link: '',
+                        //     children: [
+                        //
+                        //         {
+                        //             id: 1,
+                        //             name: 'Duration',
+                        //             icon: 'time',
+                        //             link: '',
+                        //             children: []
+                        //         },
+                        //         {
+                        //             id: 1,
+                        //             name: 'Duration',
+                        //             icon: 'time',
+                        //             link: '',
+                        //             children: []
+                        //         },
+                        //         {
+                        //             id: 1,
+                        //             name: 'Duration',
+                        //             icon: 'time',
+                        //             link: '',
+                        //             children: []
+                        //         },
+                        //     ]
+                        // }
 
                     ]
                 },
