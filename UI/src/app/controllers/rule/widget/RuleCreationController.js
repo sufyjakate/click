@@ -176,28 +176,28 @@
                         {
                             id: 1,
                             name: 'Duration',
-                            icon: 'access_time',
+                            icon: 'timelapse',
                             link: '',
                             children: [
 
                                 {
                                     id: 1,
                                     name: 'After one hour of',
-                                    icon: 'access_time',
+                                    icon: 'timelapse',
                                     link: '',
                                     children: []
                                 },
                                 {
                                     id: 1,
                                     name: 'One day after',
-                                    icon: 'access_time',
+                                    icon: 'timelapse',
                                     link: '',
                                     children: []
                                 },
                                 {
                                     id: 1,
                                     name: 'One week after',
-                                    icon: 'access_time',
+                                    icon: 'timelapse',
                                     link: '',
                                     children: []
                                 },
@@ -315,33 +315,196 @@
                     children: [
                         {
                             id: 1,
-                            name: 'User Mode',
+                            name: 'User Moods',
                             icon: 'mood_bad',
                             link: '',
-                            children: []
+                            children: [
+                                {
+                                    id: 1,
+                                    name: 'Happy',
+                                    icon: 'sentiment_very_satisfied',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Sad',
+                                    icon: 'sentiment_very_dissatisfied',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Neutral',
+                                    icon: 'sentiment_neutral',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Enjoy',
+                                    icon: 'favorite',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                },
+                                {
+                                    id: 1,
+                                    name: 'excited',
+                                    icon: 'mood',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                },
+                            ]
                         },
                         {
                             id: 1,
                             name: 'Weather',
                             icon: 'grain',
                             link: '',
-                            children: []
+                            children: [
+                                {
+                                    id: 1,
+                                    name: 'Cloudy',
+                                    icon: 'wb_cloudy',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                },{
+                                    id: 1,
+                                    name: 'Sunny',
+                                    icon: 'wb_sunny',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                },{
+                                    id: 1,
+                                    name: 'Windy',
+                                    icon: 'swap_horiz',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                },{
+                                    id: 1,
+                                    name: 'Rainy',
+                                    icon: 'grain',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                },
+
+                            ]
                         },
                         {
                             id: 1,
                             name: 'Activity',
                             icon: 'directions_run',
                             link: '',
-                            children: []
+                            children: [
+
+                                {
+                                    id: 1,
+                                    name: 'Driving',
+                                    icon: 'time_to_leave',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Sleeping',
+                                    icon: 'airline_seat_individual_suite',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Sitting',
+                                    icon: 'airline_seat_recline_extra',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Walking',
+                                    icon: 'directions_walk',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Running',
+                                    icon: 'directions_run',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Cycling',
+                                    icon: 'directions_bike',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Eating',
+                                    icon: 'local_dining',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Music',
+                                    icon: 'audiotrack',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                }
+                                ,
+                            ]
                         }
-                        ,
-                        {
-                            id: 1,
-                            name: 'Agenda',
-                            icon: 'view_agenda',
-                            link: '',
-                            children: []
-                        }
+                        // ,
+                        // {
+                        //     id: 1,
+                        //     name: 'Agenda',
+                        //     icon: 'view_agenda',
+                        //     link: '',
+                        //     children: []
+                        // }
 
                         ,
                         {
@@ -349,7 +512,35 @@
                             name: 'Traffic Situation',
                             icon: 'traffic',
                             link: '',
-                            children: []
+                            children: [
+                                {
+                                    id: 1,
+                                    name: 'Traffic High',
+                                    icon: 'trending_up',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Traffic low',
+                                    icon: 'trending_down',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                },
+                                {
+                                    id: 1,
+                                    name: 'Public Transport ',
+                                    icon: 'directions_transit',
+                                    link: '',
+                                    children: [
+
+                                    ]
+                                }
+                            ]
                         }
 
                     ]
@@ -362,30 +553,38 @@
                     children: [
                         {
                             id: 1,
-                            name: 'Dates of Month',
-                            icon: 'time',
+                            name: 'Call',
+                            icon: 'call',
                             link: '',
                             children: []
                         },
                         {
                             id: 1,
-                            name: 'Days of Week',
-                            icon: 'time',
+                            name: 'SMS',
+                            icon: 'sms',
                             link: '',
                             children: []
                         },
                         {
                             id: 1,
-                            name: 'Times',
-                            icon: 'time',
+                            name: 'Email',
+                            icon: 'email',
                             link: '',
                             children: []
                         }
                         ,
                         {
                             id: 1,
-                            name: 'Duration',
-                            icon: 'time',
+                            name: 'Post',
+                            icon: 'markunread_mailbox',
+                            link: '',
+                            children: []
+                        }
+                        ,
+                        {
+                            id: 1,
+                            name: 'Notification',
+                            icon: 'vibration',
                             link: '',
                             children: []
                         }
@@ -400,32 +599,65 @@
                     children: [
                         {
                             id: 1,
-                            name: 'Dates of Month',
-                            icon: 'time',
+                            name: 'Physical Service',
+                            icon: 'markunread_mailbox',
                             link: '',
-                            children: []
+                            children: [
+                                {
+                                    id: 1,
+                                    name: 'Post Received',
+                                    icon: 'markunread_mailbox',
+                                    link: '',
+                                    children: []
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Package Recieved',
+                                    icon: 'card_giftcard',
+                                    link: '',
+                                    children: []
+                                }
+                            ]
                         },
                         {
                             id: 1,
-                            name: 'Days of Week',
-                            icon: 'time',
+                            name: 'Non Physical Service',
+                            icon: 'cloud',
                             link: '',
-                            children: []
-                        },
-                        {
-                            id: 1,
-                            name: 'Times',
-                            icon: 'time',
-                            link: '',
-                            children: []
-                        }
-                        ,
-                        {
-                            id: 1,
-                            name: 'Duration',
-                            icon: 'time',
-                            link: '',
-                            children: []
+                            children: [
+                                {
+                                    id: 1,
+                                    name: 'Entry in Database',
+                                    icon: 'cloud_upload',
+                                    link: '',
+                                    children: []
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Entry in Logs',
+                                    icon: 'receipt',
+                                    link: '',
+                                    children: []
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Data from Web Service',
+                                    icon: 'swap_vertical_circle',
+                                    link: '',
+                                    children: []
+                                }
+                                ,
+                                {
+                                    id: 1,
+                                    name: 'Social Network',
+                                    icon: 'public',
+                                    link: '',
+                                    children: []
+                                }
+                            ]
                         }
 
                     ]
