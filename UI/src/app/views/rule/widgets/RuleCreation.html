@@ -1,6 +1,106 @@
 <md-content ng-controller="RuleCreationController as vm" class="">
 
-    <md-card >
+
+    <div flex-xs flex-gt-xs="100" >
+        <md-card>
+
+
+            
+            <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+            <md-card-title>
+                <md-card-title-text>
+                    <!--<span class="md-headline">Action buttons</span>-->
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content >
+
+<div layout="row" >
+                <md-button ng-repeat-start="item in vm.items" layout="column" layout-align=""
+                           flex class="capitalize" ng-click="vm.selectItem(item)"
+                           ui-sref-active="md-warn" ui-sref="{{item}}">
+                    <div hide-sm hide-md class="md-tile-content">
+                        <i class="material-icons md-48">edit</i>
+                    </div>
+                    <div class="md-tile-content">
+                        {{item}}
+                    </div>
+                </md-button>
+                <md-divider ng-repeat-end></md-divider>
+</div>
+
+                <nav class="menu">
+                    <input type="checkbox" href="" class="menu-open" name="menu-open" id="menu-open">
+                    <label class="menu-open-button" for="menu-open">
+                        <!--<span class="lines line-1"></span>-->
+                        <!--<span class="lines line-2"></span>-->
+                        <!--<span class="lines line-3"></span>-->
+                        <!--<span class="lines line-4"></span>-->
+                    </label>
+
+
+                    <a ng-repeat="item in vm.items" track by $index href="" class="menu-item item-{{$index}}">
+                        <i class="material-icons large fab-icon">edit</i>
+                    </a>
+
+
+                    <!--<a href="" class="menu-item item-1">-->
+                        <!--<i class="material-icons large fab-icon">edit</i>-->
+                    <!--</a>-->
+                    <!--<a href="" class="menu-item item-2"></a>-->
+                    <!--<a href="" class="menu-item item-3"></a>-->
+                    <!--<a href="" class="menu-item item-4"></a>-->
+                    <!--<a href="" class="menu-item item-5"></a>-->
+                    <!--<a href="" class="menu-item item-6"></a>-->
+                </nav>
+
+                <div flex></div>
+                <div flex></div>
+                <div flex></div><div flex></div>
+                <div flex></div>
+                <div flex></div>
+
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <!--<p>-->
+                    <!--The titles of Washed Out's breakthrough song and the first single from Paracosm share the-->
+                    <!--two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...-->
+                <!--</p>-->
+                <!--<p>-->
+                    <!--The titles of Washed Out's breakthrough song and the first single from Paracosm share the-->
+                    <!--two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...-->
+                <!--</p>-->
+                <!--<p>-->
+                    <!--The titles of Washed Out's breakthrough song and the first single from Paracosm share the-->
+                    <!--two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...-->
+                <!--</p>-->
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button>Action 1</md-button>
+                <md-button>Action 2</md-button>
+            </md-card-actions>
+        </md-card>
+
+
+
+        <!--<circular-->
+                <!--options="vm.options">-->
+        <!--</circular>-->
 
         <!--<div drag-circular-menu-->
              <!--angle="30"-->
@@ -11,17 +111,9 @@
              <!--onwing-click="vm.onWingClick1(wing)">-->
         <!--</div>-->
 
-        <md-progress-linear class="widget-progress md-accent" md-mode="determinate"
-                        value="{{vm.determinateValue}}" ng-show="vm.showProgress">
-    </md-progress-linear>
+    </div>
 
-    <md-radio-group ng-model="vm.reloadServer">
-        <md-radio-button class="md-accent" value="Staging">Staging server</md-radio-button>
-        <md-radio-button class="md-accent" value="Production">Production server</md-radio-button>
-    </md-radio-group>
 
-    <md-button class="md-raised md-warn" ng-click="vm.performProgress()">
-        Reload server
-    </md-button>
-        </md-card >
+    <div flex-xs flex-gt-xs="100" layout="column">
+    </div>
 </md-content>

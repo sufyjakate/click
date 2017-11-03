@@ -2,7 +2,9 @@
 
 angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies',
   'ngSanitize', 'ui.router', 'ngMaterial', 'nvd3', 'app' , 'md.data.table',
-    'circularMenu-directive'])
+    // 'circularMenu-directive',
+    'angularCircularNavigation'
+])
 
   .config(function ($stateProvider, $urlRouterProvider, $mdThemingProvider,
                     $mdIconProvider) {
