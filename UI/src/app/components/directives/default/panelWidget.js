@@ -23,7 +23,7 @@ angular.module('app')
 
                 '    </div>' +
                 '  </md-toolbar>' +
-                '  <div md-colors="{background: \'default-background-hue-1\'}" ng-include="template"/>' +
+                '  <div ng-include="template"/>' +
                 '</section>',
       compile: function(element, attrs, linker) {
         return function(scope, element) {

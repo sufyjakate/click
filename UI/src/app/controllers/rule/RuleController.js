@@ -374,7 +374,7 @@
                 icon: "share",
                 ariaLabel: "Sharing",
                 width: 2,
-                height: 241,
+                height: 497,
                 themeColor: 'grey'
             },
 
@@ -385,7 +385,7 @@
                 icon: "settings",
                 ariaLabel: "Management",
                 width: 4,
-                height: 473,
+                height: 268,
                 themeColor: 'dark-blue'
             },
 
@@ -396,8 +396,8 @@
                 widgetTitle: "Rule Notifications",
                 icon: "notifications",
                 ariaLabel: "Notifications",
-                width: 8,
-                height: 462,
+                width: 6,
+                height: 478,
                 themeColor: 'dark-purple'
             },
 
