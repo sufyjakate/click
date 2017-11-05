@@ -46,10 +46,10 @@
 
                 <div layout-align="center center" layout="row">
                     <md-divider></md-divider>
-                    <div ng-if="vm.levelItem1 != null" ng-repeat="item in vm.levelItem1.children" trackby $index >
+                    <div ng-if="vm.levelItem1 != null" ng-repeat="item in vm.levelItem1.children" trackby $index>
                         <div class="clearfix" ng-if="$index % 3 == 0"></div>
                         <div class="col-sm-4">
-                            <md-divider ></md-divider>
+                            <md-divider></md-divider>
 
                             <md-button layout="column" layout-align=""
                                        flex class="capitalize" ng-click="vm.selectLevelTwoItem(item)"
@@ -64,22 +64,23 @@
                                 </div>
 
                             </md-button>
-                            <md-divider ></md-divider>
+                            <md-divider></md-divider>
 
 
                         </div>
-                        <md-divider ></md-divider>
+                        <md-divider></md-divider>
 
                     </div>
-                    <md-divider ></md-divider>
+                    <md-divider></md-divider>
                 </div>
 
                 <div layout="row" layout-align="center center">
                     <md-divider></md-divider>
-                    <div ng-if="vm.levelItem1 != null || vm.levelItem2 != null" ng-repeat="item in vm.levelItem2.children" trackby $index >
+                    <div ng-if="vm.levelItem1 != null || vm.levelItem2 != null"
+                         ng-repeat="item in vm.levelItem2.children" trackby $index>
                         <div class="clearfix" ng-if="$index % 3 == 0"></div>
                         <div class="col-sm-4">
-                            <md-divider ></md-divider>
+                            <md-divider></md-divider>
 
                             <md-button layout="column" layout-align=""
                                        flex class="capitalize" ng-click="vm.selectLevelThreeItem(item)"
@@ -94,22 +95,23 @@
                                 </div>
 
                             </md-button>
-                            <md-divider ></md-divider>
+                            <md-divider></md-divider>
 
 
                         </div>
-                        <md-divider ></md-divider>
+                        <md-divider></md-divider>
 
                     </div>
-                    <md-divider ></md-divider>
+                    <md-divider></md-divider>
                 </div>
 
                 <div layout="row" layout-align="center center">
                     <md-divider></md-divider>
-                    <div ng-if="vm.levelItem1 != null || vm.levelItem2 != null || vm.levelItem3 != null" ng-repeat="item in vm.levelItem3.children" trackby $index >
+                    <div ng-if="vm.levelItem1 != null || vm.levelItem2 != null || vm.levelItem3 != null"
+                         ng-repeat="item in vm.levelItem3.children" trackby $index>
                         <div class="clearfix" ng-if="$index % 3 == 0"></div>
                         <div class="col-sm-4">
-                            <md-divider ></md-divider>
+                            <md-divider></md-divider>
 
                             <md-button layout="column" layout-align=""
                                        flex class="capitalize" ng-click="vm.selectLevelFourItem(item)"
@@ -124,22 +126,23 @@
                                 </div>
 
                             </md-button>
-                            <md-divider ></md-divider>
+                            <md-divider></md-divider>
 
 
                         </div>
-                        <md-divider ></md-divider>
+                        <md-divider></md-divider>
 
                     </div>
-                    <md-divider ></md-divider>
+                    <md-divider></md-divider>
                 </div>
 
                 <div layout="row" layout-align="center center">
                     <md-divider></md-divider>
-                    <div ng-if="vm.levelItem1 != null || vm.levelItem2 != null || vm.levelItem3 != null || vm.levelItem4 != null" ng-repeat="item in vm.levelItem4.children" trackby $index >
+                    <div ng-if="vm.levelItem1 != null || vm.levelItem2 != null || vm.levelItem3 != null || vm.levelItem4 != null"
+                         ng-repeat="item in vm.levelItem4.children" trackby $index>
                         <div class="clearfix" ng-if="$index % 3 == 0"></div>
                         <div class="col-sm-4">
-                            <md-divider ></md-divider>
+                            <md-divider></md-divider>
 
                             <md-button layout="column" layout-align=""
                                        flex class="capitalize" ng-click="vm.selectLevelFiveItem(item)"
@@ -154,74 +157,68 @@
                                 </div>
 
                             </md-button>
-                            <md-divider ></md-divider>
+                            <md-divider></md-divider>
 
 
                         </div>
-                        <md-divider ></md-divider>
+                        <md-divider></md-divider>
 
                     </div>
-                    <md-divider ></md-divider>
+                    <md-divider></md-divider>
                 </div>
 
 
                 <div layout="row" layout-align="">
 
-                            <md-button layout="column" layout-align=""
-                                       flex class="capitalize md-raised md-primary md-warn" ng-click="vm.selectLevelFiveItem(item)"
-                                       ui-sref-active="md-warn"
-                                       ng-class="" >
-                                Add
-                            </md-button>
                     <md-button layout="column" layout-align=""
-                               flex class="capitalize md-raised md-primary md-warn" ng-click="vm.selectLevelFiveItem(item)"
+                               flex class="capitalize md-raised md-primary md-warn"
+                               ng-click="vm.selectLevelFiveItem(item)"
                                ui-sref-active="md-warn"
-                               ng-class="" >
+                               ng-class="">
+                        Add
+                    </md-button>
+                    <md-button layout="column" layout-align=""
+                               flex class="capitalize md-raised md-primary md-warn"
+                               ng-click="vm.selectLevelFiveItem(item)"
+                               ui-sref-active="md-warn"
+                               ng-class="">
                         And
                     </md-button>
                     <md-button layout="column" layout-align=""
-                               flex class="capitalize md-raised md-primary md-warn" ng-click="vm.selectLevelFiveItem(item)"
+                               flex class="capitalize md-raised md-primary md-warn"
+                               ng-click="vm.selectLevelFiveItem(item)"
                                ui-sref-active="md-warn"
-                               ng-class="" >
+                               ng-class="">
                         Or
                     </md-button>
 
-                            <md-divider ></md-divider>
+                    <md-divider></md-divider>
                 </div>
 
 
-
-
-
-
-
-
-
-
-
                 <!--<nav class="menu">-->
-                    <!--<input type="checkbox" href="" class="menu-open" name="menu-open" id="menu-open">-->
-                    <!--<label class="menu-open-button" for="menu-open">-->
-                        <!--&lt;!&ndash;<span class="lines line-1"></span>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<span class="lines line-2"></span>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<span class="lines line-3"></span>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<span class="lines line-4"></span>&ndash;&gt;-->
-                    <!--</label>-->
+                <!--<input type="checkbox" href="" class="menu-open" name="menu-open" id="menu-open">-->
+                <!--<label class="menu-open-button" for="menu-open">-->
+                <!--&lt;!&ndash;<span class="lines line-1"></span>&ndash;&gt;-->
+                <!--&lt;!&ndash;<span class="lines line-2"></span>&ndash;&gt;-->
+                <!--&lt;!&ndash;<span class="lines line-3"></span>&ndash;&gt;-->
+                <!--&lt;!&ndash;<span class="lines line-4"></span>&ndash;&gt;-->
+                <!--</label>-->
 
 
-                    <!--<a ng-repeat="item in vm.items" track by $index href="" class="menu-item item-{{$index}}">-->
-                        <!--<i class="material-icons large fab-icon">edit</i>-->
-                    <!--</a>-->
+                <!--<a ng-repeat="item in vm.items" track by $index href="" class="menu-item item-{{$index}}">-->
+                <!--<i class="material-icons large fab-icon">edit</i>-->
+                <!--</a>-->
 
 
-                    <!--&lt;!&ndash;<a href="" class="menu-item item-1">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<i class="material-icons large fab-icon">edit</i>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<a href="" class="menu-item item-2"></a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<a href="" class="menu-item item-3"></a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<a href="" class="menu-item item-4"></a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<a href="" class="menu-item item-5"></a>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<a href="" class="menu-item item-6"></a>&ndash;&gt;-->
+                <!--&lt;!&ndash;<a href="" class="menu-item item-1">&ndash;&gt;-->
+                <!--&lt;!&ndash;<i class="material-icons large fab-icon">edit</i>&ndash;&gt;-->
+                <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;<a href="" class="menu-item item-2"></a>&ndash;&gt;-->
+                <!--&lt;!&ndash;<a href="" class="menu-item item-3"></a>&ndash;&gt;-->
+                <!--&lt;!&ndash;<a href="" class="menu-item item-4"></a>&ndash;&gt;-->
+                <!--&lt;!&ndash;<a href="" class="menu-item item-5"></a>&ndash;&gt;-->
+                <!--&lt;!&ndash;<a href="" class="menu-item item-6"></a>&ndash;&gt;-->
                 <!--</nav>-->
 
                 <div flex></div>
