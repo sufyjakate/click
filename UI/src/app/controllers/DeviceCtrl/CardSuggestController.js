@@ -30,7 +30,7 @@ angular.module('app')
 
     })
 
-    .controller('CardSuggestController', [ 'InterControllerCommunication', '$scope', '$log', '$mdDialog', '$http' ,function (icc, $scope, $log, $mdDialog, $http) {
+    .controller('CardSuggestController', [ 'InterControllerCommunication', '$scope', '$log', '$mdDialog', '$http', '$interval' ,function (icc, $scope, $log, $mdDialog, $http, $interval) {
 
         // var handler = function (ea, data) {
         //     $scope.widgets = data;
@@ -103,15 +103,6 @@ angular.module('app')
             cellHeight: 300,
             verticalMargin: 1
         };
-        $scope.addGuage = function () {
-            // var index = $scope.widgets.indexOf(w);
-            // console.log('Open card'+ index);
-            $mdDialog.show( {
-
-                templateUrl: 'app/views/devices/guage.html',
-                clickOutsideToClose:true
-            });
-        };
         $scope.moveWidget = function() {
             $scope.widgets[0].x = 1;
             $scope.widgets[0].width = 2;
@@ -153,8 +144,24 @@ angular.module('app')
         $scope.onItemRemoved = function(item) {
             $log.log("onItemRemoved item: "+item);
         };
+        $scope.showProgress = false;
+        $scope.determinateValue = 10;
 
         $scope.productSuggest = function () {
+
+            $scope.showProgress = true;
+
+            interval = $interval(function () {
+                $scope.determinateValue += 1;
+                if ($scope.determinateValue > 100) {
+                    $scope.determinateValue = 10;
+                    $scope.showProgress = false;
+                    $scope.showAlert();
+                    $interval.cancel(interval)
+                }
+            }, 50, 0, true);
+        };
+        $scope.showAlert = function () {
             $mdDialog.show({
                 templateUrl: 'app/views/devices/device_suggestion.html',
                 clickOutsideToClose:true
@@ -170,5 +177,6 @@ angular.module('app')
 
         }
     });
+
 
 

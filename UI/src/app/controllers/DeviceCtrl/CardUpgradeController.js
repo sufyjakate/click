@@ -92,20 +92,12 @@ angular.module('app')
             console.log("theme switched to " + widget.themeColor);
         };
 
-        self.determinateValue = 30;
+
 
         // Iterate every 100ms, non-stop and increment
         // the Determinate loader.
-        $interval(function() {
 
-            self.determinateValue += 1;
-            if (self.determinateValue > 100) {
-                self.determinateValue = 30;
-            }
-
-        }, 100);
         $scope.Widgets = ["Upgrade Widget"];
-        $scope.uploading = false;
 
 
         var WidgetType;
@@ -159,10 +151,26 @@ angular.module('app')
         $scope.onItemRemoved = function(item) {
             $log.log("onItemRemoved item: "+item);
         };
+
+        $scope.showProgress = false;
+        $scope.determinateValue = 10;
         
         $scope.checkUpgrade = function () {
 
-            $scope.uploading = true;
+            $scope.showProgress = true;
+
+            interval = $interval(function () {
+                $scope.determinateValue += 1;
+                if ($scope.determinateValue > 100) {
+                    $scope.determinateValue = 10;
+                    $scope.showProgress = false;
+                    $scope.showAlert();
+                    $interval.cancel(interval)
+                }
+            }, 50, 0, true);
+        };
+
+        $scope.showAlert = function () {
 
             $mdDialog.show(
                 $mdDialog.alert()
@@ -177,9 +185,10 @@ angular.module('app')
                     .closeTo(angular.element(document.querySelector('#right')))
             );
 
-            $scope.uploading = false;
-
         }
+
+
+
 
     }])
 

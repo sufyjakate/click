@@ -79,19 +79,6 @@
             var list_notif = icc.subscribe('list_notif.update', handler_notif);
             console.log(list_notif);
 
-
-            // $http({
-            //         url: 'http://localhost:3333/cards',
-            //         method: 'GET',
-            //         headers: {'Content-Type': 'application/json'}
-            //     }).then(function successcallback(data, status, headers, config) {
-            //
-            //         $scope.widgets = data;
-            //
-            //     }, function errorcallback(data, status, headers, config) {
-            //         $scope.status = status;
-            //         alert('Data Retrieving Failed');
-            //     });
         }])
 
         .directive('cardview', function () {
