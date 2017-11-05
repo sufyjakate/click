@@ -4,7 +4,7 @@
             <div class="col-md-12">
 
 
-                <md-card class="buttonclass" md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}" md-theme-watch>
+                <md-card class="buttonclass" md-theme={{w.themeColor}} md-theme-watch>
 
                                 <md-card-title>
 
@@ -19,7 +19,12 @@
 
                         <div ng-if="WidgetType == 'Upgrade Widget'">
                             <md-button  class="md-raised" ng-click="checkUpgrade()">Upgrade Device</md-button>
+                            <div layout="row" layout-sm="column" layout-align="space-around" ng-show="uploading">
+                                <md-progress-circular md-diameter="96"></md-progress-circular>
+                            </div>
+
                         </div>
+
 
 
                     </md-card-content>
@@ -32,9 +37,10 @@
                                         </md-select>
                                     </md-input-container>
                                     <md-button class="btn btn-primary" ng-click="removeWidget(w)">Delete</md-button>
+                                    <md-button ng-click="switchTheme($event,w)" class="btn btn-primary"> Switch Themes</md-button>
                                 </md-card-actions>
 
-                                <md-checkbox ng-model="showDarkTheme" layout-align="bottom center">Use 'Dark' Themed Cards</md-checkbox>
+
 
 
                         </md-card>
