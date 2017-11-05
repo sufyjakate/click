@@ -164,7 +164,7 @@ angular.module('app')
                 if ($scope.determinateValue > 100) {
                     $scope.determinateValue = 10;
                     $scope.showProgress = false;
-                    $scope.showAlert();
+                    $scope.showAlert1();
                     $interval.cancel(interval)
                 }
             }, 50, 0, true);
@@ -184,6 +184,16 @@ angular.module('app')
                     // or an element
                     .closeTo(angular.element(document.querySelector('#right')))
             );
+
+        };
+
+        $scope.showAlert1 = function () {
+
+            $mdDialog.show({
+
+                templateUrl: 'app/views/devices/clicktoupdate.html',
+                clickOutsideToClose: true
+            })
 
         }
 
