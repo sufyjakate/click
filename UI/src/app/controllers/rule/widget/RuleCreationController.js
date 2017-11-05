@@ -26,6 +26,117 @@
             ]
         };
 
+        vm.operator = {
+            id: 1,
+            name: 'Operator',
+            icon: 'more',
+            link: '',
+            children: [
+                {
+                    id: 1,
+                    name: 'Aggregation',
+                    icon: 'line_style',
+                    link: '',
+                    children: [
+                        {
+                            id: 1,
+                            name: 'Sum',
+                            icon: 'select_all',
+                            link: '',
+                            children: []
+                        },
+                        {
+                            id: 1,
+                            name: 'Average',
+                            icon: 'av_timer',
+                            link: '',
+                            children: []
+                        },
+                        {
+                            id: 1,
+                            name: 'Maximum',
+                            icon: 'expand_less',
+                            link: '',
+                            children: []
+                        },
+                        {
+                            id: 1,
+                            name: 'Minimum',
+                            icon: 'expand_more',
+                            link: '',
+                            children: []
+                        },
+                    ]
+                },
+                {
+                    id: 1,
+                    name: 'Comparison',
+                    icon: 'compare',
+                    link: '',
+                    children: [
+                        {
+                            id: 1,
+                            name: 'Less Than',
+                            icon: 'chevron_left',
+                            link: '',
+                            children: []
+                        },
+                        {
+                            id: 1,
+                            name: 'Greater Than',
+                            icon: 'chevron_right',
+                            link: '',
+                            children: []
+                        },
+                        {
+                            id: 1,
+                            name: 'Equal To',
+                            icon: 'equalizer',
+                            link: '',
+                            children: []
+                        },
+                        {
+                            id: 1,
+                            name: 'Not Equal To',
+                            icon: 'not_interested',
+                            link: '',
+                            children: []
+                        },
+                    ]
+                },
+                // {
+                //     id: 1,
+                //     name: 'Logical',
+                //     icon: 'time',
+                //     link: '',
+                //     children: [
+                //
+                //         {
+                //             id: 1,
+                //             name: 'Duration',
+                //             icon: 'time',
+                //             link: '',
+                //             children: []
+                //         },
+                //         {
+                //             id: 1,
+                //             name: 'Duration',
+                //             icon: 'time',
+                //             link: '',
+                //             children: []
+                //         },
+                //         {
+                //             id: 1,
+                //             name: 'Duration',
+                //             icon: 'time',
+                //             link: '',
+                //             children: []
+                //         },
+                //     ]
+                // }
+
+            ]
+        };
 
         vm.ruleParameters = {
             triggers: [
@@ -158,7 +269,7 @@
                                 },
                                 {
                                     id: 1,
-                                    name: 'Every Eventing',
+                                    name: 'Every Evening',
                                     icon: 'access_time',
                                     link: '',
                                     children: []
@@ -301,7 +412,6 @@
                                 }
 
 
-
                             ]
                         },
 
@@ -324,45 +434,35 @@
                                     name: 'Happy',
                                     icon: 'sentiment_very_satisfied',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 },
                                 {
                                     id: 1,
                                     name: 'Sad',
                                     icon: 'sentiment_very_dissatisfied',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 },
                                 {
                                     id: 1,
                                     name: 'Neutral',
                                     icon: 'sentiment_neutral',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 },
                                 {
                                     id: 1,
                                     name: 'Enjoy',
                                     icon: 'favorite',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 },
                                 {
                                     id: 1,
                                     name: 'excited',
                                     icon: 'mood',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 },
                             ]
                         },
@@ -377,33 +477,25 @@
                                     name: 'Cloudy',
                                     icon: 'wb_cloudy',
                                     link: '',
-                                    children: [
-
-                                    ]
-                                },{
+                                    children: []
+                                }, {
                                     id: 1,
                                     name: 'Sunny',
                                     icon: 'wb_sunny',
                                     link: '',
-                                    children: [
-
-                                    ]
-                                },{
+                                    children: []
+                                }, {
                                     id: 1,
                                     name: 'Windy',
                                     icon: 'swap_horiz',
                                     link: '',
-                                    children: [
-
-                                    ]
-                                },{
+                                    children: []
+                                }, {
                                     id: 1,
                                     name: 'Rainy',
                                     icon: 'grain',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 },
 
                             ]
@@ -420,9 +512,7 @@
                                     name: 'Driving',
                                     icon: 'time_to_leave',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 }
                                 ,
                                 {
@@ -430,9 +520,7 @@
                                     name: 'Sleeping',
                                     icon: 'airline_seat_individual_suite',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 }
                                 ,
                                 {
@@ -440,9 +528,7 @@
                                     name: 'Sitting',
                                     icon: 'airline_seat_recline_extra',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 }
                                 ,
                                 {
@@ -450,9 +536,7 @@
                                     name: 'Walking',
                                     icon: 'directions_walk',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 }
                                 ,
                                 {
@@ -460,9 +544,7 @@
                                     name: 'Running',
                                     icon: 'directions_run',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 }
                                 ,
                                 {
@@ -470,9 +552,7 @@
                                     name: 'Cycling',
                                     icon: 'directions_bike',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 }
                                 ,
                                 {
@@ -480,9 +560,7 @@
                                     name: 'Eating',
                                     icon: 'local_dining',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 }
                                 ,
                                 {
@@ -490,9 +568,7 @@
                                     name: 'Music',
                                     icon: 'audiotrack',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 }
                                 ,
                             ]
@@ -518,27 +594,21 @@
                                     name: 'Traffic High',
                                     icon: 'trending_up',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 },
                                 {
                                     id: 1,
                                     name: 'Traffic low',
                                     icon: 'trending_down',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 },
                                 {
                                     id: 1,
                                     name: 'Public Transport ',
                                     icon: 'directions_transit',
                                     link: '',
-                                    children: [
-
-                                    ]
+                                    children: []
                                 }
                             ]
                         }
@@ -723,7 +793,7 @@
                                             icon: 'whatshot',
                                             link: '',
                                             children: [
-                                                
+                                                vm.operator
                                             ]
                                         },
                                         {
@@ -763,7 +833,7 @@
                                             link: '',
                                             children: []
                                         }
-                                        ,{
+                                        , {
                                             id: 1,
                                             name: 'Apartment',
                                             icon: 'location_city',
@@ -779,117 +849,7 @@
 
                     ]
                 },
-                {
-                    id: 1,
-                    name: 'Operator',
-                    icon: 'more',
-                    link: '',
-                    children: [
-                        {
-                            id: 1,
-                            name: 'Aggregation',
-                            icon: 'line_style',
-                            link: '',
-                            children: [
-                                {
-                                    id: 1,
-                                    name: 'Sum',
-                                    icon: 'select_all',
-                                    link: '',
-                                    children: []
-                                },
-                                {
-                                    id: 1,
-                                    name: 'Average',
-                                    icon: 'av_timer',
-                                    link: '',
-                                    children: []
-                                },
-                                {
-                                    id: 1,
-                                    name: 'Maximum',
-                                    icon: 'expand_less',
-                                    link: '',
-                                    children: []
-                                },
-                                {
-                                    id: 1,
-                                    name: 'Minimum',
-                                    icon: 'expand_more',
-                                    link: '',
-                                    children: []
-                                },
-                            ]
-                        },
-                        {
-                            id: 1,
-                            name: 'Comparison',
-                            icon: 'compare',
-                            link: '',
-                            children: [
-                                {
-                                    id: 1,
-                                    name: 'Less Than',
-                                    icon: 'chevron_left',
-                                    link: '',
-                                    children: []
-                                },
-                                {
-                                    id: 1,
-                                    name: 'Greater Than',
-                                    icon: 'chevron_right',
-                                    link: '',
-                                    children: []
-                                },
-                                {
-                                    id: 1,
-                                    name: 'Equal To',
-                                    icon: 'equalizer',
-                                    link: '',
-                                    children: []
-                                },
-                                {
-                                    id: 1,
-                                    name: 'Not Equal To',
-                                    icon: 'not_interested',
-                                    link: '',
-                                    children: []
-                                },
-                            ]
-                        },
-                        // {
-                        //     id: 1,
-                        //     name: 'Logical',
-                        //     icon: 'time',
-                        //     link: '',
-                        //     children: [
-                        //
-                        //         {
-                        //             id: 1,
-                        //             name: 'Duration',
-                        //             icon: 'time',
-                        //             link: '',
-                        //             children: []
-                        //         },
-                        //         {
-                        //             id: 1,
-                        //             name: 'Duration',
-                        //             icon: 'time',
-                        //             link: '',
-                        //             children: []
-                        //         },
-                        //         {
-                        //             id: 1,
-                        //             name: 'Duration',
-                        //             icon: 'time',
-                        //             link: '',
-                        //             children: []
-                        //         },
-                        //     ]
-                        // }
 
-                    ]
-                },
 
             ],
             actions: []
@@ -900,19 +860,60 @@
 
 
         vm.levelItem1 = {};
-        vm.levelItem2= {};
-        vm.levelItem3= {};
-        vm.levelItem4= {};
-        vm.levelItem5= {};
+        vm.levelItem2 = {};
+        vm.levelItem3 = {};
+        vm.levelItem4 = {};
+        vm.levelItem5 = {};
+        vm.levelItem6 = {};
+        vm.levelItem7 = {};
+
+        vm.currentTrigger = "";
+
+        vm.updateTrigger = function () {
+            var result1 = vm.levelItem1? vm.levelItem1.name + ' .' : '';
+            var result2 = vm.levelItem2 ? vm.levelItem2.name + ' .' : '';
+            var result3 = vm.levelItem3? vm.levelItem3.name + ' .' : '';
+            var result4 = vm.levelItem4? vm.levelItem4.name + ' .' : '';
+            var result5 = vm.levelItem5? vm.levelItem5.name + ' .' : '';
+            var result6 = vm.levelItem6? vm.levelItem6.name + ' .' : '';
+            var result7 = vm.levelItem7? vm.levelItem7.name + ' .' : '';
+
+            var result = result1 + result2 + result3 + result4 + result5 + result6 + result7;
+            vm.currentTrigger = result;
+        }
+
+        
+        function logAllLevelItems() {
+            console.log("1st level item : ");
+            console.log(vm.levelItem1);
+            console.log("2nd level item : ");
+            console.log(vm.levelItem2);
+            console.log("3rd level item : ");
+            console.log(vm.levelItem3);
+            console.log("4th level item : ");
+            console.log(vm.levelItem4);
+            console.log("5th level item : ");
+            console.log(vm.levelItem5);
+
+            console.log("6th level item : ");
+            console.log(vm.levelItem6);
+
+            console.log("7th level item : ");
+            console.log(vm.levelItem7);
+
+            vm.updateTrigger();
+
+        }
 
         vm.selectLevelOneItem = function (item) {
 
-
-            vm.levelItem5= null;
-            vm.levelItem4= null;
-            vm.levelItem3= null;
-            vm.levelItem2= null;
             vm.levelItem1 = null;
+            vm.levelItem2 = null;
+            vm.levelItem3 = null;
+            vm.levelItem4 = null;
+            vm.levelItem5 = null;
+            vm.levelItem6 = null;
+            vm.levelItem7 = null;
 
             vm.levelItem1 = item;
             console.log("1st level item : ");
@@ -921,27 +922,15 @@
             logAllLevelItems();
         }
 
-
-        function logAllLevelItems() {
-            console.log("1st level item : ");
-            console.log(vm.levelItem1);
-            console.log("2nd level item : ");
-            console.log(vm.levelItem2);
-            console.log("3rd level item : ");
-            console.log(vm.levelitem3);
-            console.log("4th level item : ");
-            console.log(vm.levelitem4);
-            console.log("5th level item : ");
-            console.log(vm.levelitem5);
-
-
-        }
-
         vm.selectLevelTwoItem = function (item) {
 
 
-            vm.levelItem2= null;
-            vm.levelItem3= null;
+            vm.levelItem2 = null;
+            vm.levelItem3 = null;
+            vm.levelItem4 = null;
+            vm.levelItem5 = null;
+            vm.levelItem6 = null;
+            vm.levelItem7 = null;
 
 
             vm.levelItem2 = item;
@@ -952,10 +941,14 @@
 
         }
 
-
         vm.selectLevelThreeItem = function (item) {
-            vm.levelItem3= null;
-            vm.levelItem4= null;
+
+            vm.levelItem3 = null;
+            vm.levelItem4 = null;
+            vm.levelItem5 = null;
+            vm.levelItem6 = null;
+            vm.levelItem7 = null;
+
 
             vm.levelItem3 = item;
             console.log("3rd level item : ");
@@ -965,8 +958,11 @@
         }
 
         vm.selectLevelFourItem = function (item) {
-            vm.levelItem4= null;
-            vm.levelItem5= null;
+            vm.levelItem4 = null;
+            vm.levelItem5 = null;
+            vm.levelItem6 = null;
+            vm.levelItem7 = null;
+
 
             vm.levelItem4 = item;
             console.log("4th level item : ");
@@ -974,14 +970,48 @@
             logAllLevelItems();
 
         }
+
         vm.selectLevelFiveItem = function (item) {
+
+            vm.levelItem5 = null;
+            vm.levelItem6 = null;
+            vm.levelItem7 = null;
+
+
             vm.levelItem5 = item;
             console.log("5th level item : ");
             console.log(item);
+
             logAllLevelItems();
 
         }
 
+        vm.selectLevelSixItem = function (item) {
+
+            vm.levelItem6 = null;
+            vm.levelItem7 = null;
+
+
+            vm.levelItem6 = item;
+            console.log("6th level item : ");
+            console.log(item);
+
+            logAllLevelItems();
+
+        }
+
+        vm.selectLevelSevenItem = function (item) {
+
+            vm.levelItem7 = null;
+
+
+            vm.levelItem7 = item;
+            console.log("7th level item : ");
+            console.log(item);
+
+            logAllLevelItems();
+
+        }
 
 
         vm.countries = countriesService.loadAll();
