@@ -232,26 +232,14 @@
 
 
 
-                <div layout="row" layout-align="center center">
-                    <md-divider></md-divider>
-                    <div ng-if=""
-                         ng-repeat="item in vm.levelItem6.children" trackby $index>
+                <div ng-if="vm.showInput == true" layout="row" layout-align="center center">
 
-                            <md-button layout="column" layout-align=""
-                                       flex class="capitalize" ng-click="vm.selectLevelSevenItem(item)"
-                                       ui-sref-active="md-warn"
-                                       ng-class="item == vm.levelItem7? 'md-primary md-raised' :''">
-
-                                <div hide-sm hide-md class="md-tile-content">
-                                    <i class="material-icons md-24">{{item.icon}}</i>
-                                </div>
-                                <div class="md-tile-content">
-                                    {{item.name}}
-                                </div>
+                        <md-input-container layout-align="center center">
+                            <label>Value</label>
+                            <input ng-model="vm.inputValue" ng-change="vm.updateTrigger()">
+                        </md-input-container>
 
 
-                    </div>
-                    <md-divider></md-divider>
                 </div>
 
 

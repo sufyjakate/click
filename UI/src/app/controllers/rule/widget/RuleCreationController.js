@@ -866,23 +866,26 @@
         vm.levelItem5 = {};
         vm.levelItem6 = {};
         vm.levelItem7 = {};
+        vm.inputValue="";
 
         vm.currentTrigger = "";
 
         vm.updateTrigger = function () {
-            var result1 = vm.levelItem1? vm.levelItem1.name + ' .' : '';
-            var result2 = vm.levelItem2 ? vm.levelItem2.name + ' .' : '';
-            var result3 = vm.levelItem3? vm.levelItem3.name + ' .' : '';
-            var result4 = vm.levelItem4? vm.levelItem4.name + ' .' : '';
-            var result5 = vm.levelItem5? vm.levelItem5.name + ' .' : '';
-            var result6 = vm.levelItem6? vm.levelItem6.name + ' .' : '';
-            var result7 = vm.levelItem7? vm.levelItem7.name + ' .' : '';
+            var result1 = vm.levelItem1 ? vm.levelItem1.name + ' . ' : '';
+            var result2 = vm.levelItem2 ? vm.levelItem2.name + ' . ' : '';
+            var result3 = vm.levelItem3 ? vm.levelItem3.name + ' . ' : '';
+            var result4 = vm.levelItem4 ? vm.levelItem4.name + ' . ' : '';
+            var result5 = vm.levelItem5 ? vm.levelItem5.name + ' . ' : '';
+            var result6 = vm.levelItem6 ? vm.levelItem6.name + ' . ' : '';
+            var result7 = vm.levelItem7 ? vm.levelItem7.name + ' . ' : '';
 
-            var result = result1 + result2 + result3 + result4 + result5 + result6 + result7;
+            var resultValue = vm.inputValue ? vm.inputValue + '' : '';
+
+            var result = result1 + result2 + result3 + result4 + result5 + result6 + result7 + resultValue;
             vm.currentTrigger = result;
         }
 
-        
+
         function logAllLevelItems() {
             console.log("1st level item : ");
             console.log(vm.levelItem1);
@@ -901,7 +904,9 @@
             console.log("7th level item : ");
             console.log(vm.levelItem7);
 
+            vm.showInput=false;
             vm.updateTrigger();
+            vm.checkIfNoChildren();
 
         }
 
@@ -1010,6 +1015,56 @@
             console.log(item);
 
             logAllLevelItems();
+
+        }
+
+        vm.showInput = false;
+
+        vm.checkIfNoChildren = function () {
+
+            if (vm.levelItem1 != null) {
+                if (vm.levelItem1.children.length == 0) {
+                    vm.showInput = true;
+                    console.log(" children zero");
+                }
+            }
+
+            if (vm.levelItem2 != null) {
+                if (vm.levelItem2.children.length == 0) {
+                    vm.showInput = true;
+                    console.log(" children zero");
+                }
+            }
+            if (vm.levelItem3 != null) {
+                if (vm.levelItem3.children.length == 0) {
+                    vm.showInput = true;
+                    console.log(" children zero");
+                }
+            }
+            if (vm.levelItem4 != null) {
+                if (vm.levelItem4.children.length == 0) {
+                    vm.showInput = true;
+                    console.log(" children zero");
+                }
+            }
+            if (vm.levelItem5 != null) {
+                if (vm.levelItem5.children.length == 0) {
+                    vm.showInput = true;
+                    console.log(" children zero");
+                }
+            }
+            if (vm.levelItem6 != null) {
+                if (vm.levelItem6.children.length == 0) {
+                    vm.showInput = true;
+                    console.log(" children zero");
+                }
+            }
+            if (vm.levelItem7 != null) {
+                if (vm.levelItem7.children.length == 0) {
+                    vm.showInput = true;
+                    console.log(" children zero");
+                }
+            }
 
         }
 
