@@ -1,4 +1,4 @@
-<div ng-controller="deviceSuggestionCtrl" ng-cloak>
+<div ng-controller="deviceSuggestionCtrl" ng-cloak class="suggestdialog">
     <md-dialog aria-label="Device Suggestion">
         <form>
             <md-toolbar>
@@ -6,21 +6,43 @@
                     <h2>Device Suggestion</h2>
                 </div>
             </md-toolbar>
-            <md-dialog-content style="max-width:800px;max-height:810px; ">
-                <table class="table">
-                    <tr>
-                        <th>Product Name</th>
-                        <th>Purchase Device</th>
-                    </tr>
-                    <tr>
-                        <th>{{randomProduct.text}}</th>
-                        <th>
-                            <md-button class="btn btn-primary" ng-click="buyDevice()">Buy Now</md-button>
-                        </th>
+            <md-dialog-content>
+
+                <md-table-container>
+                    <table md-table md-row-select multiple ng-model="$scope.selected" class="table table-hover table-bordered">
+
+                        <thead md-head md-order="$scope.query.order" md-on-reorder="getItems()">
+
+                        <tr md-row>
+                            <th md-column md-numeric>Product ID</th>
+                            <th md-column md-order-by="Product Name"><span>Product Name</span></th>
+                            <th md-column md-numeric>Buy Now</th>
+                            <!--<th md-column md-numeric>Carbs (g)</th>-->
+
+                        </tr>
+                        </thead>
+                        <tbody md-body>
+                        <tr md-row md-select="item" md-select-id="name" md-auto-select ng-repeat="product in cardProduct">
+                            <td md-cell>{{product.prodId}}</td>
+                            <td md-cell>{{product.ProductName}}</td>
+                            <td md-cell md-button class="btn btn-primary">BUY NOW</td>
+                        </tr>
+                        </tbody>
+                        <!--<tr>-->
+                        <!--<th>Notification Text</th>-->
+                        <!--<th>Clear Toast</th>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                        <!--<th>{{randomQuote.text}}</th>-->
+                        <!--<th>-->
+                        <!--<md-button class="btn btn-primary" ng-click="removeToast()">Clear Toast</md-button>-->
+                        <!--</th>-->
 
 
-                    </tr>
-                </table>
+                        <!--</tr>-->
+                    </table>
+                </md-table-container>
+
             </md-dialog-content>
 
             <md-dialog-actions layout="row">
