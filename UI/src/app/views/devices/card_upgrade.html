@@ -19,8 +19,10 @@
 
                         <div ng-if="WidgetType == 'Upgrade Widget'">
                             <md-button  class="md-raised" ng-click="checkUpgrade()">Upgrade Device</md-button>
-                            <div layout="row" layout-sm="column" layout-align="space-around" ng-show="uploading">
-                                <md-progress-circular md-diameter="96"></md-progress-circular>
+                            <div layout="row" layout-align="center center">
+                            <md-progress-circular class="widget-progress md-accent" md-mode="indeterminate"
+                                                value="{{$parent.determinateValue}}" ng-show="$parent.showProgress">
+                            </md-progress-circular>
                             </div>
 
                         </div>

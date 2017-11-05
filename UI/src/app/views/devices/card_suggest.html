@@ -18,7 +18,10 @@
 
                         <div ng-if="WidgetType == 'Suggest Widget'">
                             <md-button  class="md-raised" ng-click="productSuggest()">Suggest</md-button>
-                            <md-button  class="md-raised" ng-click="">Re-Run</md-button>
+                                <md-progress-linear class="widget-progress md-accent" md-mode="indeterminate"
+                                                      value="{{$parent.determinateValue}}" ng-show="$parent.showProgress">
+                                </md-progress-linear>
+
                         </div>
 
 
