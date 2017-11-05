@@ -717,13 +717,15 @@
                                             link: '',
                                             children: []
                                         },
-                                        // {
-                                        //     id: 1,
-                                        //     name: 'Fan',
-                                        //     icon: 'phone_iphone',
-                                        //     link: '',
-                                        //     children: []
-                                        // },
+                                        {
+                                            id: 1,
+                                            name: 'Temperature',
+                                            icon: 'whatshot',
+                                            link: '',
+                                            children: [
+                                                
+                                            ]
+                                        },
                                         {
                                             id: 1,
                                             name: 'Light',
@@ -731,13 +733,13 @@
                                             link: '',
                                             children: []
                                         },
-                                        // {
-                                        //     id: 1,
-                                        //     name: 'Air conditioning',
-                                        //     icon: 'whatshot',
-                                        //     link: '',
-                                        //     children: []
-                                        // },
+                                        {
+                                            id: 1,
+                                            name: 'Air conditioning',
+                                            icon: 'whatshot',
+                                            link: '',
+                                            children: []
+                                        },
                                         {
                                             id: 1,
                                             name: 'Washing Machine',

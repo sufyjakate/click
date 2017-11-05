@@ -104,7 +104,6 @@
                     <md-divider ></md-divider>
                 </div>
 
-
                 <div layout="row" layout-align="center center">
                     <md-divider></md-divider>
                     <div ng-if="vm.levelItem1 != null || vm.levelItem2 != null || vm.levelItem3 != null" ng-repeat="item in vm.levelItem3.children" trackby $index >
@@ -164,6 +163,32 @@
                     </div>
                     <md-divider ></md-divider>
                 </div>
+
+
+                <div layout="row" layout-align="">
+
+                            <md-button layout="column" layout-align=""
+                                       flex class="capitalize md-raised md-primary md-warn" ng-click="vm.selectLevelFiveItem(item)"
+                                       ui-sref-active="md-warn"
+                                       ng-class="" >
+                                Add
+                            </md-button>
+                    <md-button layout="column" layout-align=""
+                               flex class="capitalize md-raised md-primary md-warn" ng-click="vm.selectLevelFiveItem(item)"
+                               ui-sref-active="md-warn"
+                               ng-class="" >
+                        And
+                    </md-button>
+                    <md-button layout="column" layout-align=""
+                               flex class="capitalize md-raised md-primary md-warn" ng-click="vm.selectLevelFiveItem(item)"
+                               ui-sref-active="md-warn"
+                               ng-class="" >
+                        Or
+                    </md-button>
+
+                            <md-divider ></md-divider>
+                </div>
+
 
 
 
