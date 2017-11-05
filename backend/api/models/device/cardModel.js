@@ -5,7 +5,8 @@ var Schema = mongoose.Schema;
 
 var CardSchema = new Schema({
         cardid: {
-            type: Number
+            type: Number,
+            unique: true
         },
         height: {
             type: Number
