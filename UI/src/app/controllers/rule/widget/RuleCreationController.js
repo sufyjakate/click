@@ -1154,15 +1154,15 @@
 
         vm.currentRule = {};
 
-        vm.AddButtonPressed = function () {
-            console.log("And Button Pressed");
-            if (vm.currentRule.triggers != null) {
-                vm.currentRule.triggers.push("And");
-            } else {
-                vm.currentRule.triggers = [];
-            }
+        vm.currentRule.triggers= {};
+        vm.currentRule.triggers.and= []
 
-            vm.currentRule.triggers.push(vm.currentTriggerChips);
+        vm.currentRule.triggers.or= []
+
+        vm.AndButtonPressed = function () {
+            console.log("And Button Pressed");
+
+            vm.currentRule.triggers.and.push(vm.currentTriggerChips);
             vm.clearSelections();
             console.log(vm.currentRule.triggers);
 
@@ -1170,14 +1170,8 @@
 
         vm.OrButtonPressed = function () {
             console.log("Or Button Pressed");
-            if (vm.currentRule.triggers != null) {
 
-                vm.currentRule.triggers.push("Or");
-            } else {
-                vm.currentRule.triggers = [];
-            }
-
-            vm.currentRule.triggers.push(vm.currentTriggerChips);
+            vm.currentRule.triggers.or.push(vm.currentTriggerChips);
             vm.clearSelections();
 
             console.log(vm.currentRule.triggers);

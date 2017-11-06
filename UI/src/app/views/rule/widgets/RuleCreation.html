@@ -235,7 +235,8 @@
 
                     <md-input-container layout-align="center center">
                         <label>Value</label>
-                        <input ng-model="vm.inputValue" ng-change="vm.updateTrigger()" align="center" layout-align="center center">
+                        <input ng-model="vm.inputValue" ng-change="vm.updateTrigger()" align="center"
+                               layout-align="center center">
                     </md-input-container>
 
 
@@ -248,7 +249,7 @@
                         <!--<md-button class="md-raised md-primary">Primary</md-button>-->
                     </div>
                     <div layout="row" layout-sm="" layout-align="right right" layout-wrap flex="30">
-                        <md-button class="md-raised md-warn" ng-click="vm.AddButtonPressed()">And</md-button>
+                        <md-button class="md-raised md-warn" ng-click="vm.AndButtonPressed()">And</md-button>
                         <md-button class="md-raised md-warn" ng-click="vm.OrButtonPressed()">Or</md-button>
                     </div>
 
@@ -260,14 +261,27 @@
 
                     <md-subheader class="md-primary" layout="column">
 
-                        <md-chips >
-                            <md-chip ng-repeat ="item in vm.currentTriggerChips">{{item}}</md-chip>
-                        </md-chips >
+                        <md-chips>
+                            <md-chip ng-repeat="item in vm.currentTriggerChips">{{item}}</md-chip>
+                        </md-chips>
 
                     </md-subheader>
 
                     <!--<md-subheader class="md-primary">{{vm.currentTrigger}}-->
                     <!--</md-subheader>-->
+
+                    <div>
+                        <md-subheader class="md-primary md-raised" layout="column">And</md-subheader>
+                        <md-chips>
+                            <md-chip ng-repeat="item in vm.currentRule.triggers.and" track by $index>{{item}}</md-chip>
+                        </md-chips>
+                    </div>
+                    <div>
+                        <md-subheader class="md-primary md-raised" layout="column">Or</md-subheader>
+                        <md-chips>
+                            <md-chip ng-repeat="item in vm.currentRule.triggers.or" track by $index>{{item}}</md-chip>
+                        </md-chips>
+                    </div>
 
                     <div class="md-toolbar-tools">Then</div>
 
