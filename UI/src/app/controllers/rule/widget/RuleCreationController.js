@@ -26,6 +26,27 @@
             ]
         };
 
+        vm.inputTypeList = [];
+
+        vm.inputTypeList.range = {
+            type: "range",
+            min: 0,
+            max: 100
+        };
+
+        vm.inputTypeList.value = {
+            type: "value",
+        };
+
+        vm.inputTypeList.switch = {
+            type: "switch",
+        };
+
+        vm.inputTypeList.knob = {
+            type: "knob",
+        };
+
+
         vm.operator = {
             id: 1,
             name: 'Operator',
@@ -43,28 +64,32 @@
                             name: 'Sum',
                             icon: 'select_all',
                             link: '',
-                            children: []
+                            children: [],
+                            input: vm.inputTypeList.value
                         },
                         {
                             id: 1,
                             name: 'Average',
                             icon: 'av_timer',
                             link: '',
-                            children: []
+                            children: [],
+                            input: vm.inputTypeList.value
                         },
                         {
                             id: 1,
                             name: 'Maximum',
                             icon: 'expand_less',
                             link: '',
-                            children: []
+                            children: [],
+                            input: vm.inputTypeList.value
                         },
                         {
                             id: 1,
                             name: 'Minimum',
                             icon: 'expand_more',
                             link: '',
-                            children: []
+                            children: [],
+                            input: vm.inputTypeList.value
                         },
                     ]
                 },
@@ -79,28 +104,32 @@
                             name: 'Less Than',
                             icon: 'chevron_left',
                             link: '',
-                            children: []
+                            children: [],
+                            input: vm.inputTypeList.knob
                         },
                         {
                             id: 1,
                             name: 'Greater Than',
                             icon: 'chevron_right',
                             link: '',
-                            children: []
+                            children: [],
+                            input: vm.inputTypeList.knob
                         },
                         {
                             id: 1,
                             name: 'Equal To',
                             icon: 'equalizer',
                             link: '',
-                            children: []
+                            children: [],
+                            input: vm.inputTypeList.knob
                         },
                         {
                             id: 1,
                             name: 'Not Equal To',
                             icon: 'not_interested',
                             link: '',
-                            children: []
+                            children: [],
+                            input: vm.inputTypeList.knob
                         },
                     ]
                 },
@@ -866,7 +895,7 @@
         vm.levelItem5 = {};
         vm.levelItem6 = {};
         vm.levelItem7 = {};
-        vm.inputValue="";
+        vm.inputValue = "";
 
         vm.currentTrigger = "";
         vm.currentTriggerChips = [];
@@ -875,14 +904,15 @@
         vm.updateTrigger = function () {
             console.log(vm.currentTriggerChips);
             vm.currentTriggerChips = [];
-            if(vm.levelItem1 !=null) vm.currentTriggerChips.push(vm.levelItem1.name);
-            if(vm.levelItem2 !=null) vm.currentTriggerChips.push(vm.levelItem2.name);
-            if(vm.levelItem3 !=null) vm.currentTriggerChips.push(vm.levelItem3.name);
-            if(vm.levelItem4 !=null) vm.currentTriggerChips.push(vm.levelItem4.name);
-            if(vm.levelItem5 !=null) vm.currentTriggerChips.push(vm.levelItem5.name);
-            if(vm.levelItem6 !=null) vm.currentTriggerChips.push(vm.levelItem6.name);
-            if(vm.levelItem7 !=null) vm.currentTriggerChips.push(vm.levelItem7.name);
-            if(vm.inputValue!="") vm.currentTriggerChips.push(vm.inputValue);
+            if (vm.levelItem1 != null) vm.currentTriggerChips.push(vm.levelItem1.name);
+            if (vm.levelItem2 != null) vm.currentTriggerChips.push(vm.levelItem2.name);
+            if (vm.levelItem3 != null) vm.currentTriggerChips.push(vm.levelItem3.name);
+            if (vm.levelItem4 != null) vm.currentTriggerChips.push(vm.levelItem4.name);
+            if (vm.levelItem5 != null) vm.currentTriggerChips.push(vm.levelItem5.name);
+            if (vm.levelItem6 != null) vm.currentTriggerChips.push(vm.levelItem6.name);
+            if (vm.levelItem7 != null) vm.currentTriggerChips.push(vm.levelItem7.name);
+            if(vm.showInput ==false)   vm.inputValue = '';
+            if (vm.inputValue != "") vm.currentTriggerChips.push(vm.inputValue);
 
             // vm.levelItem1?vm.currentTriggerChips.push(vm.levelItem1):'';
             // vm.levelItem2?vm.currentTriggerChips.push(vm.levelItem2):'';
@@ -907,8 +937,6 @@
         }
 
 
-
-
         function logAllLevelItems() {
             console.log("1st level item : ");
             console.log(vm.levelItem1);
@@ -927,7 +955,7 @@
             console.log("7th level item : ");
             console.log(vm.levelItem7);
 
-            vm.showInput=false;
+            vm.showInput = false;
             vm.updateTrigger();
             vm.checkIfNoChildren();
 
@@ -1047,45 +1075,59 @@
 
             if (vm.levelItem1 != null) {
                 if (vm.levelItem1.children.length == 0) {
-                    vm.showInput = true;
-                    console.log(" children zero");
+                    if (vm.levelItem1.input != null) {
+                        vm.showInput = true;
+                        console.log(" children zero");
+                    }
                 }
             }
 
             if (vm.levelItem2 != null) {
                 if (vm.levelItem2.children.length == 0) {
-                    vm.showInput = true;
-                    console.log(" children zero");
+                    if (vm.levelItem2.input != null) {
+                        vm.showInput = true;
+                        console.log(" children zero");
+                    }
                 }
             }
             if (vm.levelItem3 != null) {
                 if (vm.levelItem3.children.length == 0) {
-                    vm.showInput = true;
-                    console.log(" children zero");
+                    if (vm.levelItem3.input != null) {
+                        vm.showInput = true;
+                        console.log(" children zero");
+                    }
                 }
             }
             if (vm.levelItem4 != null) {
                 if (vm.levelItem4.children.length == 0) {
-                    vm.showInput = true;
-                    console.log(" children zero");
+                    if (vm.levelItem4.input != null) {
+                        vm.showInput = true;
+                        console.log(" children zero");
+                    }
                 }
             }
             if (vm.levelItem5 != null) {
                 if (vm.levelItem5.children.length == 0) {
-                    vm.showInput = true;
-                    console.log(" children zero");
+                    if (vm.levelItem5.input != null) {
+                        vm.showInput = true;
+                        console.log(" children zero");
+                    }
                 }
             }
             if (vm.levelItem6 != null) {
                 if (vm.levelItem6.children.length == 0) {
-                    vm.showInput = true;
-                    console.log(" children zero");
+                    if (vm.levelItem6.input != null) {
+                        vm.showInput = true;
+                        console.log(" children zero");
+                    }
                 }
             }
             if (vm.levelItem7 != null) {
                 if (vm.levelItem7.children.length == 0) {
-                    vm.showInput = true;
-                    console.log(" children zero");
+                    if (vm.levelItem7.input != null) {
+                        vm.showInput = true;
+                        console.log(" children zero");
+                    }
                 }
             }
 
