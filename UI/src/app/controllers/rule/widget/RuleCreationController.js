@@ -911,7 +911,7 @@
             if (vm.levelItem5 != null) vm.currentTriggerChips.push(vm.levelItem5.name);
             if (vm.levelItem6 != null) vm.currentTriggerChips.push(vm.levelItem6.name);
             if (vm.levelItem7 != null) vm.currentTriggerChips.push(vm.levelItem7.name);
-            if(vm.showInput ==false)   vm.inputValue = '';
+            if (vm.showInput == false) vm.inputValue = '';
             if (vm.inputValue != "") vm.currentTriggerChips.push(vm.inputValue);
 
             // vm.levelItem1?vm.currentTriggerChips.push(vm.levelItem1):'';
@@ -970,6 +970,7 @@
             vm.levelItem5 = null;
             vm.levelItem6 = null;
             vm.levelItem7 = null;
+            vm.showAndOr(false);
 
             vm.levelItem1 = item;
             console.log("1st level item : ");
@@ -980,6 +981,7 @@
 
         vm.selectLevelTwoItem = function (item) {
 
+            vm.showAndOr(false);
 
             vm.levelItem2 = null;
             vm.levelItem3 = null;
@@ -998,6 +1000,7 @@
         }
 
         vm.selectLevelThreeItem = function (item) {
+            vm.showAndOr(false);
 
             vm.levelItem3 = null;
             vm.levelItem4 = null;
@@ -1018,6 +1021,7 @@
             vm.levelItem5 = null;
             vm.levelItem6 = null;
             vm.levelItem7 = null;
+            vm.showAndOr(false);
 
 
             vm.levelItem4 = item;
@@ -1032,6 +1036,7 @@
             vm.levelItem5 = null;
             vm.levelItem6 = null;
             vm.levelItem7 = null;
+            vm.showAndOr(false);
 
 
             vm.levelItem5 = item;
@@ -1046,6 +1051,7 @@
 
             vm.levelItem6 = null;
             vm.levelItem7 = null;
+            vm.showAndOr(false);
 
 
             vm.levelItem6 = item;
@@ -1059,6 +1065,7 @@
         vm.selectLevelSevenItem = function (item) {
 
             vm.levelItem7 = null;
+            vm.showAndOr(false);
 
 
             vm.levelItem7 = item;
@@ -1069,12 +1076,18 @@
 
         }
 
+        vm.ShowAndOrButtons = false;
+
         vm.showInput = false;
+        vm.showAndOr = function (flag) {
+            vm.ShowAndOrButtons = flag;
+        }
 
         vm.checkIfNoChildren = function () {
 
             if (vm.levelItem1 != null) {
                 if (vm.levelItem1.children.length == 0) {
+                    vm.showAndOr(true);
                     if (vm.levelItem1.input != null) {
                         vm.showInput = true;
                         console.log(" children zero");
@@ -1084,6 +1097,7 @@
 
             if (vm.levelItem2 != null) {
                 if (vm.levelItem2.children.length == 0) {
+                    vm.showAndOr(true);
                     if (vm.levelItem2.input != null) {
                         vm.showInput = true;
                         console.log(" children zero");
@@ -1092,6 +1106,7 @@
             }
             if (vm.levelItem3 != null) {
                 if (vm.levelItem3.children.length == 0) {
+                    vm.showAndOr(true);
                     if (vm.levelItem3.input != null) {
                         vm.showInput = true;
                         console.log(" children zero");
@@ -1100,6 +1115,7 @@
             }
             if (vm.levelItem4 != null) {
                 if (vm.levelItem4.children.length == 0) {
+                    vm.showAndOr(true);
                     if (vm.levelItem4.input != null) {
                         vm.showInput = true;
                         console.log(" children zero");
@@ -1108,6 +1124,7 @@
             }
             if (vm.levelItem5 != null) {
                 if (vm.levelItem5.children.length == 0) {
+                    vm.showAndOr(true);
                     if (vm.levelItem5.input != null) {
                         vm.showInput = true;
                         console.log(" children zero");
@@ -1116,6 +1133,7 @@
             }
             if (vm.levelItem6 != null) {
                 if (vm.levelItem6.children.length == 0) {
+                    vm.showAndOr(true);
                     if (vm.levelItem6.input != null) {
                         vm.showInput = true;
                         console.log(" children zero");
@@ -1124,6 +1142,7 @@
             }
             if (vm.levelItem7 != null) {
                 if (vm.levelItem7.children.length == 0) {
+                    vm.showAndOr(true);
                     if (vm.levelItem7.input != null) {
                         vm.showInput = true;
                         console.log(" children zero");
@@ -1135,12 +1154,12 @@
 
         vm.currentRule = {};
 
-        vm.AddButtonPressed=function () {
+        vm.AddButtonPressed = function () {
             console.log("And Button Pressed");
-            if(vm.currentRule.triggers !=null){
+            if (vm.currentRule.triggers != null) {
                 vm.currentRule.triggers.push("And");
-            }else{
-                vm.currentRule.triggers=[];
+            } else {
+                vm.currentRule.triggers = [];
             }
 
             vm.currentRule.triggers.push(vm.currentTriggerChips);
@@ -1149,13 +1168,13 @@
 
         }
 
-        vm.OrButtonPressed=function () {
+        vm.OrButtonPressed = function () {
             console.log("Or Button Pressed");
-            if(vm.currentRule.triggers !=null){
+            if (vm.currentRule.triggers != null) {
 
                 vm.currentRule.triggers.push("Or");
-            }else{
-                vm.currentRule.triggers=[];
+            } else {
+                vm.currentRule.triggers = [];
             }
 
             vm.currentRule.triggers.push(vm.currentTriggerChips);
@@ -1165,7 +1184,7 @@
         }
 
 
-        vm.clearSelections=function () {
+        vm.clearSelections = function () {
             vm.levelItem1 = {};
             vm.levelItem2 = {};
             vm.levelItem3 = {};
@@ -1174,7 +1193,8 @@
             vm.levelItem6 = {};
             vm.levelItem7 = {};
             vm.inputValue = "";
-            vm.currentTriggerChips=[];
+            vm.currentTriggerChips = [];
+            vm.showAndOr(false);
         }
 
         vm.countries = countriesService.loadAll();
