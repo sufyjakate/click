@@ -259,6 +259,7 @@
 
                     <div class="md-toolbar-tools">If</div>
 
+                    <div>
                     <md-subheader class="md-primary" layout="column">
 
                         <md-chips>
@@ -266,21 +267,41 @@
                         </md-chips>
 
                     </md-subheader>
-
+                    </div>
+                    <br/>
                     <!--<md-subheader class="md-primary">{{vm.currentTrigger}}-->
                     <!--</md-subheader>-->
 
                     <div>
-                        <md-subheader class="md-primary md-raised" layout="column">And</md-subheader>
-                        <md-chips>
-                            <md-chip ng-repeat="item in vm.currentRule.triggers.and" track by $index>{{item}}</md-chip>
-                        </md-chips>
+                        <md-subheader class="md-primary md-raised" layout="column">
+                            <div layout="row">
+                            <div flex="20" layout-align="center center">
+                                And
+                            </div>
+                            <div flex="70">
+                                <md-chips>
+                                    <md-chip ng-repeat="item in vm.currentRule.triggers.and" track by $index>{{item}}</md-chip>
+                                </md-chips>
+                            </div>
+                            </div>
+                        </md-subheader>
+
                     </div>
+
                     <div>
-                        <md-subheader class="md-primary md-raised" layout="column">Or</md-subheader>
-                        <md-chips>
-                            <md-chip ng-repeat="item in vm.currentRule.triggers.or" track by $index>{{item}}</md-chip>
-                        </md-chips>
+                        <md-subheader class="md-primary md-raised" layout="column">
+                            <div layout="row">
+                                <div flex="20" layout-align="center center">
+                                    Or
+                                </div>
+                                <div flex="70">
+                                    <md-chips>
+                                        <md-chip ng-repeat="item in vm.currentRule.triggers.or" track by $index>{{item}}</md-chip>
+                                    </md-chips>
+                                </div>
+                            </div>
+                        </md-subheader>
+
                     </div>
 
                     <div class="md-toolbar-tools">Then</div>
