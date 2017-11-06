@@ -869,8 +869,29 @@
         vm.inputValue="";
 
         vm.currentTrigger = "";
+        vm.currentTriggerChips = [];
+
 
         vm.updateTrigger = function () {
+            console.log(vm.currentTriggerChips);
+            vm.currentTriggerChips = [];
+            if(vm.levelItem1 !=null) vm.currentTriggerChips.push(vm.levelItem1.name);
+            if(vm.levelItem2 !=null) vm.currentTriggerChips.push(vm.levelItem2.name);
+            if(vm.levelItem3 !=null) vm.currentTriggerChips.push(vm.levelItem3.name);
+            if(vm.levelItem4 !=null) vm.currentTriggerChips.push(vm.levelItem4.name);
+            if(vm.levelItem5 !=null) vm.currentTriggerChips.push(vm.levelItem5.name);
+            if(vm.levelItem6 !=null) vm.currentTriggerChips.push(vm.levelItem6.name);
+            if(vm.levelItem7 !=null) vm.currentTriggerChips.push(vm.levelItem7.name);
+            if(vm.inputValue!="") vm.currentTriggerChips.push(vm.inputValue);
+
+            // vm.levelItem1?vm.currentTriggerChips.push(vm.levelItem1):'';
+            // vm.levelItem2?vm.currentTriggerChips.push(vm.levelItem2):'';
+            // vm.levelItem3?vm.currentTriggerChips.push(vm.levelItem3):'';
+            // vm.levelItem4?vm.currentTriggerChips.push(vm.levelItem4):'';
+            // vm.levelItem5?vm.currentTriggerChips.push(vm.levelItem5):'';
+            // vm.levelItem6?vm.currentTriggerChips.push(vm.levelItem6):'';
+            // vm.levelItem7?vm.currentTriggerChips.push(vm.levelItem7):'';
+
             var result1 = vm.levelItem1 ? vm.levelItem1.name + ' . ' : '';
             var result2 = vm.levelItem2 ? vm.levelItem2.name + ' . ' : '';
             var result3 = vm.levelItem3 ? vm.levelItem3.name + ' . ' : '';
@@ -884,6 +905,8 @@
             var result = result1 + result2 + result3 + result4 + result5 + result6 + result7 + resultValue;
             vm.currentTrigger = result;
         }
+
+
 
 
         function logAllLevelItems() {

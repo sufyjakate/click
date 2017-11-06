@@ -231,22 +231,20 @@
                 </div>
 
 
-
                 <div ng-if="vm.showInput == true" layout="row" layout-align="center center">
 
-                        <md-input-container layout-align="center center">
-                            <label>Value</label>
-                            <input ng-model="vm.inputValue" ng-change="vm.updateTrigger()">
-                        </md-input-container>
+                    <md-input-container layout-align="center center">
+                        <label>Value</label>
+                        <input ng-model="vm.inputValue" ng-change="vm.updateTrigger()" align="center" layout-align="center center">
+                    </md-input-container>
 
 
                 </div>
 
 
-
                 <div layout="row" layout-sm="column" layout-align="" layout-wrap>
                     <div layout="row" layout-sm="" layout-align="" layout-wrap flex="70">
-                        <md-button class="md-raised">Add</md-button>
+                        <!--<md-button class="md-raised">Add</md-button>-->
                         <!--<md-button class="md-raised md-primary">Primary</md-button>-->
                     </div>
                     <div layout="row" layout-sm="" layout-align="right right" layout-wrap flex="30">
@@ -259,15 +257,18 @@
                 <div>
 
                     <div class="md-toolbar-tools">If</div>
-                    <!--<md-subheader class="md-primary">{{vm.levelItem1.name +' . '+ vm.levelItem2.name +' . '+-->
-                        <!--vm.levelItem3.name +' . '+ vm.levelItem4.name +' . '+ vm.levelItem5.name +' . '+-->
-                        <!--vm.levelItem6.name +' . '  + vm.levelItem7.name }}-->
-                    <!--</md-subheader>-->
 
-                    <md-subheader class="md-primary">{{vm.currentTrigger}}
+                    <md-subheader class="md-primary" layout="column">
+
+                        <md-chips >
+                            <md-chip ng-repeat ="item in vm.currentTriggerChips">{{item}}</md-chip>
+                        </md-chips >
+
                     </md-subheader>
 
-                    <md-divider></md-divider>
+                    <!--<md-subheader class="md-primary">{{vm.currentTrigger}}-->
+                    <!--</md-subheader>-->
+
                     <div class="md-toolbar-tools">Then</div>
 
                     <md-subheader class="md-primary">Then</md-subheader>
