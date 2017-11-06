@@ -814,7 +814,7 @@
                                             name: 'Bike',
                                             icon: 'directions_bike',
                                             link: '',
-                                            children: []
+                                            children: [vm.operator]
                                         },
                                         {
                                             id: 1,
@@ -830,14 +830,14 @@
                                             name: 'Light',
                                             icon: 'lightbulb_outline',
                                             link: '',
-                                            children: []
+                                            children: [vm.operator]
                                         },
                                         {
                                             id: 1,
                                             name: 'Air conditioning',
                                             icon: 'whatshot',
                                             link: '',
-                                            children: []
+                                            children: [vm.operator]
                                         },
                                         {
                                             id: 1,
@@ -1133,6 +1133,49 @@
 
         }
 
+        vm.currentRule = {};
+
+        vm.AddButtonPressed=function () {
+            console.log("And Button Pressed");
+            if(vm.currentRule.triggers !=null){
+                vm.currentRule.triggers.push("And");
+            }else{
+                vm.currentRule.triggers=[];
+            }
+
+            vm.currentRule.triggers.push(vm.currentTriggerChips);
+            vm.clearSelections();
+            console.log(vm.currentRule.triggers);
+
+        }
+
+        vm.OrButtonPressed=function () {
+            console.log("Or Button Pressed");
+            if(vm.currentRule.triggers !=null){
+
+                vm.currentRule.triggers.push("Or");
+            }else{
+                vm.currentRule.triggers=[];
+            }
+
+            vm.currentRule.triggers.push(vm.currentTriggerChips);
+            vm.clearSelections();
+
+            console.log(vm.currentRule.triggers);
+        }
+
+
+        vm.clearSelections=function () {
+            vm.levelItem1 = {};
+            vm.levelItem2 = {};
+            vm.levelItem3 = {};
+            vm.levelItem4 = {};
+            vm.levelItem5 = {};
+            vm.levelItem6 = {};
+            vm.levelItem7 = {};
+            vm.inputValue = "";
+            vm.currentTriggerChips=[];
+        }
 
         vm.countries = countriesService.loadAll();
         vm.selectedCountry = null;
