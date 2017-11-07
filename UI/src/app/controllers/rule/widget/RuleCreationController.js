@@ -3,11 +3,12 @@
     angular
         .module('app')
         .controller('RuleCreationController', [
-            '$timeout', '$q', 'countriesService',
+            '$timeout', '$q', 'countriesService','$mdToast',
+
             RuleCreationController
         ]);
 
-    function RuleCreationController($timeout, $q, countriesService) {
+    function RuleCreationController($timeout, $q, countriesService,$mdToast) {
         var vm = this;
 
         console.log("rule Creation controller");
@@ -1149,6 +1150,28 @@
                     }
                 }
             }
+
+        }
+
+        vm.showToastMessage = function (message) {
+            $mdToast.show(
+                $mdToast.simple()
+                // .textContent(clickedItem['name'] + ' clicked!')
+                    .textContent(message)
+                    .position('bottom right')
+                    .hideDelay(1500)
+            );
+            vm.clearSelections();
+
+            vm.currentRule = {};
+
+            vm.currentRule.triggers = {};
+            vm.currentRule.triggers.and = []
+            vm.currentRule.triggers.or = []
+
+            vm.currentRule.actions = {};
+            vm.currentRule.actions.and = []
+
 
         }
 
