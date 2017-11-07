@@ -243,23 +243,20 @@
                 </div>
 
 
-                <div ng-if="vm.ShowAndOrButtons == true" layout="row" layout-sm="column" layout-align="" layout-wrap>
-                    <div layout="row" layout-sm="" layout-align="" layout-wrap flex="70">
-                        <!--<md-button class="md-raised">Add</md-button>-->
-                        <!--<md-button class="md-raised md-primary">Primary</md-button>-->
-                    </div>
-                    <div layout="row" layout-sm="" layout-align="right right" layout-wrap flex="30">
-                        <md-button class="md-raised md-warn" ng-click="vm.AndButtonPressed()">And</md-button>
-                        <md-button class="md-raised md-warn" ng-click="vm.OrButtonPressed()">Or</md-button>
-                    </div>
+                <!--<div ng-if="vm.ShowAndOrButtons == true" layout="row" layout-sm="column" layout-align="" layout-wrap>-->
+                    <!--<div layout="row" layout-sm="" layout-align="" layout-wrap flex="70">-->
+                        <!--&lt;!&ndash;<md-button class="md-raised">Add</md-button>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<md-button class="md-raised md-primary">Primary</md-button>&ndash;&gt;-->
+                    <!--</div>-->
+                    <!--<div layout="row" layout-sm="" layout-align="right right" layout-wrap flex="30">-->
+                        <!--<md-button class="md-raised md-warn" ng-click="vm.AndButtonPressed()">And</md-button>-->
+                        <!--<md-button class="md-raised md-warn" ng-click="vm.OrButtonPressed()">Or</md-button>-->
+                    <!--</div>-->
 
-                </div>
+                <!--</div>-->
 
                 <div>
 
-                    <div class="md-toolbar-tools">If</div>
-
-                    <div>
                     <md-subheader class="md-primary" layout="column">
 
                         <md-chips>
@@ -271,12 +268,16 @@
                     <br/>
                     <!--<md-subheader class="md-primary">{{vm.currentTrigger}}-->
                     <!--</md-subheader>-->
+                <div class="md-toolbar-tools">
+                    <md-button class=" md-fab md-raised md-primary">If</md-button>
+                </div>
 
-                    <div>
+
+                    <div >
                         <md-subheader class="md-primary md-raised" layout="column">
                             <div layout="row">
                             <div flex="20" layout-align="center center">
-                                And
+                                <md-button ng-disabled="vm.ShowAndOrButtons != true"  ng-click="vm.AndButtonPressed(true)" class="md-raised md-warn">And</md-button>
                             </div>
                             <div flex="70">
                                 <md-chips>
@@ -288,11 +289,11 @@
 
                     </div>
 
-                    <div>
+                    <div >
                         <md-subheader class="md-primary md-raised" layout="column">
                             <div layout="row">
-                                <div flex="20" layout-align="center center">
-                                    Or
+                                <div  flex="20" layout-align="center center">
+                                    <md-button ng-disabled="vm.ShowAndOrButtons != true"   class="md-raised md-warn" ng-click="vm.OrButtonPressed(true)">Or</md-button>
                                 </div>
                                 <div flex="70">
                                     <md-chips>
@@ -304,9 +305,28 @@
 
                     </div>
 
-                    <div class="md-toolbar-tools">Then</div>
+                    <div class="md-toolbar-tools">
+                        <md-button class="md-fab md-raised md-primary">Then</md-button>
+                    </div>
 
-                    <md-subheader class="md-primary">Then</md-subheader>
+                <div>
+
+                    <md-subheader class="md-primary md-raised" layout="column">
+                        <div layout="row">
+                            <div  flex="20" layout-align="center center">
+                                <md-button ng-disabled="vm.ShowAndOrButtons != true"   class="md-raised md-warn" ng-click="vm.AndButtonPressed(false)">And</md-button>
+                            </div>
+                            <div flex="70">
+                                <md-chips>
+                                    <md-chip ng-repeat="item in vm.currentRule.actions.and" track by $index>{{item}}</md-chip>
+                                </md-chips>
+                            </div>
+                        </div>
+                    </md-subheader>
+
+                    <!--<md-subheader class="md-primary">-->
+                        <!--<md-button ng-disabled="vm.ShowAndOrButtons != true"  class="md-raised md-warn" ng-click="vm.AndButtonPressed(false)">And</md-button>-->
+                    <!--</md-subheader>-->
 
                 </div>
 
