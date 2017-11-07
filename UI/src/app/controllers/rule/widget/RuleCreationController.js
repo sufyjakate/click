@@ -4,11 +4,12 @@
         .module('app')
         .controller('RuleCreationController', [
             '$timeout', '$q', 'countriesService','$mdToast',
+            '$mdDialog',
 
             RuleCreationController
         ]);
 
-    function RuleCreationController($timeout, $q, countriesService,$mdToast) {
+    function RuleCreationController($timeout, $q, countriesService,$mdToast,$mdDialog) {
         var vm = this;
 
         console.log("rule Creation controller");
@@ -1153,7 +1154,7 @@
 
         }
 
-        vm.showToastMessage = function (message) {
+        vm.showToastMessage = function (message,ev) {
             $mdToast.show(
                 $mdToast.simple()
                 // .textContent(clickedItem['name'] + ' clicked!')
@@ -1163,6 +1164,18 @@
             );
             vm.clearSelections();
 
+            $mdDialog.show(
+                $mdDialog.alert()
+                    .parent(angular.element(document.querySelector('#popupContainer')))
+                    .clickOutsideToClose(true)
+                    .title('Rule '+vm.currentRule.title+' Successfully Created')
+                    .textContent(vm.currentRule.desc)
+                    .ariaLabel('Alert Dialog Demo')
+                    .ok('Done!')
+                    .targetEvent(ev)
+            );
+
+
             vm.currentRule = {};
 
             vm.currentRule.triggers = {};
@@ -1170,8 +1183,7 @@
             vm.currentRule.triggers.or = []
 
             vm.currentRule.actions = {};
-            vm.currentRule.actions.and = []
-
+            vm.currentRule.actions.and = [];
 
         }
 
@@ -1222,6 +1234,20 @@
             vm.currentTriggerChips = [];
             vm.showAndOr(false);
         }
+
+        vm.hide = function () {
+            $mdDialog.hide();
+        };
+
+        vm.cancel = function () {
+            $mdDialog.cancel();
+        };
+
+        vm.answer = function (answer) {
+            console.log(" value check");
+            // console.log(vm.selectedRule);
+            $mdDialog.hide(answer);
+        };
 
         vm.countries = countriesService.loadAll();
         vm.selectedCountry = null;
